@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "comprehend": "https://docs.aws.amazon.com/comprehend/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "Entity": {
+      "@id": "comprehend:API_Entity",
+      "@context": {
+        "score": {
+          "@id": "comprehend:Entity/Score",
+          "@type": "xsd:float"
+        },
+        "entityType": {
+          "@id": "comprehend:Entity/Type",
+          "@type": "xsd:string"
+        },
+        "text": {
+          "@id": "comprehend:Entity/Text",
+          "@type": "xsd:string"
+        },
+        "beginOffset": {
+          "@id": "comprehend:Entity/BeginOffset",
+          "@type": "xsd:integer"
+        },
+        "endOffset": {
+          "@id": "comprehend:Entity/EndOffset",
+          "@type": "xsd:integer"
+        }
+      }
+    },
+    "Sentiment": {
+      "@id": "comprehend:API_Sentiment",
+      "@context": {
+        "sentiment": {
+          "@id": "comprehend:Sentiment/Sentiment",
+          "@type": "xsd:string"
+        },
+        "positiveScore": {
+          "@id": "comprehend:Sentiment/Positive",
+          "@type": "xsd:float"
+        },
+        "negativeScore": {
+          "@id": "comprehend:Sentiment/Negative",
+          "@type": "xsd:float"
+        },
+        "neutralScore": {
+          "@id": "comprehend:Sentiment/Neutral",
+          "@type": "xsd:float"
+        },
+        "mixedScore": {
+          "@id": "comprehend:Sentiment/Mixed",
+          "@type": "xsd:float"
+        }
+      }
+    },
+    "KeyPhrase": {
+      "@id": "comprehend:API_KeyPhrase",
+      "@context": {
+        "score": {
+          "@id": "comprehend:KeyPhrase/Score",
+          "@type": "xsd:float"
+        },
+        "text": {
+          "@id": "comprehend:KeyPhrase/Text",
+          "@type": "xsd:string"
+        },
+        "beginOffset": {
+          "@id": "comprehend:KeyPhrase/BeginOffset",
+          "@type": "xsd:integer"
+        },
+        "endOffset": {
+          "@id": "comprehend:KeyPhrase/EndOffset",
+          "@type": "xsd:integer"
+        }
+      }
+    },
+    "DominantLanguage": {
+      "@id": "comprehend:API_DominantLanguage",
+      "@context": {
+        "languageCode": {
+          "@id": "comprehend:DominantLanguage/LanguageCode",
+          "@type": "xsd:string"
+        },
+        "score": {
+          "@id": "comprehend:DominantLanguage/Score",
+          "@type": "xsd:float"
+        }
+      }
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

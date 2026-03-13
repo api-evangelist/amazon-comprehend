@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/amazon-comprehend-entity.json",
+  "title": "Amazon Comprehend Entity",
+  "description": "Schema for an Amazon Comprehend entity detection result, representing named entities identified in text through NLP analysis.",
+  "type": "object",
+  "properties": {
+    "Entities": {
+      "type": "array",
+      "description": "A collection of entities identified in the input text.",
+      "items": {
+        "$ref": "#/$defs/Entity"
+      }
+    },
+    "Sentiment": {
+      "type": "string",
+      "description": "The inferred sentiment detected in the input text.",
+      "enum": ["POSITIVE", "NEGATIVE", "NEUTRAL", "MIXED"]
+    },
+    "SentimentScore": {
+      "type": "object",
+      "description": "The confidence scores for each sentiment type.",
+      "properties": {
+        "Positive": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Negative": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Neutral": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Mixed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "KeyPhrases": {
+      "type": "array",
+      "description": "A collection of key phrases identified in the input text.",
+      "items": {
+        "$ref": "#/$defs/KeyPhrase"
+      }
+    },
+    "Languages": {
+      "type": "array",
+      "description": "The languages detected in the input text.",
+      "items": {
+        "$ref": "#/$defs/DominantLanguage"
+      }
+    }
+  },
+  "$defs": {
+    "Entity": {
+      "type": "object",
+      "description": "A named entity identified in the text.",
+      "properties": {
+        "Score": {
+          "type": "number",
+          "description": "The level of confidence that Comprehend has in the accuracy of the detection.",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Type": {
+          "type": "string",
+          "description": "The entity type.",
+          "enum": [
+            "PERSON",
+            "LOCATION",
+            "ORGANIZATION",
+            "COMMERCIAL_ITEM",
+            "EVENT",
+            "DATE",
+            "QUANTITY",
+            "TITLE",
+            "OTHER"
+          ]
+        },
+        "Text": {
+          "type": "string",
+          "description": "The text of the entity."
+        },
+        "BeginOffset": {
+          "type": "integer",
+          "description": "The zero-based offset in the input text where the entity begins.",
+          "minimum": 0
+        },
+        "EndOffset": {
+          "type": "integer",
+          "description": "The zero-based offset in the input text after the entity ends.",
+          "minimum": 0
+        }
+      }
+    },
+    "KeyPhrase": {
+      "type": "object",
+      "description": "A key phrase detected in the text.",
+      "properties": {
+        "Score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Text": {
+          "type": "string",
+          "description": "The text of the key phrase."
+        },
+        "BeginOffset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "EndOffset": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "DominantLanguage": {
+      "type": "object",
+      "description": "A language detected in the text.",
+      "properties": {
+        "LanguageCode": {
+          "type": "string",
+          "description": "The RFC 5646 language code for the dominant language."
+        },
+        "Score": {
+          "type": "number",
+          "description": "The confidence score for the detected language.",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}

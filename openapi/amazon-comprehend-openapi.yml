@@ -1,0 +1,271 @@
+openapi: 3.1.0
+info:
+  title: Amazon Comprehend API
+  description: >-
+    Amazon Comprehend is a natural language processing (NLP) service that uses
+    machine learning to find insights and relationships in text. The API
+    provides operations for sentiment analysis, entity recognition, key phrase
+    extraction, language detection, and topic modeling.
+  version: "2017-11-27"
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/comprehend/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: https://comprehend.amazonaws.com
+    description: Amazon Comprehend API endpoint
+paths:
+  /:
+    post:
+      operationId: DetectSentiment
+      summary: Detect sentiment of text
+      description: >-
+        Inspects text and returns an inference of the prevailing sentiment
+        (POSITIVE, NEGATIVE, NEUTRAL, or MIXED).
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - Text
+                - LanguageCode
+              properties:
+                Text:
+                  type: string
+                  description: The text to analyze.
+                LanguageCode:
+                  type: string
+                  enum:
+                    - en
+                    - es
+                    - fr
+                    - de
+                    - it
+                    - pt
+                    - ar
+                    - hi
+                    - ja
+                    - ko
+                    - zh
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SentimentResponse"
+        "400":
+          description: Bad request
+      tags:
+        - Analysis
+  /detectEntities:
+    post:
+      operationId: DetectEntities
+      summary: Detect entities in text
+      description: >-
+        Inspects text for named entities, and returns information about them
+        including entity type, score, and location in the text.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - Text
+                - LanguageCode
+              properties:
+                Text:
+                  type: string
+                LanguageCode:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EntitiesResponse"
+        "400":
+          description: Bad request
+      tags:
+        - Analysis
+  /detectKeyPhrases:
+    post:
+      operationId: DetectKeyPhrases
+      summary: Detect key phrases in text
+      description: >-
+        Detects the key noun phrases found in the text.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - Text
+                - LanguageCode
+              properties:
+                Text:
+                  type: string
+                LanguageCode:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/KeyPhrasesResponse"
+        "400":
+          description: Bad request
+      tags:
+        - Analysis
+  /detectDominantLanguage:
+    post:
+      operationId: DetectDominantLanguage
+      summary: Detect dominant language
+      description: >-
+        Determines the dominant language of the input text.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - Text
+              properties:
+                Text:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LanguageResponse"
+      tags:
+        - Analysis
+  /batchDetectSentiment:
+    post:
+      operationId: BatchDetectSentiment
+      summary: Batch detect sentiment
+      description: >-
+        Inspects a batch of documents and returns the sentiment detected in
+        each document.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - TextList
+                - LanguageCode
+              properties:
+                TextList:
+                  type: array
+                  items:
+                    type: string
+                LanguageCode:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+        "400":
+          description: Bad request
+      tags:
+        - Batch Operations
+components:
+  schemas:
+    SentimentResponse:
+      type: object
+      properties:
+        Sentiment:
+          type: string
+          enum:
+            - POSITIVE
+            - NEGATIVE
+            - NEUTRAL
+            - MIXED
+        SentimentScore:
+          type: object
+          properties:
+            Positive:
+              type: number
+            Negative:
+              type: number
+            Neutral:
+              type: number
+            Mixed:
+              type: number
+    EntitiesResponse:
+      type: object
+      properties:
+        Entities:
+          type: array
+          items:
+            $ref: "#/components/schemas/Entity"
+    Entity:
+      type: object
+      properties:
+        Score:
+          type: number
+          description: The level of confidence that Amazon Comprehend has in the accuracy.
+        Type:
+          type: string
+          enum:
+            - PERSON
+            - LOCATION
+            - ORGANIZATION
+            - COMMERCIAL_ITEM
+            - EVENT
+            - DATE
+            - QUANTITY
+            - TITLE
+            - OTHER
+        Text:
+          type: string
+          description: The text of the entity.
+        BeginOffset:
+          type: integer
+        EndOffset:
+          type: integer
+    KeyPhrasesResponse:
+      type: object
+      properties:
+        KeyPhrases:
+          type: array
+          items:
+            type: object
+            properties:
+              Score:
+                type: number
+              Text:
+                type: string
+              BeginOffset:
+                type: integer
+              EndOffset:
+                type: integer
+    LanguageResponse:
+      type: object
+      properties:
+        Languages:
+          type: array
+          items:
+            type: object
+            properties:
+              LanguageCode:
+                type: string
+              Score:
+                type: number
+tags:
+  - name: Analysis
+    description: Real-time text analysis operations
+  - name: Batch Operations
+    description: Batch text analysis operations
