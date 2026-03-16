@@ -1,16 +1,17 @@
+aid: amazon-comprehend
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/apis.yml
 name: Amazon Comprehend API
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+specificationVersion: '0.19'
 description: >-
   Amazon Comprehend is a natural language processing (NLP) service that uses
-  machine learning to uncover information in unstructured data. The service can
-  identify critical elements in data, including references to language, people,
-  and places, and the text files can be categorized by relevant topics. Amazon
-  Comprehend can analyze text to extract key phrases, places, people, brands,
-  events, sentiment, and syntax.
-image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-url: https://aws.amazon.com/comprehend/
-baseURL: https://comprehend.amazonaws.com
+  machine learning to uncover information in unstructured data. The service
+  can identify critical elements in data, including references to language,
+  people, and places.
 created: '2024-01-15'
-modified: '2026-03-13'
+modified: '2026-03-16'
 tags:
   - NLP
   - Natural Language Processing
