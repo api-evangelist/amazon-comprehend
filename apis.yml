@@ -13,11 +13,11 @@ description: >-
 created: '2024-01-15'
 modified: '2026-03-16'
 tags:
-  - NLP
-  - Natural Language Processing
-  - Text Analysis
-  - Machine Learning
   - AWS
+  - Machine Learning
+  - Natural Language Processing
+  - NLP
+  - Text Analysis
 apis:
   - name: Amazon Comprehend API
     description: >-
