@@ -20,7 +20,7 @@ paths:
   /:
     post:
       operationId: DetectSentiment
-      summary: Detect sentiment of text
+      summary: Amazon Comprehend Detect sentiment of text
       description: >-
         Inspects text and returns an inference of the prevailing sentiment
         (POSITIVE, NEGATIVE, NEUTRAL, or MIXED).
@@ -65,7 +65,7 @@ paths:
   /detectEntities:
     post:
       operationId: DetectEntities
-      summary: Detect entities in text
+      summary: Amazon Comprehend Detect entities in text
       description: >-
         Inspects text for named entities, and returns information about them
         including entity type, score, and location in the text.
@@ -97,7 +97,7 @@ paths:
   /detectKeyPhrases:
     post:
       operationId: DetectKeyPhrases
-      summary: Detect key phrases in text
+      summary: Amazon Comprehend Detect key phrases in text
       description: >-
         Detects the key noun phrases found in the text.
       requestBody:
@@ -128,7 +128,7 @@ paths:
   /detectDominantLanguage:
     post:
       operationId: DetectDominantLanguage
-      summary: Detect dominant language
+      summary: Amazon Comprehend Detect dominant language
       description: >-
         Determines the dominant language of the input text.
       requestBody:
@@ -154,7 +154,7 @@ paths:
   /batchDetectSentiment:
     post:
       operationId: BatchDetectSentiment
-      summary: Batch detect sentiment
+      summary: Amazon Comprehend Batch detect sentiment
       description: >-
         Inspects a batch of documents and returns the sentiment detected in
         each document.
