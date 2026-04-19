@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-flywheel-summary-structure.json",
+  "name": "FlywheelSummary",
+  "description": "Flywheel summary information.",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel"
+        }
+      ]
+    },
+    "ActiveModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "ARN of the active model version for the flywheel."
+        }
+      ]
+    },
+    "DataLakeS3Uri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Uri"
+        },
+        {
+          "description": "Amazon S3 URI of the data lake location. "
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelStatus"
+        },
+        {
+          "description": "The status of the flywheel."
+        }
+      ]
+    },
+    "ModelType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ModelType"
+        },
+        {
+          "description": "Model type of the flywheel's model."
+        }
+      ]
+    },
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "A description of the status of the flywheel."
+        }
+      ]
+    },
+    "CreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Creation time of the flywheel."
+        }
+      ]
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Last modified time for the flywheel."
+        }
+      ]
+    },
+    "LatestFlywheelIteration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelIterationId"
+        },
+        {
+          "description": "The most recent flywheel iteration."
+        }
+      ]
+    }
+  }
+}

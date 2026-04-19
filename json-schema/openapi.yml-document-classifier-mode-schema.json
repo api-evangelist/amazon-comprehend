@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-document-classifier-mode-schema.json",
+  "title": "DocumentClassifierMode",
+  "description": "DocumentClassifierMode schema",
+  "type": "string",
+  "enum": [
+    "MULTI_CLASS",
+    "MULTI_LABEL"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-list-document-classifier-summaries-response-schema.json",
+  "title": "ListDocumentClassifierSummariesResponse",
+  "description": "ListDocumentClassifierSummariesResponse schema",
+  "type": "object",
+  "properties": {
+    "DocumentClassifierSummariesList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassifierSummariesList"
+        },
+        {
+          "description": "The list of summaries of document classifiers."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    }
+  }
+}

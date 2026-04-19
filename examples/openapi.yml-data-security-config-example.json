@@ -1,0 +1,6 @@
+{
+  "ModelKmsKeyId": "example-string",
+  "VolumeKmsKeyId": "example-string",
+  "DataLakeKmsKeyId": "example-string",
+  "VpcConfig": "example-string"
+}

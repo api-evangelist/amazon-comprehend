@@ -1,0 +1,7 @@
+{
+  "AttributeNames": "example-name",
+  "S3Uri": "example-string",
+  "AnnotationDataS3Uri": "example-string",
+  "SourceDocumentsS3Uri": "example-string",
+  "DocumentType": "ORGANIZATION"
+}

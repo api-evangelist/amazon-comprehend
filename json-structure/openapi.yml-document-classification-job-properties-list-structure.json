@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-document-classification-job-properties-list-structure.json",
+  "name": "DocumentClassificationJobPropertiesList",
+  "description": "DocumentClassificationJobPropertiesList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/DocumentClassificationJobProperties"
+  }
+}

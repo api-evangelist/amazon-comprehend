@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-delete-resource-policy-response-structure.json",
+  "name": "DeleteResourcePolicyResponse",
+  "description": "DeleteResourcePolicyResponse schema",
+  "type": "object",
+  "properties": {}
+}

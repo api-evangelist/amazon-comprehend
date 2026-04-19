@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-document-metadata-schema.json",
+  "title": "DocumentMetadata",
+  "description": "Information about the document, discovered during text extraction.",
+  "type": "object",
+  "properties": {
+    "Pages": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "Number of pages in the document."
+        }
+      ]
+    },
+    "ExtractedCharacters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfExtractedCharacters"
+        },
+        {
+          "description": "List of pages in the document, with the number of characters extracted from each page."
+        }
+      ]
+    }
+  }
+}

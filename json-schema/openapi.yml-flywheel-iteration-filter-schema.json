@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-flywheel-iteration-filter-schema.json",
+  "title": "FlywheelIterationFilter",
+  "description": "Filter the flywheel iterations based on creation time.",
+  "type": "object",
+  "properties": {
+    "CreationTimeAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filter the flywheel iterations to include iterations created after the specified time."
+        }
+      ]
+    },
+    "CreationTimeBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filter the flywheel iterations to include iterations created before the specified time."
+        }
+      ]
+    }
+  }
+}

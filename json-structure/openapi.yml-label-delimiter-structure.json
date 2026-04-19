@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-label-delimiter-structure.json",
+  "name": "LabelDelimiter",
+  "description": "LabelDelimiter schema",
+  "type": "string",
+  "pattern": "^[ ~!@#$%^*\\-_+=|\\\\:;\\t>?/]$",
+  "minLength": 1,
+  "maxLength": 1
+}

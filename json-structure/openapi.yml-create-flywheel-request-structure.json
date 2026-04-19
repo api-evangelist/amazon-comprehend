@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-create-flywheel-request-structure.json",
+  "name": "CreateFlywheelRequest",
+  "description": "CreateFlywheelRequest schema",
+  "type": "object",
+  "properties": {
+    "FlywheelName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArnName"
+        },
+        {
+          "description": "Name for the flywheel."
+        }
+      ]
+    },
+    "ActiveModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "To associate an existing model with the flywheel, specify the Amazon Resource Number (ARN) of the model version."
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to access the flywheel data in the data lake."
+        }
+      ]
+    },
+    "TaskConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TaskConfig"
+        },
+        {
+          "description": "Configuration about the custom classifier associated with the flywheel."
+        }
+      ]
+    },
+    "ModelType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ModelType"
+        },
+        {
+          "description": "The model type."
+        }
+      ]
+    },
+    "DataLakeS3Uri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelS3Uri"
+        },
+        {
+          "description": "Enter the S3 location for the data lake. You can specify a new S3 bucket or a new folder of an existing S3 bucket. The flywheel creates the data lake at this location."
+        }
+      ]
+    },
+    "DataSecurityConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSecurityConfig"
+        },
+        {
+          "description": "Data security configurations."
+        }
+      ]
+    },
+    "ClientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestTokenString"
+        },
+        {
+          "description": "A unique identifier for the request. If you don't set the client request token, Amazon Comprehend generates one."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The tags to associate with this flywheel."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FlywheelName",
+    "DataAccessRoleArn",
+    "DataLakeS3Uri"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-put-resource-policy-response-structure.json",
+  "name": "PutResourcePolicyResponse",
+  "description": "PutResourcePolicyResponse schema",
+  "type": "object",
+  "properties": {
+    "PolicyRevisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyRevisionId"
+        },
+        {
+          "description": "The revision ID of the policy. Each time you modify a policy, Amazon Comprehend assigns a new revision ID, and it deletes the prior version of the policy."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "Text": "This is example text for NLP analysis.",
+  "LanguageCode": "en",
+  "EndpointArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "Bytes": "example-string",
+  "DocumentReaderConfig": "example-string"
+}

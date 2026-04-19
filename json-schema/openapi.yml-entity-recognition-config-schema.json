@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-entity-recognition-config-schema.json",
+  "title": "EntityRecognitionConfig",
+  "description": "Configuration required for an entity recognition model.",
+  "type": "object",
+  "properties": {
+    "EntityTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityTypesList"
+        },
+        {
+          "description": "Up to 25 entity types that the model is trained to recognize."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EntityTypes"
+  ]
+}

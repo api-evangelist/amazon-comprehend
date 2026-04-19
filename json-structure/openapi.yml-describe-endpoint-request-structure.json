@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-endpoint-request-structure.json",
+  "name": "DescribeEndpointRequest",
+  "description": "DescribeEndpointRequest schema",
+  "type": "object",
+  "properties": {
+    "EndpointArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendEndpointArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the endpoint being described."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointArn"
+  ]
+}

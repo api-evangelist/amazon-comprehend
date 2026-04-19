@@ -1,0 +1,8 @@
+{
+  "Score": "0.98",
+  "Type": "ORGANIZATION",
+  "Text": "This is example text for NLP analysis.",
+  "BeginOffset": "example-string",
+  "EndOffset": "example-string",
+  "BlockReferences": "example-string"
+}

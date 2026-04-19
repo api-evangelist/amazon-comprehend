@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-entity-schema.json",
+  "title": "Entity",
+  "description": "<p>Provides information about an entity. </p> <p> </p>",
+  "type": "object",
+  "properties": {
+    "Score": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The level of confidence that Amazon Comprehend has in the accuracy of the detection."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityType"
+        },
+        {
+          "description": "<p>The entity type. For entity detection using the built-in model, this field contains one of the standard entity types listed below.</p> <p>For custom entity detection, this field contains one of the entity types that you specified when you trained your custom model.</p>"
+        }
+      ]
+    },
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The text of the entity."
+        }
+      ]
+    },
+    "BeginOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "<p>The zero-based offset from the beginning of the source text to the first character in the entity.</p> <p>This field is empty for non-text input.</p>"
+        }
+      ]
+    },
+    "EndOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "<p>The zero-based offset from the beginning of the source text to the last character in the entity.</p> <p>This field is empty for non-text input.</p>"
+        }
+      ]
+    },
+    "BlockReferences": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfBlockReferences"
+        },
+        {
+          "description": "A reference to each block for this entity. This field is empty for plain-text input."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "SourceModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "ModelName": "example-name",
+  "VersionName": "example-name",
+  "ModelKmsKeyId": "example-string",
+  "DataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "Tags": "example-string"
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-document-classifiers-response-structure.json",
+  "name": "ListDocumentClassifiersResponse",
+  "description": "ListDocumentClassifiersResponse schema",
+  "type": "object",
+  "properties": {
+    "DocumentClassifierPropertiesList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassifierPropertiesList"
+        },
+        {
+          "description": "A list containing the properties of each job returned."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    }
+  }
+}

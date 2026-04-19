@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-contains-pii-entities-response-schema.json",
+  "title": "ContainsPiiEntitiesResponse",
+  "description": "ContainsPiiEntitiesResponse schema",
+  "type": "object",
+  "properties": {
+    "Labels": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfEntityLabels"
+        },
+        {
+          "description": "The labels used in the document being analyzed. Individual labels represent personally identifiable information (PII) entity types."
+        }
+      ]
+    }
+  }
+}

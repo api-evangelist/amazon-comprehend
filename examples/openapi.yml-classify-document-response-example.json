@@ -1,0 +1,8 @@
+{
+  "Classes": "example-string",
+  "Labels": "example-string",
+  "DocumentMetadata": "example-string",
+  "DocumentType": "ORGANIZATION",
+  "Errors": "example-string",
+  "Warnings": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

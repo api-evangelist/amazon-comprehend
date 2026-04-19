@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-document-read-mode-structure.json",
+  "name": "DocumentReadMode",
+  "description": "DocumentReadMode schema",
+  "type": "string",
+  "enum": [
+    "SERVICE_DEFAULT",
+    "FORCE_DOCUMENT_READ_ACTION"
+  ]
+}

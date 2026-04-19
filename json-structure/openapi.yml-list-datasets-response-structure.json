@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-datasets-response-structure.json",
+  "name": "ListDatasetsResponse",
+  "description": "ListDatasetsResponse schema",
+  "type": "object",
+  "properties": {
+    "DatasetPropertiesList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetPropertiesList"
+        },
+        {
+          "description": "The dataset properties list."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    }
+  }
+}

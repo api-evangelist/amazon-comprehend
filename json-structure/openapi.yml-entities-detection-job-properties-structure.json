@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-entities-detection-job-properties-structure.json",
+  "name": "EntitiesDetectionJobProperties",
+  "description": "Provides information about an entities detection job.",
+  "type": "object",
+  "properties": {
+    "JobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The identifier assigned to the entities detection job."
+        }
+      ]
+    },
+    "JobArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the ARN is as follows:</p> <p> <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code> </p> <p>The following is an example job ARN:</p> <p> <code>arn:aws:comprehend:us-west-2:111122223333:entities-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>"
+        }
+      ]
+    },
+    "JobName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobName"
+        },
+        {
+          "description": "The name that you assigned the entities detection job."
+        }
+      ]
+    },
+    "JobStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobStatus"
+        },
+        {
+          "description": "The current status of the entities detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure."
+        }
+      ]
+    },
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "A description of the status of a job."
+        }
+      ]
+    },
+    "SubmitTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time that the entities detection job was submitted for processing."
+        }
+      ]
+    },
+    "EndTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time that the entities detection job completed"
+        }
+      ]
+    },
+    "EntityRecognizerArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityRecognizerArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) that identifies the entity recognizer."
+        }
+      ]
+    },
+    "InputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InputDataConfig"
+        },
+        {
+          "description": "The input data configuration that you supplied when you created the entities detection job."
+        }
+      ]
+    },
+    "OutputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputDataConfig"
+        },
+        {
+          "description": "The output data configuration that you supplied when you created the entities detection job. "
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "description": "The language code of the input documents."
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data."
+        }
+      ]
+    },
+    "VolumeKmsKeyId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KmsKeyId"
+        },
+        {
+          "description": "<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>\"1234abcd-12ab-34cd-56ef-1234567890ab\"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>\"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab\"</code> </p> </li> </ul>"
+        }
+      ]
+    },
+    "VpcConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VpcConfig"
+        },
+        {
+          "description": " Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your entity detection job. For more information, see <a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html\">Amazon VPC</a>. "
+        }
+      ]
+    },
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the flywheel associated with this job."
+        }
+      ]
+    }
+  }
+}

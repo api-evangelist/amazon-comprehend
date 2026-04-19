@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-topics-detection-job-properties-list-structure.json",
+  "name": "TopicsDetectionJobPropertiesList",
+  "description": "TopicsDetectionJobPropertiesList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/TopicsDetectionJobProperties"
+  }
+}

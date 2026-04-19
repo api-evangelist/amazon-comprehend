@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-flywheel-request-structure.json",
+  "name": "DescribeFlywheelRequest",
+  "description": "DescribeFlywheelRequest schema",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FlywheelArn"
+  ]
+}

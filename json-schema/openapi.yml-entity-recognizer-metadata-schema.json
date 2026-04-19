@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-entity-recognizer-metadata-schema.json",
+  "title": "EntityRecognizerMetadata",
+  "description": "Detailed information about an entity recognizer.",
+  "type": "object",
+  "properties": {
+    "NumberOfTrainedDocuments": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": " The number of documents in the input data that were used to train the entity recognizer. Typically this is 80 to 90 percent of the input documents."
+        }
+      ]
+    },
+    "NumberOfTestDocuments": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": " The number of documents in the input data that were used to test the entity recognizer. Typically this is 10 to 20 percent of the input documents."
+        }
+      ]
+    },
+    "EvaluationMetrics": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityRecognizerEvaluationMetrics"
+        },
+        {
+          "description": "Detailed information about the accuracy of an entity recognizer."
+        }
+      ]
+    },
+    "EntityTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityRecognizerMetadataEntityTypesList"
+        },
+        {
+          "description": "Entity types from the metadata of an entity recognizer."
+        }
+      ]
+    }
+  }
+}

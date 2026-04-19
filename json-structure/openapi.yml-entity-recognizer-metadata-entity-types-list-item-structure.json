@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-entity-recognizer-metadata-entity-types-list-item-structure.json",
+  "name": "EntityRecognizerMetadataEntityTypesListItem",
+  "description": "Individual item from the list of entity types in the metadata of an entity recognizer.",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "Type of entity from the list of entity types in the metadata of an entity recognizer. "
+        }
+      ]
+    },
+    "EvaluationMetrics": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityTypesEvaluationMetrics"
+        },
+        {
+          "description": "Detailed information about the accuracy of the entity recognizer for a specific item on the list of entity types. "
+        }
+      ]
+    },
+    "NumberOfTrainMentions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "Indicates the number of times the given entity type was seen in the training data. "
+        }
+      ]
+    }
+  }
+}

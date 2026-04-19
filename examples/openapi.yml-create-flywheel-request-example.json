@@ -1,0 +1,11 @@
+{
+  "FlywheelName": "example-name",
+  "ActiveModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "TaskConfig": "example-string",
+  "ModelType": "ORGANIZATION",
+  "DataLakeS3Uri": "example-string",
+  "DataSecurityConfig": "example-string",
+  "ClientRequestToken": "example-string",
+  "Tags": "example-string"
+}

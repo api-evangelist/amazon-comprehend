@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-key-phrases-detection-job-request-schema.json",
+  "title": "DescribeKeyPhrasesDetectionJobRequest",
+  "description": "DescribeKeyPhrasesDetectionJobRequest schema",
+  "type": "object",
+  "properties": {
+    "JobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The identifier that Amazon Comprehend generated for the job. The <code>StartKeyPhrasesDetectionJob</code> operation returns this identifier in its response."
+        }
+      ]
+    }
+  },
+  "required": [
+    "JobId"
+  ]
+}

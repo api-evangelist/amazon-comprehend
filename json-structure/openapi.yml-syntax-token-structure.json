@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-syntax-token-structure.json",
+  "name": "SyntaxToken",
+  "description": "Represents a work in the input text that was recognized and assigned a part of speech. There is one syntax token record for each word in the source text.",
+  "type": "object",
+  "properties": {
+    "TokenId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "A unique identifier for a token."
+        }
+      ]
+    },
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The word that was recognized in the source text."
+        }
+      ]
+    },
+    "BeginOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The zero-based offset from the beginning of the source text to the first character in the word."
+        }
+      ]
+    },
+    "EndOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The zero-based offset from the beginning of the source text to the last character in the word."
+        }
+      ]
+    },
+    "PartOfSpeech": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PartOfSpeechTag"
+        },
+        {
+          "description": "Provides the part of speech label and the confidence level that Amazon Comprehend has that the part of speech was correctly identified. For more information, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html\">Syntax</a> in the Comprehend Developer Guide. "
+        }
+      ]
+    }
+  }
+}

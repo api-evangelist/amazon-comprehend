@@ -1,0 +1,16 @@
+{
+  "JobId": "example-string",
+  "JobArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "JobName": "example-name",
+  "JobStatus": "ACTIVE",
+  "Message": "example-string",
+  "SubmitTime": "example-string",
+  "EndTime": "example-string",
+  "DocumentClassifierArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "InputDataConfig": "example-string",
+  "OutputDataConfig": "example-string",
+  "DataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "VolumeKmsKeyId": "example-string",
+  "VpcConfig": "example-string",
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

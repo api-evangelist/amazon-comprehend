@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-list-tags-for-resource-request-schema.json",
+  "title": "ListTagsForResourceRequest",
+  "description": "ListTagsForResourceRequest schema",
+  "type": "object",
+  "properties": {
+    "ResourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the given Amazon Comprehend resource you are querying. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceArn"
+  ]
+}

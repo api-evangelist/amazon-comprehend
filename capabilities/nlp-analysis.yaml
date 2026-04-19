@@ -1,0 +1,277 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Amazon Comprehend NLP Analysis"
+  description: "Workflow capability for natural language processing analysis including entity recognition, sentiment analysis, key phrase extraction, language detection, PII detection, and custom text classification. Used by data scientists and application developers to extract insights from unstructured text."
+  tags:
+    - Amazon
+    - AWS
+    - Natural Language Processing
+    - NLP
+    - Machine Learning
+    - Text Analysis
+    - Sentiment Analysis
+    - Entity Recognition
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - import: comprehend
+      location: ./shared/comprehend.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: nlp-analysis-api
+      description: "Unified REST API for Amazon Comprehend NLP analysis workflows."
+      resources:
+        - path: /v1/analyze/entities
+          name: entity-analysis
+          description: "Named entity recognition."
+          operations:
+            - method: POST
+              name: detect-entities
+              description: "Detect named entities in text."
+              call: "comprehend.detect-entities"
+              with:
+                text: "rest.text"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/analyze/sentiment
+          name: sentiment-analysis
+          description: "Sentiment analysis."
+          operations:
+            - method: POST
+              name: detect-sentiment
+              description: "Detect sentiment in text."
+              call: "comprehend.detect-sentiment"
+              with:
+                text: "rest.text"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/analyze/key-phrases
+          name: key-phrase-extraction
+          description: "Key phrase extraction."
+          operations:
+            - method: POST
+              name: detect-key-phrases
+              description: "Extract key phrases from text."
+              call: "comprehend.detect-key-phrases"
+              with:
+                text: "rest.text"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/analyze/language
+          name: language-detection
+          description: "Language detection."
+          operations:
+            - method: POST
+              name: detect-language
+              description: "Detect the dominant language of text."
+              call: "comprehend.detect-dominant-language"
+              with:
+                text: "rest.text"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/analyze/pii
+          name: pii-detection
+          description: "PII detection."
+          operations:
+            - method: POST
+              name: detect-pii
+              description: "Detect PII entities in text."
+              call: "comprehend.detect-pii-entities"
+              with:
+                text: "rest.text"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/classify
+          name: text-classification
+          description: "Custom text classification."
+          operations:
+            - method: GET
+              name: list-classifiers
+              description: "List available document classifiers."
+              call: "comprehend.list-document-classifiers"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/batch/entities
+          name: batch-entity-analysis
+          description: "Batch entity detection."
+          operations:
+            - method: POST
+              name: batch-detect-entities
+              description: "Detect entities in multiple documents."
+              call: "comprehend.batch-detect-entities"
+              with:
+                text_list: "rest.text_list"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/batch/sentiment
+          name: batch-sentiment-analysis
+          description: "Batch sentiment analysis."
+          operations:
+            - method: POST
+              name: batch-detect-sentiment
+              description: "Detect sentiment in multiple documents."
+              call: "comprehend.batch-detect-sentiment"
+              with:
+                text_list: "rest.text_list"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9090
+      namespace: nlp-analysis-mcp
+      transport: http
+      description: "MCP server for AI-assisted Amazon Comprehend NLP text analysis."
+      tools:
+        - name: detect-entities
+          description: "Detect named entities (people, places, organizations, dates) in text using Amazon Comprehend."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "comprehend.detect-entities"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-sentiment
+          description: "Analyze the sentiment of text (POSITIVE, NEGATIVE, NEUTRAL, or MIXED) using Amazon Comprehend."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "comprehend.detect-sentiment"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-key-phrases
+          description: "Extract key noun phrases from text using Amazon Comprehend."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "comprehend.detect-key-phrases"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-language
+          description: "Detect the dominant language of input text using Amazon Comprehend."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "comprehend.detect-dominant-language"
+          with:
+            text: "tools.text"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-syntax
+          description: "Analyze syntax and parts of speech in text using Amazon Comprehend."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "comprehend.detect-syntax"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-pii
+          description: "Detect personally identifiable information (PII) entities in text using Amazon Comprehend."
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "comprehend.detect-pii-entities"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: batch-detect-entities
+          description: "Detect entities in multiple text documents in one batch call."
+          hints:
+            readOnly: true
+          call: "comprehend.batch-detect-entities"
+          with:
+            text_list: "tools.text_list"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: batch-detect-sentiment
+          description: "Detect sentiment in multiple text documents in one batch call."
+          hints:
+            readOnly: true
+          call: "comprehend.batch-detect-sentiment"
+          with:
+            text_list: "tools.text_list"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: list-classifiers
+          description: "List custom document classifiers trained in Amazon Comprehend."
+          hints:
+            readOnly: true
+          call: "comprehend.list-document-classifiers"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: describe-classifier
+          description: "Get properties and status of a specific document classifier."
+          hints:
+            readOnly: true
+          call: "comprehend.describe-document-classifier"
+          with:
+            classifier_arn: "tools.classifier_arn"
+          outputParameters:
+            - type: object
+              mapping: "$."

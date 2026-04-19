@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-batch-detect-dominant-language-request-schema.json",
+  "title": "BatchDetectDominantLanguageRequest",
+  "description": "BatchDetectDominantLanguageRequest schema",
+  "type": "object",
+  "properties": {
+    "TextList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomerInputStringList"
+        },
+        {
+          "description": "A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. Each document should contain at least 20 characters. The maximum size of each document is 5 KB."
+        }
+      ]
+    }
+  },
+  "required": [
+    "TextList"
+  ]
+}

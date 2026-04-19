@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-flywheel-model-evaluation-metrics-structure.json",
+  "name": "FlywheelModelEvaluationMetrics",
+  "description": "The evaluation metrics associated with the evaluated model.",
+  "type": "object",
+  "properties": {
+    "AverageF1Score": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "description": "The average F1 score from the evaluation metrics."
+        }
+      ]
+    },
+    "AveragePrecision": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "description": "Average precision metric for the model."
+        }
+      ]
+    },
+    "AverageRecall": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "description": "Average recall metric for the model."
+        }
+      ]
+    },
+    "AverageAccuracy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "description": "Average accuracy metric for the model."
+        }
+      ]
+    }
+  }
+}

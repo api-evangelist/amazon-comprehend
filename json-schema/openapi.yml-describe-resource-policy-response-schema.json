@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-resource-policy-response-schema.json",
+  "title": "DescribeResourcePolicyResponse",
+  "description": "DescribeResourcePolicyResponse schema",
+  "type": "object",
+  "properties": {
+    "ResourcePolicy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Policy"
+        },
+        {
+          "description": "The JSON body of the resource-based policy."
+        }
+      ]
+    },
+    "CreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time at which the policy was created."
+        }
+      ]
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time at which the policy was last modified."
+        }
+      ]
+    },
+    "PolicyRevisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PolicyRevisionId"
+        },
+        {
+          "description": "The revision ID of the policy. Each time you modify a policy, Amazon Comprehend assigns a new revision ID, and it deletes the prior version of the policy."
+        }
+      ]
+    }
+  }
+}

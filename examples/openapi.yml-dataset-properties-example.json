@@ -1,0 +1,12 @@
+{
+  "DatasetArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DatasetName": "example-name",
+  "DatasetType": "ORGANIZATION",
+  "DatasetS3Uri": "example-string",
+  "Description": "example-string",
+  "Status": "ACTIVE",
+  "Message": "example-string",
+  "NumberOfDocuments": "example-string",
+  "CreationTime": "example-string",
+  "EndTime": "example-string"
+}

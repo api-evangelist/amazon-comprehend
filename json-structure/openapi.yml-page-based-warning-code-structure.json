@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-page-based-warning-code-structure.json",
+  "name": "PageBasedWarningCode",
+  "description": "PageBasedWarningCode schema",
+  "type": "string",
+  "enum": [
+    "INFERENCING_PLAINTEXT_WITH_NATIVE_TRAINED_MODEL",
+    "INFERENCING_NATIVE_DOCUMENT_WITH_PLAINTEXT_TRAINED_MODEL"
+  ]
+}

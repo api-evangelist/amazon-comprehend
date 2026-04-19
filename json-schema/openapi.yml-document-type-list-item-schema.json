@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-document-type-list-item-schema.json",
+  "title": "DocumentTypeListItem",
+  "description": "Document type for each page in the document.",
+  "type": "object",
+  "properties": {
+    "Page": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "Page number."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentType"
+        },
+        {
+          "description": "Document type."
+        }
+      ]
+    }
+  }
+}

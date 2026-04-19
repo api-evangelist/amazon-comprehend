@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-flywheel-iteration-id-structure.json",
+  "name": "FlywheelIterationId",
+  "description": "FlywheelIterationId schema",
+  "type": "string",
+  "pattern": "[0-9]{8}T[0-9]{6}Z",
+  "maxLength": 63
+}

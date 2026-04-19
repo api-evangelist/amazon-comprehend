@@ -1,0 +1,268 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Amazon Comprehend"
+  description: "Vocabulary and taxonomy for Amazon Comprehend covering NLP analysis, entity recognition, sentiment analysis, and custom classification dimensions."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: Amazon Comprehend API
+      namespace: comprehend
+      version: "2017-11-27"
+      baseUrl: https://comprehend.{region}.amazonaws.com
+      status: active
+
+  resources:
+    - name: entities
+      description: "Named entities detected in text (people, places, organizations, dates)."
+      api: comprehend
+      actions: [detect, batch-detect]
+    - name: sentiment
+      description: "Sentiment analysis results (POSITIVE, NEGATIVE, NEUTRAL, MIXED)."
+      api: comprehend
+      actions: [detect, batch-detect]
+    - name: key-phrases
+      description: "Key noun phrases extracted from text."
+      api: comprehend
+      actions: [detect, batch-detect]
+    - name: language
+      description: "Detected dominant language of text."
+      api: comprehend
+      actions: [detect, batch-detect]
+    - name: syntax
+      description: "Syntax and parts of speech analysis."
+      api: comprehend
+      actions: [detect, batch-detect]
+    - name: pii-entities
+      description: "Personally identifiable information detected in text."
+      api: comprehend
+      actions: [detect, batch-detect, contains-pii-entities]
+    - name: document-classifiers
+      description: "Custom ML classifiers trained on labeled documents."
+      api: comprehend
+      actions: [create, describe, list, update, delete, train]
+    - name: entity-recognizers
+      description: "Custom entity recognizers trained on labeled entity data."
+      api: comprehend
+      actions: [create, describe, list, delete]
+    - name: topics
+      description: "Topics discovered via topic modeling on document sets."
+      api: comprehend
+      actions: [start-detection, describe, list]
+    - name: flywheel
+      description: "Flywheel for continuous model training and evaluation."
+      api: comprehend
+      actions: [create, describe, list, update, delete]
+
+  actions:
+    - name: detect
+      httpMethods: [POST]
+      pattern: read
+    - name: batch-detect
+      httpMethods: [POST]
+      pattern: read
+    - name: create
+      httpMethods: [POST]
+      pattern: write
+    - name: describe
+      httpMethods: [POST]
+      pattern: read
+    - name: list
+      httpMethods: [POST]
+      pattern: read
+    - name: delete
+      httpMethods: [POST]
+      pattern: destructive
+    - name: start
+      httpMethods: [POST]
+      pattern: write
+    - name: stop
+      httpMethods: [POST]
+      pattern: write
+
+  schemas:
+    core:
+      - name: Entity
+        description: "A named entity detected in text."
+        properties: [Score, Type, Text, BeginOffset, EndOffset]
+      - name: SentimentScore
+        description: "Scores for each sentiment category."
+        properties: [Positive, Negative, Neutral, Mixed]
+      - name: KeyPhrase
+        description: "A key noun phrase extracted from text."
+        properties: [Score, Text, BeginOffset, EndOffset]
+      - name: DominantLanguage
+        description: "A detected language with a confidence score."
+        properties: [LanguageCode, Score]
+      - name: PiiEntity
+        description: "A PII entity detected in text."
+        properties: [Score, Type, BeginOffset, EndOffset]
+      - name: SyntaxToken
+        description: "A syntax token with part-of-speech tag."
+        properties: [TokenId, Text, BeginOffset, EndOffset, PartOfSpeech]
+
+  parameters:
+    pagination:
+      - NextToken
+      - MaxResults
+    identifiers:
+      - JobId
+      - DocumentClassifierArn
+      - EntityRecognizerArn
+      - FlywheelArn
+    filters:
+      - Filter
+      - LanguageCode
+
+  enums:
+    entity_types:
+      - PERSON
+      - LOCATION
+      - ORGANIZATION
+      - COMMERCIAL_ITEM
+      - EVENT
+      - DATE
+      - QUANTITY
+      - TITLE
+      - OTHER
+    sentiment_types:
+      - POSITIVE
+      - NEGATIVE
+      - NEUTRAL
+      - MIXED
+    language_codes:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+    pii_entity_types:
+      - BANK_ACCOUNT_NUMBER
+      - CREDIT_DEBIT_NUMBER
+      - CREDIT_DEBIT_EXPIRY
+      - PIN
+      - EMAIL
+      - ADDRESS
+      - NAME
+      - PHONE
+      - SSN
+      - DATE_TIME
+      - PASSPORT_NUMBER
+      - DRIVER_ID
+      - URL
+      - AGE
+      - USERNAME
+      - PASSWORD
+    job_status:
+      - SUBMITTED
+      - IN_PROGRESS
+      - COMPLETED
+      - FAILED
+      - STOP_REQUESTED
+      - STOPPED
+
+  authentication:
+    schemes:
+      - type: AWS SigV4
+        description: AWS Signature Version 4 for all API calls
+
+capability:
+  workflows:
+    - name: NLP Analysis
+      file: capabilities/nlp-analysis.yaml
+      description: "End-to-end NLP analysis using entity, sentiment, key phrase, and PII detection."
+      apis: [comprehend]
+      toolCount: 10
+      personas:
+        - Data Scientist
+        - Application Developer
+
+  personas:
+    - id: data-scientist
+      name: Data Scientist
+      description: "Uses Comprehend for bulk text analysis, topic modeling, and custom model training."
+      workflows: [nlp-analysis]
+    - id: app-developer
+      name: Application Developer
+      description: "Integrates Comprehend NLP APIs into applications for real-time text analysis."
+      workflows: [nlp-analysis]
+
+  domains:
+    - name: Text Analysis
+      resources: [entities, sentiment, key-phrases, language, syntax]
+      workflows: [nlp-analysis]
+    - name: PII Management
+      resources: [pii-entities]
+      workflows: [nlp-analysis]
+    - name: Custom Models
+      resources: [document-classifiers, entity-recognizers, flywheel]
+      workflows: [nlp-analysis]
+
+  namespaces:
+    - name: comprehend
+      type: consumed
+      baseUri: https://comprehend.{region}.amazonaws.com
+    - name: nlp-analysis-api
+      type: rest-exposed
+      port: 8080
+    - name: nlp-analysis-mcp
+      type: mcp-exposed
+      port: 9090
+
+  binds:
+    - name: AWS_ACCESS_KEY_ID
+      workflows: [nlp-analysis]
+    - name: AWS_SECRET_ACCESS_KEY
+      workflows: [nlp-analysis]
+    - name: AWS_REGION
+      workflows: [nlp-analysis]
+
+crossReference:
+  - resource: entities
+    operations:
+      - DetectEntities
+      - BatchDetectEntities
+      - StartEntitiesDetectionJob
+    workflows: [nlp-analysis]
+    personas: [data-scientist, app-developer]
+
+  - resource: sentiment
+    operations:
+      - DetectSentiment
+      - BatchDetectSentiment
+      - StartSentimentDetectionJob
+    workflows: [nlp-analysis]
+    personas: [data-scientist, app-developer]
+
+  - resource: key-phrases
+    operations:
+      - DetectKeyPhrases
+      - BatchDetectKeyPhrases
+      - StartKeyPhrasesDetectionJob
+    workflows: [nlp-analysis]
+    personas: [data-scientist, app-developer]
+
+  - resource: pii-entities
+    operations:
+      - DetectPiiEntities
+      - ContainsPiiEntities
+      - StartPiiEntitiesDetectionJob
+    workflows: [nlp-analysis]
+    personas: [data-scientist, app-developer]
+
+  - resource: document-classifiers
+    operations:
+      - CreateDocumentClassifier
+      - DescribeDocumentClassifier
+      - ListDocumentClassifiers
+      - DeleteDocumentClassifier
+    workflows: [nlp-analysis]
+    personas: [data-scientist]

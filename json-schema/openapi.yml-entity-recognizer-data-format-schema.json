@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-entity-recognizer-data-format-schema.json",
+  "title": "EntityRecognizerDataFormat",
+  "description": "EntityRecognizerDataFormat schema",
+  "type": "string",
+  "enum": [
+    "COMPREHEND_CSV",
+    "AUGMENTED_MANIFEST"
+  ]
+}

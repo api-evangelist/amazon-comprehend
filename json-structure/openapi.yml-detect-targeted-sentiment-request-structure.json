@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-detect-targeted-sentiment-request-structure.json",
+  "name": "DetectTargetedSentimentRequest",
+  "description": "DetectTargetedSentimentRequest schema",
+  "type": "object",
+  "properties": {
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomerInputString"
+        },
+        {
+          "description": "A UTF-8 text string. The maximum string length is 5 KB."
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "description": "The language of the input documents. Currently, English is the only supported language."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Text",
+    "LanguageCode"
+  ]
+}

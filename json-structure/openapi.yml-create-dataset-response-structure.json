@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-create-dataset-response-structure.json",
+  "name": "CreateDatasetResponse",
+  "description": "CreateDatasetResponse schema",
+  "type": "object",
+  "properties": {
+    "DatasetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendDatasetArn"
+        },
+        {
+          "description": "The ARN of the dataset."
+        }
+      ]
+    }
+  }
+}

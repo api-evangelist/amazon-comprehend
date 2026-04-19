@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-events-detection-job-properties-structure.json",
+  "name": "EventsDetectionJobProperties",
+  "description": "Provides information about an events detection job.",
+  "type": "object",
+  "properties": {
+    "JobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The identifier assigned to the events detection job."
+        }
+      ]
+    },
+    "JobArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the events detection job. It is a unique, fully qualified identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the ARN is as follows:</p> <p> <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:events-detection-job/&lt;job-id&gt;</code> </p> <p>The following is an example job ARN:</p> <p> <code>arn:aws:comprehend:us-west-2:111122223333:events-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>"
+        }
+      ]
+    },
+    "JobName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobName"
+        },
+        {
+          "description": "The name you assigned the events detection job."
+        }
+      ]
+    },
+    "JobStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobStatus"
+        },
+        {
+          "description": "The current status of the events detection job."
+        }
+      ]
+    },
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "A description of the status of the events detection job."
+        }
+      ]
+    },
+    "SubmitTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time that the events detection job was submitted for processing."
+        }
+      ]
+    },
+    "EndTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time that the events detection job completed."
+        }
+      ]
+    },
+    "InputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InputDataConfig"
+        },
+        {
+          "description": "The input data configuration that you supplied when you created the events detection job."
+        }
+      ]
+    },
+    "OutputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputDataConfig"
+        },
+        {
+          "description": "The output data configuration that you supplied when you created the events detection job."
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "description": "The language code of the input documents."
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data."
+        }
+      ]
+    },
+    "TargetEventTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetEventTypes"
+        },
+        {
+          "description": "The types of events that are detected by the job."
+        }
+      ]
+    }
+  }
+}

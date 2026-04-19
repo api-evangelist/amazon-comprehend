@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-document-type-structure.json",
+  "name": "DocumentType",
+  "description": "DocumentType schema",
+  "type": "string",
+  "enum": [
+    "NATIVE_PDF",
+    "SCANNED_PDF",
+    "MS_WORD",
+    "IMAGE",
+    "PLAIN_TEXT",
+    "TEXTRACT_DETECT_DOCUMENT_TEXT_JSON",
+    "TEXTRACT_ANALYZE_DOCUMENT_JSON"
+  ]
+}

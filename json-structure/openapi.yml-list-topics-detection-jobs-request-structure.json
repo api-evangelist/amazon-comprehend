@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-topics-detection-jobs-request-structure.json",
+  "name": "ListTopicsDetectionJobsRequest",
+  "description": "ListTopicsDetectionJobsRequest schema",
+  "type": "object",
+  "properties": {
+    "Filter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TopicsDetectionJobFilter"
+        },
+        {
+          "description": "Filters the jobs that are returned. Jobs can be filtered on their name, status, or the date and time that they were submitted. You can set only one filter at a time."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResultsInteger"
+        },
+        {
+          "description": "The maximum number of results to return in each page. The default is 100."
+        }
+      ]
+    }
+  }
+}

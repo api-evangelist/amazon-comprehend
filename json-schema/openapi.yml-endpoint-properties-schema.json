@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-endpoint-properties-schema.json",
+  "title": "EndpointProperties",
+  "description": "Specifies information about the specified endpoint. For information about endpoints, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html\">Managing endpoints</a>.",
+  "type": "object",
+  "properties": {
+    "EndpointArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendEndpointArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the endpoint."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointStatus"
+        },
+        {
+          "description": "Specifies the status of the endpoint. Because the endpoint updates and creation are asynchronous, so customers will need to wait for the endpoint to be <code>Ready</code> status before making inference requests."
+        }
+      ]
+    },
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "Specifies a reason for failure in cases of <code>Failed</code> status."
+        }
+      ]
+    },
+    "ModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the model to which the endpoint is attached."
+        }
+      ]
+    },
+    "DesiredModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the model ARN when the update is in progress"
+        }
+      ]
+    },
+    "DesiredInferenceUnits": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InferenceUnitsInteger"
+        },
+        {
+          "description": "The desired number of inference units to be used by the model using this endpoint. Each inference unit represents of a throughput of 100 characters per second."
+        }
+      ]
+    },
+    "CurrentInferenceUnits": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InferenceUnitsInteger"
+        },
+        {
+          "description": "The number of inference units currently used by the model using this endpoint."
+        }
+      ]
+    },
+    "CreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The creation date and time of the endpoint."
+        }
+      ]
+    },
+    "LastModifiedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The date and time that the endpoint was last modified."
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId)."
+        }
+      ]
+    },
+    "DesiredDataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "Data access role ARN to use in case the new model is encrypted with a customer KMS key."
+        }
+      ]
+    },
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel"
+        }
+      ]
+    }
+  }
+}

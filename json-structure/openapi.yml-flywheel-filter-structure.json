@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-flywheel-filter-structure.json",
+  "name": "FlywheelFilter",
+  "description": "Filter the flywheels based on creation time or flywheel status.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelStatus"
+        },
+        {
+          "description": "Filter the flywheels based on the flywheel status."
+        }
+      ]
+    },
+    "CreationTimeAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filter the flywheels to include flywheels created after the specified time."
+        }
+      ]
+    },
+    "CreationTimeBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filter the flywheels to include flywheels created before the specified time."
+        }
+      ]
+    }
+  }
+}

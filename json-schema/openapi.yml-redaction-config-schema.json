@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-redaction-config-schema.json",
+  "title": "RedactionConfig",
+  "description": "Provides configuration parameters for PII entity redaction.",
+  "type": "object",
+  "properties": {
+    "PiiEntityTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfPiiEntityTypes"
+        },
+        {
+          "description": "An array of the types of PII entities that Amazon Comprehend detects in the input text for your request."
+        }
+      ]
+    },
+    "MaskMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PiiEntitiesDetectionMaskMode"
+        },
+        {
+          "description": "Specifies whether the PII entity is redacted with the mask character or the entity type."
+        }
+      ]
+    },
+    "MaskCharacter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaskCharacter"
+        },
+        {
+          "description": "A character that replaces each character in the redacted PII entity."
+        }
+      ]
+    }
+  }
+}

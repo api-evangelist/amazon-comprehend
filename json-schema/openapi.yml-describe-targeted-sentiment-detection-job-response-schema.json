@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-targeted-sentiment-detection-job-response-schema.json",
+  "title": "DescribeTargetedSentimentDetectionJobResponse",
+  "description": "DescribeTargetedSentimentDetectionJobResponse schema",
+  "type": "object",
+  "properties": {
+    "TargetedSentimentDetectionJobProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetedSentimentDetectionJobProperties"
+        },
+        {
+          "description": "An object that contains the properties associated with a targeted sentiment detection job."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "DataFormat": "example-string",
+  "EntityTypes": "ORGANIZATION",
+  "Documents": "example-string",
+  "Annotations": "example-string",
+  "EntityList": "example-string",
+  "AugmentedManifests": "example-string"
+}

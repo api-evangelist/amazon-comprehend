@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-document-classifier-summary-schema.json",
+  "title": "DocumentClassifierSummary",
+  "description": "Describes information about a document classifier and its versions.",
+  "type": "object",
+  "properties": {
+    "DocumentClassifierName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArnName"
+        },
+        {
+          "description": "The name that you assigned the document classifier."
+        }
+      ]
+    },
+    "NumberOfVersions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The number of versions you created."
+        }
+      ]
+    },
+    "LatestVersionCreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time that the latest document classifier version was submitted for processing."
+        }
+      ]
+    },
+    "LatestVersionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VersionName"
+        },
+        {
+          "description": "The version name you assigned to the latest document classifier version."
+        }
+      ]
+    },
+    "LatestVersionStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ModelStatus"
+        },
+        {
+          "description": "Provides the status of the latest document classifier version."
+        }
+      ]
+    }
+  }
+}

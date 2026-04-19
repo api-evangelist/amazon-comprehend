@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-delete-endpoint-request-schema.json",
+  "title": "DeleteEndpointRequest",
+  "description": "DeleteEndpointRequest schema",
+  "type": "object",
+  "properties": {
+    "EndpointArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendEndpointArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the endpoint being deleted."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointArn"
+  ]
+}

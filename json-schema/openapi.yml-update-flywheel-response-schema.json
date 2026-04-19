@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-update-flywheel-response-schema.json",
+  "title": "UpdateFlywheelResponse",
+  "description": "UpdateFlywheelResponse schema",
+  "type": "object",
+  "properties": {
+    "FlywheelProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelProperties"
+        },
+        {
+          "description": "The flywheel properties."
+        }
+      ]
+    }
+  }
+}

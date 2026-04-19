@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-part-of-speech-tag-structure.json",
+  "name": "PartOfSpeechTag",
+  "description": "Identifies the part of speech represented by the token and gives the confidence that Amazon Comprehend has that the part of speech was correctly identified. For more information about the parts of speech that Amazon Comprehend can identify, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html\">Syntax</a> in the Comprehend Developer Guide. ",
+  "type": "object",
+  "properties": {
+    "Tag": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PartOfSpeechTagType"
+        },
+        {
+          "description": "Identifies the part of speech that the token represents."
+        }
+      ]
+    },
+    "Score": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The confidence that Amazon Comprehend has that the part of speech was correctly identified."
+        }
+      ]
+    }
+  }
+}

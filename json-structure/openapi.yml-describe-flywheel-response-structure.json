@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-flywheel-response-structure.json",
+  "name": "DescribeFlywheelResponse",
+  "description": "DescribeFlywheelResponse schema",
+  "type": "object",
+  "properties": {
+    "FlywheelProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelProperties"
+        },
+        {
+          "description": "The flywheel properties."
+        }
+      ]
+    }
+  }
+}

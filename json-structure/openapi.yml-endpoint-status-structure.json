@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-endpoint-status-structure.json",
+  "name": "EndpointStatus",
+  "description": "EndpointStatus schema",
+  "type": "string",
+  "enum": [
+    "CREATING",
+    "DELETING",
+    "FAILED",
+    "IN_SERVICE",
+    "UPDATING"
+  ]
+}

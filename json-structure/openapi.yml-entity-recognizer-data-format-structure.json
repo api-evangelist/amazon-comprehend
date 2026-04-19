@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-entity-recognizer-data-format-structure.json",
+  "name": "EntityRecognizerDataFormat",
+  "description": "EntityRecognizerDataFormat schema",
+  "type": "string",
+  "enum": [
+    "COMPREHEND_CSV",
+    "AUGMENTED_MANIFEST"
+  ]
+}

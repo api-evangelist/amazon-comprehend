@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-flywheel-iteration-status-structure.json",
+  "name": "FlywheelIterationStatus",
+  "description": "FlywheelIterationStatus schema",
+  "type": "string",
+  "enum": [
+    "TRAINING",
+    "EVALUATING",
+    "COMPLETED",
+    "FAILED",
+    "STOP_REQUESTED",
+    "STOPPED"
+  ]
+}

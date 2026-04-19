@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-augmented-manifests-list-item-structure.json",
+  "name": "AugmentedManifestsListItem",
+  "description": "An augmented manifest file that provides training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.",
+  "type": "object",
+  "properties": {
+    "S3Uri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Uri"
+        },
+        {
+          "description": "The Amazon S3 location of the augmented manifest file."
+        }
+      ]
+    },
+    "Split": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Split"
+        },
+        {
+          "description": "<p>The purpose of the data you've provided in the augmented manifest. You can either train or test this data. If you don't specify, the default is train.</p> <p>TRAIN - all of the documents in the manifest will be used for training. If no test documents are provided, Amazon Comprehend will automatically reserve a portion of the training documents for testing.</p> <p> TEST - all of the documents in the manifest will be used for testing.</p>"
+        }
+      ]
+    },
+    "AttributeNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AttributeNamesList"
+        },
+        {
+          "description": "<p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p> <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p> <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>"
+        }
+      ]
+    },
+    "AnnotationDataS3Uri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Uri"
+        },
+        {
+          "description": "The S3 prefix to the annotation files that are referred in the augmented manifest file."
+        }
+      ]
+    },
+    "SourceDocumentsS3Uri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Uri"
+        },
+        {
+          "description": "The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file."
+        }
+      ]
+    },
+    "DocumentType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AugmentedManifestsDocumentTypeFormat"
+        },
+        {
+          "description": "<p>The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is PlainTextDocument. </p> <ul> <li> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p> </li> <li> <p> <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and TXT.</p> </li> </ul>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "S3Uri",
+    "AttributeNames"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-dataset-response-schema.json",
+  "title": "DescribeDatasetResponse",
+  "description": "DescribeDatasetResponse schema",
+  "type": "object",
+  "properties": {
+    "DatasetProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetProperties"
+        },
+        {
+          "description": "The dataset properties."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "NumberOfLabels": "example-string",
+  "NumberOfTrainedDocuments": "example-string",
+  "NumberOfTestDocuments": "example-string",
+  "EvaluationMetrics": "example-string"
+}

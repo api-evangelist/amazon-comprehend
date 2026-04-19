@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-resource-policy-request-schema.json",
+  "title": "DescribeResourcePolicyRequest",
+  "description": "DescribeResourcePolicyRequest schema",
+  "type": "object",
+  "properties": {
+    "ResourceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the custom model version that has the resource policy."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResourceArn"
+  ]
+}

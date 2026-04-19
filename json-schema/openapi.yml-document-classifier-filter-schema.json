@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-document-classifier-filter-schema.json",
+  "title": "DocumentClassifierFilter",
+  "description": "Provides information for filtering a list of document classifiers. You can only specify one filtering parameter in a request. For more information, see the <code>ListDocumentClassifiers</code> operation.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ModelStatus"
+        },
+        {
+          "description": "Filters the list of classifiers based on status."
+        }
+      ]
+    },
+    "DocumentClassifierName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArnName"
+        },
+        {
+          "description": "The name that you assigned to the document classifier"
+        }
+      ]
+    },
+    "SubmitTimeBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filters the list of classifiers based on the time that the classifier was submitted for processing. Returns only classifiers submitted before the specified time. Classifiers are returned in ascending order, oldest to newest."
+        }
+      ]
+    },
+    "SubmitTimeAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filters the list of classifiers based on the time that the classifier was submitted for processing. Returns only classifiers submitted after the specified time. Classifiers are returned in descending order, newest to oldest."
+        }
+      ]
+    }
+  }
+}

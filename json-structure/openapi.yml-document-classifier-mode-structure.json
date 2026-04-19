@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-document-classifier-mode-structure.json",
+  "name": "DocumentClassifierMode",
+  "description": "DocumentClassifierMode schema",
+  "type": "string",
+  "enum": [
+    "MULTI_CLASS",
+    "MULTI_LABEL"
+  ]
+}

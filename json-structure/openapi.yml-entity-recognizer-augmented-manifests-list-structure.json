@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-entity-recognizer-augmented-manifests-list-structure.json",
+  "name": "EntityRecognizerAugmentedManifestsList",
+  "description": "EntityRecognizerAugmentedManifestsList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/AugmentedManifestsListItem"
+  }
+}

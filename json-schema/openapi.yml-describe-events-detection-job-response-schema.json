@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-events-detection-job-response-schema.json",
+  "title": "DescribeEventsDetectionJobResponse",
+  "description": "DescribeEventsDetectionJobResponse schema",
+  "type": "object",
+  "properties": {
+    "EventsDetectionJobProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EventsDetectionJobProperties"
+        },
+        {
+          "description": "An object that contains the properties associated with an event detection job."
+        }
+      ]
+    }
+  }
+}

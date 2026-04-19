@@ -1,0 +1,5 @@
+{
+  "Precision": "example-string",
+  "Recall": "example-string",
+  "F1Score": "0.98"
+}

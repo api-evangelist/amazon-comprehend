@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-of-block-references-structure.json",
+  "name": "ListOfBlockReferences",
+  "description": "ListOfBlockReferences schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/BlockReference"
+  }
+}

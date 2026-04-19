@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-list-of-entity-labels-schema.json",
+  "title": "ListOfEntityLabels",
+  "description": "ListOfEntityLabels schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/EntityLabel"
+  }
+}

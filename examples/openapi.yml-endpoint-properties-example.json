@@ -1,0 +1,14 @@
+{
+  "EndpointArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "Status": "ACTIVE",
+  "Message": "example-string",
+  "ModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DesiredModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DesiredInferenceUnits": "example-string",
+  "CurrentInferenceUnits": "example-string",
+  "CreationTime": "example-string",
+  "LastModifiedTime": "example-string",
+  "DataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DesiredDataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-stop-key-phrases-detection-job-request-schema.json",
+  "title": "StopKeyPhrasesDetectionJobRequest",
+  "description": "StopKeyPhrasesDetectionJobRequest schema",
+  "type": "object",
+  "properties": {
+    "JobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The identifier of the key phrases detection job to stop."
+        }
+      ]
+    }
+  },
+  "required": [
+    "JobId"
+  ]
+}

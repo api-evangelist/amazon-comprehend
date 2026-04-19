@@ -1,0 +1,7 @@
+{
+  "TokenId": "example-string",
+  "Text": "This is example text for NLP analysis.",
+  "BeginOffset": "example-string",
+  "EndOffset": "example-string",
+  "PartOfSpeech": "example-string"
+}

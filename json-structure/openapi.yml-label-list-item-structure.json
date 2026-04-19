@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-label-list-item-structure.json",
+  "name": "LabelListItem",
+  "description": "LabelListItem schema",
+  "type": "string",
+  "pattern": "^\\P{C}*$",
+  "maxLength": 5000
+}

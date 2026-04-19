@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-comprehend-arn-name-structure.json",
+  "name": "ComprehendArnName",
+  "description": "ComprehendArnName schema",
+  "type": "string",
+  "pattern": "^[a-zA-Z0-9](-*[a-zA-Z0-9])*$",
+  "maxLength": 63
+}

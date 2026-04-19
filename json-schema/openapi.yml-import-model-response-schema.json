@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-import-model-response-schema.json",
+  "title": "ImportModelResponse",
+  "description": "ImportModelResponse schema",
+  "type": "object",
+  "properties": {
+    "ModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the custom model being imported."
+        }
+      ]
+    }
+  }
+}

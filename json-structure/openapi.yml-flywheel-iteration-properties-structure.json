@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-flywheel-iteration-properties-structure.json",
+  "name": "FlywheelIterationProperties",
+  "description": "The configuration properties of a flywheel iteration.",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    },
+    "FlywheelIterationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelIterationId"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    },
+    "CreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The creation start time of the flywheel iteration."
+        }
+      ]
+    },
+    "EndTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The completion time of this flywheel iteration."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelIterationStatus"
+        },
+        {
+          "description": "The status of the flywheel iteration."
+        }
+      ]
+    },
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "A description of the status of the flywheel iteration."
+        }
+      ]
+    },
+    "EvaluatedModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The ARN of the evaluated model associated with this flywheel iteration."
+        }
+      ]
+    },
+    "EvaluatedModelMetrics": {
+      "$ref": "#/components/schemas/FlywheelModelEvaluationMetrics"
+    },
+    "TrainedModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The ARN of the trained model associated with this flywheel iteration."
+        }
+      ]
+    },
+    "TrainedModelMetrics": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelModelEvaluationMetrics"
+        },
+        {
+          "description": "The metrics associated with the trained model."
+        }
+      ]
+    },
+    "EvaluationManifestS3Prefix": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Uri"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    }
+  }
+}

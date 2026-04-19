@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-list-pii-entities-detection-jobs-response-schema.json",
+  "title": "ListPiiEntitiesDetectionJobsResponse",
+  "description": "ListPiiEntitiesDetectionJobsResponse schema",
+  "type": "object",
+  "properties": {
+    "PiiEntitiesDetectionJobPropertiesList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PiiEntitiesDetectionJobPropertiesList"
+        },
+        {
+          "description": "A list containing the properties of each job that is returned."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    }
+  }
+}

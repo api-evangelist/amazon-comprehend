@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-list-entity-recognizer-summaries-request-schema.json",
+  "title": "ListEntityRecognizerSummariesRequest",
+  "description": "ListEntityRecognizerSummariesRequest schema",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResultsInteger"
+        },
+        {
+          "description": "The maximum number of results to return on each page. The default is 100."
+        }
+      ]
+    }
+  }
+}

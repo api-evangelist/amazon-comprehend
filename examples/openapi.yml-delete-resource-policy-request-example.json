@@ -1,0 +1,4 @@
+{
+  "ResourceArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "PolicyRevisionId": "example-string"
+}

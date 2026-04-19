@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-endpoint-status-schema.json",
+  "title": "EndpointStatus",
+  "description": "EndpointStatus schema",
+  "type": "string",
+  "enum": [
+    "CREATING",
+    "DELETING",
+    "FAILED",
+    "IN_SERVICE",
+    "UPDATING"
+  ]
+}

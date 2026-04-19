@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-policy-revision-id-structure.json",
+  "name": "PolicyRevisionId",
+  "description": "PolicyRevisionId schema",
+  "type": "string",
+  "pattern": "[0-9A-Fa-f]+",
+  "maxLength": 64
+}

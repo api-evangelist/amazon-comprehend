@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-dataset-entity-recognizer-input-data-config-structure.json",
+  "name": "DatasetEntityRecognizerInputDataConfig",
+  "description": "Specifies the format and location of the input data. You must provide either the <code>Annotations</code> parameter or the <code>EntityList</code> parameter.",
+  "type": "object",
+  "properties": {
+    "Annotations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetEntityRecognizerAnnotations"
+        },
+        {
+          "description": "The S3 location of the annotation documents for your custom entity recognizer."
+        }
+      ]
+    },
+    "Documents": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetEntityRecognizerDocuments"
+        },
+        {
+          "description": "The format and location of the training documents for your custom entity recognizer."
+        }
+      ]
+    },
+    "EntityList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetEntityRecognizerEntityList"
+        },
+        {
+          "description": "The S3 location of the entity list for your custom entity recognizer."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Documents"
+  ]
+}

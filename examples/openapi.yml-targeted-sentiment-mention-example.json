@@ -1,0 +1,9 @@
+{
+  "Score": "0.98",
+  "GroupScore": "0.98",
+  "Text": "This is example text for NLP analysis.",
+  "Type": "ORGANIZATION",
+  "MentionSentiment": "example-string",
+  "BeginOffset": "example-string",
+  "EndOffset": "example-string"
+}

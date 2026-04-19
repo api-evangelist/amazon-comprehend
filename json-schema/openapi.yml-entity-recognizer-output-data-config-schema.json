@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-entity-recognizer-output-data-config-schema.json",
+  "title": "EntityRecognizerOutputDataConfig",
+  "description": "Output data configuration.",
+  "type": "object",
+  "properties": {
+    "FlywheelStatsS3Prefix": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Uri"
+        },
+        {
+          "description": "The Amazon S3 prefix for the data lake location of the flywheel statistics."
+        }
+      ]
+    }
+  }
+}

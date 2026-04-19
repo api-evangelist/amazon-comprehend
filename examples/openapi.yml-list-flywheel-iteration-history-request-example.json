@@ -1,0 +1,6 @@
+{
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "Filter": "example-string",
+  "NextToken": "example-string",
+  "MaxResults": "example-string"
+}

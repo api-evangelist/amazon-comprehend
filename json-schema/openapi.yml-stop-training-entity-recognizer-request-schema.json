@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-stop-training-entity-recognizer-request-schema.json",
+  "title": "StopTrainingEntityRecognizerRequest",
+  "description": "StopTrainingEntityRecognizerRequest schema",
+  "type": "object",
+  "properties": {
+    "EntityRecognizerArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityRecognizerArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) that identifies the entity recognizer currently being trained."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EntityRecognizerArn"
+  ]
+}

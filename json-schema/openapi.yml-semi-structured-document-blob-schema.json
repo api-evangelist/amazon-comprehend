@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-semi-structured-document-blob-schema.json",
+  "title": "SemiStructuredDocumentBlob",
+  "description": "SemiStructuredDocumentBlob schema",
+  "type": "string",
+  "minLength": 1
+}

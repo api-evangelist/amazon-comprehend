@@ -1,0 +1,6 @@
+{
+  "NumberOfTrainedDocuments": "example-string",
+  "NumberOfTestDocuments": "example-string",
+  "EvaluationMetrics": "example-string",
+  "EntityTypes": "ORGANIZATION"
+}

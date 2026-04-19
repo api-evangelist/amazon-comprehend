@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-attribute-names-list-item-structure.json",
+  "name": "AttributeNamesListItem",
+  "description": "AttributeNamesListItem schema",
+  "type": "string",
+  "pattern": "^[a-zA-Z0-9](-*[a-zA-Z0-9])*",
+  "minLength": 1,
+  "maxLength": 63
+}

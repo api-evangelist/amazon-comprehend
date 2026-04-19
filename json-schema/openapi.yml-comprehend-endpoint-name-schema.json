@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-comprehend-endpoint-name-schema.json",
+  "title": "ComprehendEndpointName",
+  "description": "ComprehendEndpointName schema",
+  "type": "string",
+  "pattern": "^[a-zA-Z0-9](-*[a-zA-Z0-9])*$",
+  "maxLength": 40
+}

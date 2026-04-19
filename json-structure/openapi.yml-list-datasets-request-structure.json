@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-datasets-request-structure.json",
+  "name": "ListDatasetsRequest",
+  "description": "ListDatasetsRequest schema",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel."
+        }
+      ]
+    },
+    "Filter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetFilter"
+        },
+        {
+          "description": "Filters the datasets to be returned in the response."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResultsInteger"
+        },
+        {
+          "description": "Maximum number of results to return in a response. The default is 100."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-input-format-schema.json",
+  "title": "InputFormat",
+  "description": "InputFormat schema",
+  "type": "string",
+  "enum": [
+    "ONE_DOC_PER_FILE",
+    "ONE_DOC_PER_LINE"
+  ]
+}

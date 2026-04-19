@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-endpoint-response-structure.json",
+  "name": "DescribeEndpointResponse",
+  "description": "DescribeEndpointResponse schema",
+  "type": "object",
+  "properties": {
+    "EndpointProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointProperties"
+        },
+        {
+          "description": "Describes information associated with the specific endpoint."
+        }
+      ]
+    }
+  }
+}

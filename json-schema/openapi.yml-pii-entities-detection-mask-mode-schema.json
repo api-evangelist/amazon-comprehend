@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-pii-entities-detection-mask-mode-schema.json",
+  "title": "PiiEntitiesDetectionMaskMode",
+  "description": "PiiEntitiesDetectionMaskMode schema",
+  "type": "string",
+  "enum": [
+    "MASK",
+    "REPLACE_WITH_PII_ENTITY_TYPE"
+  ]
+}

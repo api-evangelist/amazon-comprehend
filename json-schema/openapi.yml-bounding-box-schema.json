@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-bounding-box-schema.json",
+  "title": "BoundingBox",
+  "description": "<p>The bounding box around the detected page or around an element on a document page. The left (x-coordinate) and top (y-coordinate) are coordinates that represent the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). </p> <p>For additional information, see <a href=\"https://docs.aws.amazon.com/textract/latest/dg/API_BoundingBox.html\">BoundingBox</a> in the Amazon Textract API reference.</p>",
+  "type": "object",
+  "properties": {
+    "Height": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The height of the bounding box as a ratio of the overall document page height."
+        }
+      ]
+    },
+    "Left": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The left coordinate of the bounding box as a ratio of overall document page width."
+        }
+      ]
+    },
+    "Top": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The top coordinate of the bounding box as a ratio of overall document page height."
+        }
+      ]
+    },
+    "Width": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The width of the bounding box as a ratio of the overall document page width."
+        }
+      ]
+    }
+  }
+}

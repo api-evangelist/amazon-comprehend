@@ -1,0 +1,21 @@
+{
+  "DocumentClassifierArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "LanguageCode": "en",
+  "Status": "ACTIVE",
+  "Message": "example-string",
+  "SubmitTime": "example-string",
+  "EndTime": "example-string",
+  "TrainingStartTime": "example-string",
+  "TrainingEndTime": "example-string",
+  "InputDataConfig": "example-string",
+  "OutputDataConfig": "example-string",
+  "ClassifierMetadata": "example-string",
+  "DataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "VolumeKmsKeyId": "example-string",
+  "VpcConfig": "example-string",
+  "Mode": "example-string",
+  "ModelKmsKeyId": "example-string",
+  "VersionName": "example-name",
+  "SourceModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

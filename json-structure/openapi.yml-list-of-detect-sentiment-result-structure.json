@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-of-detect-sentiment-result-structure.json",
+  "name": "ListOfDetectSentimentResult",
+  "description": "ListOfDetectSentimentResult schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/BatchDetectSentimentItemResult"
+  }
+}

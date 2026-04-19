@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-document-type-schema.json",
+  "title": "DocumentType",
+  "description": "DocumentType schema",
+  "type": "string",
+  "enum": [
+    "NATIVE_PDF",
+    "SCANNED_PDF",
+    "MS_WORD",
+    "IMAGE",
+    "PLAIN_TEXT",
+    "TEXTRACT_DETECT_DOCUMENT_TEXT_JSON",
+    "TEXTRACT_ANALYZE_DOCUMENT_JSON"
+  ]
+}

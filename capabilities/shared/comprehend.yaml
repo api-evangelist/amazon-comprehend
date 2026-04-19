@@ -1,0 +1,300 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Amazon Comprehend API"
+  description: "Shared per-API capability definition for Amazon Comprehend covering NLP analysis, entity recognition, sentiment analysis, topic modeling, and custom classifiers."
+  tags:
+    - Amazon
+    - AWS
+    - Natural Language Processing
+    - NLP
+    - Machine Learning
+    - Text Analysis
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - type: http
+      namespace: comprehend
+      baseUri: https://comprehend.{region}.amazonaws.com
+      description: "Amazon Comprehend NLP API."
+      authentication:
+        type: apikey
+        key: Authorization
+        value: "{{AWS_ACCESS_KEY_ID}}"
+        placement: header
+      resources:
+        - name: text-analysis
+          path: /
+          description: "Real-time text analysis operations."
+          operations:
+            - name: detect-entities
+              method: POST
+              description: "Inspects text for named entities, and returns information about them."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  Text: "{{tools.text}}"
+                  LanguageCode: "{{tools.language_code}}"
+
+            - name: detect-sentiment
+              method: POST
+              description: "Inspects text and returns an inference of the prevailing sentiment."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  Text: "{{tools.text}}"
+                  LanguageCode: "{{tools.language_code}}"
+
+            - name: detect-key-phrases
+              method: POST
+              description: "Detects the key noun phrases found in the text."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  Text: "{{tools.text}}"
+                  LanguageCode: "{{tools.language_code}}"
+
+            - name: detect-dominant-language
+              method: POST
+              description: "Determines the dominant language of the input text."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  Text: "{{tools.text}}"
+
+            - name: detect-syntax
+              method: POST
+              description: "Inspects text for syntax and the part of speech of words in the document."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  Text: "{{tools.text}}"
+                  LanguageCode: "{{tools.language_code}}"
+
+            - name: detect-pii-entities
+              method: POST
+              description: "Inspects the input text for entities that contain personally identifiable information (PII)."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  Text: "{{tools.text}}"
+                  LanguageCode: "{{tools.language_code}}"
+
+        - name: batch-analysis
+          path: /
+          description: "Batch text analysis operations."
+          operations:
+            - name: batch-detect-entities
+              method: POST
+              description: "Inspects the text of each document in the list and returns information about the predominant entities."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  TextList: "{{tools.text_list}}"
+                  LanguageCode: "{{tools.language_code}}"
+
+            - name: batch-detect-sentiment
+              method: POST
+              description: "Inspects a batch of documents and returns an inference of the prevailing sentiment."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  TextList: "{{tools.text_list}}"
+                  LanguageCode: "{{tools.language_code}}"
+
+        - name: classifiers
+          path: /
+          description: "Custom document classifier management."
+          operations:
+            - name: create-document-classifier
+              method: POST
+              description: "Creates a new document classifier that you can use to categorize documents."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  DocumentClassifierName: "{{tools.classifier_name}}"
+                  DataAccessRoleArn: "{{tools.role_arn}}"
+
+            - name: list-document-classifiers
+              method: POST
+              description: "Gets a list of the document classifiers that you have created."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+
+            - name: describe-document-classifier
+              method: POST
+              description: "Gets the properties associated with a document classifier."
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  DocumentClassifierArn: "{{tools.classifier_arn}}"
+
+  exposes:
+    - type: rest
+      port: 8100
+      namespace: comprehend-rest
+      resources:
+        - path: /v1/detect/entities
+          name: detect-entities
+          description: "Detect named entities in text."
+          operations:
+            - method: POST
+              name: detect-entities
+              description: "Detect entities in provided text."
+              call: "comprehend.detect-entities"
+              with:
+                text: "rest.text"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+        - path: /v1/detect/sentiment
+          name: detect-sentiment
+          description: "Detect sentiment in text."
+          operations:
+            - method: POST
+              name: detect-sentiment
+              description: "Detect sentiment in provided text."
+              call: "comprehend.detect-sentiment"
+              with:
+                text: "rest.text"
+                language_code: "rest.language_code"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9100
+      namespace: comprehend-mcp
+      transport: http
+      tools:
+        - name: detect-entities
+          description: "Detect named entities in text using Amazon Comprehend."
+          hints:
+            readOnly: true
+          call: "comprehend.detect-entities"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-sentiment
+          description: "Detect sentiment (positive, negative, neutral, mixed) in text."
+          hints:
+            readOnly: true
+          call: "comprehend.detect-sentiment"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-key-phrases
+          description: "Extract key phrases from text."
+          hints:
+            readOnly: true
+          call: "comprehend.detect-key-phrases"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-language
+          description: "Detect the dominant language of input text."
+          hints:
+            readOnly: true
+          call: "comprehend.detect-dominant-language"
+          with:
+            text: "tools.text"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: detect-pii
+          description: "Detect personally identifiable information (PII) in text."
+          hints:
+            readOnly: true
+          call: "comprehend.detect-pii-entities"
+          with:
+            text: "tools.text"
+            language_code: "tools.language_code"
+          outputParameters:
+            - type: object
+              mapping: "$."
+
+        - name: list-classifiers
+          description: "List custom document classifiers."
+          hints:
+            readOnly: true
+          call: "comprehend.list-document-classifiers"
+          outputParameters:
+            - type: object
+              mapping: "$."

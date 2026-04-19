@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-stop-training-entity-recognizer-response-structure.json",
+  "name": "StopTrainingEntityRecognizerResponse",
+  "description": "StopTrainingEntityRecognizerResponse schema",
+  "type": "object",
+  "properties": {}
+}

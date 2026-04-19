@@ -1,0 +1,13 @@
+{
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "FlywheelIterationId": "example-string",
+  "CreationTime": "example-string",
+  "EndTime": "example-string",
+  "Status": "ACTIVE",
+  "Message": "example-string",
+  "EvaluatedModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "EvaluatedModelMetrics": "example-string",
+  "TrainedModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "TrainedModelMetrics": "example-string",
+  "EvaluationManifestS3Prefix": "example-string"
+}

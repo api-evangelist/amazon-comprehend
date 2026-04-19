@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-dataset-properties-structure.json",
+  "name": "DatasetProperties",
+  "description": "Properties associated with the dataset.",
+  "type": "object",
+  "properties": {
+    "DatasetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendDatasetArn"
+        },
+        {
+          "description": "The ARN of the dataset."
+        }
+      ]
+    },
+    "DatasetName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArnName"
+        },
+        {
+          "description": "The name of the dataset."
+        }
+      ]
+    },
+    "DatasetType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetType"
+        },
+        {
+          "description": "The dataset type (training data or test data)."
+        }
+      ]
+    },
+    "DatasetS3Uri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Uri"
+        },
+        {
+          "description": "The S3 URI where the dataset is stored."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Description"
+        },
+        {
+          "description": "Description of the dataset."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetStatus"
+        },
+        {
+          "description": "The dataset status. While the system creates the dataset, the status is <code>CREATING</code>. When the dataset is ready to use, the status changes to <code>COMPLETED</code>. "
+        }
+      ]
+    },
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "A description of the status of the dataset."
+        }
+      ]
+    },
+    "NumberOfDocuments": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NumberOfDocuments"
+        },
+        {
+          "description": "The number of documents in the dataset."
+        }
+      ]
+    },
+    "CreationTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Creation time of the dataset."
+        }
+      ]
+    },
+    "EndTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Time when the data from the dataset becomes available in the data lake."
+        }
+      ]
+    }
+  }
+}

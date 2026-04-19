@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-sentiment-score-schema.json",
+  "title": "SentimentScore",
+  "description": "Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.",
+  "type": "object",
+  "properties": {
+    "Positive": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>POSITIVE</code> sentiment."
+        }
+      ]
+    },
+    "Negative": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEGATIVE</code> sentiment."
+        }
+      ]
+    },
+    "Neutral": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEUTRAL</code> sentiment."
+        }
+      ]
+    },
+    "Mixed": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment."
+        }
+      ]
+    }
+  }
+}

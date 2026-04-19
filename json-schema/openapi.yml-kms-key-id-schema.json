@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-kms-key-id-schema.json",
+  "title": "KmsKeyId",
+  "description": "KmsKeyId schema",
+  "type": "string",
+  "pattern": "^\\p{ASCII}+$",
+  "maxLength": 2048
+}

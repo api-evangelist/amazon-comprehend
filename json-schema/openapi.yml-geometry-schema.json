@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-geometry-schema.json",
+  "title": "Geometry",
+  "description": "<p>Information about the location of items on a document page.</p> <p>For additional information, see <a href=\"https://docs.aws.amazon.com/textract/latest/dg/API_Geometry.html\">Geometry</a> in the Amazon Textract API reference.</p>",
+  "type": "object",
+  "properties": {
+    "BoundingBox": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoundingBox"
+        },
+        {
+          "description": "An axis-aligned coarse representation of the location of the recognized item on the document page."
+        }
+      ]
+    },
+    "Polygon": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Polygon"
+        },
+        {
+          "description": "Within the bounding box, a fine-grained polygon around the recognized item."
+        }
+      ]
+    }
+  }
+}

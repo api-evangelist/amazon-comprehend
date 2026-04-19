@@ -1,0 +1,5 @@
+{
+  "PiiEntityTypes": "ORGANIZATION",
+  "MaskMode": "example-string",
+  "MaskCharacter": "example-string"
+}

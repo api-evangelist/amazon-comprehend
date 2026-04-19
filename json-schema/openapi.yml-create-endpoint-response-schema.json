@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-create-endpoint-response-schema.json",
+  "title": "CreateEndpointResponse",
+  "description": "CreateEndpointResponse schema",
+  "type": "object",
+  "properties": {
+    "EndpointArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendEndpointArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the endpoint being created."
+        }
+      ]
+    },
+    "ModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the model to which the endpoint is attached."
+        }
+      ]
+    }
+  }
+}

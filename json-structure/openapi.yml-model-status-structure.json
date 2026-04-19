@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-model-status-structure.json",
+  "name": "ModelStatus",
+  "description": "ModelStatus schema",
+  "type": "string",
+  "enum": [
+    "SUBMITTED",
+    "TRAINING",
+    "DELETING",
+    "STOP_REQUESTED",
+    "STOPPED",
+    "IN_ERROR",
+    "TRAINED",
+    "TRAINED_WITH_WARNING"
+  ]
+}

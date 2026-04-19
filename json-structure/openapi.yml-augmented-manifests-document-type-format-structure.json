@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-augmented-manifests-document-type-format-structure.json",
+  "name": "AugmentedManifestsDocumentTypeFormat",
+  "description": "AugmentedManifestsDocumentTypeFormat schema",
+  "type": "string",
+  "enum": [
+    "PLAIN_TEXT_DOCUMENT",
+    "SEMI_STRUCTURED_DOCUMENT"
+  ]
+}

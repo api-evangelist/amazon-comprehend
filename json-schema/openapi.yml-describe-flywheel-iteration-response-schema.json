@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-flywheel-iteration-response-schema.json",
+  "title": "DescribeFlywheelIterationResponse",
+  "description": "DescribeFlywheelIterationResponse schema",
+  "type": "object",
+  "properties": {
+    "FlywheelIterationProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelIterationProperties"
+        },
+        {
+          "description": "The configuration properties of a flywheel iteration."
+        }
+      ]
+    }
+  }
+}

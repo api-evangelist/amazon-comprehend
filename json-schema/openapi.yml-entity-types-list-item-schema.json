@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-entity-types-list-item-schema.json",
+  "title": "EntityTypesListItem",
+  "description": "An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityTypeName"
+        },
+        {
+          "description": "<p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p> <p>Entity types must not contain the following invalid characters: \\n (line break), \\\\n (escaped line break, \\r (carriage return), \\\\r (escaped carriage return), \\t (tab), \\\\t (escaped tab), space, and , (comma).</p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "Type"
+  ]
+}

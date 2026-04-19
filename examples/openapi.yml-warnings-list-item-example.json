@@ -1,0 +1,5 @@
+{
+  "Page": "example-string",
+  "WarnCode": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "WarnMessage": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

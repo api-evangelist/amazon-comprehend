@@ -1,0 +1,7 @@
+{
+  "EndpointArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DesiredModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DesiredInferenceUnits": "example-string",
+  "DesiredDataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

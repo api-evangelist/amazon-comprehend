@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-entity-recognizer-response-structure.json",
+  "name": "DescribeEntityRecognizerResponse",
+  "description": "DescribeEntityRecognizerResponse schema",
+  "type": "object",
+  "properties": {
+    "EntityRecognizerProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityRecognizerProperties"
+        },
+        {
+          "description": "Describes information associated with an entity recognizer."
+        }
+      ]
+    }
+  }
+}

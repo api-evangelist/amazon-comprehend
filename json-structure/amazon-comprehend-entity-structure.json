@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/amazon-comprehend-entity-structure.json",
+  "name": "Amazon Comprehend Entity",
+  "description": "Schema for an Amazon Comprehend entity detection result, representing named entities identified in text through NLP analysis.",
+  "type": "object",
+  "properties": {
+    "Entities": {
+      "type": "array",
+      "description": "A collection of entities identified in the input text.",
+      "items": {
+        "$ref": "#/$defs/Entity"
+      }
+    },
+    "Sentiment": {
+      "type": "string",
+      "description": "The inferred sentiment detected in the input text.",
+      "enum": [
+        "POSITIVE",
+        "NEGATIVE",
+        "NEUTRAL",
+        "MIXED"
+      ]
+    },
+    "SentimentScore": {
+      "type": "object",
+      "description": "The confidence scores for each sentiment type.",
+      "properties": {
+        "Positive": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Negative": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Neutral": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "Mixed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "KeyPhrases": {
+      "type": "array",
+      "description": "A collection of key phrases identified in the input text.",
+      "items": {
+        "$ref": "#/$defs/KeyPhrase"
+      }
+    },
+    "Languages": {
+      "type": "array",
+      "description": "The languages detected in the input text.",
+      "items": {
+        "$ref": "#/$defs/DominantLanguage"
+      }
+    }
+  }
+}

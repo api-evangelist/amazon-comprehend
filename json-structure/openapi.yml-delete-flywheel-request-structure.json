@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-delete-flywheel-request-structure.json",
+  "name": "DeleteFlywheelRequest",
+  "description": "DeleteFlywheelRequest schema",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FlywheelArn"
+  ]
+}

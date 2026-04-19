@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-targeted-sentiment-mention-structure.json",
+  "name": "TargetedSentimentMention",
+  "description": "<p>Information about one mention of an entity. The mention information includes the location of the mention in the text and the sentiment of the mention.</p> <p>For more information about targeted sentiment, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html\">Targeted sentiment</a>.</p>",
+  "type": "object",
+  "properties": {
+    "Score": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "Model confidence that the entity is relevant. Value range is zero to one, where one is highest confidence."
+        }
+      ]
+    },
+    "GroupScore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The confidence that all the entities mentioned in the group relate to the same entity."
+        }
+      ]
+    },
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The text in the document that identifies the entity."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetedSentimentEntityType"
+        },
+        {
+          "description": "The type of the entity. Amazon Comprehend supports a variety of <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html#how-targeted-sentiment-entities\">entity types</a>."
+        }
+      ]
+    },
+    "MentionSentiment": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MentionSentiment"
+        },
+        {
+          "description": "Contains the sentiment and sentiment score for the mention."
+        }
+      ]
+    },
+    "BeginOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The offset into the document text where the mention begins."
+        }
+      ]
+    },
+    "EndOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The offset into the document text where the mention ends."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-delete-document-classifier-request-structure.json",
+  "name": "DeleteDocumentClassifierRequest",
+  "description": "DeleteDocumentClassifierRequest schema",
+  "type": "object",
+  "properties": {
+    "DocumentClassifierArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassifierArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) that identifies the document classifier. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "DocumentClassifierArn"
+  ]
+}

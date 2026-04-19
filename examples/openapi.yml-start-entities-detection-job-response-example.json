@@ -1,0 +1,6 @@
+{
+  "JobId": "example-string",
+  "JobArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "JobStatus": "ACTIVE",
+  "EntityRecognizerArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

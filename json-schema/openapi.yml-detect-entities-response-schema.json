@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-detect-entities-response-schema.json",
+  "title": "DetectEntitiesResponse",
+  "description": "DetectEntitiesResponse schema",
+  "type": "object",
+  "properties": {
+    "Entities": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfEntities"
+        },
+        {
+          "description": "<p>A collection of entities identified in the input text. For each entity, the response provides the entity text, entity type, where the entity text begins and ends, and the level of confidence that Amazon Comprehend has in the detection. </p> <p>If your request uses a custom entity recognition model, Amazon Comprehend detects the entities that the model is trained to recognize. Otherwise, it detects the default entity types. For a list of default entity types, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-entities.html\">Entities</a> in the Comprehend Developer Guide. </p>"
+        }
+      ]
+    },
+    "DocumentMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentMetadata"
+        },
+        {
+          "description": "Information about the document, discovered during text extraction. This field is present in the response only if your request used the <code>Byte</code> parameter. "
+        }
+      ]
+    },
+    "DocumentType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfDocumentType"
+        },
+        {
+          "description": "The document type for each page in the input document. This field is present in the response only if your request used the <code>Byte</code> parameter. "
+        }
+      ]
+    },
+    "Blocks": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfBlocks"
+        },
+        {
+          "description": "<p>Information about each block of text in the input document. Blocks are nested. A page block contains a block for each line of text, which contains a block for each word. </p> <p>The <code>Block</code> content for a Word input document does not include a <code>Geometry</code> field.</p> <p>The <code>Block</code> field is not present in the response for plain-text inputs.</p>"
+        }
+      ]
+    },
+    "Errors": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfErrors"
+        },
+        {
+          "description": "Page-level errors that the system detected while processing the input document. The field is empty if the system encountered no errors."
+        }
+      ]
+    }
+  }
+}

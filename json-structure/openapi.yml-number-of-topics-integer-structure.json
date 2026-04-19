@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-number-of-topics-integer-structure.json",
+  "name": "NumberOfTopicsInteger",
+  "description": "NumberOfTopicsInteger schema",
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 100
+}

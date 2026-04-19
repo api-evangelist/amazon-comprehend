@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-of-descriptive-mention-indices-structure.json",
+  "name": "ListOfDescriptiveMentionIndices",
+  "description": "ListOfDescriptiveMentionIndices schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/Integer"
+  }
+}

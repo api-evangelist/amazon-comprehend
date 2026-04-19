@@ -1,0 +1,7 @@
+{
+  "DocumentClassifierName": "example-name",
+  "NumberOfVersions": "example-string",
+  "LatestVersionCreatedAt": "example-string",
+  "LatestVersionName": "example-name",
+  "LatestVersionStatus": "ACTIVE"
+}

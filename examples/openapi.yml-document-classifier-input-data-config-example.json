@@ -1,0 +1,10 @@
+{
+  "DataFormat": "example-string",
+  "S3Uri": "example-string",
+  "TestS3Uri": "example-string",
+  "LabelDelimiter": "example-string",
+  "AugmentedManifests": "example-string",
+  "DocumentType": "ORGANIZATION",
+  "Documents": "example-string",
+  "DocumentReaderConfig": "example-string"
+}

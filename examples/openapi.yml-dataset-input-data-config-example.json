@@ -1,0 +1,6 @@
+{
+  "AugmentedManifests": "example-string",
+  "DataFormat": "example-string",
+  "DocumentClassifierInputDataConfig": "example-string",
+  "EntityRecognizerInputDataConfig": "example-string"
+}

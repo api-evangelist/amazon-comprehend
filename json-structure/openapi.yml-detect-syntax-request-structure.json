@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-detect-syntax-request-structure.json",
+  "name": "DetectSyntaxRequest",
+  "description": "DetectSyntaxRequest schema",
+  "type": "object",
+  "properties": {
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomerInputString"
+        },
+        {
+          "description": "A UTF-8 string. The maximum string size is 5 KB."
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SyntaxLanguageCode"
+        },
+        {
+          "description": "The language code of the input documents. You can specify any of the following languages supported by Amazon Comprehend: German (\"de\"), English (\"en\"), Spanish (\"es\"), French (\"fr\"), Italian (\"it\"), or Portuguese (\"pt\")."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Text",
+    "LanguageCode"
+  ]
+}

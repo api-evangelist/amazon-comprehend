@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-customer-input-string-list-structure.json",
+  "name": "CustomerInputStringList",
+  "description": "CustomerInputStringList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/CustomerInputString"
+  },
+  "minItems": 1
+}

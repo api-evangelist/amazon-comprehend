@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-start-flywheel-iteration-request-structure.json",
+  "name": "StartFlywheelIterationRequest",
+  "description": "StartFlywheelIterationRequest schema",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The ARN of the flywheel."
+        }
+      ]
+    },
+    "ClientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestTokenString"
+        },
+        {
+          "description": "A unique identifier for the request. If you don't set the client request token, Amazon Comprehend generates one."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FlywheelArn"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-model-status-schema.json",
+  "title": "ModelStatus",
+  "description": "ModelStatus schema",
+  "type": "string",
+  "enum": [
+    "SUBMITTED",
+    "TRAINING",
+    "DELETING",
+    "STOP_REQUESTED",
+    "STOPPED",
+    "IN_ERROR",
+    "TRAINED",
+    "TRAINED_WITH_WARNING"
+  ]
+}

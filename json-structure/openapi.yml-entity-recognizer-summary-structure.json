@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-entity-recognizer-summary-structure.json",
+  "name": "EntityRecognizerSummary",
+  "description": " Describes the information about an entity recognizer and its versions.",
+  "type": "object",
+  "properties": {
+    "RecognizerName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArnName"
+        },
+        {
+          "description": " The name that you assigned the entity recognizer."
+        }
+      ]
+    },
+    "NumberOfVersions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": " The number of versions you created."
+        }
+      ]
+    },
+    "LatestVersionCreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": " The time that the latest entity recognizer version was submitted for processing."
+        }
+      ]
+    },
+    "LatestVersionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VersionName"
+        },
+        {
+          "description": " The version name you assigned to the latest entity recognizer version."
+        }
+      ]
+    },
+    "LatestVersionStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ModelStatus"
+        },
+        {
+          "description": " Provides the status of the latest entity recognizer version."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-document-classifier-response-schema.json",
+  "title": "DescribeDocumentClassifierResponse",
+  "description": "DescribeDocumentClassifierResponse schema",
+  "type": "object",
+  "properties": {
+    "DocumentClassifierProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassifierProperties"
+        },
+        {
+          "description": "An object that contains the properties associated with a document classifier."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-sentiment-detection-job-response-structure.json",
+  "name": "DescribeSentimentDetectionJobResponse",
+  "description": "DescribeSentimentDetectionJobResponse schema",
+  "type": "object",
+  "properties": {
+    "SentimentDetectionJobProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SentimentDetectionJobProperties"
+        },
+        {
+          "description": "An object that contains the properties associated with a sentiment detection job."
+        }
+      ]
+    }
+  }
+}

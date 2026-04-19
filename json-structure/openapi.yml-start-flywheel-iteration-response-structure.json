@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-start-flywheel-iteration-response-structure.json",
+  "name": "StartFlywheelIterationResponse",
+  "description": "StartFlywheelIterationResponse schema",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    },
+    "FlywheelIterationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelIterationId"
+        },
+        {
+          "description": "<p/>"
+        }
+      ]
+    }
+  }
+}

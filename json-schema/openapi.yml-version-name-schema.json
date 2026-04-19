@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-version-name-schema.json",
+  "title": "VersionName",
+  "description": "VersionName schema",
+  "type": "string",
+  "pattern": "^[a-zA-Z0-9](-*[a-zA-Z0-9])*$",
+  "maxLength": 63
+}

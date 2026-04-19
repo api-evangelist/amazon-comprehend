@@ -1,0 +1,6 @@
+{
+  "Status": "ACTIVE",
+  "DocumentClassifierName": "example-name",
+  "SubmitTimeBefore": "example-string",
+  "SubmitTimeAfter": "example-string"
+}

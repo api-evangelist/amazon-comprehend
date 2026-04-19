@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-block-reference-schema.json",
+  "title": "BlockReference",
+  "description": "A reference to a block. ",
+  "type": "object",
+  "properties": {
+    "BlockId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Unique identifier for the block."
+        }
+      ]
+    },
+    "BeginOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "Offset of the start of the block within its parent block."
+        }
+      ]
+    },
+    "EndOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "Offset of the end of the block within its parent block."
+        }
+      ]
+    },
+    "ChildBlocks": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfChildBlocks"
+        },
+        {
+          "description": "List of child blocks within this block."
+        }
+      ]
+    }
+  }
+}

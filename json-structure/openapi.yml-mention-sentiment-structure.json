@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-mention-sentiment-structure.json",
+  "name": "MentionSentiment",
+  "description": "<p>Contains the sentiment and sentiment score for one mention of an entity.</p> <p>For more information about targeted sentiment, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html\">Targeted sentiment</a>.</p>",
+  "type": "object",
+  "properties": {
+    "Sentiment": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SentimentType"
+        },
+        {
+          "description": "The sentiment of the mention. "
+        }
+      ]
+    },
+    "SentimentScore": {
+      "$ref": "#/components/schemas/SentimentScore"
+    }
+  }
+}

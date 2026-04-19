@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-update-endpoint-response-structure.json",
+  "name": "UpdateEndpointResponse",
+  "description": "UpdateEndpointResponse schema",
+  "type": "object",
+  "properties": {
+    "DesiredModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the new model."
+        }
+      ]
+    }
+  }
+}

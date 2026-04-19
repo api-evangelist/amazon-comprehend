@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-task-config-schema.json",
+  "title": "TaskConfig",
+  "description": "Configuration about the custom classifier associated with the flywheel.",
+  "type": "object",
+  "properties": {
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "description": "Language code for the language that the model supports."
+        }
+      ]
+    },
+    "DocumentClassificationConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassificationConfig"
+        },
+        {
+          "description": "Configuration required for a classification model."
+        }
+      ]
+    },
+    "EntityRecognitionConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityRecognitionConfig"
+        },
+        {
+          "description": "Configuration required for an entity recognition model."
+        }
+      ]
+    }
+  },
+  "required": [
+    "LanguageCode"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-topics-detection-job-response-schema.json",
+  "title": "DescribeTopicsDetectionJobResponse",
+  "description": "DescribeTopicsDetectionJobResponse schema",
+  "type": "object",
+  "properties": {
+    "TopicsDetectionJobProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TopicsDetectionJobProperties"
+        },
+        {
+          "description": "The list of properties for the requested job."
+        }
+      ]
+    }
+  }
+}

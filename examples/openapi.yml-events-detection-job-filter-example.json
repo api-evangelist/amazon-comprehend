@@ -1,0 +1,6 @@
+{
+  "JobName": "example-name",
+  "JobStatus": "ACTIVE",
+  "SubmitTimeBefore": "example-string",
+  "SubmitTimeAfter": "example-string"
+}

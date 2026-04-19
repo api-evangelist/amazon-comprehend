@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-targeted-sentiment-entity-type-schema.json",
+  "title": "TargetedSentimentEntityType",
+  "description": "TargetedSentimentEntityType schema",
+  "type": "string",
+  "enum": [
+    "PERSON",
+    "LOCATION",
+    "ORGANIZATION",
+    "FACILITY",
+    "BRAND",
+    "COMMERCIAL_ITEM",
+    "MOVIE",
+    "MUSIC",
+    "BOOK",
+    "SOFTWARE",
+    "GAME",
+    "PERSONAL_TITLE",
+    "EVENT",
+    "DATE",
+    "QUANTITY",
+    "ATTRIBUTE",
+    "OTHER"
+  ]
+}

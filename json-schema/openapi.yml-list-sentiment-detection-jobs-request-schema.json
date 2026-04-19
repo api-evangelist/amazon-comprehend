@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-list-sentiment-detection-jobs-request-schema.json",
+  "title": "ListSentimentDetectionJobsRequest",
+  "description": "ListSentimentDetectionJobsRequest schema",
+  "type": "object",
+  "properties": {
+    "Filter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SentimentDetectionJobFilter"
+        },
+        {
+          "description": "Filters the jobs that are returned. You can filter jobs on their name, status, or the date and time that they were submitted. You can only set one filter at a time."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResultsInteger"
+        },
+        {
+          "description": "The maximum number of results to return in each page. The default is 100."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-endpoints-response-structure.json",
+  "name": "ListEndpointsResponse",
+  "description": "ListEndpointsResponse schema",
+  "type": "object",
+  "properties": {
+    "EndpointPropertiesList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointPropertiesList"
+        },
+        {
+          "description": "Displays a list of endpoint properties being retrieved by the service in response to the request."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    }
+  }
+}

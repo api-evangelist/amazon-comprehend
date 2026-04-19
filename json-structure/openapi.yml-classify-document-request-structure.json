@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-classify-document-request-structure.json",
+  "name": "ClassifyDocumentRequest",
+  "description": "ClassifyDocumentRequest schema",
+  "type": "object",
+  "properties": {
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomerInputString"
+        },
+        {
+          "description": "The document text to be analyzed. If you enter text using this parameter, do not use the <code>Bytes</code> parameter."
+        }
+      ]
+    },
+    "EndpointArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassifierEndpointArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the endpoint. For information about endpoints, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html\">Managing endpoints</a>."
+        }
+      ]
+    },
+    "Bytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SemiStructuredDocumentBlob"
+        },
+        {
+          "description": "<p>Use the <code>Bytes</code> parameter to input a text, PDF, Word or image file. You can also use the <code>Bytes</code> parameter to input an Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.</p> <p>Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services SDK to classify documents, the SDK may encode the document file bytes for you. </p> <p>The maximum length of this field depends on the input document type. For details, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/idp-inputs-sync.html\"> Inputs for real-time custom analysis</a> in the Comprehend Developer Guide. </p> <p>If you use the <code>Bytes</code> parameter, do not use the <code>Text</code> parameter.</p>"
+        }
+      ]
+    },
+    "DocumentReaderConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentReaderConfig"
+        },
+        {
+          "description": "Provides configuration parameters to override the default actions for extracting text from PDF documents and image files."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointArn"
+  ]
+}

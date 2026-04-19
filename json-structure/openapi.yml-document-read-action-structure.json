@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-document-read-action-structure.json",
+  "name": "DocumentReadAction",
+  "description": "DocumentReadAction schema",
+  "type": "string",
+  "enum": [
+    "TEXTRACT_DETECT_DOCUMENT_TEXT",
+    "TEXTRACT_ANALYZE_DOCUMENT"
+  ]
+}

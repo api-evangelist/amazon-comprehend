@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-flywheel-s3-uri-structure.json",
+  "name": "FlywheelS3Uri",
+  "description": "FlywheelS3Uri schema",
+  "type": "string",
+  "pattern": "s3://[a-z0-9][\\.\\-a-z0-9]{1,61}[a-z0-9](/.*)?",
+  "maxLength": 512
+}

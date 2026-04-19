@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-language-code-schema.json",
+  "title": "LanguageCode",
+  "description": "LanguageCode schema",
+  "type": "string",
+  "enum": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "ar",
+    "hi",
+    "ja",
+    "ko",
+    "zh",
+    "zh-TW"
+  ]
+}

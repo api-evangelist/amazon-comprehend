@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-block-structure.json",
+  "name": "Block",
+  "description": "<p>Information about each word or line of text in the input document.</p> <p>For additional information, see <a href=\"https://docs.aws.amazon.com/textract/latest/dg/API_Block.html\">Block</a> in the Amazon Textract API reference.</p>",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Unique identifier for the block."
+        }
+      ]
+    },
+    "BlockType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BlockType"
+        },
+        {
+          "description": "<p>The block represents a line of text or one word of text.</p> <ul> <li> <p>WORD - A word that's detected on a document page. A word is one or more ISO basic Latin script characters that aren't separated by spaces.</p> </li> <li> <p>LINE - A string of tab-delimited, contiguous words that are detected on a document page</p> </li> </ul>"
+        }
+      ]
+    },
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The word or line of text extracted from the block."
+        }
+      ]
+    },
+    "Page": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "Page number where the block appears."
+        }
+      ]
+    },
+    "Geometry": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "description": "Co-ordinates of the rectangle or polygon that contains the text."
+        }
+      ]
+    },
+    "Relationships": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfRelationships"
+        },
+        {
+          "description": "A list of child blocks of the current block. For example, a LINE object has child blocks for each WORD block that's part of the line of text. "
+        }
+      ]
+    }
+  }
+}

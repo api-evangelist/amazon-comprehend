@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-document-classification-job-response-structure.json",
+  "name": "DescribeDocumentClassificationJobResponse",
+  "description": "DescribeDocumentClassificationJobResponse schema",
+  "type": "object",
+  "properties": {
+    "DocumentClassificationJobProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassificationJobProperties"
+        },
+        {
+          "description": "An object that describes the properties associated with the document classification job."
+        }
+      ]
+    }
+  }
+}

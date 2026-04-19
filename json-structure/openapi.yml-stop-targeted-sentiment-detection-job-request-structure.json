@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-stop-targeted-sentiment-detection-job-request-structure.json",
+  "name": "StopTargetedSentimentDetectionJobRequest",
+  "description": "StopTargetedSentimentDetectionJobRequest schema",
+  "type": "object",
+  "properties": {
+    "JobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The identifier of the targeted sentiment detection job to stop."
+        }
+      ]
+    }
+  },
+  "required": [
+    "JobId"
+  ]
+}

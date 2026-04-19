@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-document-classification-config-structure.json",
+  "name": "DocumentClassificationConfig",
+  "description": "Configuration required for a custom classification model.",
+  "type": "object",
+  "properties": {
+    "Mode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassifierMode"
+        },
+        {
+          "description": "Classification mode indicates whether the documents are <code>MULTI_CLASS</code> or <code>MULTI_LABEL</code>."
+        }
+      ]
+    },
+    "Labels": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LabelsList"
+        },
+        {
+          "description": "One or more labels to associate with the custom classifier."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Mode"
+  ]
+}

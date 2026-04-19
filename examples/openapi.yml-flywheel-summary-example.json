@@ -1,0 +1,11 @@
+{
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "ActiveModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DataLakeS3Uri": "example-string",
+  "Status": "ACTIVE",
+  "ModelType": "ORGANIZATION",
+  "Message": "example-string",
+  "CreationTime": "example-string",
+  "LastModifiedTime": "example-string",
+  "LatestFlywheelIteration": "example-string"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-endpoint-filter-structure.json",
+  "name": "EndpointFilter",
+  "description": "The filter used to determine which endpoints are returned. You can filter jobs on their name, model, status, or the date and time that they were created. You can only set one filter at a time. ",
+  "type": "object",
+  "properties": {
+    "ModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the model to which the endpoint is attached."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointStatus"
+        },
+        {
+          "description": "Specifies the status of the endpoint being returned. Possible values are: Creating, Ready, Updating, Deleting, Failed."
+        }
+      ]
+    },
+    "CreationTimeBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Specifies a date before which the returned endpoint or endpoints were created."
+        }
+      ]
+    },
+    "CreationTimeAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Specifies a date after which the returned endpoint or endpoints were created."
+        }
+      ]
+    }
+  }
+}

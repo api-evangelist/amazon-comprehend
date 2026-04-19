@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-detect-sentiment-response-schema.json",
+  "title": "DetectSentimentResponse",
+  "description": "DetectSentimentResponse schema",
+  "type": "object",
+  "properties": {
+    "Sentiment": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SentimentType"
+        },
+        {
+          "description": "The inferred sentiment that Amazon Comprehend has the highest level of confidence in."
+        }
+      ]
+    },
+    "SentimentScore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SentimentScore"
+        },
+        {
+          "description": "An object that lists the sentiments, and their corresponding confidence levels."
+        }
+      ]
+    }
+  }
+}

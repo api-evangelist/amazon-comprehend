@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-dataset-filter-schema.json",
+  "title": "DatasetFilter",
+  "description": "Filter the datasets based on creation time or dataset status.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetStatus"
+        },
+        {
+          "description": "Filter the datasets based on the dataset status."
+        }
+      ]
+    },
+    "DatasetType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetType"
+        },
+        {
+          "description": "Filter the datasets based on the dataset type."
+        }
+      ]
+    },
+    "CreationTimeAfter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filter the datasets to include datasets created after the specified time."
+        }
+      ]
+    },
+    "CreationTimeBefore": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "Filter the datasets to include datasets created before the specified time."
+        }
+      ]
+    }
+  }
+}

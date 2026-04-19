@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-syntax-language-code-structure.json",
+  "name": "SyntaxLanguageCode",
+  "description": "SyntaxLanguageCode schema",
+  "type": "string",
+  "enum": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "it",
+    "pt"
+  ]
+}

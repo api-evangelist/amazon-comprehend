@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-endpoints-request-structure.json",
+  "name": "ListEndpointsRequest",
+  "description": "ListEndpointsRequest schema",
+  "type": "object",
+  "properties": {
+    "Filter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndpointFilter"
+        },
+        {
+          "description": "Filters the endpoints that are returned. You can filter endpoints on their name, model, status, or the date and time that they were created. You can only set one filter at a time. "
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResultsInteger"
+        },
+        {
+          "description": "The maximum number of results to return in each page. The default is 100."
+        }
+      ]
+    }
+  }
+}

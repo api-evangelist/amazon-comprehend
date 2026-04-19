@@ -1,0 +1,9 @@
+{
+  "EndpointName": "example-name",
+  "ModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DesiredInferenceUnits": "example-string",
+  "ClientRequestToken": "example-string",
+  "Tags": "example-string",
+  "DataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier"
+}

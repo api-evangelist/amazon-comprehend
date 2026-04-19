@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-model-type-structure.json",
+  "name": "ModelType",
+  "description": "ModelType schema",
+  "type": "string",
+  "enum": [
+    "DOCUMENT_CLASSIFIER",
+    "ENTITY_RECOGNIZER"
+  ]
+}

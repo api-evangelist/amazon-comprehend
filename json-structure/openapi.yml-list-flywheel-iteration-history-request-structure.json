@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-flywheel-iteration-history-request-structure.json",
+  "name": "ListFlywheelIterationHistoryRequest",
+  "description": "ListFlywheelIterationHistoryRequest schema",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The ARN of the flywheel."
+        }
+      ]
+    },
+    "Filter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlywheelIterationFilter"
+        },
+        {
+          "description": "Filter the flywheel iteration history based on creation time."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Next token"
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResultsInteger"
+        },
+        {
+          "description": "Maximum number of iteration history results to return"
+        }
+      ]
+    }
+  },
+  "required": [
+    "FlywheelArn"
+  ]
+}

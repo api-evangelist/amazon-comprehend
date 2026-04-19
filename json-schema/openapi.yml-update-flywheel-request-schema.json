@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-update-flywheel-request-schema.json",
+  "title": "UpdateFlywheelRequest",
+  "description": "UpdateFlywheelRequest schema",
+  "type": "object",
+  "properties": {
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel to update."
+        }
+      ]
+    },
+    "ActiveModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the active model version."
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the flywheel data."
+        }
+      ]
+    },
+    "DataSecurityConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UpdateDataSecurityConfig"
+        },
+        {
+          "description": "Flywheel data security configuration."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FlywheelArn"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-list-targeted-sentiment-detection-jobs-response-structure.json",
+  "name": "ListTargetedSentimentDetectionJobsResponse",
+  "description": "ListTargetedSentimentDetectionJobsResponse schema",
+  "type": "object",
+  "properties": {
+    "TargetedSentimentDetectionJobPropertiesList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetedSentimentDetectionJobPropertiesList"
+        },
+        {
+          "description": "A list containing the properties of each job that is returned."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "Identifies the next page of results to return."
+        }
+      ]
+    }
+  }
+}

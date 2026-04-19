@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-key-phrases-detection-job-properties-list-structure.json",
+  "name": "KeyPhrasesDetectionJobPropertiesList",
+  "description": "KeyPhrasesDetectionJobPropertiesList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/KeyPhrasesDetectionJobProperties"
+  }
+}

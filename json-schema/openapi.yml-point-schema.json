@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-point-schema.json",
+  "title": "Point",
+  "description": "<p>The X and Y coordinates of a point on a document page.</p> <p>For additional information, see <a href=\"https://docs.aws.amazon.com/textract/latest/dg/API_Point.html\">Point</a> in the Amazon Textract API reference.</p>",
+  "type": "object",
+  "properties": {
+    "X": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The value of the X coordinate for a point on a polygon"
+        }
+      ]
+    },
+    "Y": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Float"
+        },
+        {
+          "description": "The value of the Y coordinate for a point on a polygon"
+        }
+      ]
+    }
+  }
+}

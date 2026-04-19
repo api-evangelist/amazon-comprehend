@@ -1,92 +1,1108 @@
 {
   "@context": {
-    "@vocab": "https://schema.org/",
-    "comprehend": "https://docs.aws.amazon.com/comprehend/latest/APIReference/",
-    "aws": "https://aws.amazon.com/",
-    "Entity": {
-      "@id": "comprehend:API_Entity",
-      "@context": {
-        "score": {
-          "@id": "comprehend:Entity/Score",
-          "@type": "xsd:float"
-        },
-        "entityType": {
-          "@id": "comprehend:Entity/Type",
-          "@type": "xsd:string"
-        },
-        "text": {
-          "@id": "comprehend:Entity/Text",
-          "@type": "xsd:string"
-        },
-        "beginOffset": {
-          "@id": "comprehend:Entity/BeginOffset",
-          "@type": "xsd:integer"
-        },
-        "endOffset": {
-          "@id": "comprehend:Entity/EndOffset",
-          "@type": "xsd:integer"
-        }
-      }
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ListPiiEntitiesDetectionJobsResponse": "aws:ListPiiEntitiesDetectionJobsResponse",
+    "TargetedSentimentEntity": "aws:TargetedSentimentEntity",
+    "BatchDetectDominantLanguageRequest": "aws:BatchDetectDominantLanguageRequest",
+    "WarningsListItem": "aws:WarningsListItem",
+    "BatchDetectDominantLanguageResponse": "aws:BatchDetectDominantLanguageResponse",
+    "Block": "aws:Block",
+    "ListSentimentDetectionJobsResponse": "aws:ListSentimentDetectionJobsResponse",
+    "StartDominantLanguageDetectionJobRequest": "aws:StartDominantLanguageDetectionJobRequest",
+    "DocumentClassifierFilter": "aws:DocumentClassifierFilter",
+    "StopDominantLanguageDetectionJobRequest": "aws:StopDominantLanguageDetectionJobRequest",
+    "SyntaxToken": "aws:SyntaxToken",
+    "DescribeFlywheelIterationRequest": "aws:DescribeFlywheelIterationRequest",
+    "ListFlywheelsResponse": "aws:ListFlywheelsResponse",
+    "TargetedSentimentDetectionJobFilter": "aws:TargetedSentimentDetectionJobFilter",
+    "DocumentClassifierDocuments": "aws:DocumentClassifierDocuments",
+    "DetectTargetedSentimentResponse": "aws:DetectTargetedSentimentResponse",
+    "OutputDataConfig": {
+      "@id": "aws:OutputDataConfig",
+      "@type": "xsd:string"
+    },
+    "StopKeyPhrasesDetectionJobResponse": "aws:StopKeyPhrasesDetectionJobResponse",
+    "BatchDetectSyntaxResponse": "aws:BatchDetectSyntaxResponse",
+    "MentionSentiment": {
+      "@id": "aws:MentionSentiment",
+      "@type": "xsd:string"
+    },
+    "StopDominantLanguageDetectionJobResponse": "aws:StopDominantLanguageDetectionJobResponse",
+    "StartEventsDetectionJobRequest": "aws:StartEventsDetectionJobRequest",
+    "EntityLabel": "aws:EntityLabel",
+    "DescribeSentimentDetectionJobResponse": "aws:DescribeSentimentDetectionJobResponse",
+    "StopSentimentDetectionJobRequest": "aws:StopSentimentDetectionJobRequest",
+    "DocumentLabel": "aws:DocumentLabel",
+    "BatchDetectKeyPhrasesResponse": "aws:BatchDetectKeyPhrasesResponse",
+    "UntagResourceRequest": "aws:UntagResourceRequest",
+    "ListEntitiesDetectionJobsResponse": "aws:ListEntitiesDetectionJobsResponse",
+    "StopEntitiesDetectionJobResponse": "aws:StopEntitiesDetectionJobResponse",
+    "DescribeFlywheelRequest": "aws:DescribeFlywheelRequest",
+    "EntityRecognizerInputDataConfig": {
+      "@id": "aws:EntityRecognizerInputDataConfig",
+      "@type": "xsd:string"
+    },
+    "StartDocumentClassificationJobResponse": "aws:StartDocumentClassificationJobResponse",
+    "ListEventsDetectionJobsRequest": "aws:ListEventsDetectionJobsRequest",
+    "CreateDatasetRequest": "aws:CreateDatasetRequest",
+    "DescribeKeyPhrasesDetectionJobResponse": "aws:DescribeKeyPhrasesDetectionJobResponse",
+    "ListFlywheelIterationHistoryRequest": "aws:ListFlywheelIterationHistoryRequest",
+    "PiiOutputDataConfig": "aws:PiiOutputDataConfig",
+    "PiiEntitiesDetectionJobProperties": {
+      "@id": "aws:PiiEntitiesDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "DeleteResourcePolicyResponse": "aws:DeleteResourcePolicyResponse",
+    "DescribeSentimentDetectionJobRequest": "aws:DescribeSentimentDetectionJobRequest",
+    "DominantLanguageDetectionJobProperties": {
+      "@id": "aws:DominantLanguageDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "UpdateEndpointRequest": "aws:UpdateEndpointRequest",
+    "BatchDetectSentimentItemResult": "aws:BatchDetectSentimentItemResult",
+    "DescribeEntitiesDetectionJobResponse": "aws:DescribeEntitiesDetectionJobResponse",
+    "TagResourceRequest": "aws:TagResourceRequest",
+    "DeleteEntityRecognizerResponse": "aws:DeleteEntityRecognizerResponse",
+    "ListTargetedSentimentDetectionJobsRequest": "aws:ListTargetedSentimentDetectionJobsRequest",
+    "FlywheelModelEvaluationMetrics": "aws:FlywheelModelEvaluationMetrics",
+    "DeleteEndpointRequest": "aws:DeleteEndpointRequest",
+    "DocumentClassifierProperties": {
+      "@id": "aws:DocumentClassifierProperties",
+      "@type": "xsd:string"
+    },
+    "ListDocumentClassificationJobsResponse": "aws:ListDocumentClassificationJobsResponse",
+    "StartEntitiesDetectionJobRequest": "aws:StartEntitiesDetectionJobRequest",
+    "DocumentClassificationJobProperties": {
+      "@id": "aws:DocumentClassificationJobProperties",
+      "@type": "xsd:string"
+    },
+    "KeyPhrasesDetectionJobFilter": "aws:KeyPhrasesDetectionJobFilter",
+    "CreateEndpointResponse": "aws:CreateEndpointResponse",
+    "EndpointProperties": {
+      "@id": "aws:EndpointProperties",
+      "@type": "xsd:string"
+    },
+    "CreateDatasetResponse": "aws:CreateDatasetResponse",
+    "CreateFlywheelResponse": "aws:CreateFlywheelResponse",
+    "CreateEntityRecognizerRequest": "aws:CreateEntityRecognizerRequest",
+    "DescribeEndpointResponse": "aws:DescribeEndpointResponse",
+    "SentimentDetectionJobFilter": "aws:SentimentDetectionJobFilter",
+    "TargetedSentimentDetectionJobProperties": {
+      "@id": "aws:TargetedSentimentDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "EndpointFilter": "aws:EndpointFilter",
+    "DescribeTopicsDetectionJobRequest": "aws:DescribeTopicsDetectionJobRequest",
+    "DetectTargetedSentimentRequest": "aws:DetectTargetedSentimentRequest",
+    "DocumentClassificationJobFilter": "aws:DocumentClassificationJobFilter",
+    "DescribeEntityRecognizerRequest": "aws:DescribeEntityRecognizerRequest",
+    "DescribeFlywheelResponse": "aws:DescribeFlywheelResponse",
+    "ClassifyDocumentResponse": "aws:ClassifyDocumentResponse",
+    "ChildBlock": "aws:ChildBlock",
+    "StopTargetedSentimentDetectionJobRequest": "aws:StopTargetedSentimentDetectionJobRequest",
+    "ClassifyDocumentRequest": "aws:ClassifyDocumentRequest",
+    "DescribePiiEntitiesDetectionJobResponse": "aws:DescribePiiEntitiesDetectionJobResponse",
+    "VpcConfig": {
+      "@id": "aws:VpcConfig",
+      "@type": "xsd:string"
+    },
+    "EntityRecognizerSummary": "aws:EntityRecognizerSummary",
+    "EntityRecognizerDocuments": "aws:EntityRecognizerDocuments",
+    "RedactionConfig": {
+      "@id": "aws:RedactionConfig",
+      "@type": "xsd:string"
+    },
+    "ListEntityRecognizerSummariesResponse": "aws:ListEntityRecognizerSummariesResponse",
+    "DetectKeyPhrasesRequest": "aws:DetectKeyPhrasesRequest",
+    "ContainsPiiEntitiesRequest": "aws:ContainsPiiEntitiesRequest",
+    "EntityRecognizerAnnotations": "aws:EntityRecognizerAnnotations",
+    "StartDominantLanguageDetectionJobResponse": "aws:StartDominantLanguageDetectionJobResponse",
+    "DescribeTargetedSentimentDetectionJobRequest": "aws:DescribeTargetedSentimentDetectionJobRequest",
+    "EntitiesDetectionJobProperties": {
+      "@id": "aws:EntitiesDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "DescribeEventsDetectionJobRequest": "aws:DescribeEventsDetectionJobRequest",
+    "StopTrainingEntityRecognizerResponse": "aws:StopTrainingEntityRecognizerResponse",
+    "DetectSentimentRequest": "aws:DetectSentimentRequest",
+    "DescribeDocumentClassifierRequest": "aws:DescribeDocumentClassifierRequest",
+    "ListTagsForResourceRequest": "aws:ListTagsForResourceRequest",
+    "ListDocumentClassifierSummariesRequest": "aws:ListDocumentClassifierSummariesRequest",
+    "BatchDetectTargetedSentimentItemResult": "aws:BatchDetectTargetedSentimentItemResult",
+    "DocumentClassificationConfig": {
+      "@id": "aws:DocumentClassificationConfig",
+      "@type": "xsd:string"
+    },
+    "StartSentimentDetectionJobResponse": "aws:StartSentimentDetectionJobResponse",
+    "EntityTypesEvaluationMetrics": "aws:EntityTypesEvaluationMetrics",
+    "CreateFlywheelRequest": "aws:CreateFlywheelRequest",
+    "ClassifierEvaluationMetrics": "aws:ClassifierEvaluationMetrics",
+    "EntityRecognizerOutputDataConfig": "aws:EntityRecognizerOutputDataConfig",
+    "PutResourcePolicyResponse": "aws:PutResourcePolicyResponse",
+    "ListTopicsDetectionJobsRequest": "aws:ListTopicsDetectionJobsRequest",
+    "ListEventsDetectionJobsResponse": "aws:ListEventsDetectionJobsResponse",
+    "ListEndpointsRequest": "aws:ListEndpointsRequest",
+    "StopPiiEntitiesDetectionJobRequest": "aws:StopPiiEntitiesDetectionJobRequest",
+    "TopicsDetectionJobProperties": {
+      "@id": "aws:TopicsDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "DatasetEntityRecognizerAnnotations": "aws:DatasetEntityRecognizerAnnotations",
+    "Geometry": {
+      "@id": "aws:Geometry",
+      "@type": "xsd:string"
+    },
+    "ExtractedCharactersListItem": "aws:ExtractedCharactersListItem",
+    "ListFlywheelsRequest": "aws:ListFlywheelsRequest",
+    "InputDataConfig": {
+      "@id": "aws:InputDataConfig",
+      "@type": "xsd:string"
+    },
+    "StopKeyPhrasesDetectionJobRequest": "aws:StopKeyPhrasesDetectionJobRequest",
+    "DatasetInputDataConfig": "aws:DatasetInputDataConfig",
+    "ListKeyPhrasesDetectionJobsResponse": "aws:ListKeyPhrasesDetectionJobsResponse",
+    "DescribeDominantLanguageDetectionJobRequest": "aws:DescribeDominantLanguageDetectionJobRequest",
+    "StartTopicsDetectionJobRequest": "aws:StartTopicsDetectionJobRequest",
+    "StartTargetedSentimentDetectionJobRequest": "aws:StartTargetedSentimentDetectionJobRequest",
+    "DescribeDominantLanguageDetectionJobResponse": "aws:DescribeDominantLanguageDetectionJobResponse",
+    "ListDominantLanguageDetectionJobsRequest": "aws:ListDominantLanguageDetectionJobsRequest",
+    "DescribePiiEntitiesDetectionJobRequest": "aws:DescribePiiEntitiesDetectionJobRequest",
+    "DetectEntitiesRequest": "aws:DetectEntitiesRequest",
+    "BatchDetectDominantLanguageItemResult": "aws:BatchDetectDominantLanguageItemResult",
+    "DescribeDatasetResponse": "aws:DescribeDatasetResponse",
+    "DescribeTargetedSentimentDetectionJobResponse": "aws:DescribeTargetedSentimentDetectionJobResponse",
+    "DescribeDocumentClassificationJobRequest": "aws:DescribeDocumentClassificationJobRequest",
+    "DatasetFilter": "aws:DatasetFilter",
+    "DeleteDocumentClassifierRequest": "aws:DeleteDocumentClassifierRequest",
+    "ListEntityRecognizersRequest": "aws:ListEntityRecognizersRequest",
+    "DatasetDocumentClassifierInputDataConfig": "aws:DatasetDocumentClassifierInputDataConfig",
+    "ListTagsForResourceResponse": "aws:ListTagsForResourceResponse",
+    "BatchDetectEntitiesItemResult": "aws:BatchDetectEntitiesItemResult",
+    "DetectEntitiesResponse": "aws:DetectEntitiesResponse",
+    "BlockReference": "aws:BlockReference",
+    "StopTrainingEntityRecognizerRequest": "aws:StopTrainingEntityRecognizerRequest",
+    "DeleteFlywheelRequest": "aws:DeleteFlywheelRequest",
+    "DominantLanguage": "aws:DominantLanguage",
+    "BatchDetectTargetedSentimentResponse": "aws:BatchDetectTargetedSentimentResponse",
+    "DescribeResourcePolicyResponse": "aws:DescribeResourcePolicyResponse",
+    "StartKeyPhrasesDetectionJobRequest": "aws:StartKeyPhrasesDetectionJobRequest",
+    "BatchDetectSentimentRequest": "aws:BatchDetectSentimentRequest",
+    "StopEventsDetectionJobResponse": "aws:StopEventsDetectionJobResponse",
+    "FlywheelIterationProperties": {
+      "@id": "aws:FlywheelIterationProperties",
+      "@type": "xsd:string"
+    },
+    "DescribeDocumentClassificationJobResponse": "aws:DescribeDocumentClassificationJobResponse",
+    "StopSentimentDetectionJobResponse": "aws:StopSentimentDetectionJobResponse",
+    "ListEntityRecognizersResponse": "aws:ListEntityRecognizersResponse",
+    "StopTargetedSentimentDetectionJobResponse": "aws:StopTargetedSentimentDetectionJobResponse",
+    "DeleteEntityRecognizerRequest": "aws:DeleteEntityRecognizerRequest",
+    "DocumentReaderConfig": {
+      "@id": "aws:DocumentReaderConfig",
+      "@type": "xsd:string"
+    },
+    "UpdateFlywheelRequest": "aws:UpdateFlywheelRequest",
+    "CreateEntityRecognizerResponse": "aws:CreateEntityRecognizerResponse",
+    "StartTargetedSentimentDetectionJobResponse": "aws:StartTargetedSentimentDetectionJobResponse",
+    "BatchDetectKeyPhrasesItemResult": "aws:BatchDetectKeyPhrasesItemResult",
+    "DescribeEntitiesDetectionJobRequest": "aws:DescribeEntitiesDetectionJobRequest",
+    "ListDatasetsResponse": "aws:ListDatasetsResponse",
+    "StopPiiEntitiesDetectionJobResponse": "aws:StopPiiEntitiesDetectionJobResponse",
+    "StopTrainingDocumentClassifierResponse": "aws:StopTrainingDocumentClassifierResponse",
+    "DeleteEndpointResponse": "aws:DeleteEndpointResponse",
+    "ListPiiEntitiesDetectionJobsRequest": "aws:ListPiiEntitiesDetectionJobsRequest",
+    "DetectPiiEntitiesRequest": "aws:DetectPiiEntitiesRequest",
+    "RelationshipsListItem": "aws:RelationshipsListItem",
+    "DescribeDocumentClassifierResponse": "aws:DescribeDocumentClassifierResponse",
+    "DeleteFlywheelResponse": "aws:DeleteFlywheelResponse",
+    "ListDocumentClassificationJobsRequest": "aws:ListDocumentClassificationJobsRequest",
+    "StartEventsDetectionJobResponse": "aws:StartEventsDetectionJobResponse",
+    "DatasetEntityRecognizerInputDataConfig": "aws:DatasetEntityRecognizerInputDataConfig",
+    "DetectPiiEntitiesResponse": "aws:DetectPiiEntitiesResponse",
+    "CreateDocumentClassifierResponse": "aws:CreateDocumentClassifierResponse",
+    "DescribeEntityRecognizerResponse": "aws:DescribeEntityRecognizerResponse",
+    "TagResourceResponse": "aws:TagResourceResponse",
+    "DominantLanguageDetectionJobFilter": "aws:DominantLanguageDetectionJobFilter",
+    "DocumentMetadata": {
+      "@id": "aws:DocumentMetadata",
+      "@type": "xsd:string"
+    },
+    "BatchDetectEntitiesRequest": "aws:BatchDetectEntitiesRequest",
+    "ListEntityRecognizerSummariesRequest": "aws:ListEntityRecognizerSummariesRequest",
+    "FlywheelSummary": "aws:FlywheelSummary",
+    "EventsDetectionJobFilter": "aws:EventsDetectionJobFilter",
+    "StartPiiEntitiesDetectionJobRequest": "aws:StartPiiEntitiesDetectionJobRequest",
+    "TopicsDetectionJobFilter": "aws:TopicsDetectionJobFilter",
+    "BatchDetectSentimentResponse": "aws:BatchDetectSentimentResponse",
+    "StartEntitiesDetectionJobResponse": "aws:StartEntitiesDetectionJobResponse",
+    "DatasetEntityRecognizerDocuments": "aws:DatasetEntityRecognizerDocuments",
+    "ListDocumentClassifiersResponse": "aws:ListDocumentClassifiersResponse",
+    "StartSentimentDetectionJobRequest": "aws:StartSentimentDetectionJobRequest",
+    "StartFlywheelIterationResponse": "aws:StartFlywheelIterationResponse",
+    "ListTargetedSentimentDetectionJobsResponse": "aws:ListTargetedSentimentDetectionJobsResponse",
+    "ListDominantLanguageDetectionJobsResponse": "aws:ListDominantLanguageDetectionJobsResponse",
+    "UpdateDataSecurityConfig": "aws:UpdateDataSecurityConfig",
+    "DocumentClassifierOutputDataConfig": "aws:DocumentClassifierOutputDataConfig",
+    "BatchDetectEntitiesResponse": "aws:BatchDetectEntitiesResponse",
+    "TaskConfig": {
+      "@id": "aws:TaskConfig",
+      "@type": "xsd:string"
+    },
+    "FlywheelFilter": "aws:FlywheelFilter",
+    "UpdateFlywheelResponse": "aws:UpdateFlywheelResponse",
+    "UpdateEndpointResponse": "aws:UpdateEndpointResponse",
+    "DescribeEndpointRequest": "aws:DescribeEndpointRequest",
+    "EntityRecognitionConfig": {
+      "@id": "aws:EntityRecognitionConfig",
+      "@type": "xsd:string"
+    },
+    "ListDocumentClassifiersRequest": "aws:ListDocumentClassifiersRequest",
+    "DeleteResourcePolicyRequest": "aws:DeleteResourcePolicyRequest",
+    "BatchDetectSyntaxRequest": "aws:BatchDetectSyntaxRequest",
+    "EntitiesDetectionJobFilter": "aws:EntitiesDetectionJobFilter",
+    "StartDocumentClassificationJobRequest": "aws:StartDocumentClassificationJobRequest",
+    "DescribeDatasetRequest": "aws:DescribeDatasetRequest",
+    "ListFlywheelIterationHistoryResponse": "aws:ListFlywheelIterationHistoryResponse",
+    "DescribeTopicsDetectionJobResponse": "aws:DescribeTopicsDetectionJobResponse",
+    "ListTopicsDetectionJobsResponse": "aws:ListTopicsDetectionJobsResponse",
+    "EntityRecognizerMetadata": "aws:EntityRecognizerMetadata",
+    "DatasetAugmentedManifestsListItem": "aws:DatasetAugmentedManifestsListItem",
+    "DescribeFlywheelIterationResponse": "aws:DescribeFlywheelIterationResponse",
+    "PutResourcePolicyRequest": "aws:PutResourcePolicyRequest",
+    "DetectSyntaxRequest": "aws:DetectSyntaxRequest",
+    "DatasetProperties": {
+      "@id": "aws:DatasetProperties",
+      "@type": "xsd:string"
+    },
+    "DocumentClassifierSummary": "aws:DocumentClassifierSummary",
+    "BatchDetectSyntaxItemResult": "aws:BatchDetectSyntaxItemResult",
+    "SentimentDetectionJobProperties": {
+      "@id": "aws:SentimentDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "DetectDominantLanguageRequest": "aws:DetectDominantLanguageRequest",
+    "SentimentScore": {
+      "@id": "aws:SentimentScore",
+      "@type": "xsd:string"
+    },
+    "PiiEntity": "aws:PiiEntity",
+    "DatasetEntityRecognizerEntityList": "aws:DatasetEntityRecognizerEntityList",
+    "ListEntitiesDetectionJobsRequest": "aws:ListEntitiesDetectionJobsRequest",
+    "EntityRecognizerFilter": "aws:EntityRecognizerFilter",
+    "ClassifierMetadata": {
+      "@id": "aws:ClassifierMetadata",
+      "@type": "xsd:string"
+    },
+    "FlywheelProperties": {
+      "@id": "aws:FlywheelProperties",
+      "@type": "xsd:string"
+    },
+    "DataSecurityConfig": {
+      "@id": "aws:DataSecurityConfig",
+      "@type": "xsd:string"
+    },
+    "StopEntitiesDetectionJobRequest": "aws:StopEntitiesDetectionJobRequest",
+    "KeyPhrasesDetectionJobProperties": {
+      "@id": "aws:KeyPhrasesDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "StartTopicsDetectionJobResponse": "aws:StartTopicsDetectionJobResponse",
+    "CreateDocumentClassifierRequest": "aws:CreateDocumentClassifierRequest",
+    "ListEndpointsResponse": "aws:ListEndpointsResponse",
+    "DetectDominantLanguageResponse": "aws:DetectDominantLanguageResponse",
+    "DocumentTypeListItem": "aws:DocumentTypeListItem",
+    "ListDocumentClassifierSummariesResponse": "aws:ListDocumentClassifierSummariesResponse",
+    "Tag": {
+      "@id": "aws:Tag",
+      "@type": "xsd:string"
+    },
+    "DocumentClassifierInputDataConfig": {
+      "@id": "aws:DocumentClassifierInputDataConfig",
+      "@type": "xsd:string"
+    },
+    "Point": "aws:Point",
+    "Entity": "aws:Entity",
+    "DetectSyntaxResponse": "aws:DetectSyntaxResponse",
+    "StopEventsDetectionJobRequest": "aws:StopEventsDetectionJobRequest",
+    "TargetedSentimentMention": "aws:TargetedSentimentMention",
+    "ImportModelResponse": "aws:ImportModelResponse",
+    "Amazon Comprehend Entity": "aws:Amazon Comprehend Entity",
+    "AugmentedManifestsListItem": "aws:AugmentedManifestsListItem",
+    "BatchDetectTargetedSentimentRequest": "aws:BatchDetectTargetedSentimentRequest",
+    "EntityRecognizerProperties": {
+      "@id": "aws:EntityRecognizerProperties",
+      "@type": "xsd:string"
+    },
+    "PartOfSpeechTag": "aws:PartOfSpeechTag",
+    "EntityRecognizerMetadataEntityTypesListItem": "aws:EntityRecognizerMetadataEntityTypesListItem",
+    "ImportModelRequest": "aws:ImportModelRequest",
+    "EntityRecognizerEntityList": "aws:EntityRecognizerEntityList",
+    "StartKeyPhrasesDetectionJobResponse": "aws:StartKeyPhrasesDetectionJobResponse",
+    "ListSentimentDetectionJobsRequest": "aws:ListSentimentDetectionJobsRequest",
+    "PiiEntitiesDetectionJobFilter": "aws:PiiEntitiesDetectionJobFilter",
+    "EntityRecognizerEvaluationMetrics": "aws:EntityRecognizerEvaluationMetrics",
+    "ContainsPiiEntitiesResponse": "aws:ContainsPiiEntitiesResponse",
+    "EventsDetectionJobProperties": {
+      "@id": "aws:EventsDetectionJobProperties",
+      "@type": "xsd:string"
+    },
+    "DescribeResourcePolicyRequest": "aws:DescribeResourcePolicyRequest",
+    "CreateEndpointRequest": "aws:CreateEndpointRequest",
+    "UntagResourceResponse": "aws:UntagResourceResponse",
+    "DeleteDocumentClassifierResponse": "aws:DeleteDocumentClassifierResponse",
+    "FlywheelIterationFilter": "aws:FlywheelIterationFilter",
+    "EntityTypesListItem": "aws:EntityTypesListItem",
+    "StopTrainingDocumentClassifierRequest": "aws:StopTrainingDocumentClassifierRequest",
+    "StartPiiEntitiesDetectionJobResponse": "aws:StartPiiEntitiesDetectionJobResponse",
+    "ListDatasetsRequest": "aws:ListDatasetsRequest",
+    "StartFlywheelIterationRequest": "aws:StartFlywheelIterationRequest",
+    "ListKeyPhrasesDetectionJobsRequest": "aws:ListKeyPhrasesDetectionJobsRequest",
+    "DetectKeyPhrasesResponse": "aws:DetectKeyPhrasesResponse",
+    "KeyPhrase": "aws:KeyPhrase",
+    "DescribeEventsDetectionJobResponse": "aws:DescribeEventsDetectionJobResponse",
+    "DetectSentimentResponse": "aws:DetectSentimentResponse",
+    "BatchDetectKeyPhrasesRequest": "aws:BatchDetectKeyPhrasesRequest",
+    "BoundingBox": {
+      "@id": "aws:BoundingBox",
+      "@type": "xsd:string"
+    },
+    "DocumentClass": "aws:DocumentClass",
+    "DescribeKeyPhrasesDetectionJobRequest": "aws:DescribeKeyPhrasesDetectionJobRequest",
+    "PiiEntitiesDetectionJobPropertiesList": {
+      "@id": "aws:PiiEntitiesDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "aws:NextToken",
+      "@type": "xsd:string"
+    },
+    "DescriptiveMentionIndex": {
+      "@id": "aws:DescriptiveMentionIndex",
+      "@type": "xsd:string"
+    },
+    "Mentions": {
+      "@id": "aws:Mentions",
+      "@type": "xsd:string"
+    },
+    "TextList": {
+      "@id": "aws:TextList",
+      "@type": "xsd:string"
+    },
+    "Page": {
+      "@id": "aws:Page",
+      "@type": "xsd:string"
+    },
+    "WarnCode": {
+      "@id": "aws:WarnCode",
+      "@type": "xsd:string"
+    },
+    "WarnMessage": {
+      "@id": "aws:WarnMessage",
+      "@type": "xsd:string"
+    },
+    "ResultList": {
+      "@id": "aws:ResultList",
+      "@type": "xsd:string"
+    },
+    "ErrorList": {
+      "@id": "aws:ErrorList",
+      "@type": "xsd:string"
+    },
+    "Id": {
+      "@id": "aws:Id",
+      "@type": "xsd:string"
+    },
+    "BlockType": {
+      "@id": "aws:BlockType",
+      "@type": "xsd:string"
+    },
+    "Text": {
+      "@id": "aws:Text",
+      "@type": "xsd:string"
+    },
+    "Relationships": {
+      "@id": "aws:Relationships",
+      "@type": "xsd:string"
+    },
+    "SentimentDetectionJobPropertiesList": {
+      "@id": "aws:SentimentDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "DataAccessRoleArn": {
+      "@id": "aws:DataAccessRoleArn",
+      "@type": "xsd:string"
+    },
+    "JobName": {
+      "@id": "aws:JobName",
+      "@type": "xsd:string"
+    },
+    "ClientRequestToken": {
+      "@id": "aws:ClientRequestToken",
+      "@type": "xsd:string"
+    },
+    "VolumeKmsKeyId": {
+      "@id": "aws:VolumeKmsKeyId",
+      "@type": "xsd:string"
+    },
+    "Tags": {
+      "@id": "aws:Tags",
+      "@type": "xsd:string"
+    },
+    "Status": {
+      "@id": "aws:Status",
+      "@type": "xsd:string"
+    },
+    "DocumentClassifierName": {
+      "@id": "aws:DocumentClassifierName",
+      "@type": "xsd:string"
+    },
+    "SubmitTimeBefore": {
+      "@id": "aws:SubmitTimeBefore",
+      "@type": "xsd:string"
+    },
+    "SubmitTimeAfter": {
+      "@id": "aws:SubmitTimeAfter",
+      "@type": "xsd:string"
+    },
+    "JobId": {
+      "@id": "aws:JobId",
+      "@type": "xsd:string"
+    },
+    "TokenId": {
+      "@id": "aws:TokenId",
+      "@type": "xsd:string"
+    },
+    "BeginOffset": {
+      "@id": "aws:BeginOffset",
+      "@type": "xsd:string"
+    },
+    "EndOffset": {
+      "@id": "aws:EndOffset",
+      "@type": "xsd:string"
+    },
+    "PartOfSpeech": {
+      "@id": "aws:PartOfSpeech",
+      "@type": "xsd:string"
+    },
+    "FlywheelArn": {
+      "@id": "aws:FlywheelArn",
+      "@type": "xsd:string"
+    },
+    "FlywheelIterationId": {
+      "@id": "aws:FlywheelIterationId",
+      "@type": "xsd:string"
+    },
+    "FlywheelSummaryList": {
+      "@id": "aws:FlywheelSummaryList",
+      "@type": "xsd:string"
+    },
+    "JobStatus": {
+      "@id": "aws:JobStatus",
+      "@type": "xsd:string"
+    },
+    "S3Uri": {
+      "@id": "aws:S3Uri",
+      "@type": "xsd:string"
+    },
+    "TestS3Uri": {
+      "@id": "aws:TestS3Uri",
+      "@type": "xsd:string"
+    },
+    "Entities": {
+      "@id": "aws:Entities",
+      "@type": "xsd:string"
+    },
+    "KmsKeyId": {
+      "@id": "aws:KmsKeyId",
+      "@type": "xsd:string"
     },
     "Sentiment": {
-      "@id": "comprehend:API_Sentiment",
-      "@context": {
-        "sentiment": {
-          "@id": "comprehend:Sentiment/Sentiment",
-          "@type": "xsd:string"
-        },
-        "positiveScore": {
-          "@id": "comprehend:Sentiment/Positive",
-          "@type": "xsd:float"
-        },
-        "negativeScore": {
-          "@id": "comprehend:Sentiment/Negative",
-          "@type": "xsd:float"
-        },
-        "neutralScore": {
-          "@id": "comprehend:Sentiment/Neutral",
-          "@type": "xsd:float"
-        },
-        "mixedScore": {
-          "@id": "comprehend:Sentiment/Mixed",
-          "@type": "xsd:float"
-        }
-      }
+      "@id": "aws:Sentiment",
+      "@type": "xsd:string"
     },
-    "KeyPhrase": {
-      "@id": "comprehend:API_KeyPhrase",
-      "@context": {
-        "score": {
-          "@id": "comprehend:KeyPhrase/Score",
-          "@type": "xsd:float"
-        },
-        "text": {
-          "@id": "comprehend:KeyPhrase/Text",
-          "@type": "xsd:string"
-        },
-        "beginOffset": {
-          "@id": "comprehend:KeyPhrase/BeginOffset",
-          "@type": "xsd:integer"
-        },
-        "endOffset": {
-          "@id": "comprehend:KeyPhrase/EndOffset",
-          "@type": "xsd:integer"
-        }
-      }
+    "LanguageCode": {
+      "@id": "aws:LanguageCode",
+      "@type": "xsd:string"
     },
-    "DominantLanguage": {
-      "@id": "comprehend:API_DominantLanguage",
-      "@context": {
-        "languageCode": {
-          "@id": "comprehend:DominantLanguage/LanguageCode",
-          "@type": "xsd:string"
-        },
-        "score": {
-          "@id": "comprehend:DominantLanguage/Score",
-          "@type": "xsd:float"
-        }
-      }
+    "TargetEventTypes": {
+      "@id": "aws:TargetEventTypes",
+      "@type": "xsd:string"
     },
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "Name": {
+      "@id": "aws:Name",
+      "@type": "xsd:string"
+    },
+    "Score": {
+      "@id": "aws:Score",
+      "@type": "xsd:string"
+    },
+    "ResourceArn": {
+      "@id": "aws:ResourceArn",
+      "@type": "xsd:string"
+    },
+    "TagKeys": {
+      "@id": "aws:TagKeys",
+      "@type": "xsd:string"
+    },
+    "EntitiesDetectionJobPropertiesList": {
+      "@id": "aws:EntitiesDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "DataFormat": {
+      "@id": "aws:DataFormat",
+      "@type": "xsd:string"
+    },
+    "EntityTypes": {
+      "@id": "aws:EntityTypes",
+      "@type": "xsd:string"
+    },
+    "Documents": {
+      "@id": "aws:Documents",
+      "@type": "xsd:string"
+    },
+    "Annotations": {
+      "@id": "aws:Annotations",
+      "@type": "xsd:string"
+    },
+    "EntityList": {
+      "@id": "aws:EntityList",
+      "@type": "xsd:string"
+    },
+    "AugmentedManifests": {
+      "@id": "aws:AugmentedManifests",
+      "@type": "xsd:string"
+    },
+    "JobArn": {
+      "@id": "aws:JobArn",
+      "@type": "xsd:string"
+    },
+    "DocumentClassifierArn": {
+      "@id": "aws:DocumentClassifierArn",
+      "@type": "xsd:string"
+    },
+    "Filter": {
+      "@id": "aws:Filter",
+      "@type": "xsd:string"
+    },
+    "MaxResults": {
+      "@id": "aws:MaxResults",
+      "@type": "xsd:string"
+    },
+    "DatasetName": {
+      "@id": "aws:DatasetName",
+      "@type": "xsd:string"
+    },
+    "DatasetType": {
+      "@id": "aws:DatasetType",
+      "@type": "xsd:string"
+    },
+    "Description": {
+      "@id": "aws:Description",
+      "@type": "xsd:string"
+    },
+    "Message": {
+      "@id": "aws:Message",
+      "@type": "xsd:string"
+    },
+    "SubmitTime": {
+      "@id": "aws:SubmitTime",
+      "@type": "xsd:string"
+    },
+    "EndTime": {
+      "@id": "aws:EndTime",
+      "@type": "xsd:string"
+    },
+    "Mode": {
+      "@id": "aws:Mode",
+      "@type": "xsd:string"
+    },
+    "EndpointArn": {
+      "@id": "aws:EndpointArn",
+      "@type": "xsd:string"
+    },
+    "DesiredModelArn": {
+      "@id": "aws:DesiredModelArn",
+      "@type": "xsd:string"
+    },
+    "DesiredInferenceUnits": {
+      "@id": "aws:DesiredInferenceUnits",
+      "@type": "xsd:string"
+    },
+    "DesiredDataAccessRoleArn": {
+      "@id": "aws:DesiredDataAccessRoleArn",
+      "@type": "xsd:string"
+    },
+    "Index": {
+      "@id": "aws:Index",
+      "@type": "xsd:string"
+    },
+    "AverageF1Score": {
+      "@id": "aws:AverageF1Score",
+      "@type": "xsd:string"
+    },
+    "AveragePrecision": {
+      "@id": "aws:AveragePrecision",
+      "@type": "xsd:string"
+    },
+    "AverageRecall": {
+      "@id": "aws:AverageRecall",
+      "@type": "xsd:string"
+    },
+    "AverageAccuracy": {
+      "@id": "aws:AverageAccuracy",
+      "@type": "xsd:string"
+    },
+    "TrainingStartTime": {
+      "@id": "aws:TrainingStartTime",
+      "@type": "xsd:string"
+    },
+    "TrainingEndTime": {
+      "@id": "aws:TrainingEndTime",
+      "@type": "xsd:string"
+    },
+    "ModelKmsKeyId": {
+      "@id": "aws:ModelKmsKeyId",
+      "@type": "xsd:string"
+    },
+    "VersionName": {
+      "@id": "aws:VersionName",
+      "@type": "xsd:string"
+    },
+    "SourceModelArn": {
+      "@id": "aws:SourceModelArn",
+      "@type": "xsd:string"
+    },
+    "DocumentClassificationJobPropertiesList": {
+      "@id": "aws:DocumentClassificationJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "EntityRecognizerArn": {
+      "@id": "aws:EntityRecognizerArn",
+      "@type": "xsd:string"
+    },
+    "ModelArn": {
+      "@id": "aws:ModelArn",
+      "@type": "xsd:string"
+    },
+    "CurrentInferenceUnits": {
+      "@id": "aws:CurrentInferenceUnits",
+      "@type": "xsd:string"
+    },
+    "CreationTime": {
+      "@id": "aws:CreationTime",
+      "@type": "xsd:string"
+    },
+    "LastModifiedTime": {
+      "@id": "aws:LastModifiedTime",
+      "@type": "xsd:string"
+    },
+    "DatasetArn": {
+      "@id": "aws:DatasetArn",
+      "@type": "xsd:string"
+    },
+    "ActiveModelArn": {
+      "@id": "aws:ActiveModelArn",
+      "@type": "xsd:string"
+    },
+    "RecognizerName": {
+      "@id": "aws:RecognizerName",
+      "@type": "xsd:string"
+    },
+    "ModelPolicy": {
+      "@id": "aws:ModelPolicy",
+      "@type": "xsd:string"
+    },
+    "CreationTimeBefore": {
+      "@id": "aws:CreationTimeBefore",
+      "@type": "xsd:string"
+    },
+    "CreationTimeAfter": {
+      "@id": "aws:CreationTimeAfter",
+      "@type": "xsd:string"
+    },
+    "Classes": {
+      "@id": "aws:Classes",
+      "@type": "xsd:string"
+    },
+    "Labels": {
+      "@id": "aws:Labels",
+      "@type": "xsd:string"
+    },
+    "DocumentType": {
+      "@id": "aws:DocumentType",
+      "@type": "xsd:string"
+    },
+    "Errors": {
+      "@id": "aws:Errors",
+      "@type": "xsd:string"
+    },
+    "Warnings": {
+      "@id": "aws:Warnings",
+      "@type": "xsd:string"
+    },
+    "ChildBlockId": {
+      "@id": "aws:ChildBlockId",
+      "@type": "xsd:string"
+    },
+    "Bytes": {
+      "@id": "aws:Bytes",
+      "@type": "xsd:string"
+    },
+    "SecurityGroupIds": {
+      "@id": "aws:SecurityGroupIds",
+      "@type": "xsd:string"
+    },
+    "Subnets": {
+      "@id": "aws:Subnets",
+      "@type": "xsd:string"
+    },
+    "NumberOfVersions": {
+      "@id": "aws:NumberOfVersions",
+      "@type": "xsd:string"
+    },
+    "LatestVersionCreatedAt": {
+      "@id": "aws:LatestVersionCreatedAt",
+      "@type": "xsd:string"
+    },
+    "LatestVersionName": {
+      "@id": "aws:LatestVersionName",
+      "@type": "xsd:string"
+    },
+    "LatestVersionStatus": {
+      "@id": "aws:LatestVersionStatus",
+      "@type": "xsd:string"
+    },
+    "InputFormat": {
+      "@id": "aws:InputFormat",
+      "@type": "xsd:string"
+    },
+    "PiiEntityTypes": {
+      "@id": "aws:PiiEntityTypes",
+      "@type": "xsd:string"
+    },
+    "MaskMode": {
+      "@id": "aws:MaskMode",
+      "@type": "xsd:string"
+    },
+    "MaskCharacter": {
+      "@id": "aws:MaskCharacter",
+      "@type": "xsd:string"
+    },
+    "EntityRecognizerSummariesList": {
+      "@id": "aws:EntityRecognizerSummariesList",
+      "@type": "xsd:string"
+    },
+    "Precision": {
+      "@id": "aws:Precision",
+      "@type": "xsd:string"
+    },
+    "Recall": {
+      "@id": "aws:Recall",
+      "@type": "xsd:string"
+    },
+    "F1Score": {
+      "@id": "aws:F1Score",
+      "@type": "xsd:string"
+    },
+    "FlywheelName": {
+      "@id": "aws:FlywheelName",
+      "@type": "xsd:string"
+    },
+    "ModelType": {
+      "@id": "aws:ModelType",
+      "@type": "xsd:string"
+    },
+    "DataLakeS3Uri": {
+      "@id": "aws:DataLakeS3Uri",
+      "@type": "xsd:string"
+    },
+    "Accuracy": {
+      "@id": "aws:Accuracy",
+      "@type": "xsd:string"
+    },
+    "MicroPrecision": {
+      "@id": "aws:MicroPrecision",
+      "@type": "xsd:string"
+    },
+    "MicroRecall": {
+      "@id": "aws:MicroRecall",
+      "@type": "xsd:string"
+    },
+    "MicroF1Score": {
+      "@id": "aws:MicroF1Score",
+      "@type": "xsd:string"
+    },
+    "HammingLoss": {
+      "@id": "aws:HammingLoss",
+      "@type": "xsd:string"
+    },
+    "FlywheelStatsS3Prefix": {
+      "@id": "aws:FlywheelStatsS3Prefix",
+      "@type": "xsd:string"
+    },
+    "PolicyRevisionId": {
+      "@id": "aws:PolicyRevisionId",
+      "@type": "xsd:string"
+    },
+    "EventsDetectionJobPropertiesList": {
+      "@id": "aws:EventsDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "NumberOfTopics": {
+      "@id": "aws:NumberOfTopics",
+      "@type": "xsd:string"
+    },
+    "Polygon": {
+      "@id": "aws:Polygon",
+      "@type": "xsd:string"
+    },
+    "Count": {
+      "@id": "aws:Count",
+      "@type": "xsd:string"
+    },
+    "KeyPhrasesDetectionJobPropertiesList": {
+      "@id": "aws:KeyPhrasesDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "Languages": {
+      "@id": "aws:Languages",
+      "@type": "xsd:string"
+    },
+    "LabelDelimiter": {
+      "@id": "aws:LabelDelimiter",
+      "@type": "xsd:string"
+    },
+    "Blocks": {
+      "@id": "aws:Blocks",
+      "@type": "xsd:string"
+    },
+    "BlockId": {
+      "@id": "aws:BlockId",
+      "@type": "xsd:string"
+    },
+    "ChildBlocks": {
+      "@id": "aws:ChildBlocks",
+      "@type": "xsd:string"
+    },
+    "ResourcePolicy": {
+      "@id": "aws:ResourcePolicy",
+      "@type": "xsd:string"
+    },
+    "EvaluatedModelArn": {
+      "@id": "aws:EvaluatedModelArn",
+      "@type": "xsd:string"
+    },
+    "EvaluatedModelMetrics": {
+      "@id": "aws:EvaluatedModelMetrics",
+      "@type": "xsd:string"
+    },
+    "TrainedModelArn": {
+      "@id": "aws:TrainedModelArn",
+      "@type": "xsd:string"
+    },
+    "TrainedModelMetrics": {
+      "@id": "aws:TrainedModelMetrics",
+      "@type": "xsd:string"
+    },
+    "EvaluationManifestS3Prefix": {
+      "@id": "aws:EvaluationManifestS3Prefix",
+      "@type": "xsd:string"
+    },
+    "EntityRecognizerPropertiesList": {
+      "@id": "aws:EntityRecognizerPropertiesList",
+      "@type": "xsd:string"
+    },
+    "DocumentReadAction": {
+      "@id": "aws:DocumentReadAction",
+      "@type": "xsd:string"
+    },
+    "DocumentReadMode": {
+      "@id": "aws:DocumentReadMode",
+      "@type": "xsd:string"
+    },
+    "FeatureTypes": {
+      "@id": "aws:FeatureTypes",
+      "@type": "xsd:string"
+    },
+    "KeyPhrases": {
+      "@id": "aws:KeyPhrases",
+      "@type": "xsd:string"
+    },
+    "DatasetPropertiesList": {
+      "@id": "aws:DatasetPropertiesList",
+      "@type": "xsd:string"
+    },
+    "Ids": {
+      "@id": "aws:Ids",
+      "@type": "xsd:string"
+    },
+    "Type": {
+      "@id": "aws:Type",
+      "@type": "xsd:string"
+    },
+    "Pages": {
+      "@id": "aws:Pages",
+      "@type": "xsd:string"
+    },
+    "ExtractedCharacters": {
+      "@id": "aws:ExtractedCharacters",
+      "@type": "xsd:string"
+    },
+    "LatestFlywheelIteration": {
+      "@id": "aws:LatestFlywheelIteration",
+      "@type": "xsd:string"
+    },
+    "DocumentClassifierPropertiesList": {
+      "@id": "aws:DocumentClassifierPropertiesList",
+      "@type": "xsd:string"
+    },
+    "TargetedSentimentDetectionJobPropertiesList": {
+      "@id": "aws:TargetedSentimentDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "DominantLanguageDetectionJobPropertiesList": {
+      "@id": "aws:DominantLanguageDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "FlywheelIterationPropertiesList": {
+      "@id": "aws:FlywheelIterationPropertiesList",
+      "@type": "xsd:string"
+    },
+    "TopicsDetectionJobPropertiesList": {
+      "@id": "aws:TopicsDetectionJobPropertiesList",
+      "@type": "xsd:string"
+    },
+    "NumberOfTrainedDocuments": {
+      "@id": "aws:NumberOfTrainedDocuments",
+      "@type": "xsd:string"
+    },
+    "NumberOfTestDocuments": {
+      "@id": "aws:NumberOfTestDocuments",
+      "@type": "xsd:string"
+    },
+    "EvaluationMetrics": {
+      "@id": "aws:EvaluationMetrics",
+      "@type": "xsd:string"
+    },
+    "AttributeNames": {
+      "@id": "aws:AttributeNames",
+      "@type": "xsd:string"
+    },
+    "AnnotationDataS3Uri": {
+      "@id": "aws:AnnotationDataS3Uri",
+      "@type": "xsd:string"
+    },
+    "SourceDocumentsS3Uri": {
+      "@id": "aws:SourceDocumentsS3Uri",
+      "@type": "xsd:string"
+    },
+    "DatasetS3Uri": {
+      "@id": "aws:DatasetS3Uri",
+      "@type": "xsd:string"
+    },
+    "NumberOfDocuments": {
+      "@id": "aws:NumberOfDocuments",
+      "@type": "xsd:string"
+    },
+    "SyntaxTokens": {
+      "@id": "aws:SyntaxTokens",
+      "@type": "xsd:string"
+    },
+    "Positive": {
+      "@id": "aws:Positive",
+      "@type": "xsd:string"
+    },
+    "Negative": {
+      "@id": "aws:Negative",
+      "@type": "xsd:string"
+    },
+    "Neutral": {
+      "@id": "aws:Neutral",
+      "@type": "xsd:string"
+    },
+    "Mixed": {
+      "@id": "aws:Mixed",
+      "@type": "xsd:string"
+    },
+    "NumberOfLabels": {
+      "@id": "aws:NumberOfLabels",
+      "@type": "xsd:string"
+    },
+    "DataLakeKmsKeyId": {
+      "@id": "aws:DataLakeKmsKeyId",
+      "@type": "xsd:string"
+    },
+    "EndpointPropertiesList": {
+      "@id": "aws:EndpointPropertiesList",
+      "@type": "xsd:string"
+    },
+    "DocumentClassifierSummariesList": {
+      "@id": "aws:DocumentClassifierSummariesList",
+      "@type": "xsd:string"
+    },
+    "Key": {
+      "@id": "aws:Key",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "aws:Value",
+      "@type": "xsd:string"
+    },
+    "X": {
+      "@id": "aws:X",
+      "@type": "xsd:string"
+    },
+    "Y": {
+      "@id": "aws:Y",
+      "@type": "xsd:string"
+    },
+    "BlockReferences": {
+      "@id": "aws:BlockReferences",
+      "@type": "xsd:string"
+    },
+    "GroupScore": {
+      "@id": "aws:GroupScore",
+      "@type": "xsd:string"
+    },
+    "Split": {
+      "@id": "aws:Split",
+      "@type": "xsd:string"
+    },
+    "RecognizerMetadata": {
+      "@id": "aws:RecognizerMetadata",
+      "@type": "xsd:string"
+    },
+    "NumberOfTrainMentions": {
+      "@id": "aws:NumberOfTrainMentions",
+      "@type": "xsd:string"
+    },
+    "ModelName": {
+      "@id": "aws:ModelName",
+      "@type": "xsd:string"
+    },
+    "EndpointName": {
+      "@id": "aws:EndpointName",
+      "@type": "xsd:string"
+    },
+    "Height": {
+      "@id": "aws:Height",
+      "@type": "xsd:string"
+    },
+    "Left": {
+      "@id": "aws:Left",
+      "@type": "xsd:string"
+    },
+    "Top": {
+      "@id": "aws:Top",
+      "@type": "xsd:string"
+    },
+    "Width": {
+      "@id": "aws:Width",
+      "@type": "xsd:string"
+    }
   }
 }

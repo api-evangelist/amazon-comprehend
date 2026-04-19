@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-split-structure.json",
+  "name": "Split",
+  "description": "Split schema",
+  "type": "string",
+  "enum": [
+    "TRAIN",
+    "TEST"
+  ]
+}

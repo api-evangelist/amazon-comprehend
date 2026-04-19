@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-detect-pii-entities-request-schema.json",
+  "title": "DetectPiiEntitiesRequest",
+  "description": "DetectPiiEntitiesRequest schema",
+  "type": "object",
+  "properties": {
+    "Text": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "A UTF-8 text string. The maximum string size is 100 KB."
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "description": "The language of the input documents. Currently, English is the only valid language."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Text",
+    "LanguageCode"
+  ]
+}

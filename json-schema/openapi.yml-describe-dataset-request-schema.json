@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-dataset-request-schema.json",
+  "title": "DescribeDatasetRequest",
+  "description": "DescribeDatasetRequest schema",
+  "type": "object",
+  "properties": {
+    "DatasetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendDatasetArn"
+        },
+        {
+          "description": "The ARN of the dataset."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DatasetArn"
+  ]
+}

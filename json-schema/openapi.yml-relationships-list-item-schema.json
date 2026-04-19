@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-relationships-list-item-schema.json",
+  "title": "RelationshipsListItem",
+  "description": "List of child blocks for the current block.",
+  "type": "object",
+  "properties": {
+    "Ids": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringList"
+        },
+        {
+          "description": "Identifers of the child blocks."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RelationshipType"
+        },
+        {
+          "description": "Only supported relationship is a child relationship."
+        }
+      ]
+    }
+  }
+}

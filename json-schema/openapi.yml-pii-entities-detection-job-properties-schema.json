@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-pii-entities-detection-job-properties-schema.json",
+  "title": "PiiEntitiesDetectionJobProperties",
+  "description": "Provides information about a PII entities detection job.",
+  "type": "object",
+  "properties": {
+    "JobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobId"
+        },
+        {
+          "description": "The identifier assigned to the PII entities detection job."
+        }
+      ]
+    },
+    "JobArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendArn"
+        },
+        {
+          "description": "<p>The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the ARN is as follows:</p> <p> <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code> </p> <p>The following is an example job ARN:</p> <p> <code>arn:aws:comprehend:us-west-2:111122223333:pii-entities-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>"
+        }
+      ]
+    },
+    "JobName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobName"
+        },
+        {
+          "description": "The name that you assigned the PII entities detection job."
+        }
+      ]
+    },
+    "JobStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobStatus"
+        },
+        {
+          "description": "The current status of the PII entities detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure."
+        }
+      ]
+    },
+    "Message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AnyLengthString"
+        },
+        {
+          "description": "A description of the status of a job."
+        }
+      ]
+    },
+    "SubmitTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time that the PII entities detection job was submitted for processing."
+        }
+      ]
+    },
+    "EndTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time that the PII entities detection job completed."
+        }
+      ]
+    },
+    "InputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InputDataConfig"
+        },
+        {
+          "description": "The input properties for a PII entities detection job."
+        }
+      ]
+    },
+    "OutputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PiiOutputDataConfig"
+        },
+        {
+          "description": "The output data configuration that you supplied when you created the PII entities detection job."
+        }
+      ]
+    },
+    "RedactionConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RedactionConfig"
+        },
+        {
+          "description": "<p>Provides configuration parameters for PII entity redaction.</p> <p>This parameter is required if you set the <code>Mode</code> parameter to <code>ONLY_REDACTION</code>. In that case, you must provide a <code>RedactionConfig</code> definition that includes the <code>PiiEntityTypes</code> parameter.</p>"
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "description": "The language code of the input documents"
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data."
+        }
+      ]
+    },
+    "Mode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PiiEntitiesDetectionMode"
+        },
+        {
+          "description": "Specifies whether the output provides the locations (offsets) of PII entities or a file in which PII entities are redacted."
+        }
+      ]
+    }
+  }
+}

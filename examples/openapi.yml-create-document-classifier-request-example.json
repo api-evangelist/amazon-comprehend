@@ -1,0 +1,15 @@
+{
+  "DocumentClassifierName": "example-name",
+  "VersionName": "example-name",
+  "DataAccessRoleArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "Tags": "example-string",
+  "InputDataConfig": "example-string",
+  "OutputDataConfig": "example-string",
+  "ClientRequestToken": "example-string",
+  "LanguageCode": "en",
+  "VolumeKmsKeyId": "example-string",
+  "VpcConfig": "example-string",
+  "Mode": "example-string",
+  "ModelKmsKeyId": "example-string",
+  "ModelPolicy": "example-string"
+}

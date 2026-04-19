@@ -1,0 +1,5 @@
+{
+  "LanguageCode": "en",
+  "DocumentClassificationConfig": "example-string",
+  "EntityRecognitionConfig": "example-string"
+}

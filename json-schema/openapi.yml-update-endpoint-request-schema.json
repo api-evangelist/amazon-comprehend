@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-update-endpoint-request-schema.json",
+  "title": "UpdateEndpointRequest",
+  "description": "UpdateEndpointRequest schema",
+  "type": "object",
+  "properties": {
+    "EndpointArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendEndpointArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the endpoint being updated."
+        }
+      ]
+    },
+    "DesiredModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The ARN of the new model to use when updating an existing endpoint."
+        }
+      ]
+    },
+    "DesiredInferenceUnits": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InferenceUnitsInteger"
+        },
+        {
+          "description": " The desired number of inference units to be used by the model using this endpoint. Each inference unit represents of a throughput of 100 characters per second."
+        }
+      ]
+    },
+    "DesiredDataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "Data access role ARN to use in case the new model is encrypted with a customer CMK."
+        }
+      ]
+    },
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel"
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointArn"
+  ]
+}

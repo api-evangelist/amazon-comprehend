@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-create-endpoint-request-schema.json",
+  "title": "CreateEndpointRequest",
+  "description": "CreateEndpointRequest schema",
+  "type": "object",
+  "properties": {
+    "EndpointName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendEndpointName"
+        },
+        {
+          "description": "This is the descriptive suffix that becomes part of the <code>EndpointArn</code> used for all subsequent requests to this resource. "
+        }
+      ]
+    },
+    "ModelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendModelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the model to which the endpoint will be attached."
+        }
+      ]
+    },
+    "DesiredInferenceUnits": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InferenceUnitsInteger"
+        },
+        {
+          "description": " The desired number of inference units to be used by the model using this endpoint. Each inference unit represents of a throughput of 100 characters per second."
+        }
+      ]
+    },
+    "ClientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestTokenString"
+        },
+        {
+          "description": "An idempotency token provided by the customer. If this token matches a previous endpoint creation request, Amazon Comprehend will not return a <code>ResourceInUseException</code>. "
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "Tags to associate with the endpoint. A tag is a key-value pair that adds metadata to the endpoint. For example, a tag with \"Sales\" as the key might be added to an endpoint to indicate its use by the sales department. "
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId)."
+        }
+      ]
+    },
+    "FlywheelArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComprehendFlywheelArn"
+        },
+        {
+          "description": "The Amazon Resource Number (ARN) of the flywheel to which the endpoint will be attached."
+        }
+      ]
+    }
+  },
+  "required": [
+    "EndpointName",
+    "DesiredInferenceUnits"
+  ]
+}

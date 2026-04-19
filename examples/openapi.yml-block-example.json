@@ -1,0 +1,8 @@
+{
+  "Id": "example-string",
+  "BlockType": "ORGANIZATION",
+  "Text": "This is example text for NLP analysis.",
+  "Page": "example-string",
+  "Geometry": "example-string",
+  "Relationships": "example-string"
+}

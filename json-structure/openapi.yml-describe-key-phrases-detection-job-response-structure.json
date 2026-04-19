@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-key-phrases-detection-job-response-structure.json",
+  "name": "DescribeKeyPhrasesDetectionJobResponse",
+  "description": "DescribeKeyPhrasesDetectionJobResponse schema",
+  "type": "object",
+  "properties": {
+    "KeyPhrasesDetectionJobProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KeyPhrasesDetectionJobProperties"
+        },
+        {
+          "description": "An object that contains the properties associated with a key phrases detection job. "
+        }
+      ]
+    }
+  }
+}

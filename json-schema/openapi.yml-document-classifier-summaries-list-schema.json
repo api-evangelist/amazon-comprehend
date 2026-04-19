@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-document-classifier-summaries-list-schema.json",
+  "title": "DocumentClassifierSummariesList",
+  "description": "DocumentClassifierSummariesList schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/DocumentClassifierSummary"
+  }
+}

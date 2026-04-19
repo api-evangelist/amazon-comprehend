@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-describe-dominant-language-detection-job-response-schema.json",
+  "title": "DescribeDominantLanguageDetectionJobResponse",
+  "description": "DescribeDominantLanguageDetectionJobResponse schema",
+  "type": "object",
+  "properties": {
+    "DominantLanguageDetectionJobProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DominantLanguageDetectionJobProperties"
+        },
+        {
+          "description": "An object that contains the properties associated with a dominant language detection job."
+        }
+      ]
+    }
+  }
+}

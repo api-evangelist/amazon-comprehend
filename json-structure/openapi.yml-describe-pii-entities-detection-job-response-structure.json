@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-describe-pii-entities-detection-job-response-structure.json",
+  "name": "DescribePiiEntitiesDetectionJobResponse",
+  "description": "DescribePiiEntitiesDetectionJobResponse schema",
+  "type": "object",
+  "properties": {
+    "PiiEntitiesDetectionJobProperties": {
+      "$ref": "#/components/schemas/PiiEntitiesDetectionJobProperties"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-string-structure.json",
+  "name": "String",
+  "description": "String schema",
+  "type": "string",
+  "minLength": 1
+}

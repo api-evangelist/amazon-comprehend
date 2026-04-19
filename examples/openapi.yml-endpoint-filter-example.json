@@ -1,0 +1,6 @@
+{
+  "ModelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "Status": "ACTIVE",
+  "CreationTimeBefore": "example-string",
+  "CreationTimeAfter": "example-string"
+}

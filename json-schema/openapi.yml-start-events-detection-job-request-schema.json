@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-start-events-detection-job-request-schema.json",
+  "title": "StartEventsDetectionJobRequest",
+  "description": "StartEventsDetectionJobRequest schema",
+  "type": "object",
+  "properties": {
+    "InputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InputDataConfig"
+        },
+        {
+          "description": "Specifies the format and location of the input data for the job."
+        }
+      ]
+    },
+    "OutputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputDataConfig"
+        },
+        {
+          "description": "Specifies where to send the output files."
+        }
+      ]
+    },
+    "DataAccessRoleArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRoleArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data."
+        }
+      ]
+    },
+    "JobName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobName"
+        },
+        {
+          "description": "The identifier of the events detection job."
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "description": "The language code of the input documents."
+        }
+      ]
+    },
+    "ClientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestTokenString"
+        },
+        {
+          "description": "An unique identifier for the request. If you don't set the client request token, Amazon Comprehend generates one."
+        }
+      ]
+    },
+    "TargetEventTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetEventTypes"
+        },
+        {
+          "description": "The types of events to detect in the input documents."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "Tags to associate with the events detection job. A tag is a key-value pair that adds metadata to a resource used by Amazon Comprehend. For example, a tag with \"Sales\" as the key might be added to a resource to indicate its use by the sales department."
+        }
+      ]
+    }
+  },
+  "required": [
+    "InputDataConfig",
+    "OutputDataConfig",
+    "DataAccessRoleArn",
+    "LanguageCode",
+    "TargetEventTypes"
+  ]
+}

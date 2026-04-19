@@ -9,9 +9,11 @@ description: >-
   Amazon Comprehend is a natural language processing (NLP) service that uses
   machine learning to uncover information in unstructured data. The service
   can identify critical elements in data, including references to language,
-  people, and places.
+  people, and places. It provides entity recognition, sentiment analysis, key
+  phrase extraction, language detection, topic modeling, PII detection, and
+  custom classification capabilities for text documents at scale.
 created: '2024-01-15'
-modified: '2026-03-16'
+modified: '2026-04-19'
 tags:
   - AWS
   - Machine Learning
@@ -23,73 +25,126 @@ apis:
     description: >-
       The Amazon Comprehend API provides programmatic access to natural language
       processing capabilities including sentiment analysis, entity recognition,
-      key phrase extraction, language detection, topic modeling, and syntax
-      analysis for text documents.
+      key phrase extraction, language detection, topic modeling, PII detection,
+      and syntax analysis for text documents. The API supports real-time and
+      batch processing with 84 operations covering detection, async jobs, custom
+      model training, and flywheel management for continuous learning.
     image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    url: https://aws.amazon.com/comprehend/
+    humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
+    tags:
+      - AWS
+      - Machine Learning
+      - Natural Language Processing
+      - NLP
+      - Text Analysis
     properties:
       - type: Documentation
-        url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+        url: https://docs.aws.amazon.com/comprehend/latest/dg/
       - type: OpenAPI
         url: openapi/amazon-comprehend-openapi.yml
-      - type: OpenAPI
-        url: https://api.apis.guru/v2/specs/amazonaws.com/comprehend/2017-11-27/openapi.yaml
-      - type: JSONSchema
-        url: json-schema/amazon-comprehend-entity-schema.json
-      - type: JSONLD
-        url: json-ld/amazon-comprehend-context.jsonld
+      - type: APIReference
+        url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
       - type: Pricing
         url: https://aws.amazon.com/comprehend/pricing/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://aws.amazon.com/comprehend/getting-started/
       - type: FAQ
         url: https://aws.amazon.com/comprehend/faqs/
-      - type: User Guide
-        url: https://docs.aws.amazon.com/comprehend/latest/dg/
-      - type: API Reference
-        url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
-      - type: CLI Reference
-        url: https://docs.aws.amazon.com/cli/latest/reference/comprehend/
-      - type: Security
-        url: https://docs.aws.amazon.com/comprehend/latest/dg/security.html
+      - type: JSONSchema
+        url: json-schema/comprehend-entity-schema.json
+      - type: JSONStructure
+        url: json-structure/comprehend-entity-structure.json
+      - type: JSON-LD
+        url: json-ld/amazon-comprehend-context.jsonld
 common:
   - type: Portal
     url: https://aws.amazon.com/
   - type: Website
     url: https://aws.amazon.com/comprehend/
   - type: Documentation
-    url: https://docs.aws.amazon.com/
-  - type: Terms of Service
+    url: https://docs.aws.amazon.com/comprehend/
+  - type: TermsOfService
     url: https://aws.amazon.com/service-terms/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://aws.amazon.com/privacy/
   - type: Support
     url: https://aws.amazon.com/support/
   - type: Blog
     url: https://aws.amazon.com/blogs/machine-learning/
-  - type: GitHub
+  - type: GitHubOrganization
     url: https://github.com/aws
   - type: Console
     url: https://console.aws.amazon.com/comprehend/
-  - type: Sign Up
+  - type: SignUp
     url: https://portal.aws.amazon.com/billing/signup
   - type: Login
     url: https://signin.aws.amazon.com/
-  - type: Status
+  - type: StatusPage
     url: https://health.aws.amazon.com/health/status
-  - type: Knowledge Center
-    url: https://repost.aws/knowledge-center
   - type: YouTube
     url: https://www.youtube.com/user/AmazonWebServices
-  - type: Stack Overflow
+  - type: StackOverflow
     url: https://stackoverflow.com/questions/tagged/amazon-comprehend
   - type: Contact
     url: https://aws.amazon.com/contact-us/
-  - type: Security
-    url: https://aws.amazon.com/security/
-  - type: Compliance
-    url: https://aws.amazon.com/compliance/
-maintainer:
-  name: Kin Lane
-  email: kin@apievangelist.com
+  - type: SpectralRules
+    url: rules/amazon-comprehend-spectral-rules.yml
+  - type: NaftikoCapability
+    url: capabilities/nlp-analysis.yaml
+  - type: Vocabulary
+    url: vocabulary/amazon-comprehend-vocabulary.yaml
+  - type: Features
+    data:
+      - name: Entity Recognition
+        description: Identify named entities such as people, places, organizations, dates, and quantities in text.
+      - name: Sentiment Analysis
+        description: Detect positive, negative, neutral, or mixed sentiment in text documents.
+      - name: Key Phrase Extraction
+        description: Extract key noun phrases and concepts from unstructured text.
+      - name: Language Detection
+        description: Automatically detect the dominant language of input text from 100+ supported languages.
+      - name: PII Detection and Redaction
+        description: Identify and optionally redact personally identifiable information from documents.
+      - name: Topic Modeling
+        description: Discover latent topics in large collections of documents using unsupervised learning.
+      - name: Custom Classification
+        description: Train custom document classifiers using your own labeled training data.
+      - name: Custom Entity Recognition
+        description: Train custom entity recognizers to identify domain-specific entities in text.
+      - name: Syntax Analysis
+        description: Analyze the syntax of text including parts of speech tagging and tokenization.
+      - name: Flywheel
+        description: Continuously improve custom models with new training data using the Flywheel feature.
+  - type: UseCases
+    data:
+      - name: Customer Feedback Analysis
+        description: Analyze customer reviews, support tickets, and survey responses to understand sentiment and extract actionable insights.
+      - name: Content Moderation
+        description: Detect and filter inappropriate content, hate speech, or PII from user-generated content.
+      - name: Document Processing
+        description: Extract entities, key information, and classifications from contracts, reports, and medical records.
+      - name: Voice of Customer Analytics
+        description: Mine customer interactions for trends, topics, and sentiment to improve products and services.
+      - name: Compliance and PII Redaction
+        description: Automatically detect and redact PII from documents to meet GDPR, HIPAA, and other compliance requirements.
+      - name: Search Enhancement
+        description: Enrich search indexes with entities, key phrases, and topics to improve search relevance.
+  - type: Integrations
+    data:
+      - name: Amazon S3
+        description: Process documents stored in S3 buckets using async batch analysis jobs.
+      - name: Amazon SageMaker
+        description: Integrate custom Comprehend models with SageMaker for advanced ML workflows.
+      - name: AWS Lambda
+        description: Trigger real-time Comprehend analysis from Lambda functions in event-driven architectures.
+      - name: Amazon Kinesis
+        description: Analyze streaming text data from Kinesis Data Streams and Firehose.
+      - name: Amazon OpenSearch
+        description: Enrich OpenSearch indexes with Comprehend-detected entities and topics for better search.
+      - name: AWS Glue
+        description: Use Comprehend in AWS Glue ETL jobs for large-scale document processing pipelines.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com

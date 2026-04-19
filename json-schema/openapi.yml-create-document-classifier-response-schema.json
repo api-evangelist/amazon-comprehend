@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-create-document-classifier-response-schema.json",
+  "title": "CreateDocumentClassifierResponse",
+  "description": "CreateDocumentClassifierResponse schema",
+  "type": "object",
+  "properties": {
+    "DocumentClassifierArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DocumentClassifierArn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) that identifies the document classifier."
+        }
+      ]
+    }
+  }
+}

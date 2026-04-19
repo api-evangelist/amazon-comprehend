@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-list-of-detect-key-phrases-result-schema.json",
+  "title": "ListOfDetectKeyPhrasesResult",
+  "description": "ListOfDetectKeyPhrasesResult schema",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/BatchDetectKeyPhrasesItemResult"
+  }
+}

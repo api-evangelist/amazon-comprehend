@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-batch-detect-dominant-language-response-structure.json",
+  "name": "BatchDetectDominantLanguageResponse",
+  "description": "BatchDetectDominantLanguageResponse schema",
+  "type": "object",
+  "properties": {
+    "ResultList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ListOfDetectDominantLanguageResult"
+        },
+        {
+          "description": "A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty."
+        }
+      ]
+    },
+    "ErrorList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BatchItemErrorList"
+        },
+        {
+          "description": "A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ResultList",
+    "ErrorList"
+  ]
+}

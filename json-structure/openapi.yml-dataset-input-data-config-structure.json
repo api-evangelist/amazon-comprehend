@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-dataset-input-data-config-structure.json",
+  "name": "DatasetInputDataConfig",
+  "description": "Specifies the format and location of the input data for the dataset.",
+  "type": "object",
+  "properties": {
+    "AugmentedManifests": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetAugmentedManifestsList"
+        },
+        {
+          "description": "A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth. "
+        }
+      ]
+    },
+    "DataFormat": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetDataFormat"
+        },
+        {
+          "description": "<p> <code>COMPREHEND_CSV</code>: The data format is a two-column CSV file, where the first column contains labels and the second column contains documents.</p> <p> <code>AUGMENTED_MANIFEST</code>: The data format </p>"
+        }
+      ]
+    },
+    "DocumentClassifierInputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetDocumentClassifierInputDataConfig"
+        },
+        {
+          "description": "<p>The input properties for training a document classifier model. </p> <p>For more information on how the input file is formatted, see <a href=\"https://docs.aws.amazon.com/comprehend/latest/dg/prep-classifier-data.html\">Preparing training data</a> in the Comprehend Developer Guide. </p>"
+        }
+      ]
+    },
+    "EntityRecognizerInputDataConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DatasetEntityRecognizerInputDataConfig"
+        },
+        {
+          "description": "The input properties for training an entity recognizer model."
+        }
+      ]
+    }
+  }
+}

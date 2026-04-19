@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-dataset-status-schema.json",
+  "title": "DatasetStatus",
+  "description": "DatasetStatus schema",
+  "type": "string",
+  "enum": [
+    "CREATING",
+    "COMPLETED",
+    "FAILED"
+  ]
+}

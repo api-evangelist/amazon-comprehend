@@ -1,0 +1,8 @@
+{
+  "S3Uri": "example-string",
+  "Split": "example-string",
+  "AttributeNames": "example-name",
+  "AnnotationDataS3Uri": "example-string",
+  "SourceDocumentsS3Uri": "example-string",
+  "DocumentType": "ORGANIZATION"
+}

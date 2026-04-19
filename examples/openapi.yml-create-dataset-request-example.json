@@ -1,0 +1,9 @@
+{
+  "FlywheelArn": "arn:aws:comprehend:us-east-1:123456789012:document-classifier/MyClassifier",
+  "DatasetName": "example-name",
+  "DatasetType": "ORGANIZATION",
+  "Description": "example-string",
+  "InputDataConfig": "example-string",
+  "ClientRequestToken": "example-string",
+  "Tags": "example-string"
+}

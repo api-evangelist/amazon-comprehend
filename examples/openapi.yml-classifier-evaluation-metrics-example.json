@@ -1,0 +1,10 @@
+{
+  "Accuracy": "example-string",
+  "Precision": "example-string",
+  "Recall": "example-string",
+  "F1Score": "0.98",
+  "MicroPrecision": "example-string",
+  "MicroRecall": "example-string",
+  "MicroF1Score": "0.98",
+  "HammingLoss": "example-string"
+}

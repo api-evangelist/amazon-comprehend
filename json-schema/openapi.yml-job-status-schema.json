@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-schema/openapi.yml-job-status-schema.json",
+  "title": "JobStatus",
+  "description": "JobStatus schema",
+  "type": "string",
+  "enum": [
+    "SUBMITTED",
+    "IN_PROGRESS",
+    "COMPLETED",
+    "FAILED",
+    "STOP_REQUESTED",
+    "STOPPED"
+  ]
+}

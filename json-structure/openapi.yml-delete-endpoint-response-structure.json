@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-delete-endpoint-response-structure.json",
+  "name": "DeleteEndpointResponse",
+  "description": "DeleteEndpointResponse schema",
+  "type": "object",
+  "properties": {}
+}

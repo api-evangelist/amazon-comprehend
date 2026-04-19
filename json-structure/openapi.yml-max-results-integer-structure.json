@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/json-structure/openapi.yml-max-results-integer-structure.json",
+  "name": "MaxResultsInteger",
+  "description": "MaxResultsInteger schema",
+  "type": "integer",
+  "minimum": 1,
+  "maximum": 500
+}
