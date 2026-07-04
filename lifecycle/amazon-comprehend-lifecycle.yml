@@ -1,0 +1,31 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  AWS Comprehend documentation (developer guide, API reference, guidelines and
+  quotas) and AWS Health status dashboard, reviewed 2026-06-20.
+versioning:
+  scheme: date-based-api-version
+  current: '2017-11-27'
+  detail: >-
+    The Comprehend API version is fixed at 2017-11-27 (x-amazon service model
+    version); the target is selected via the X-Amz-Target header
+    (Comprehend_20171127.<Operation>). AWS SDKs pin this version.
+  docs: https://docs.aws.amazon.com/comprehend/latest/APIReference/Welcome.html
+deprecation:
+  policy_url: https://docs.aws.amazon.com/comprehend/latest/dg/comprehend-availability-change.html
+  sunset_header: false
+  detail: >-
+    AWS does not use RFC 8594 Sunset/Deprecation HTTP headers for this API.
+    Feature-availability and deprecation changes are announced via the developer
+    guide "feature availability change" page and AWS communications.
+sla:
+  url: https://aws.amazon.com/machine-learning/sla/
+  uptime_target: "99.9%"
+  detail: Covered by the AWS Machine Learning Services SLA.
+status_page: https://health.aws.amazon.com/health/status
+quotas_docs: https://docs.aws.amazon.com/comprehend/latest/dg/guidelines-and-limits.html
+deprecated_operations: []
+notes: >-
+  No operations are marked deprecated in the current OpenAPI. AWS announced the
+  end of new-customer availability for some Comprehend features; see the
+  feature-availability-change page for specifics.

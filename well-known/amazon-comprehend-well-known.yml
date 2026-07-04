@@ -1,0 +1,33 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  Probed /.well-known/ on the API base host (comprehend.us-east-1.amazonaws.com)
+  and the provider corporate host (aws.amazon.com) on 2026-06-20.
+hosts:
+  - host: https://comprehend.us-east-1.amazonaws.com
+    note: >-
+      Regional API endpoint (SigV4-signed JSON query protocol). No discovery
+      documents published; all probes returned 404.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://aws.amazon.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: amazon-comprehend-security.txt
+        type: SecurityTxt
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404

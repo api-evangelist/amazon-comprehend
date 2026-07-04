@@ -1,0 +1,33 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon Comprehend
+  version: 1.0.0
+extends: openapi/amazon-comprehend-openapi.yml
+x-provenance:
+  generated: '2026-06-20'
+  method: generated
+  source: apis.yml + repo artifacts
+actions:
+  - target: $.info
+    description: Tag the spec with API Evangelist metadata.
+    update:
+      x-apievangelist-slug: amazon-comprehend
+      x-apievangelist-provider: Amazon Web Services
+      x-apievangelist-category: Natural Language Processing
+      x-apievangelist-auth: aws-sigv4
+  - target: $.info
+    description: Link to the natural-language descriptors captured in this repo.
+    update:
+      x-apievangelist-artifacts:
+        packages: packages/amazon-comprehend-packages.yml
+        llms: llms/amazon-comprehend-llms.txt
+        conformance: conformance/amazon-comprehend-conformance.yml
+        errors: errors/amazon-comprehend-problem-types.yml
+        lifecycle: lifecycle/amazon-comprehend-lifecycle.yml
+        mcp: mcp/amazon-comprehend-mcp.yml
+        vocabulary: vocabulary/amazon-comprehend-vocabulary.yaml
+  - target: $.externalDocs
+    description: Point external docs at the human developer guide.
+    update:
+      description: Amazon Comprehend Developer Guide
+      url: https://docs.aws.amazon.com/comprehend/latest/dg/

@@ -1,0 +1,74 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  Public package registries (npm, PyPI, Maven Central, NuGet, pkg.go.dev,
+  RubyGems, Packagist, crates.io) probed 2026-06-20; all HTTP 200.
+description: >-
+  First-party AWS SDK client libraries exposing the Amazon Comprehend API.
+  Amazon Comprehend does not ship a standalone SDK; access is provided through
+  the language-specific AWS SDKs (service client "Comprehend") and the AWS CLI.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@aws-sdk/client-comprehend"
+    url: https://www.npmjs.com/package/@aws-sdk/client-comprehend
+    install: npm install @aws-sdk/client-comprehend
+    official: true
+    status: 200
+  - language: python
+    registry: pypi
+    name: boto3
+    url: https://pypi.org/project/boto3/
+    install: pip install boto3
+    note: Comprehend accessed via boto3.client('comprehend'); low-level core is botocore.
+    official: true
+    status: 200
+  - language: java
+    registry: maven-central
+    name: software.amazon.awssdk:comprehend
+    url: https://repo1.maven.org/maven2/software/amazon/awssdk/comprehend/
+    install: "implementation 'software.amazon.awssdk:comprehend'"
+    official: true
+    status: 200
+  - language: dotnet
+    registry: nuget
+    name: AWSSDK.Comprehend
+    url: https://www.nuget.org/packages/AWSSDK.Comprehend
+    install: dotnet add package AWSSDK.Comprehend
+    official: true
+    status: 200
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/aws/aws-sdk-go-v2/service/comprehend
+    url: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/comprehend
+    install: go get github.com/aws/aws-sdk-go-v2/service/comprehend
+    official: true
+    status: 200
+  - language: ruby
+    registry: rubygems
+    name: aws-sdk-comprehend
+    url: https://rubygems.org/gems/aws-sdk-comprehend
+    install: gem install aws-sdk-comprehend
+    official: true
+    status: 200
+  - language: php
+    registry: packagist
+    name: aws/aws-sdk-php
+    url: https://packagist.org/packages/aws/aws-sdk-php
+    install: composer require aws/aws-sdk-php
+    note: Monolithic PHP SDK; Comprehend exposed via the ComprehendClient class.
+    official: true
+    status: 200
+  - language: rust
+    registry: crates.io
+    name: aws-sdk-comprehend
+    url: https://crates.io/crates/aws-sdk-comprehend
+    install: cargo add aws-sdk-comprehend
+    official: true
+    status: 200
+  - language: cli
+    registry: aws-cli
+    name: aws comprehend
+    url: https://docs.aws.amazon.com/cli/latest/reference/comprehend/
+    install: aws comprehend help
+    official: true

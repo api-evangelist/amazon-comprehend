@@ -13,7 +13,7 @@ description: >-
   phrase extraction, language detection, topic modeling, PII detection, and
   custom classification capabilities for text documents at scale.
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-06-20'
 tags:
   - AWS
   - Machine Learning
@@ -57,6 +57,16 @@ apis:
         url: json-structure/comprehend-entity-structure.json
       - type: JSON-LD
         url: json-ld/amazon-comprehend-context.jsonld
+      - type: Overlay
+        url: overlays/amazon-comprehend-openapi-overlay.yaml
+      - type: MCPServer
+        url: mcp/amazon-comprehend-mcp.yml
+      - type: ErrorCatalog
+        url: errors/amazon-comprehend-problem-types.yml
+      - type: Conformance
+        url: conformance/amazon-comprehend-conformance.yml
+      - type: Lifecycle
+        url: lifecycle/amazon-comprehend-lifecycle.yml
 common:
   - type: Portal
     url: https://aws.amazon.com/
@@ -94,6 +104,16 @@ common:
     url: capabilities/nlp-analysis.yaml
   - type: Vocabulary
     url: vocabulary/amazon-comprehend-vocabulary.yaml
+  - type: Packages
+    url: packages/amazon-comprehend-packages.yml
+  - type: WellKnown
+    url: well-known/amazon-comprehend-well-known.yml
+  - type: SecurityTxt
+    url: well-known/amazon-comprehend-security.txt
+  - type: LLMsTxt
+    url: llms/amazon-comprehend-llms.txt
+  - type: LLMsFull
+    url: llms/amazon-comprehend-llms-full.txt
   - type: Features
     data:
       - name: Entity Recognition

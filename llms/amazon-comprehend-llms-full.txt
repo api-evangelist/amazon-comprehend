@@ -1,0 +1,204 @@
+# Amazon Comprehend Comprehend API Reference
+
+> Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+
+- [Welcome](https://docs.aws.amazon.com/comprehend/latest/APIReference/Welcome.md)
+- [Common Parameters](https://docs.aws.amazon.com/comprehend/latest/APIReference/CommonParameters.md)
+- [Common Error Types](https://docs.aws.amazon.com/comprehend/latest/APIReference/CommonErrors.md)
+
+## [Actions](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_Operations.md)
+
+- [BatchDetectDominantLanguage](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectDominantLanguage.md): Determines the dominant language of the input text for a batch of documents.
+- [BatchDetectEntities](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectEntities.md): Inspects the text of a batch of documents for named entities and returns information about them.
+- [BatchDetectKeyPhrases](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectKeyPhrases.md): Detects the key noun phrases found in a batch of documents.
+- [BatchDetectSentiment](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectSentiment.md): Inspects a batch of documents and returns an inference of the prevailing sentiment, POSITIVE, NEUTRAL, MIXED, or NEGATIVE, in each one.
+- [BatchDetectSyntax](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectSyntax.md): Inspects the text of a batch of documents for the syntax and part of speech of the words in the document and returns information about them.
+- [BatchDetectTargetedSentiment](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectTargetedSentiment.md): Inspects a batch of documents and returns a sentiment analysis for each entity identified in the documents.
+- [ClassifyDocument](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ClassifyDocument.md): Creates a classification request to analyze a single document in real-time.
+- [ContainsPiiEntities](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ContainsPiiEntities.md): Analyzes input text for the presence of personally identifiable information (PII) and returns the labels of identified PII entity types such as name, address, bank account number, or phone number.
+- [CreateDataset](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_CreateDataset.md): Creates a dataset to upload training or test data for a model associated with a flywheel.
+- [CreateDocumentClassifier](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_CreateDocumentClassifier.md): Creates a new document classifier that you can use to categorize documents.
+- [CreateEndpoint](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_CreateEndpoint.md): Creates a model-specific endpoint for synchronous inference for a previously trained custom model For information about endpoints, see Managing endpoints.
+- [CreateEntityRecognizer](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_CreateEntityRecognizer.md): Creates an entity recognizer using submitted files.
+- [CreateFlywheel](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_CreateFlywheel.md): A flywheel is an AWS resource that orchestrates the ongoing training of a model for custom classification or custom entity recognition.
+- [DeleteDocumentClassifier](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DeleteDocumentClassifier.md): Deletes a previously created document classifier
+- [DeleteEndpoint](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DeleteEndpoint.md): Deletes a model-specific endpoint for a previously-trained custom model.
+- [DeleteEntityRecognizer](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DeleteEntityRecognizer.md): Deletes an entity recognizer.
+- [DeleteFlywheel](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DeleteFlywheel.md): Deletes a flywheel.
+- [DeleteResourcePolicy](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DeleteResourcePolicy.md): Deletes a resource-based policy that is attached to a custom model.
+- [DescribeDataset](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeDataset.md): Returns information about the dataset that you specify.
+- [DescribeDocumentClassificationJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeDocumentClassificationJob.md): Gets the properties associated with a document classification job.
+- [DescribeDocumentClassifier](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeDocumentClassifier.md): Gets the properties associated with a document classifier.
+- [DescribeDominantLanguageDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeDominantLanguageDetectionJob.md): Gets the properties associated with a dominant language detection job.
+- [DescribeEndpoint](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeEndpoint.md): Gets the properties associated with a specific endpoint.
+- [DescribeEntitiesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeEntitiesDetectionJob.md): Gets the properties associated with an entities detection job.
+- [DescribeEntityRecognizer](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeEntityRecognizer.md): Provides details about an entity recognizer including status, S3 buckets containing training data, recognizer metadata, metrics, and so on.
+- [DescribeEventsDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeEventsDetectionJob.md)
+- [DescribeFlywheel](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeFlywheel.md): Provides configuration information about the flywheel.
+- [DescribeFlywheelIteration](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeFlywheelIteration.md): Retrieve the configuration properties of a flywheel iteration.
+- [DescribeKeyPhrasesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeKeyPhrasesDetectionJob.md): Gets the properties associated with a key phrases detection job.
+- [DescribePiiEntitiesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribePiiEntitiesDetectionJob.md): Gets the properties associated with a PII entities detection job.
+- [DescribeResourcePolicy](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeResourcePolicy.md): Gets the details of a resource-based policy that is attached to a custom model, including the JSON body of the policy.
+- [DescribeSentimentDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeSentimentDetectionJob.md): Gets the properties associated with a sentiment detection job.
+- [DescribeTargetedSentimentDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeTargetedSentimentDetectionJob.md): Gets the properties associated with a targeted sentiment detection job.
+- [DescribeTopicsDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DescribeTopicsDetectionJob.md)
+- [DetectDominantLanguage](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectDominantLanguage.md): Determines the dominant language of the input text.
+- [DetectEntities](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectEntities.md): Detects named entities in input text when you use the pre-trained model.
+- [DetectKeyPhrases](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectKeyPhrases.md): Detects the key noun phrases found in the text.
+- [DetectPiiEntities](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectPiiEntities.md): Inspects the input text for entities that contain personally identifiable information (PII) and returns information about them.
+- [DetectSentiment](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectSentiment.md): Inspects text and returns an inference of the prevailing sentiment (POSITIVE, NEUTRAL, MIXED, or NEGATIVE).
+- [DetectSyntax](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectSyntax.md): Inspects text for syntax and the part of speech of words in the document.
+- [DetectTargetedSentiment](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectTargetedSentiment.md): Inspects the input text and returns a sentiment analysis for each entity identified in the text.
+- [DetectToxicContent](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DetectToxicContent.md)
+- [ImportModel](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ImportModel.md): Creates a new custom model that replicates a source custom model that you import.
+- [ListDatasets](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListDatasets.md): List the datasets that you have configured in this Region.
+- [ListDocumentClassificationJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListDocumentClassificationJobs.md): Gets a list of the documentation classification jobs that you have submitted.
+- [ListDocumentClassifiers](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListDocumentClassifiers.md): Gets a list of the document classifiers that you have created.
+- [ListDocumentClassifierSummaries](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListDocumentClassifierSummaries.md): Gets a list of summaries of the document classifiers that you have created
+- [ListDominantLanguageDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListDominantLanguageDetectionJobs.md): Gets a list of the dominant language detection jobs that you have submitted.
+- [ListEndpoints](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListEndpoints.md): Gets a list of all existing endpoints that you've created.
+- [ListEntitiesDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListEntitiesDetectionJobs.md): Gets a list of the entity detection jobs that you have submitted.
+- [ListEntityRecognizers](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListEntityRecognizers.md): Gets a list of the properties of all entity recognizers that you created, including recognizers currently in training.
+- [ListEntityRecognizerSummaries](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListEntityRecognizerSummaries.md): Gets a list of summaries for the entity recognizers that you have created.
+- [ListEventsDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListEventsDetectionJobs.md)
+- [ListFlywheelIterationHistory](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListFlywheelIterationHistory.md): Information about the history of a flywheel iteration.
+- [ListFlywheels](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListFlywheels.md): Gets a list of the flywheels that you have created.
+- [ListKeyPhrasesDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListKeyPhrasesDetectionJobs.md): Get a list of key phrase detection jobs that you have submitted.
+- [ListPiiEntitiesDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListPiiEntitiesDetectionJobs.md): Gets a list of the PII entity detection jobs that you have submitted.
+- [ListSentimentDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListSentimentDetectionJobs.md): Gets a list of sentiment detection jobs that you have submitted.
+- [ListTagsForResource](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListTagsForResource.md): Lists all tags associated with a given Amazon Comprehend resource.
+- [ListTargetedSentimentDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListTargetedSentimentDetectionJobs.md): Gets a list of targeted sentiment detection jobs that you have submitted.
+- [ListTopicsDetectionJobs](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ListTopicsDetectionJobs.md)
+- [PutResourcePolicy](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_PutResourcePolicy.md): Attaches a resource-based policy to a custom model.
+- [StartDocumentClassificationJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartDocumentClassificationJob.md): Starts an asynchronous document classification job using a custom classification model.
+- [StartDominantLanguageDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartDominantLanguageDetectionJob.md): Starts an asynchronous dominant language detection job for a collection of documents.
+- [StartEntitiesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartEntitiesDetectionJob.md): Starts an asynchronous entity detection job for a collection of documents.
+- [StartEventsDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartEventsDetectionJob.md)
+- [StartFlywheelIteration](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartFlywheelIteration.md): Start the flywheel iteration.This operation uses any new datasets to train a new model version.
+- [StartKeyPhrasesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartKeyPhrasesDetectionJob.md): Starts an asynchronous key phrase detection job for a collection of documents.
+- [StartPiiEntitiesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartPiiEntitiesDetectionJob.md): Starts an asynchronous PII entity detection job for a collection of documents.
+- [StartSentimentDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartSentimentDetectionJob.md): Starts an asynchronous sentiment detection job for a collection of documents.
+- [StartTargetedSentimentDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartTargetedSentimentDetectionJob.md): Starts an asynchronous targeted sentiment detection job for a collection of documents.
+- [StartTopicsDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StartTopicsDetectionJob.md)
+- [StopDominantLanguageDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopDominantLanguageDetectionJob.md): Stops a dominant language detection job in progress.
+- [StopEntitiesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopEntitiesDetectionJob.md): Stops an entities detection job in progress.
+- [StopEventsDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopEventsDetectionJob.md)
+- [StopKeyPhrasesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopKeyPhrasesDetectionJob.md): Stops a key phrases detection job in progress.
+- [StopPiiEntitiesDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopPiiEntitiesDetectionJob.md): Stops a PII entities detection job in progress.
+- [StopSentimentDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopSentimentDetectionJob.md): Stops a sentiment detection job in progress.
+- [StopTargetedSentimentDetectionJob](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopTargetedSentimentDetectionJob.md): Stops a targeted sentiment detection job in progress.
+- [StopTrainingDocumentClassifier](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopTrainingDocumentClassifier.md): Stops a document classifier training job while in progress.
+- [StopTrainingEntityRecognizer](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_StopTrainingEntityRecognizer.md): Stops an entity recognizer training job while in progress.
+- [TagResource](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TagResource.md): Associates a specific tag with an Amazon Comprehend resource.
+- [UntagResource](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_UntagResource.md): Removes a specific tag associated with an Amazon Comprehend resource.
+- [UpdateEndpoint](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_UpdateEndpoint.md): Updates information about the specified endpoint.
+- [UpdateFlywheel](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_UpdateFlywheel.md): Update the configuration information for an existing flywheel.
+
+
+## [Data Types](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_Types.md)
+
+- [AugmentedManifestsListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_AugmentedManifestsListItem.md): An augmented manifest file that provides training data for your custom model.
+- [BatchDetectDominantLanguageItemResult](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectDominantLanguageItemResult.md): The result of calling the operation.
+- [BatchDetectEntitiesItemResult](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectEntitiesItemResult.md): The result of calling the operation.
+- [BatchDetectKeyPhrasesItemResult](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectKeyPhrasesItemResult.md): The result of calling the operation.
+- [BatchDetectSentimentItemResult](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectSentimentItemResult.md): The result of calling the operation.
+- [BatchDetectSyntaxItemResult](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectSyntaxItemResult.md): The result of calling the operation.
+- [BatchDetectTargetedSentimentItemResult](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchDetectTargetedSentimentItemResult.md): Analysis results for one of the documents in the batch.
+- [BatchItemError](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BatchItemError.md): Describes an error that occurred while processing a document in a batch.
+- [Block](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_Block.md): Information about each word or line of text in the input document.
+- [BlockReference](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BlockReference.md): A reference to a block.
+- [BoundingBox](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_BoundingBox.md): The bounding box around the detected page or around an element on a document page.
+- [ChildBlock](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ChildBlock.md): Nested block contained within a block.
+- [ClassifierEvaluationMetrics](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ClassifierEvaluationMetrics.md): Describes the result metrics for the test data associated with an documentation classifier.
+- [ClassifierMetadata](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ClassifierMetadata.md): Provides information about a document classifier.
+- [DataSecurityConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DataSecurityConfig.md): Data security configuration.
+- [DatasetAugmentedManifestsListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetAugmentedManifestsListItem.md): An augmented manifest file that provides training data for your custom model.
+- [DatasetDocumentClassifierInputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetDocumentClassifierInputDataConfig.md): Describes the dataset input data configuration for a document classifier model.
+- [DatasetEntityRecognizerAnnotations](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetEntityRecognizerAnnotations.md): Describes the annotations associated with a entity recognizer.
+- [DatasetEntityRecognizerDocuments](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetEntityRecognizerDocuments.md): Describes the documents submitted with a dataset for an entity recognizer model.
+- [DatasetEntityRecognizerEntityList](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetEntityRecognizerEntityList.md): Describes the dataset entity list for an entity recognizer model.
+- [DatasetEntityRecognizerInputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetEntityRecognizerInputDataConfig.md): Specifies the format and location of the input data.
+- [DatasetFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetFilter.md): Filter the datasets based on creation time or dataset status.
+- [DatasetInputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetInputDataConfig.md): Specifies the format and location of the input data for the dataset.
+- [DatasetProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DatasetProperties.md): Properties associated with the dataset.
+- [DocumentClass](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClass.md): Specifies the class that categorizes the document being analyzed
+- [DocumentClassificationConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassificationConfig.md): Configuration required for a document classification model.
+- [DocumentClassificationJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassificationJobFilter.md): Provides information for filtering a list of document classification jobs.
+- [DocumentClassificationJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassificationJobProperties.md): Provides information about a document classification job.
+- [DocumentClassifierDocuments](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassifierDocuments.md): The location of the training documents.
+- [DocumentClassifierFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassifierFilter.md): Provides information for filtering a list of document classifiers.
+- [DocumentClassifierInputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassifierInputDataConfig.md): The input properties for training a document classifier.
+- [DocumentClassifierOutputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassifierOutputDataConfig.md): Provide the location for output data from a custom classifier job.
+- [DocumentClassifierProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassifierProperties.md): Provides information about a document classifier.
+- [DocumentClassifierSummary](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentClassifierSummary.md): Describes information about a document classifier and its versions.
+- [DocumentLabel](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentLabel.md): Specifies one of the label or labels that categorize the document being analyzed.
+- [DocumentMetadata](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentMetadata.md): Information about the document, discovered during text extraction.
+- [DocumentReaderConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentReaderConfig.md): Provides configuration parameters to override the default actions for extracting text from PDF documents and image files.
+- [DocumentTypeListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DocumentTypeListItem.md): Document type for each page in the document.
+- [DominantLanguage](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DominantLanguage.md): Returns the code for the dominant language in the input text and the level of confidence that Amazon Comprehend has in the accuracy of the detection.
+- [DominantLanguageDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DominantLanguageDetectionJobFilter.md): Provides information for filtering a list of dominant language detection jobs.
+- [DominantLanguageDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_DominantLanguageDetectionJobProperties.md): Provides information about a dominant language detection job.
+- [EndpointFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EndpointFilter.md): The filter used to determine which endpoints are returned.
+- [EndpointProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EndpointProperties.md): Specifies information about the specified endpoint.
+- [EntitiesDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntitiesDetectionJobFilter.md): Provides information for filtering a list of dominant language detection jobs.
+- [EntitiesDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntitiesDetectionJobProperties.md): Provides information about an entities detection job.
+- [Entity](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_Entity.md): Provides information about an entity.
+- [EntityLabel](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityLabel.md): Specifies one of the label or labels that categorize the personally identifiable information (PII) entity being analyzed.
+- [EntityRecognitionConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognitionConfig.md): Configuration required for an entity recognition model.
+- [EntityRecognizerAnnotations](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerAnnotations.md): Describes the annotations associated with a entity recognizer.
+- [EntityRecognizerDocuments](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerDocuments.md): Describes the training documents submitted with an entity recognizer.
+- [EntityRecognizerEntityList](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerEntityList.md): Describes the entity list submitted with an entity recognizer.
+- [EntityRecognizerEvaluationMetrics](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerEvaluationMetrics.md): Detailed information about the accuracy of an entity recognizer.
+- [EntityRecognizerFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerFilter.md): Provides information for filtering a list of entity recognizers.
+- [EntityRecognizerInputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerInputDataConfig.md): Specifies the format and location of the input data.
+- [EntityRecognizerMetadata](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerMetadata.md): Detailed information about an entity recognizer.
+- [EntityRecognizerMetadataEntityTypesListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerMetadataEntityTypesListItem.md): Individual item from the list of entity types in the metadata of an entity recognizer.
+- [EntityRecognizerOutputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerOutputDataConfig.md): Output data configuration.
+- [EntityRecognizerProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerProperties.md): Describes information about an entity recognizer.
+- [EntityRecognizerSummary](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityRecognizerSummary.md): Describes the information about an entity recognizer and its versions.
+- [EntityTypesEvaluationMetrics](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityTypesEvaluationMetrics.md): Detailed information about the accuracy of an entity recognizer for a specific entity type.
+- [EntityTypesListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EntityTypesListItem.md): An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.
+- [ErrorsListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ErrorsListItem.md): Text extraction encountered one or more page-level errors in the input document.
+- [EventsDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EventsDetectionJobFilter.md)
+- [EventsDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_EventsDetectionJobProperties.md)
+- [ExtractedCharactersListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ExtractedCharactersListItem.md): Array of the number of characters extracted from each page.
+- [FlywheelFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_FlywheelFilter.md): Filter the flywheels based on creation time or flywheel status.
+- [FlywheelIterationFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_FlywheelIterationFilter.md): Filter the flywheel iterations based on creation time.
+- [FlywheelIterationProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_FlywheelIterationProperties.md): The configuration properties of a flywheel iteration.
+- [FlywheelModelEvaluationMetrics](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_FlywheelModelEvaluationMetrics.md): The evaluation metrics associated with the evaluated model.
+- [FlywheelProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_FlywheelProperties.md): The flywheel properties.
+- [FlywheelSummary](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_FlywheelSummary.md): Flywheel summary information.
+- [Geometry](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_Geometry.md): Information about the location of items on a document page.
+- [InputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_InputDataConfig.md): The input properties for an inference job.
+- [InvalidRequestDetail](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_InvalidRequestDetail.md): Provides additional detail about why the request failed.
+- [KeyPhrase](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_KeyPhrase.md): Describes a key noun phrase.
+- [KeyPhrasesDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_KeyPhrasesDetectionJobFilter.md): Provides information for filtering a list of dominant language detection jobs.
+- [KeyPhrasesDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_KeyPhrasesDetectionJobProperties.md): Provides information about a key phrases detection job.
+- [MentionSentiment](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_MentionSentiment.md): Contains the sentiment and sentiment score for one mention of an entity.
+- [OutputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_OutputDataConfig.md): Provides configuration parameters for the output of inference jobs.
+- [PartOfSpeechTag](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_PartOfSpeechTag.md): Identifies the part of speech represented by the token and gives the confidence that Amazon Comprehend has that the part of speech was correctly identified.
+- [PiiEntitiesDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_PiiEntitiesDetectionJobFilter.md): Provides information for filtering a list of PII entity detection jobs.
+- [PiiEntitiesDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_PiiEntitiesDetectionJobProperties.md): Provides information about a PII entities detection job.
+- [PiiEntity](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_PiiEntity.md): Provides information about a PII entity.
+- [PiiOutputDataConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_PiiOutputDataConfig.md): Provides configuration parameters for the output of PII entity detection jobs.
+- [Point](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_Point.md): The X and Y coordinates of a point on a document page.
+- [RedactionConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_RedactionConfig.md): Provides configuration parameters for PII entity redaction.
+- [RelationshipsListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_RelationshipsListItem.md): List of child blocks for the current block.
+- [SentimentDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_SentimentDetectionJobFilter.md): Provides information for filtering a list of dominant language detection jobs.
+- [SentimentDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_SentimentDetectionJobProperties.md): Provides information about a sentiment detection job.
+- [SentimentScore](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_SentimentScore.md): Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.
+- [SyntaxToken](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_SyntaxToken.md): Represents a work in the input text that was recognized and assigned a part of speech.
+- [Tag](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_Tag.md): A key-value pair that adds as a metadata to a resource used by Amazon Comprehend.
+- [TargetedSentimentDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TargetedSentimentDetectionJobFilter.md): Provides information for filtering a list of dominant language detection jobs.
+- [TargetedSentimentDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TargetedSentimentDetectionJobProperties.md): Provides information about a targeted sentiment detection job.
+- [TargetedSentimentEntity](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TargetedSentimentEntity.md): Information about one of the entities found by targeted sentiment analysis.
+- [TargetedSentimentMention](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TargetedSentimentMention.md): Information about one mention of an entity.
+- [TaskConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TaskConfig.md): Configuration about the model associated with a flywheel.
+- [TextSegment](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TextSegment.md): One of the of text strings.
+- [TopicsDetectionJobFilter](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TopicsDetectionJobFilter.md)
+- [TopicsDetectionJobProperties](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_TopicsDetectionJobProperties.md)
+- [ToxicContent](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ToxicContent.md)
+- [ToxicLabels](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_ToxicLabels.md)
+- [UpdateDataSecurityConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_UpdateDataSecurityConfig.md): Data security configuration.
+- [VpcConfig](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_VpcConfig.md): Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job.
+- [WarningsListItem](https://docs.aws.amazon.com/comprehend/latest/APIReference/API_WarningsListItem.md): The system identified one of the following warnings while processing the input document:

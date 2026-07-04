@@ -1,0 +1,184 @@
+generated: '2026-06-20'
+method: derived
+format: aws-json-1.1
+source: Derived from modeled exception schemas in openapi/amazon-comprehend-openapi.yml; semantic HTTP
+  status and titles enriched from https://docs.aws.amazon.com/comprehend/latest/APIReference/CommonErrors.html
+note: Amazon Comprehend uses the AWS JSON 1.1 protocol. Errors are returned as {"__type":"<Exception>","message":"..."}
+  rather than RFC 9457 problem+json. The aws2openapi source spec encodes these as synthetic 480-489 status
+  codes; the status values below are the semantic HTTP statuses.
+problems:
+- name: InvalidRequestException
+  status: 400
+  title: Invalid Request
+  aws_error_type: InvalidRequestException
+  remediation: The request is invalid. Check request parameters and try again.
+  example_operations:
+  - BatchDetectDominantLanguage
+  - BatchDetectEntities
+  - BatchDetectKeyPhrases
+  - BatchDetectSentiment
+  - BatchDetectSyntax
+- name: TextSizeLimitExceededException
+  status: 400
+  title: Text Size Limit Exceeded
+  aws_error_type: TextSizeLimitExceededException
+  remediation: The input text exceeds the size limit. Split the text or reduce document size (25 KB UTF-8
+    for sync operations).
+  example_operations:
+  - BatchDetectDominantLanguage
+  - BatchDetectEntities
+  - BatchDetectKeyPhrases
+  - BatchDetectSentiment
+  - BatchDetectSyntax
+- name: BatchSizeLimitExceededException
+  status: 400
+  title: Batch Size Limit Exceeded
+  aws_error_type: BatchSizeLimitExceededException
+  remediation: The number of documents in the batch exceeds the limit (25 for batch sync operations).
+    Reduce the batch size.
+  example_operations:
+  - BatchDetectDominantLanguage
+  - BatchDetectEntities
+  - BatchDetectKeyPhrases
+  - BatchDetectSentiment
+  - BatchDetectSyntax
+- name: UnsupportedLanguageException
+  status: 400
+  title: Unsupported Language
+  aws_error_type: UnsupportedLanguageException
+  remediation: The requested language is not supported for this operation. See the supported-languages
+    documentation.
+  example_operations:
+  - BatchDetectEntities
+  - BatchDetectKeyPhrases
+  - BatchDetectSentiment
+  - BatchDetectSyntax
+  - BatchDetectTargetedSentiment
+- name: InvalidFilterException
+  status: 400
+  title: Invalid Filter
+  aws_error_type: InvalidFilterException
+  remediation: The filter specified for a List operation is invalid. Correct the filter parameters.
+  example_operations:
+  - ListDatasets
+  - ListDocumentClassificationJobs
+  - ListDocumentClassifiers
+  - ListDominantLanguageDetectionJobs
+  - ListEntitiesDetectionJobs
+- name: ResourceUnavailableException
+  status: 400
+  title: Resource Unavailable
+  aws_error_type: ResourceUnavailableException
+  remediation: The specified resource is not available. Verify the resource state and retry.
+  example_operations:
+  - ClassifyDocument
+  - CreateEndpoint
+  - CreateFlywheel
+  - DeleteDocumentClassifier
+  - DeleteEntityRecognizer
+- name: ResourceInUseException
+  status: 400
+  title: Resource In Use
+  aws_error_type: ResourceInUseException
+  remediation: The specified resource is in use and cannot be modified or deleted. Wait until it is no
+    longer in use.
+  example_operations:
+  - CreateDataset
+  - CreateDocumentClassifier
+  - CreateEndpoint
+  - CreateEntityRecognizer
+  - CreateFlywheel
+- name: ResourceLimitExceededException
+  status: 400
+  title: Resource Limit Exceeded
+  aws_error_type: ResourceLimitExceededException
+  remediation: A resource quota has been exceeded. Request a quota increase or delete unused resources.
+  example_operations:
+  - CreateDataset
+  - CreateDocumentClassifier
+  - CreateEndpoint
+  - CreateEntityRecognizer
+  - CreateFlywheel
+- name: KmsKeyValidationException
+  status: 400
+  title: Kms Key Validation
+  aws_error_type: KmsKeyValidationException
+  remediation: The provided AWS KMS key could not be validated. Check the key ARN and IAM permissions.
+  example_operations:
+  - CreateDocumentClassifier
+  - CreateEntityRecognizer
+  - CreateFlywheel
+  - ImportModel
+  - StartDocumentClassificationJob
+- name: TooManyTagsException
+  status: 400
+  title: Too Many Tags
+  aws_error_type: TooManyTagsException
+  remediation: The request contains too many tags. Reduce the number of tags (max 50 per resource).
+  example_operations:
+  - CreateDataset
+  - CreateDocumentClassifier
+  - CreateEndpoint
+  - CreateEntityRecognizer
+  - CreateFlywheel
+- name: TooManyTagKeysException
+  status: 400
+  title: Too Many Tag Keys
+  aws_error_type: TooManyTagKeysException
+  remediation: The request references too many tag keys. Reduce the number of tag keys.
+  example_operations:
+  - UntagResource
+- name: ConcurrentModificationException
+  status: 400
+  title: Concurrent Modification
+  aws_error_type: ConcurrentModificationException
+  remediation: The resource was modified concurrently. Retry the operation.
+  example_operations:
+  - TagResource
+  - UntagResource
+- name: ResourceNotFoundException
+  status: 404
+  title: Resource Not Found
+  aws_error_type: ResourceNotFoundException
+  remediation: The specified resource (job, endpoint, classifier, recognizer, flywheel, or ARN) was not
+    found. Verify the identifier.
+  example_operations:
+  - CreateDataset
+  - CreateEndpoint
+  - CreateFlywheel
+  - DeleteDocumentClassifier
+  - DeleteEndpoint
+- name: JobNotFoundException
+  status: 404
+  title: Job Not Found
+  aws_error_type: JobNotFoundException
+  remediation: The specified job was not found. Verify the JobId.
+  example_operations:
+  - DescribeDocumentClassificationJob
+  - DescribeDominantLanguageDetectionJob
+  - DescribeEntitiesDetectionJob
+  - DescribeEventsDetectionJob
+  - DescribeKeyPhrasesDetectionJob
+- name: TooManyRequestsException
+  status: 429
+  title: Too Many Requests
+  aws_error_type: TooManyRequestsException
+  remediation: The request rate exceeded the service throttling limit. Implement exponential backoff and
+    retry.
+  example_operations:
+  - CreateDataset
+  - CreateDocumentClassifier
+  - CreateEndpoint
+  - CreateEntityRecognizer
+  - CreateFlywheel
+- name: InternalServerException
+  status: 500
+  title: Internal Server
+  aws_error_type: InternalServerException
+  remediation: An internal server error occurred. Retry the request; if it persists, contact AWS Support.
+  example_operations:
+  - BatchDetectDominantLanguage
+  - BatchDetectEntities
+  - BatchDetectKeyPhrases
+  - BatchDetectSentiment
+  - BatchDetectSyntax
