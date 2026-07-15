@@ -68,6 +68,8 @@ apis:
       - type: Lifecycle
         url: lifecycle/amazon-comprehend-lifecycle.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-comprehend-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-comprehend-trust-center.yml
   - type: VulnerabilityDisclosure
