@@ -1,0 +1,361 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDataset API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.DescribeDataset'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.DescribeDataset:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeDataset
+      description: Returns information about the dataset that you specify. For more information about datasets, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/flywheels-about.html"> Flywheel overview</a> in the <i>Amazon Comprehend Developer Guide</i>.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeDatasetResponse'
+              examples:
+                DescribeDataset200Example:
+                  summary: Default DescribeDataset 200
+                  x-microcks-default: true
+                  value:
+                    DatasetProperties: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                DescribeDataset480Example:
+                  summary: Default DescribeDataset 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DescribeDataset481Example:
+                  summary: Default DescribeDataset 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                DescribeDataset482Example:
+                  summary: Default DescribeDataset 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DescribeDataset483Example:
+                  summary: Default DescribeDataset 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeDatasetRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.DescribeDataset
+      summary: Amazon Comprehend Describe Dataset
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.DescribeDataset'
+components:
+  schemas:
+    NumberOfDocuments:
+      type: integer
+    DatasetProperties:
+      type: object
+      properties:
+        DatasetArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendDatasetArn'
+          - description: The ARN of the dataset.
+        DatasetName:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendArnName'
+          - description: The name of the dataset.
+        DatasetType:
+          allOf:
+          - $ref: '#/components/schemas/DatasetType'
+          - description: The dataset type (training data or test data).
+        DatasetS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 URI where the dataset is stored.
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/Description'
+          - description: Description of the dataset.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/DatasetStatus'
+          - description: 'The dataset status. While the system creates the dataset, the status is <code>CREATING</code>. When the dataset is ready to use, the status changes to <code>COMPLETED</code>. '
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: A description of the status of the dataset.
+        NumberOfDocuments:
+          allOf:
+          - $ref: '#/components/schemas/NumberOfDocuments'
+          - description: The number of documents in the dataset.
+        CreationTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Creation time of the dataset.
+        EndTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Time when the data from the dataset becomes available in the data lake.
+      description: Properties associated with the dataset.
+    DescribeDatasetResponse:
+      type: object
+      properties:
+        DatasetProperties:
+          allOf:
+          - $ref: '#/components/schemas/DatasetProperties'
+          - description: The dataset properties.
+    ResourceNotFoundException: {}
+    AnyLengthString:
+      type: string
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
+    DatasetType:
+      type: string
+      enum:
+      - TRAIN
+      - TEST
+    InvalidRequestException: {}
+    DatasetStatus:
+      type: string
+      enum:
+      - CREATING
+      - COMPLETED
+      - FAILED
+    Timestamp:
+      type: string
+      format: date-time
+    TooManyRequestsException: {}
+    DescribeDatasetRequest:
+      type: object
+      required:
+      - DatasetArn
+      title: DescribeDatasetRequest
+      properties:
+        DatasetArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendDatasetArn'
+          - description: The ARN of the dataset.
+    InternalServerException: {}
+    ComprehendDatasetArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    ComprehendArnName:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+      maxLength: 63
+    Description:
+      type: string
+      pattern: ^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$
+      maxLength: 2048
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

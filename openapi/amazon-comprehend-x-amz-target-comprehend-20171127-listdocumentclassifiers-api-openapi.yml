@@ -1,0 +1,753 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ListDocumentClassifiers API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.ListDocumentClassifiers'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.ListDocumentClassifiers:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListDocumentClassifiers
+      description: Gets a list of the document classifiers that you have created.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListDocumentClassifiersResponse'
+              examples:
+                ListDocumentClassifiers200Example:
+                  summary: Default ListDocumentClassifiers 200
+                  x-microcks-default: true
+                  value:
+                    DocumentClassifierPropertiesList: example
+                    NextToken: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                ListDocumentClassifiers480Example:
+                  summary: Default ListDocumentClassifiers 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                ListDocumentClassifiers481Example:
+                  summary: Default ListDocumentClassifiers 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: InvalidFilterException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidFilterException'
+              examples:
+                ListDocumentClassifiers482Example:
+                  summary: Default ListDocumentClassifiers 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                ListDocumentClassifiers483Example:
+                  summary: Default ListDocumentClassifiers 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListDocumentClassifiersRequest'
+      parameters:
+      - name: MaxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.ListDocumentClassifiers
+      summary: Amazon Comprehend List Document Classifiers
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.ListDocumentClassifiers'
+components:
+  schemas:
+    ListDocumentClassifiersResponse:
+      type: object
+      properties:
+        DocumentClassifierPropertiesList:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierPropertiesList'
+          - description: A list containing the properties of each job returned.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Identifies the next page of results to return.
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    SecurityGroupId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    DocumentClassifierOutputDataConfig:
+      type: object
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: <p>When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the Amazon S3 location where you want to write the confusion matrix and other output files. The URI must be in the same Region as the API endpoint that you are calling. The location is used as the prefix for the actual location of this output file.</p> <p>When the custom classifier job is finished, the service creates the output file in a directory specific to the job. The <code>S3Uri</code> field contains the location of the output file, called <code>output.tar.gz</code>. It is a compressed archive that contains the confusion matrix.</p>
+        KmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job. The KmsKeyId can be one of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>KMS Key Alias: <code>"alias/ExampleAlias"</code> </p> </li> <li> <p>ARN of a KMS Key Alias: <code>"arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias"</code> </p> </li> </ul>'
+        FlywheelStatsS3Prefix:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The Amazon S3 prefix for the data lake location of the flywheel statistics.
+      description: Provide the location for output data from a custom classifier job. This field is mandatory if you are training a native classifier model.
+    SubnetId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    AugmentedManifestsListItem:
+      type: object
+      required:
+      - S3Uri
+      - AttributeNames
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The Amazon S3 location of the augmented manifest file.
+        Split:
+          allOf:
+          - $ref: '#/components/schemas/Split'
+          - description: <p>The purpose of the data you've provided in the augmented manifest. You can either train or test this data. If you don't specify, the default is train.</p> <p>TRAIN - all of the documents in the manifest will be used for training. If no test documents are provided, Amazon Comprehend will automatically reserve a portion of the training documents for testing.</p> <p> TEST - all of the documents in the manifest will be used for testing.</p>
+        AttributeNames:
+          allOf:
+          - $ref: '#/components/schemas/AttributeNamesList'
+          - description: <p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p> <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p> <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>
+        AnnotationDataS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the annotation files that are referred in the augmented manifest file.
+        SourceDocumentsS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+        DocumentType:
+          allOf:
+          - $ref: '#/components/schemas/AugmentedManifestsDocumentTypeFormat'
+          - description: <p>The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is PlainTextDocument. </p> <ul> <li> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p> </li> <li> <p> <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and TXT.</p> </li> </ul>
+      description: An augmented manifest file that provides training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.
+    DocumentClassifierProperties:
+      type: object
+      properties:
+        DocumentClassifierArn:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierArn'
+          - description: The Amazon Resource Name (ARN) that identifies the document classifier.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language code for the language of the documents that the classifier was trained on.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/ModelStatus'
+          - description: <p>The status of the document classifier. If the status is <code>TRAINED</code> the classifier is ready to use. If the status is <code>TRAINED_WITH_WARNINGS</code> the classifier training succeeded, but you should review the warnings returned in the <code>CreateDocumentClassifier</code> response.</p> <p> If the status is <code>FAILED</code> you can see additional information about why the classifier wasn't trained in the <code>Message</code> field.</p>
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: Additional information about the status of the classifier.
+        SubmitTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that the document classifier was submitted for training.
+        EndTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that training the document classifier completed.
+        TrainingStartTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: 'Indicates the time when the training starts on documentation classifiers. You are billed for the time interval between this time and the value of TrainingEndTime. '
+        TrainingEndTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that training of the document classifier was completed. Indicates the time when the training completes on documentation classifiers. You are billed for the time interval between this time and the value of TrainingStartTime.
+        InputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierInputDataConfig'
+          - description: The input data configuration that you supplied when you created the document classifier for training.
+        OutputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierOutputDataConfig'
+          - description: ' Provides output results configuration parameters for custom classifier jobs.'
+        ClassifierMetadata:
+          allOf:
+          - $ref: '#/components/schemas/ClassifierMetadata'
+          - description: Information about the document classifier, including the number of documents used for training the classifier, the number of documents used for test the classifier, and an accuracy rating.
+        DataAccessRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/IamRoleArn'
+          - description: The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
+        VolumeKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> </ul>'
+        VpcConfig:
+          allOf:
+          - $ref: '#/components/schemas/VpcConfig'
+          - description: ' Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your custom classifier. For more information, see <a href="https://docs.aws.amazon.com/vppc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+        Mode:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierMode'
+          - description: Indicates the mode in which the specific classifier was trained. This also indicates the format of input documents and the format of the confusion matrix. Each classifier can only be trained in one mode and this cannot be changed once the classifier is trained.
+        ModelKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> </ul>'
+        VersionName:
+          allOf:
+          - $ref: '#/components/schemas/VersionName'
+          - description: The version name that you assigned to the document classifier.
+        SourceModelArn:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierArn'
+          - description: The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web Services account to create the document classifier model in your Amazon Web Services account.
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: The Amazon Resource Number (ARN) of the flywheel
+      description: Provides information about a document classifier.
+    DocumentReadMode:
+      type: string
+      enum:
+      - SERVICE_DEFAULT
+      - FORCE_DOCUMENT_READ_ACTION
+    VersionName:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+      maxLength: 63
+    ListDocumentClassifiersRequest:
+      type: object
+      title: ListDocumentClassifiersRequest
+      properties:
+        Filter:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierFilter'
+          - description: Filters the jobs that are returned. You can filter jobs on their name, status, or the date and time that they were submitted. You can only set one filter at a time.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Identifies the next page of results to return.
+        MaxResults:
+          allOf:
+          - $ref: '#/components/schemas/MaxResultsInteger'
+          - description: The maximum number of results to return in each page. The default is 100.
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    ModelStatus:
+      type: string
+      enum:
+      - SUBMITTED
+      - TRAINING
+      - DELETING
+      - STOP_REQUESTED
+      - STOPPED
+      - IN_ERROR
+      - TRAINED
+      - TRAINED_WITH_WARNING
+    DocumentClassifierDocuments:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 URI location of the training documents specified in the S3Uri CSV file.
+        TestS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 URI location of the test documents included in the TestS3Uri CSV file. This field is not required if you do not specify a test CSV file.
+      description: The location of the training documents. This parameter is required in a request to create a native classifier model.
+    AnyLengthString:
+      type: string
+    InvalidFilterException: {}
+    Subnets:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 1
+      maxItems: 16
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
+    Split:
+      type: string
+      enum:
+      - TRAIN
+      - TEST
+    DocumentReaderConfig:
+      type: object
+      required:
+      - DocumentReadAction
+      properties:
+        DocumentReadAction:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadAction'
+          - description: <p>This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract text from PDF files and image files. Enter one of the following values:</p> <ul> <li> <p> <code>TEXTRACT_DETECT_DOCUMENT_TEXT</code> - The Amazon Comprehend service uses the <code>DetectDocumentText</code> API operation. </p> </li> <li> <p> <code>TEXTRACT_ANALYZE_DOCUMENT</code> - The Amazon Comprehend service uses the <code>AnalyzeDocument</code> API operation. </p> </li> </ul>
+        DocumentReadMode:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadMode'
+          - description: <p>Determines the text extraction actions for PDF files. Enter one of the following values:</p> <ul> <li> <p> <code>SERVICE_DEFAULT</code> - use the Amazon Comprehend service defaults for PDF files.</p> </li> <li> <p> <code>FORCE_DOCUMENT_READ_ACTION</code> - Amazon Comprehend uses the Textract API specified by DocumentReadAction for all PDF files, including digital PDF files. </p> </li> </ul>
+        FeatureTypes:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDocumentReadFeatureTypes'
+          - description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document. </p> </li> </ul>
+      description: '<p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>'
+    DocumentClassifierInputDataConfig:
+      type: object
+      properties:
+        DataFormat:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierDataFormat'
+          - description: '<p>The format of your training data:</p> <ul> <li> <p> <code>COMPREHEND_CSV</code>: A two-column CSV file, where labels are provided in the first column, and documents are provided in the second. If you use this value, you must provide the <code>S3Uri</code> parameter in your request.</p> </li> <li> <p> <code>AUGMENTED_MANIFEST</code>: A labeled dataset that is produced by Amazon SageMaker Ground Truth. This file is in JSON lines format. Each line is a complete JSON object that contains a training document and its associated labels. </p> <p>If you use this value, you must provide the <code>AugmentedManifests</code> parameter in your request.</p> </li> </ul> <p>If you don''t specify a value, Amazon Comprehend uses <code>COMPREHEND_CSV</code> as the default.</p>'
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: <p>The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that you are calling. The URI can point to a single input file or it can provide the prefix for a collection of input files.</p> <p>For example, if you use the URI <code>S3://bucketName/prefix</code>, if the prefix is a single file, Amazon Comprehend uses that file as input. If more than one file begins with the prefix, Amazon Comprehend uses all of them as input.</p> <p>This parameter is required if you set <code>DataFormat</code> to <code>COMPREHEND_CSV</code>.</p>
+        TestS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: 'This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI must be in the same Amazon Web Services Region as the API endpoint that you are calling. '
+        LabelDelimiter:
+          allOf:
+          - $ref: '#/components/schemas/LabelDelimiter'
+          - description: Indicates the delimiter used to separate each label for training a multi-label classifier. The default delimiter between labels is a pipe (|). You can use a different character as a delimiter (if it's an allowed character) by specifying it under Delimiter for labels. If the training documents use a delimiter other than the default or the delimiter you specify, the labels on that line will be combined to make a single unique label, such as LABELLABELLABEL.
+        AugmentedManifests:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierAugmentedManifestsList'
+          - description: <p>A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.</p> <p>This parameter is required if you set <code>DataFormat</code> to <code>AUGMENTED_MANIFEST</code>.</p>
+        DocumentType:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierDocumentTypeFormat'
+          - description: The type of input documents for training the model. Provide plain-text documents to create a plain-text model, and provide semi-structured documents to create a native model.
+        Documents:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierDocuments'
+          - description: The S3 location of the training documents. This parameter is required in a request to create a native classifier model.
+        DocumentReaderConfig:
+          $ref: '#/components/schemas/DocumentReaderConfig'
+      description: <p>The input properties for training a document classifier. </p> <p>For more information on how the input file is formatted, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/prep-classifier-data.html">Preparing training data</a> in the Comprehend Developer Guide. </p>
+    AttributeNamesListItem:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      minLength: 1
+      maxLength: 63
+    DocumentClassifierArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:document-classifier/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    AttributeNamesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AttributeNamesListItem'
+    DocumentClassifierDocumentTypeFormat:
+      type: string
+      enum:
+      - PLAIN_TEXT_DOCUMENT
+      - SEMI_STRUCTURED_DOCUMENT
+    InvalidRequestException: {}
+    DocumentReadFeatureTypes:
+      type: string
+      enum:
+      - TABLES
+      - FORMS
+      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
+    DocumentClassifierMode:
+      type: string
+      enum:
+      - MULTI_CLASS
+      - MULTI_LABEL
+    String:
+      type: string
+      minLength: 1
+    SecurityGroupIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
+    DocumentClassifierFilter:
+      type: object
+      properties:
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/ModelStatus'
+          - description: Filters the list of classifiers based on status.
+        DocumentClassifierName:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendArnName'
+          - description: The name that you assigned to the document classifier
+        SubmitTimeBefore:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filters the list of classifiers based on the time that the classifier was submitted for processing. Returns only classifiers submitted before the specified time. Classifiers are returned in ascending order, oldest to newest.
+        SubmitTimeAfter:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filters the list of classifiers based on the time that the classifier was submitted for processing. Returns only classifiers submitted after the specified time. Classifiers are returned in descending order, newest to oldest.
+      description: Provides information for filtering a list of document classifiers. You can only specify one filtering parameter in a request. For more information, see the <code>ListDocumentClassifiers</code> operation.
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    Timestamp:
+      type: string
+      format: date-time
+    Integer:
+      type: integer
+    DocumentClassifierDataFormat:
+      type: string
+      enum:
+      - COMPREHEND_CSV
+      - AUGMENTED_MANIFEST
+    ListOfDocumentReadFeatureTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentReadFeatureTypes'
+      minItems: 1
+      maxItems: 2
+    ClassifierMetadata:
+      type: object
+      properties:
+        NumberOfLabels:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: 'The number of labels in the input data. '
+        NumberOfTrainedDocuments:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The number of documents in the input data that were used to train the classifier. Typically this is 80 to 90 percent of the input documents.
+        NumberOfTestDocuments:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The number of documents in the input data that were used to test the classifier. Typically this is 10 to 20 percent of the input documents, up to 10,000 documents.
+        EvaluationMetrics:
+          allOf:
+          - $ref: '#/components/schemas/ClassifierEvaluationMetrics'
+          - description: ' Describes the result metrics for the test data associated with an documentation classifier.'
+      description: Provides information about a document classifier.
+    Double:
+      type: number
+      format: double
+    TooManyRequestsException: {}
+    VpcConfig:
+      type: object
+      required:
+      - SecurityGroupIds
+      - Subnets
+      properties:
+        SecurityGroupIds:
+          allOf:
+          - $ref: '#/components/schemas/SecurityGroupIds'
+          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
+        Subnets:
+          allOf:
+          - $ref: '#/components/schemas/Subnets'
+          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
+      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+    DocumentClassifierAugmentedManifestsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AugmentedManifestsListItem'
+    ClassifierEvaluationMetrics:
+      type: object
+      properties:
+        Accuracy:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: The fraction of the labels that were correct recognized. It is computed by dividing the number of labels in the test documents that were correctly recognized by the total number of labels in the test documents.
+        Precision:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of the usefulness of the classifier results in the test data. High precision means that the classifier returned substantially more relevant results than irrelevant ones.
+        Recall:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of how complete the classifier results are for the test data. High recall means that the classifier returned most of the relevant results. '
+        F1Score:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of how accurate the classifier results are for the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. The highest score is 1, and the worst score is 0. '
+        MicroPrecision:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of the usefulness of the recognizer results in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. Unlike the Precision metric which comes from averaging the precision of all available labels, this is based on the overall score of all precision scores added together.
+        MicroRecall:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of how complete the classifier results are for the test data. High recall means that the classifier returned most of the relevant results. Specifically, this indicates how many of the correct categories in the text that the model can predict. It is a percentage of correct categories in the text that can found. Instead of averaging the recall scores of all labels (as with Recall), micro Recall is based on the overall score of all recall scores added together.
+        MicroF1Score:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of how accurate the classifier results are for the test data. It is a combination of the <code>Micro Precision</code> and <code>Micro Recall</code> values. The <code>Micro F1Score</code> is the harmonic mean of the two scores. The highest score is 1, and the worst score is 0.
+        HammingLoss:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: Indicates the fraction of labels that are incorrectly predicted. Also seen as the fraction of wrong labels compared to the total number of labels. Scores closer to zero are better.
+      description: Describes the result metrics for the test data associated with an documentation classifier.
+    InternalServerException: {}
+    DocumentClassifierPropertiesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentClassifierProperties'
+    DocumentReadAction:
+      type: string
+      enum:
+      - TEXTRACT_DETECT_DOCUMENT_TEXT
+      - TEXTRACT_ANALYZE_DOCUMENT
+    ComprehendArnName:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+      maxLength: 63
+    LabelDelimiter:
+      type: string
+      pattern: ^[ ~!@#$%^*\-_+=|\\:;\t>?/]$
+      minLength: 1
+      maxLength: 1
+    AugmentedManifestsDocumentTypeFormat:
+      type: string
+      enum:
+      - PLAIN_TEXT_DOCUMENT
+      - SEMI_STRUCTURED_DOCUMENT
+    MaxResultsInteger:
+      type: integer
+      minimum: 1
+      maximum: 500
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

@@ -1,0 +1,355 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.UpdateEndpoint API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.UpdateEndpoint'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.UpdateEndpoint:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: UpdateEndpoint
+      description: Updates information about the specified endpoint. For information about endpoints, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing endpoints</a>.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateEndpointResponse'
+              examples:
+                UpdateEndpoint200Example:
+                  summary: Default UpdateEndpoint 200
+                  x-microcks-default: true
+                  value:
+                    DesiredModelArn: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                UpdateEndpoint480Example:
+                  summary: Default UpdateEndpoint 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                UpdateEndpoint481Example:
+                  summary: Default UpdateEndpoint 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: ResourceInUseException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceInUseException'
+              examples:
+                UpdateEndpoint482Example:
+                  summary: Default UpdateEndpoint 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: ResourceLimitExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceLimitExceededException'
+              examples:
+                UpdateEndpoint483Example:
+                  summary: Default UpdateEndpoint 483
+                  x-microcks-default: true
+                  value: example
+        '484':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                UpdateEndpoint484Example:
+                  summary: Default UpdateEndpoint 484
+                  x-microcks-default: true
+                  value: example
+        '485':
+          description: ResourceUnavailableException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceUnavailableException'
+              examples:
+                UpdateEndpoint485Example:
+                  summary: Default UpdateEndpoint 485
+                  x-microcks-default: true
+                  value: example
+        '486':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                UpdateEndpoint486Example:
+                  summary: Default UpdateEndpoint 486
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateEndpointRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.UpdateEndpoint
+      summary: Amazon Comprehend Update Endpoint
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.UpdateEndpoint'
+components:
+  schemas:
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    ResourceLimitExceededException: {}
+    ResourceNotFoundException: {}
+    ResourceUnavailableException: {}
+    InvalidRequestException: {}
+    UpdateEndpointRequest:
+      type: object
+      required:
+      - EndpointArn
+      title: UpdateEndpointRequest
+      properties:
+        EndpointArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendEndpointArn'
+          - description: The Amazon Resource Number (ARN) of the endpoint being updated.
+        DesiredModelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendModelArn'
+          - description: The ARN of the new model to use when updating an existing endpoint.
+        DesiredInferenceUnits:
+          allOf:
+          - $ref: '#/components/schemas/InferenceUnitsInteger'
+          - description: ' The desired number of inference units to be used by the model using this endpoint. Each inference unit represents of a throughput of 100 characters per second.'
+        DesiredDataAccessRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/IamRoleArn'
+          - description: Data access role ARN to use in case the new model is encrypted with a customer CMK.
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: The Amazon Resource Number (ARN) of the flywheel
+    UpdateEndpointResponse:
+      type: object
+      properties:
+        DesiredModelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendModelArn'
+          - description: The Amazon Resource Number (ARN) of the new model.
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    ResourceInUseException: {}
+    ComprehendEndpointArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier-endpoint|entity-recognizer-endpoint)/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    TooManyRequestsException: {}
+    InferenceUnitsInteger:
+      type: integer
+      minimum: 1
+    InternalServerException: {}
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

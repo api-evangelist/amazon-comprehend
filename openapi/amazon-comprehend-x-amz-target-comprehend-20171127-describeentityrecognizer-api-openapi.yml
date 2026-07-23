@@ -1,0 +1,691 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.DescribeEntityRecognizer'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.DescribeEntityRecognizer:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeEntityRecognizer
+      description: Provides details about an entity recognizer including status, S3 buckets containing training data, recognizer metadata, metrics, and so on.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeEntityRecognizerResponse'
+              examples:
+                DescribeEntityRecognizer200Example:
+                  summary: Default DescribeEntityRecognizer 200
+                  x-microcks-default: true
+                  value:
+                    EntityRecognizerProperties: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                DescribeEntityRecognizer480Example:
+                  summary: Default DescribeEntityRecognizer 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DescribeEntityRecognizer481Example:
+                  summary: Default DescribeEntityRecognizer 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                DescribeEntityRecognizer482Example:
+                  summary: Default DescribeEntityRecognizer 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DescribeEntityRecognizer483Example:
+                  summary: Default DescribeEntityRecognizer 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeEntityRecognizerRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.DescribeEntityRecognizer
+      summary: Amazon Comprehend Describe Entity Recognizer
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.DescribeEntityRecognizer'
+components:
+  schemas:
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    SecurityGroupId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    EntityTypesListItem:
+      type: object
+      required:
+      - Type
+      properties:
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypeName'
+          - description: '<p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p> <p>Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break, \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma).</p>'
+      description: An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.
+    EntityTypeName:
+      type: string
+      pattern: ^(?![^\n\r\t,]*\\n|\\r|\\t)[^\n\r\t,]+$
+      maxLength: 64
+    SubnetId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    AugmentedManifestsListItem:
+      type: object
+      required:
+      - S3Uri
+      - AttributeNames
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The Amazon S3 location of the augmented manifest file.
+        Split:
+          allOf:
+          - $ref: '#/components/schemas/Split'
+          - description: <p>The purpose of the data you've provided in the augmented manifest. You can either train or test this data. If you don't specify, the default is train.</p> <p>TRAIN - all of the documents in the manifest will be used for training. If no test documents are provided, Amazon Comprehend will automatically reserve a portion of the training documents for testing.</p> <p> TEST - all of the documents in the manifest will be used for testing.</p>
+        AttributeNames:
+          allOf:
+          - $ref: '#/components/schemas/AttributeNamesList'
+          - description: <p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p> <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p> <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>
+        AnnotationDataS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the annotation files that are referred in the augmented manifest file.
+        SourceDocumentsS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+        DocumentType:
+          allOf:
+          - $ref: '#/components/schemas/AugmentedManifestsDocumentTypeFormat'
+          - description: <p>The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is PlainTextDocument. </p> <ul> <li> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p> </li> <li> <p> <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and TXT.</p> </li> </ul>
+      description: An augmented manifest file that provides training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.
+    EntityRecognizerEntityList:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: Specifies the Amazon S3 location where the entity list is located. The URI must be in the same Region as the API endpoint that you are calling.
+      description: Describes the entity list submitted with an entity recognizer.
+    EntityTypesEvaluationMetrics:
+      type: object
+      properties:
+        Precision:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of the usefulness of the recognizer results for a specific entity type in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. '
+        Recall:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of how complete the recognizer results are for a specific entity type in the test data. High recall means that the recognizer returned most of the relevant results.
+        F1Score:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of how accurate the recognizer results are for a specific entity type in the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. The highest score is 1, and the worst score is 0. '
+      description: 'Detailed information about the accuracy of an entity recognizer for a specific entity type. '
+    EntityRecognizerEvaluationMetrics:
+      type: object
+      properties:
+        Precision:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of the usefulness of the recognizer results in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. '
+        Recall:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of how complete the recognizer results are for the test data. High recall means that the recognizer returned most of the relevant results.
+        F1Score:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of how accurate the recognizer results are for the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. For plain text entity recognizer models, the range is 0 to 100, where 100 is the best score. For PDF/Word entity recognizer models, the range is 0 to 1, where 1 is the best score. '
+      description: 'Detailed information about the accuracy of an entity recognizer. '
+    VersionName:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+      maxLength: 63
+    ResourceNotFoundException: {}
+    EntityTypesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/EntityTypesListItem'
+    EntityRecognizerProperties:
+      type: object
+      properties:
+        EntityRecognizerArn:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerArn'
+          - description: The Amazon Resource Name (ARN) that identifies the entity recognizer.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: ' The language of the input documents. All documents must be in the same language. Only English ("en") is currently supported.'
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/ModelStatus'
+          - description: Provides the status of the entity recognizer.
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: ' A description of the status of the recognizer.'
+        SubmitTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that the recognizer was submitted for processing.
+        EndTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that the recognizer creation completed.
+        TrainingStartTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that training of the entity recognizer started.
+        TrainingEndTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that training of the entity recognizer was completed.
+        InputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerInputDataConfig'
+          - description: The input data properties of an entity recognizer.
+        RecognizerMetadata:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerMetadata'
+          - description: ' Provides information about an entity recognizer.'
+        DataAccessRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/IamRoleArn'
+          - description: ' The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.'
+        VolumeKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> </ul>'
+        VpcConfig:
+          allOf:
+          - $ref: '#/components/schemas/VpcConfig'
+          - description: ' Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your custom entity recognizer. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+        ModelKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> </ul>'
+        VersionName:
+          allOf:
+          - $ref: '#/components/schemas/VersionName'
+          - description: The version name you assigned to the entity recognizer.
+        SourceModelArn:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerArn'
+          - description: The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web Services account to create the entity recognizer model in your Amazon Web Services account.
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: The Amazon Resource Number (ARN) of the flywheel
+        OutputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerOutputDataConfig'
+          - description: Output data configuration.
+      description: Describes information about an entity recognizer.
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    ModelStatus:
+      type: string
+      enum:
+      - SUBMITTED
+      - TRAINING
+      - DELETING
+      - STOP_REQUESTED
+      - STOPPED
+      - IN_ERROR
+      - TRAINED
+      - TRAINED_WITH_WARNING
+    EntityRecognizerAugmentedManifestsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AugmentedManifestsListItem'
+    EntityRecognizerAnnotations:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the annotations for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
+        TestS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
+      description: Describes the annotations associated with a entity recognizer.
+    AnyLengthString:
+      type: string
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
+    EntityRecognizerMetadataEntityTypesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/EntityRecognizerMetadataEntityTypesListItem'
+    Subnets:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 1
+      maxItems: 16
+    Split:
+      type: string
+      enum:
+      - TRAIN
+      - TEST
+    InputFormat:
+      type: string
+      enum:
+      - ONE_DOC_PER_FILE
+      - ONE_DOC_PER_LINE
+    AttributeNamesListItem:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      minLength: 1
+      maxLength: 63
+    AttributeNamesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AttributeNamesListItem'
+    DescribeEntityRecognizerRequest:
+      type: object
+      required:
+      - EntityRecognizerArn
+      title: DescribeEntityRecognizerRequest
+      properties:
+        EntityRecognizerArn:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerArn'
+          - description: The Amazon Resource Name (ARN) that identifies the entity recognizer.
+    InvalidRequestException: {}
+    DescribeEntityRecognizerResponse:
+      type: object
+      properties:
+        EntityRecognizerProperties:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerProperties'
+          - description: Describes information associated with an entity recognizer.
+    EntityRecognizerOutputDataConfig:
+      type: object
+      properties:
+        FlywheelStatsS3Prefix:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The Amazon S3 prefix for the data lake location of the flywheel statistics.
+      description: Output data configuration.
+    EntityRecognizerMetadataEntityTypesListItem:
+      type: object
+      properties:
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: 'Type of entity from the list of entity types in the metadata of an entity recognizer. '
+        EvaluationMetrics:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypesEvaluationMetrics'
+          - description: 'Detailed information about the accuracy of the entity recognizer for a specific item on the list of entity types. '
+        NumberOfTrainMentions:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: 'Indicates the number of times the given entity type was seen in the training data. '
+      description: Individual item from the list of entity types in the metadata of an entity recognizer.
+    EntityRecognizerInputDataConfig:
+      type: object
+      required:
+      - EntityTypes
+      properties:
+        DataFormat:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerDataFormat'
+          - description: '<p>The format of your training data:</p> <ul> <li> <p> <code>COMPREHEND_CSV</code>: A CSV file that supplements your training documents. The CSV file contains information about the custom entities that your trained model will detect. The required format of the file depends on whether you are providing annotations or an entity list.</p> <p>If you use this value, you must provide your CSV file by using either the <code>Annotations</code> or <code>EntityList</code> parameters. You must provide your training documents by using the <code>Documents</code> parameter.</p> </li> <li> <p> <code>AUGMENTED_MANIFEST</code>: A labeled dataset that is produced by Amazon SageMaker Ground Truth. This file is in JSON lines format. Each line is a complete JSON object that contains a training document and its labels. Each label annotates a named entity in the training document. </p> <p>If you use this value, you must provide the <code>AugmentedManifests</code> parameter in your request.</p> </li> </ul> <p>If you don''t specify a value, Amazon Comprehend uses <code>COMPREHEND_CSV</code> as the default.</p>'
+        EntityTypes:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypesList'
+          - description: '<p>The entity types in the labeled training data that Amazon Comprehend uses to train the custom entity recognizer. Any entity types that you don''t specify are ignored.</p> <p>A maximum of 25 entity types can be used at one time to train an entity recognizer. Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break), \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma). </p>'
+        Documents:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerDocuments'
+          - description: <p>The S3 location of the folder that contains the training documents for your custom entity recognizer.</p> <p>This parameter is required if you set <code>DataFormat</code> to <code>COMPREHEND_CSV</code>.</p>
+        Annotations:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerAnnotations'
+          - description: The S3 location of the CSV file that annotates your training documents.
+        EntityList:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerEntityList'
+          - description: The S3 location of the CSV file that has the entity list for your custom entity recognizer.
+        AugmentedManifests:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerAugmentedManifestsList'
+          - description: <p>A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.</p> <p>This parameter is required if you set <code>DataFormat</code> to <code>AUGMENTED_MANIFEST</code>.</p>
+      description: Specifies the format and location of the input data.
+    SecurityGroupIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    Integer:
+      type: integer
+    Timestamp:
+      type: string
+      format: date-time
+    EntityRecognizerMetadata:
+      type: object
+      properties:
+        NumberOfTrainedDocuments:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: ' The number of documents in the input data that were used to train the entity recognizer. Typically this is 80 to 90 percent of the input documents.'
+        NumberOfTestDocuments:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: ' The number of documents in the input data that were used to test the entity recognizer. Typically this is 10 to 20 percent of the input documents.'
+        EvaluationMetrics:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerEvaluationMetrics'
+          - description: Detailed information about the accuracy of an entity recognizer.
+        EntityTypes:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerMetadataEntityTypesList'
+          - description: Entity types from the metadata of an entity recognizer.
+      description: Detailed information about an entity recognizer.
+    Double:
+      type: number
+      format: double
+    EntityRecognizerDocuments:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
+        TestS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the test documents for an entity recognizer are located. The URI must be in the same Amazon Web Services Region as the API endpoint that you are calling.'
+        InputFormat:
+          allOf:
+          - $ref: '#/components/schemas/InputFormat'
+          - description: ' Specifies how the text in an input file should be processed. This is optional, and the default is ONE_DOC_PER_LINE. ONE_DOC_PER_FILE - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers. ONE_DOC_PER_LINE - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.'
+      description: Describes the training documents submitted with an entity recognizer.
+    EntityRecognizerArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:entity-recognizer/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    TooManyRequestsException: {}
+    VpcConfig:
+      type: object
+      required:
+      - SecurityGroupIds
+      - Subnets
+      properties:
+        SecurityGroupIds:
+          allOf:
+          - $ref: '#/components/schemas/SecurityGroupIds'
+          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
+        Subnets:
+          allOf:
+          - $ref: '#/components/schemas/Subnets'
+          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
+      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+    InternalServerException: {}
+    EntityRecognizerDataFormat:
+      type: string
+      enum:
+      - COMPREHEND_CSV
+      - AUGMENTED_MANIFEST
+    AugmentedManifestsDocumentTypeFormat:
+      type: string
+      enum:
+      - PLAIN_TEXT_DOCUMENT
+      - SEMI_STRUCTURED_DOCUMENT
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

@@ -1,0 +1,490 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.DescribeDominantLanguageDetectionJob:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeDominantLanguageDetectionJob
+      description: Gets the properties associated with a dominant language detection job. Use this operation to get the status of a detection job.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeDominantLanguageDetectionJobResponse'
+              examples:
+                DescribeDominantLanguageDetectionJob200Example:
+                  summary: Default DescribeDominantLanguageDetectionJob 200
+                  x-microcks-default: true
+                  value:
+                    DominantLanguageDetectionJobProperties: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                DescribeDominantLanguageDetectionJob480Example:
+                  summary: Default DescribeDominantLanguageDetectionJob 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: JobNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobNotFoundException'
+              examples:
+                DescribeDominantLanguageDetectionJob481Example:
+                  summary: Default DescribeDominantLanguageDetectionJob 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DescribeDominantLanguageDetectionJob482Example:
+                  summary: Default DescribeDominantLanguageDetectionJob 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DescribeDominantLanguageDetectionJob483Example:
+                  summary: Default DescribeDominantLanguageDetectionJob 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeDominantLanguageDetectionJobRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.DescribeDominantLanguageDetectionJob
+      summary: Amazon Comprehend Describe Dominant Language Detection Job
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob'
+components:
+  schemas:
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    SecurityGroupId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    SubnetId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    DocumentReadMode:
+      type: string
+      enum:
+      - SERVICE_DEFAULT
+      - FORCE_DOCUMENT_READ_ACTION
+    JobStatus:
+      type: string
+      enum:
+      - SUBMITTED
+      - IN_PROGRESS
+      - COMPLETED
+      - FAILED
+      - STOP_REQUESTED
+      - STOPPED
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    DominantLanguageDetectionJobProperties:
+      type: object
+      properties:
+        JobId:
+          allOf:
+          - $ref: '#/components/schemas/JobId'
+          - description: The identifier assigned to the dominant language detection job.
+        JobArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendArn'
+          - description: <p>The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the ARN is as follows:</p> <p> <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code> </p> <p>The following is an example job ARN:</p> <p> <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+        JobName:
+          allOf:
+          - $ref: '#/components/schemas/JobName'
+          - description: The name that you assigned to the dominant language detection job.
+        JobStatus:
+          allOf:
+          - $ref: '#/components/schemas/JobStatus'
+          - description: The current status of the dominant language detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: A description for the status of a job.
+        SubmitTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that the dominant language detection job was submitted for processing.
+        EndTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that the dominant language detection job completed.
+        InputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/InputDataConfig'
+          - description: The input data configuration that you supplied when you created the dominant language detection job.
+        OutputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/OutputDataConfig'
+          - description: The output data configuration that you supplied when you created the dominant language detection job.
+        DataAccessRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/IamRoleArn'
+          - description: The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
+        VolumeKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> </ul>'
+        VpcConfig:
+          allOf:
+          - $ref: '#/components/schemas/VpcConfig'
+          - description: ' Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your dominant language detection job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+      description: Provides information about a dominant language detection job.
+    AnyLengthString:
+      type: string
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
+    Subnets:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 1
+      maxItems: 16
+    DocumentReaderConfig:
+      type: object
+      required:
+      - DocumentReadAction
+      properties:
+        DocumentReadAction:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadAction'
+          - description: <p>This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract text from PDF files and image files. Enter one of the following values:</p> <ul> <li> <p> <code>TEXTRACT_DETECT_DOCUMENT_TEXT</code> - The Amazon Comprehend service uses the <code>DetectDocumentText</code> API operation. </p> </li> <li> <p> <code>TEXTRACT_ANALYZE_DOCUMENT</code> - The Amazon Comprehend service uses the <code>AnalyzeDocument</code> API operation. </p> </li> </ul>
+        DocumentReadMode:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadMode'
+          - description: <p>Determines the text extraction actions for PDF files. Enter one of the following values:</p> <ul> <li> <p> <code>SERVICE_DEFAULT</code> - use the Amazon Comprehend service defaults for PDF files.</p> </li> <li> <p> <code>FORCE_DOCUMENT_READ_ACTION</code> - Amazon Comprehend uses the Textract API specified by DocumentReadAction for all PDF files, including digital PDF files. </p> </li> </ul>
+        FeatureTypes:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDocumentReadFeatureTypes'
+          - description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document. </p> </li> </ul>
+      description: '<p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>'
+    JobId:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
+      minLength: 1
+      maxLength: 32
+    InputFormat:
+      type: string
+      enum:
+      - ONE_DOC_PER_FILE
+      - ONE_DOC_PER_LINE
+    OutputDataConfig:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: <p>When you use the <code>OutputDataConfig</code> object with asynchronous operations, you specify the Amazon S3 location where you want to write the output data. The URI must be in the same Region as the API endpoint that you are calling. The location is used as the prefix for the actual location of the output file.</p> <p>When the topic detection job is finished, the service creates an output file in a directory specific to the job. The <code>S3Uri</code> field contains the location of the output file, called <code>output.tar.gz</code>. It is a compressed archive that contains the ouput of the operation.</p> <p> For a PII entity detection job, the output file is plain text, not a compressed archive. The output file name is the same as the input file, with <code>.out</code> appended at the end. </p>
+        KmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job. The KmsKeyId can be one of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>KMS Key Alias: <code>"alias/ExampleAlias"</code> </p> </li> <li> <p>ARN of a KMS Key Alias: <code>"arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias"</code> </p> </li> </ul>'
+      description: <p>Provides configuration parameters for the output of inference jobs.</p> <p/>
+    JobName:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
+      minLength: 1
+      maxLength: 256
+    DescribeDominantLanguageDetectionJobResponse:
+      type: object
+      properties:
+        DominantLanguageDetectionJobProperties:
+          allOf:
+          - $ref: '#/components/schemas/DominantLanguageDetectionJobProperties'
+          - description: An object that contains the properties associated with a dominant language detection job.
+    InvalidRequestException: {}
+    DocumentReadFeatureTypes:
+      type: string
+      enum:
+      - TABLES
+      - FORMS
+      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
+    JobNotFoundException: {}
+    SecurityGroupIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
+    Timestamp:
+      type: string
+      format: date-time
+    InputDataConfig:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: <p>The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are calling. The URI can point to a single input file or it can provide the prefix for a collection of data files. </p> <p>For example, if you use the URI <code>S3://bucketName/prefix</code>, if the prefix is a single file, Amazon Comprehend uses that file as input. If more than one file begins with the prefix, Amazon Comprehend uses all of them as input.</p>
+        InputFormat:
+          allOf:
+          - $ref: '#/components/schemas/InputFormat'
+          - description: <p>Specifies how the text in an input file should be processed:</p> <ul> <li> <p> <code>ONE_DOC_PER_FILE</code> - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers.</p> </li> <li> <p> <code>ONE_DOC_PER_LINE</code> - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.</p> </li> </ul>
+        DocumentReaderConfig:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReaderConfig'
+          - description: Provides configuration parameters to override the default actions for extracting text from PDF documents and image files.
+      description: The input properties for an inference job. The document reader config field applies only to non-text inputs for custom analysis.
+    ListOfDocumentReadFeatureTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentReadFeatureTypes'
+      minItems: 1
+      maxItems: 2
+    TooManyRequestsException: {}
+    VpcConfig:
+      type: object
+      required:
+      - SecurityGroupIds
+      - Subnets
+      properties:
+        SecurityGroupIds:
+          allOf:
+          - $ref: '#/components/schemas/SecurityGroupIds'
+          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
+        Subnets:
+          allOf:
+          - $ref: '#/components/schemas/Subnets'
+          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
+      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+    DocumentReadAction:
+      type: string
+      enum:
+      - TEXTRACT_DETECT_DOCUMENT_TEXT
+      - TEXTRACT_ANALYZE_DOCUMENT
+    InternalServerException: {}
+    ComprehendArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:[a-zA-Z0-9-]{1,64}/[a-zA-Z0-9](-*[a-zA-Z0-9])*((/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*)|(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*))?
+      maxLength: 256
+    DescribeDominantLanguageDetectionJobRequest:
+      type: object
+      required:
+      - JobId
+      title: DescribeDominantLanguageDetectionJobRequest
+      properties:
+        JobId:
+          allOf:
+          - $ref: '#/components/schemas/JobId'
+          - description: The identifier that Amazon Comprehend generated for the job. The <code>StartDominantLanguageDetectionJob</code> operation returns this identifier in its response.
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

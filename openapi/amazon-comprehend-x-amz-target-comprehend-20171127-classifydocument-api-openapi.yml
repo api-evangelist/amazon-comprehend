@@ -1,0 +1,526 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ClassifyDocument API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.ClassifyDocument'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.ClassifyDocument:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ClassifyDocument
+      description: <p>Creates a new document classification request to analyze a single document in real-time, using a previously created and trained custom model and an endpoint.</p> <p>You can input plain text or you can upload a single-page input document (text, PDF, Word, or image). </p> <p>If the system detects errors while processing a page in the input document, the API response includes an entry in <code>Errors</code> that describes the errors.</p> <p>If the system detects a document-level error in your input document, the API returns an <code>InvalidRequestException</code> error response. For details about this exception, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-inputs-sync-err.html"> Errors in semi-structured documents</a> in the Comprehend Developer Guide. </p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClassifyDocumentResponse'
+              examples:
+                ClassifyDocument200Example:
+                  summary: Default ClassifyDocument 200
+                  x-microcks-default: true
+                  value:
+                    Classes: example
+                    Labels: example
+                    DocumentMetadata: example
+                    DocumentType: example
+                    Errors: example
+                    Warnings: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                ClassifyDocument480Example:
+                  summary: Default ClassifyDocument 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: ResourceUnavailableException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceUnavailableException'
+              examples:
+                ClassifyDocument481Example:
+                  summary: Default ClassifyDocument 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: TextSizeLimitExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextSizeLimitExceededException'
+              examples:
+                ClassifyDocument482Example:
+                  summary: Default ClassifyDocument 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                ClassifyDocument483Example:
+                  summary: Default ClassifyDocument 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClassifyDocumentRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.ClassifyDocument
+      summary: Amazon Comprehend Classify Document
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.ClassifyDocument'
+components:
+  schemas:
+    DocumentReadMode:
+      type: string
+      enum:
+      - SERVICE_DEFAULT
+      - FORCE_DOCUMENT_READ_ACTION
+    WarningsListItem:
+      type: object
+      properties:
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Page number in the input document.
+        WarnCode:
+          allOf:
+          - $ref: '#/components/schemas/PageBasedWarningCode'
+          - description: The type of warning.
+        WarnMessage:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Text message associated with the warning.
+      description: <p>The system identified one of the following warnings while processing the input document:</p> <ul> <li> <p>The document to classify is plain text, but the classifier is a native model.</p> </li> <li> <p>The document to classify is semi-structured, but the classifier is a plain-text model.</p> </li> </ul>
+    DocumentTypeListItem:
+      type: object
+      properties:
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Page number.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/DocumentType'
+          - description: Document type.
+      description: Document type for each page in the document.
+    TextSizeLimitExceededException: {}
+    DocumentReaderConfig:
+      type: object
+      required:
+      - DocumentReadAction
+      properties:
+        DocumentReadAction:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadAction'
+          - description: <p>This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract text from PDF files and image files. Enter one of the following values:</p> <ul> <li> <p> <code>TEXTRACT_DETECT_DOCUMENT_TEXT</code> - The Amazon Comprehend service uses the <code>DetectDocumentText</code> API operation. </p> </li> <li> <p> <code>TEXTRACT_ANALYZE_DOCUMENT</code> - The Amazon Comprehend service uses the <code>AnalyzeDocument</code> API operation. </p> </li> </ul>
+        DocumentReadMode:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadMode'
+          - description: <p>Determines the text extraction actions for PDF files. Enter one of the following values:</p> <ul> <li> <p> <code>SERVICE_DEFAULT</code> - use the Amazon Comprehend service defaults for PDF files.</p> </li> <li> <p> <code>FORCE_DOCUMENT_READ_ACTION</code> - Amazon Comprehend uses the Textract API specified by DocumentReadAction for all PDF files, including digital PDF files. </p> </li> </ul>
+        FeatureTypes:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDocumentReadFeatureTypes'
+          - description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document. </p> </li> </ul>
+      description: '<p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>'
+    DocumentClassifierEndpointArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:document-classifier-endpoint/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    ClassifyDocumentResponse:
+      type: object
+      properties:
+        Classes:
+          allOf:
+          - $ref: '#/components/schemas/ListOfClasses'
+          - description: 'The classes used by the document being analyzed. These are used for multi-class trained models. Individual classes are mutually exclusive and each document is expected to have only a single class assigned to it. For example, an animal can be a dog or a cat, but not both at the same time. '
+        Labels:
+          allOf:
+          - $ref: '#/components/schemas/ListOfLabels'
+          - description: 'The labels used the document being analyzed. These are used for multi-label trained models. Individual labels represent different categories that are related in some manner and are not mutually exclusive. For example, a movie can be just an action movie, or it can be an action movie, a science fiction movie, and a comedy, all at the same time. '
+        DocumentMetadata:
+          allOf:
+          - $ref: '#/components/schemas/DocumentMetadata'
+          - description: 'Extraction information about the document. This field is present in the response only if your request includes the <code>Byte</code> parameter. '
+        DocumentType:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDocumentType'
+          - description: 'The document type for each page in the input document. This field is present in the response only if your request includes the <code>Byte</code> parameter. '
+        Errors:
+          allOf:
+          - $ref: '#/components/schemas/ListOfErrors'
+          - description: Page-level errors that the system detected while processing the input document. The field is empty if the system encountered no errors.
+        Warnings:
+          allOf:
+          - $ref: '#/components/schemas/ListOfWarnings'
+          - description: <p>Warnings detected while processing the input document. The response includes a warning if there is a mismatch between the input document type and the model type associated with the endpoint that you specified. The response can also include warnings for individual pages that have a mismatch. </p> <p>The field is empty if the system generated no warnings.</p>
+    ResourceUnavailableException: {}
+    DocumentType:
+      type: string
+      enum:
+      - NATIVE_PDF
+      - SCANNED_PDF
+      - MS_WORD
+      - IMAGE
+      - PLAIN_TEXT
+      - TEXTRACT_DETECT_DOCUMENT_TEXT_JSON
+      - TEXTRACT_ANALYZE_DOCUMENT_JSON
+    PageBasedWarningCode:
+      type: string
+      enum:
+      - INFERENCING_PLAINTEXT_WITH_NATIVE_TRAINED_MODEL
+      - INFERENCING_NATIVE_DOCUMENT_WITH_PLAINTEXT_TRAINED_MODEL
+    SemiStructuredDocumentBlob:
+      type: string
+      minLength: 1
+    InvalidRequestException: {}
+    DocumentReadFeatureTypes:
+      type: string
+      enum:
+      - TABLES
+      - FORMS
+      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
+    Float:
+      type: number
+      format: float
+    String:
+      type: string
+      minLength: 1
+    DocumentMetadata:
+      type: object
+      properties:
+        Pages:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Number of pages in the document.
+        ExtractedCharacters:
+          allOf:
+          - $ref: '#/components/schemas/ListOfExtractedCharacters'
+          - description: List of pages in the document, with the number of characters extracted from each page.
+      description: Information about the document, discovered during text extraction.
+    ListOfClasses:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentClass'
+    DocumentLabel:
+      type: object
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the label.
+        Score:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The confidence score that Amazon Comprehend has this label correctly attributed.
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: 'Page number where the label occurs. This field is present in the response only if your request includes the <code>Byte</code> parameter. '
+      description: Specifies one of the label or labels that categorize the document being analyzed.
+    DocumentClass:
+      type: object
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the class.
+        Score:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The confidence score that Amazon Comprehend has this class correctly attributed.
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: 'Page number in the input document. This field is present in the response only if your request includes the <code>Byte</code> parameter. '
+      description: Specifies the class that categorizes the document being analyzed
+    ListOfWarnings:
+      type: array
+      items:
+        $ref: '#/components/schemas/WarningsListItem'
+    ListOfErrors:
+      type: array
+      items:
+        $ref: '#/components/schemas/ErrorsListItem'
+    Integer:
+      type: integer
+    ErrorsListItem:
+      type: object
+      properties:
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Page number where the error occurred.
+        ErrorCode:
+          allOf:
+          - $ref: '#/components/schemas/PageBasedErrorCode'
+          - description: Error code for the cause of the error.
+        ErrorMessage:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Text message explaining the reason for the error.
+      description: <p>Text extraction encountered one or more page-level errors in the input document.</p> <p>The <code>ErrorCode</code> contains one of the following values:</p> <ul> <li> <p>TEXTRACT_BAD_PAGE - Amazon Textract cannot read the page. For more information about page limits in Amazon Textract, see <a href="https://docs.aws.amazon.com/textract/latest/dg/limits-document.html"> Page Quotas in Amazon Textract</a>.</p> </li> <li> <p>TEXTRACT_PROVISIONED_THROUGHPUT_EXCEEDED - The number of requests exceeded your throughput limit. For more information about throughput quotas in Amazon Textract, see <a href="https://docs.aws.amazon.com/textract/latest/dg/limits-quotas-explained.html"> Default quotas in Amazon Textract</a>.</p> </li> <li> <p>PAGE_CHARACTERS_EXCEEDED - Too many text characters on the page (10,000 characters maximum).</p> </li> <li> <p>PAGE_SIZE_EXCEEDED - The maximum page size is 10 MB.</p> </li> <li> <p>INTERNAL_SERVER_ERROR - The request encountered a service issue. Try the API request again.</p> </li> </ul>
+    PageBasedErrorCode:
+      type: string
+      enum:
+      - TEXTRACT_BAD_PAGE
+      - TEXTRACT_PROVISIONED_THROUGHPUT_EXCEEDED
+      - PAGE_CHARACTERS_EXCEEDED
+      - PAGE_SIZE_EXCEEDED
+      - INTERNAL_SERVER_ERROR
+    ListOfDocumentReadFeatureTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentReadFeatureTypes'
+      minItems: 1
+      maxItems: 2
+    ClassifyDocumentRequest:
+      type: object
+      required:
+      - EndpointArn
+      title: ClassifyDocumentRequest
+      properties:
+        Text:
+          allOf:
+          - $ref: '#/components/schemas/CustomerInputString'
+          - description: The document text to be analyzed. If you enter text using this parameter, do not use the <code>Bytes</code> parameter.
+        EndpointArn:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierEndpointArn'
+          - description: The Amazon Resource Number (ARN) of the endpoint. For information about endpoints, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing endpoints</a>.
+        Bytes:
+          allOf:
+          - $ref: '#/components/schemas/SemiStructuredDocumentBlob'
+          - description: <p>Use the <code>Bytes</code> parameter to input a text, PDF, Word or image file. You can also use the <code>Bytes</code> parameter to input an Amazon Textract <code>DetectDocumentText</code> or <code>AnalyzeDocument</code> output file.</p> <p>Provide the input document as a sequence of base64-encoded bytes. If your code uses an Amazon Web Services SDK to classify documents, the SDK may encode the document file bytes for you. </p> <p>The maximum length of this field depends on the input document type. For details, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-inputs-sync.html"> Inputs for real-time custom analysis</a> in the Comprehend Developer Guide. </p> <p>If you use the <code>Bytes</code> parameter, do not use the <code>Text</code> parameter.</p>
+        DocumentReaderConfig:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReaderConfig'
+          - description: Provides configuration parameters to override the default actions for extracting text from PDF documents and image files.
+    ListOfLabels:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentLabel'
+    CustomerInputString:
+      type: string
+      minLength: 1
+      format: password
+    ExtractedCharactersListItem:
+      type: object
+      properties:
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Page number.
+        Count:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Number of characters extracted from each page.
+      description: Array of the number of characters extracted from each page.
+    InternalServerException: {}
+    DocumentReadAction:
+      type: string
+      enum:
+      - TEXTRACT_DETECT_DOCUMENT_TEXT
+      - TEXTRACT_ANALYZE_DOCUMENT
+    ListOfDocumentType:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentTypeListItem'
+    ListOfExtractedCharacters:
+      type: array
+      items:
+        $ref: '#/components/schemas/ExtractedCharactersListItem'
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

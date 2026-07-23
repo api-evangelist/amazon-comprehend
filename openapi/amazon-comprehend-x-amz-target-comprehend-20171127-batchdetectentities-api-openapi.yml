@@ -1,0 +1,464 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectEntities API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.BatchDetectEntities'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.BatchDetectEntities:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: BatchDetectEntities
+      description: 'Inspects the text of a batch of documents for named entities and returns information about them. For more information about named entities, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-entities.html">Entities</a> in the Comprehend Developer Guide. '
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchDetectEntitiesResponse'
+              examples:
+                BatchDetectEntities200Example:
+                  summary: Default BatchDetectEntities 200
+                  x-microcks-default: true
+                  value:
+                    ResultList: example
+                    ErrorList: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                BatchDetectEntities480Example:
+                  summary: Default BatchDetectEntities 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TextSizeLimitExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextSizeLimitExceededException'
+              examples:
+                BatchDetectEntities481Example:
+                  summary: Default BatchDetectEntities 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: UnsupportedLanguageException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnsupportedLanguageException'
+              examples:
+                BatchDetectEntities482Example:
+                  summary: Default BatchDetectEntities 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: BatchSizeLimitExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchSizeLimitExceededException'
+              examples:
+                BatchDetectEntities483Example:
+                  summary: Default BatchDetectEntities 483
+                  x-microcks-default: true
+                  value: example
+        '484':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                BatchDetectEntities484Example:
+                  summary: Default BatchDetectEntities 484
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchDetectEntitiesRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.BatchDetectEntities
+      summary: Amazon Comprehend Batch Detect Entities
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.BatchDetectEntities'
+components:
+  schemas:
+    ListOfChildBlocks:
+      type: array
+      items:
+        $ref: '#/components/schemas/ChildBlock'
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    BatchSizeLimitExceededException: {}
+    UnsupportedLanguageException: {}
+    BatchDetectEntitiesItemResult:
+      type: object
+      properties:
+        Index:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based index of the document in the input list.
+        Entities:
+          allOf:
+          - $ref: '#/components/schemas/ListOfEntities'
+          - description: One or more <a>Entity</a> objects, one for each entity detected in the document.
+      description: The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.
+    TextSizeLimitExceededException: {}
+    Entity:
+      type: object
+      properties:
+        Score:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of the detection.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/EntityType'
+          - description: <p>The entity type. For entity detection using the built-in model, this field contains one of the standard entity types listed below.</p> <p>For custom entity detection, this field contains one of the entity types that you specified when you trained your custom model.</p>
+        Text:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The text of the entity.
+        BeginOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: <p>The zero-based offset from the beginning of the source text to the first character in the entity.</p> <p>This field is empty for non-text input.</p>
+        EndOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: <p>The zero-based offset from the beginning of the source text to the last character in the entity.</p> <p>This field is empty for non-text input.</p>
+        BlockReferences:
+          allOf:
+          - $ref: '#/components/schemas/ListOfBlockReferences'
+          - description: A reference to each block for this entity. This field is empty for plain-text input.
+      description: <p>Provides information about an entity. </p> <p> </p>
+    ListOfEntities:
+      type: array
+      items:
+        $ref: '#/components/schemas/Entity'
+    BlockReference:
+      type: object
+      properties:
+        BlockId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Unique identifier for the block.
+        BeginOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Offset of the start of the block within its parent block.
+        EndOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Offset of the end of the block within its parent block.
+        ChildBlocks:
+          allOf:
+          - $ref: '#/components/schemas/ListOfChildBlocks'
+          - description: List of child blocks within this block.
+      description: 'A reference to a block. '
+    BatchDetectEntitiesRequest:
+      type: object
+      required:
+      - TextList
+      - LanguageCode
+      title: BatchDetectEntitiesRequest
+      properties:
+        TextList:
+          allOf:
+          - $ref: '#/components/schemas/CustomerInputStringList'
+          - description: A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. The maximum size of each document is 5 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language of the input documents. You can specify any of the primary languages supported by Amazon Comprehend. All documents must be in the same language.
+    BatchDetectEntitiesResponse:
+      type: object
+      required:
+      - ResultList
+      - ErrorList
+      properties:
+        ResultList:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDetectEntitiesResult'
+          - description: A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty.
+        ErrorList:
+          allOf:
+          - $ref: '#/components/schemas/BatchItemErrorList'
+          - description: A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty.
+    ListOfBlockReferences:
+      type: array
+      items:
+        $ref: '#/components/schemas/BlockReference'
+    InvalidRequestException: {}
+    EntityType:
+      type: string
+      enum:
+      - PERSON
+      - LOCATION
+      - ORGANIZATION
+      - COMMERCIAL_ITEM
+      - EVENT
+      - DATE
+      - QUANTITY
+      - TITLE
+      - OTHER
+    Float:
+      type: number
+      format: float
+    String:
+      type: string
+      minLength: 1
+    CustomerInputStringList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomerInputString'
+      minItems: 1
+    ChildBlock:
+      type: object
+      properties:
+        ChildBlockId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Unique identifier for the child block.
+        BeginOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Offset of the start of the child block within its parent block.
+        EndOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Offset of the end of the child block within its parent block.
+      description: Nested block contained within a block.
+    BatchItemErrorList:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchItemError'
+    Integer:
+      type: integer
+    ListOfDetectEntitiesResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchDetectEntitiesItemResult'
+    CustomerInputString:
+      type: string
+      minLength: 1
+      format: password
+    BatchItemError:
+      type: object
+      properties:
+        Index:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based index of the document in the input list.
+        ErrorCode:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The numeric error code of the error.
+        ErrorMessage:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A text description of the error.
+      description: Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.
+    InternalServerException: {}
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

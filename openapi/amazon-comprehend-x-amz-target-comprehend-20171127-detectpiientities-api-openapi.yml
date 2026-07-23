@@ -1,0 +1,375 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectPiiEntities API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.DetectPiiEntities'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.DetectPiiEntities:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DetectPiiEntities
+      description: Inspects the input text for entities that contain personally identifiable information (PII) and returns information about them.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetectPiiEntitiesResponse'
+              examples:
+                DetectPiiEntities200Example:
+                  summary: Default DetectPiiEntities 200
+                  x-microcks-default: true
+                  value:
+                    Entities: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                DetectPiiEntities480Example:
+                  summary: Default DetectPiiEntities 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TextSizeLimitExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextSizeLimitExceededException'
+              examples:
+                DetectPiiEntities481Example:
+                  summary: Default DetectPiiEntities 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: UnsupportedLanguageException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnsupportedLanguageException'
+              examples:
+                DetectPiiEntities482Example:
+                  summary: Default DetectPiiEntities 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DetectPiiEntities483Example:
+                  summary: Default DetectPiiEntities 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DetectPiiEntitiesRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.DetectPiiEntities
+      summary: Amazon Comprehend Detect Pii Entities
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.DetectPiiEntities'
+components:
+  schemas:
+    PiiEntity:
+      type: object
+      properties:
+        Score:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of the detection.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/PiiEntityType'
+          - description: The entity's type.
+        BeginOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based offset from the beginning of the source text to the first character in the entity.
+        EndOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based offset from the beginning of the source text to the last character in the entity.
+      description: Provides information about a PII entity.
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    UnsupportedLanguageException: {}
+    PiiEntityType:
+      type: string
+      enum:
+      - BANK_ACCOUNT_NUMBER
+      - BANK_ROUTING
+      - CREDIT_DEBIT_NUMBER
+      - CREDIT_DEBIT_CVV
+      - CREDIT_DEBIT_EXPIRY
+      - PIN
+      - EMAIL
+      - ADDRESS
+      - NAME
+      - PHONE
+      - SSN
+      - DATE_TIME
+      - PASSPORT_NUMBER
+      - DRIVER_ID
+      - URL
+      - AGE
+      - USERNAME
+      - PASSWORD
+      - AWS_ACCESS_KEY
+      - AWS_SECRET_KEY
+      - IP_ADDRESS
+      - MAC_ADDRESS
+      - ALL
+      - LICENSE_PLATE
+      - VEHICLE_IDENTIFICATION_NUMBER
+      - UK_NATIONAL_INSURANCE_NUMBER
+      - CA_SOCIAL_INSURANCE_NUMBER
+      - US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER
+      - UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER
+      - IN_PERMANENT_ACCOUNT_NUMBER
+      - IN_NREGA
+      - INTERNATIONAL_BANK_ACCOUNT_NUMBER
+      - SWIFT_CODE
+      - UK_NATIONAL_HEALTH_SERVICE_NUMBER
+      - CA_HEALTH_NUMBER
+      - IN_AADHAAR
+      - IN_VOTER_NUMBER
+    DetectPiiEntitiesResponse:
+      type: object
+      properties:
+        Entities:
+          allOf:
+          - $ref: '#/components/schemas/ListOfPiiEntities'
+          - description: A collection of PII entities identified in the input text. For each entity, the response provides the entity type, where the entity text begins and ends, and the level of confidence that Amazon Comprehend has in the detection.
+    TextSizeLimitExceededException: {}
+    ListOfPiiEntities:
+      type: array
+      items:
+        $ref: '#/components/schemas/PiiEntity'
+    InvalidRequestException: {}
+    DetectPiiEntitiesRequest:
+      type: object
+      required:
+      - Text
+      - LanguageCode
+      title: DetectPiiEntitiesRequest
+      properties:
+        Text:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A UTF-8 text string. The maximum string size is 100 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language of the input documents. Currently, English is the only valid language.
+    Float:
+      type: number
+      format: float
+    String:
+      type: string
+      minLength: 1
+    Integer:
+      type: integer
+    InternalServerException: {}
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

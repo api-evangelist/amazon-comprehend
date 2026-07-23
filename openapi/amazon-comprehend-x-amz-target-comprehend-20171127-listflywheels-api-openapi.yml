@@ -1,0 +1,407 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ListFlywheels API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.ListFlywheels'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.ListFlywheels:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: ListFlywheels
+      description: Gets a list of the flywheels that you have created.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListFlywheelsResponse'
+              examples:
+                ListFlywheels200Example:
+                  summary: Default ListFlywheels 200
+                  x-microcks-default: true
+                  value:
+                    FlywheelSummaryList: example
+                    NextToken: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                ListFlywheels480Example:
+                  summary: Default ListFlywheels 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                ListFlywheels481Example:
+                  summary: Default ListFlywheels 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: InvalidFilterException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidFilterException'
+              examples:
+                ListFlywheels482Example:
+                  summary: Default ListFlywheels 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                ListFlywheels483Example:
+                  summary: Default ListFlywheels 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListFlywheelsRequest'
+      parameters:
+      - name: MaxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.ListFlywheels
+      summary: Amazon Comprehend List Flywheels
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.ListFlywheels'
+components:
+  schemas:
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    ListFlywheelsResponse:
+      type: object
+      properties:
+        FlywheelSummaryList:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelSummaryList'
+          - description: 'A list of flywheel properties retrieved by the service in response to the request. '
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Identifies the next page of results to return.
+    AnyLengthString:
+      type: string
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
+    InvalidFilterException: {}
+    ListFlywheelsRequest:
+      type: object
+      title: ListFlywheelsRequest
+      properties:
+        Filter:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelFilter'
+          - description: 'Filters the flywheels that are returned. You can filter flywheels on their status, or the date and time that they were submitted. You can only set one filter at a time. '
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Identifies the next page of results to return.
+        MaxResults:
+          allOf:
+          - $ref: '#/components/schemas/MaxResultsInteger'
+          - description: Maximum number of results to return in a response. The default is 100.
+    FlywheelSummaryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/FlywheelSummary'
+    FlywheelStatus:
+      type: string
+      enum:
+      - CREATING
+      - ACTIVE
+      - UPDATING
+      - DELETING
+      - FAILED
+    InvalidRequestException: {}
+    FlywheelFilter:
+      type: object
+      properties:
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelStatus'
+          - description: Filter the flywheels based on the flywheel status.
+        CreationTimeAfter:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filter the flywheels to include flywheels created after the specified time.
+        CreationTimeBefore:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filter the flywheels to include flywheels created before the specified time.
+      description: Filter the flywheels based on creation time or flywheel status.
+    String:
+      type: string
+      minLength: 1
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    Timestamp:
+      type: string
+      format: date-time
+    FlywheelSummary:
+      type: object
+      properties:
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: The Amazon Resource Number (ARN) of the flywheel
+        ActiveModelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendModelArn'
+          - description: ARN of the active model version for the flywheel.
+        DataLakeS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: 'Amazon S3 URI of the data lake location. '
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelStatus'
+          - description: The status of the flywheel.
+        ModelType:
+          allOf:
+          - $ref: '#/components/schemas/ModelType'
+          - description: Model type of the flywheel's model.
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: A description of the status of the flywheel.
+        CreationTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Creation time of the flywheel.
+        LastModifiedTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Last modified time for the flywheel.
+        LatestFlywheelIteration:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelIterationId'
+          - description: The most recent flywheel iteration.
+      description: Flywheel summary information.
+    ModelType:
+      type: string
+      enum:
+      - DOCUMENT_CLASSIFIER
+      - ENTITY_RECOGNIZER
+    TooManyRequestsException: {}
+    FlywheelIterationId:
+      type: string
+      pattern: '[0-9]{8}T[0-9]{6}Z'
+      maxLength: 63
+    InternalServerException: {}
+    MaxResultsInteger:
+      type: integer
+      minimum: 1
+      maximum: 500
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

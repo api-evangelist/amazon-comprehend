@@ -1,0 +1,522 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeFlywheel API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.DescribeFlywheel'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.DescribeFlywheel:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeFlywheel
+      description: Provides configuration information about the flywheel. For more information about flywheels, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/flywheels-about.html"> Flywheel overview</a> in the <i>Amazon Comprehend Developer Guide</i>.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeFlywheelResponse'
+              examples:
+                DescribeFlywheel200Example:
+                  summary: Default DescribeFlywheel 200
+                  x-microcks-default: true
+                  value:
+                    FlywheelProperties: example
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                DescribeFlywheel480Example:
+                  summary: Default DescribeFlywheel 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DescribeFlywheel481Example:
+                  summary: Default DescribeFlywheel 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+              examples:
+                DescribeFlywheel482Example:
+                  summary: Default DescribeFlywheel 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DescribeFlywheel483Example:
+                  summary: Default DescribeFlywheel 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeFlywheelRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.DescribeFlywheel
+      summary: Amazon Comprehend Describe Flywheel
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.DescribeFlywheel'
+components:
+  schemas:
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    SecurityGroupId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    EntityTypesListItem:
+      type: object
+      required:
+      - Type
+      properties:
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypeName'
+          - description: '<p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p> <p>Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break, \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma).</p>'
+      description: An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    EntityTypeName:
+      type: string
+      pattern: ^(?![^\n\r\t,]*\\n|\\r|\\t)[^\n\r\t,]+$
+      maxLength: 64
+    SubnetId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    DocumentClassificationConfig:
+      type: object
+      required:
+      - Mode
+      properties:
+        Mode:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassifierMode'
+          - description: Classification mode indicates whether the documents are <code>MULTI_CLASS</code> or <code>MULTI_LABEL</code>.
+        Labels:
+          allOf:
+          - $ref: '#/components/schemas/LabelsList'
+          - description: One or more labels to associate with the custom classifier.
+      description: Configuration required for a custom classification model.
+    ResourceNotFoundException: {}
+    EntityTypesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/EntityTypesListItem'
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    AnyLengthString:
+      type: string
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
+    Subnets:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 1
+      maxItems: 16
+    DescribeFlywheelResponse:
+      type: object
+      properties:
+        FlywheelProperties:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelProperties'
+          - description: The flywheel properties.
+    TaskConfig:
+      type: object
+      required:
+      - LanguageCode
+      properties:
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: Language code for the language that the model supports.
+        DocumentClassificationConfig:
+          allOf:
+          - $ref: '#/components/schemas/DocumentClassificationConfig'
+          - description: Configuration required for a classification model.
+        EntityRecognitionConfig:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognitionConfig'
+          - description: Configuration required for an entity recognition model.
+      description: Configuration about the custom classifier associated with the flywheel.
+    FlywheelStatus:
+      type: string
+      enum:
+      - CREATING
+      - ACTIVE
+      - UPDATING
+      - DELETING
+      - FAILED
+    DocumentClassifierMode:
+      type: string
+      enum:
+      - MULTI_CLASS
+      - MULTI_LABEL
+    InvalidRequestException: {}
+    DescribeFlywheelRequest:
+      type: object
+      required:
+      - FlywheelArn
+      title: DescribeFlywheelRequest
+      properties:
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: The Amazon Resource Number (ARN) of the flywheel.
+    LabelListItem:
+      type: string
+      pattern: ^\P{C}*$
+      maxLength: 5000
+    SecurityGroupIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    Timestamp:
+      type: string
+      format: date-time
+    LabelsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/LabelListItem'
+      maxItems: 1000
+    ModelType:
+      type: string
+      enum:
+      - DOCUMENT_CLASSIFIER
+      - ENTITY_RECOGNIZER
+    FlywheelProperties:
+      type: object
+      properties:
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: The Amazon Resource Number (ARN) of the flywheel.
+        ActiveModelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendModelArn'
+          - description: The Amazon Resource Number (ARN) of the active model version.
+        DataAccessRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/IamRoleArn'
+          - description: The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the flywheel data.
+        TaskConfig:
+          allOf:
+          - $ref: '#/components/schemas/TaskConfig'
+          - description: Configuration about the custom classifier associated with the flywheel.
+        DataLakeS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: 'Amazon S3 URI of the data lake location. '
+        DataSecurityConfig:
+          allOf:
+          - $ref: '#/components/schemas/DataSecurityConfig'
+          - description: Data security configuration.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelStatus'
+          - description: The status of the flywheel.
+        ModelType:
+          allOf:
+          - $ref: '#/components/schemas/ModelType'
+          - description: Model type of the flywheel's model.
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: A description of the status of the flywheel.
+        CreationTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Creation time of the flywheel.
+        LastModifiedTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Last modified time for the flywheel.
+        LatestFlywheelIteration:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelIterationId'
+          - description: The most recent flywheel iteration.
+      description: The flywheel properties.
+    TooManyRequestsException: {}
+    VpcConfig:
+      type: object
+      required:
+      - SecurityGroupIds
+      - Subnets
+      properties:
+        SecurityGroupIds:
+          allOf:
+          - $ref: '#/components/schemas/SecurityGroupIds'
+          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
+        Subnets:
+          allOf:
+          - $ref: '#/components/schemas/Subnets'
+          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
+      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+    FlywheelIterationId:
+      type: string
+      pattern: '[0-9]{8}T[0-9]{6}Z'
+      maxLength: 63
+    EntityRecognitionConfig:
+      type: object
+      required:
+      - EntityTypes
+      properties:
+        EntityTypes:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypesList'
+          - description: Up to 25 entity types that the model is trained to recognize.
+      description: Configuration required for an entity recognition model.
+    InternalServerException: {}
+    DataSecurityConfig:
+      type: object
+      properties:
+        ModelKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> </ul>'
+        VolumeKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: ID for the KMS key that Amazon Comprehend uses to encrypt the volume.
+        DataLakeKmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: ID for the KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
+        VpcConfig:
+          $ref: '#/components/schemas/VpcConfig'
+      description: Data security configuration.
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true

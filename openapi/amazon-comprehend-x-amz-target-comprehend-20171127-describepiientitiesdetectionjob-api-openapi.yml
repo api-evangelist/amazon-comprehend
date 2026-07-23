@@ -1,0 +1,558 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-27'
+  x-release: v4
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribePiiEntitiesDetectionJob API'
+  description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: comprehend
+  x-aws-signingName: comprehend
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: https://comprehend.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon Comprehend multi-region endpoint
+- url: http://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+- url: https://comprehend.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon Comprehend endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=Comprehend 20171127.DescribePiiEntitiesDetectionJob'
+paths:
+  /#X-Amz-Target=Comprehend_20171127.DescribePiiEntitiesDetectionJob:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribePiiEntitiesDetectionJob
+      description: Gets the properties associated with a PII entities detection job. For example, you can use this operation to get the job status.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribePiiEntitiesDetectionJobResponse'
+              examples:
+                DescribePiiEntitiesDetectionJob200Example:
+                  summary: Default DescribePiiEntitiesDetectionJob 200
+                  x-microcks-default: true
+                  value:
+                    PiiEntitiesDetectionJobProperties:
+                      JobId: {}
+                      JobArn: {}
+                      JobName: {}
+                      JobStatus: {}
+                      Message: {}
+                      SubmitTime: {}
+                      EndTime: {}
+                      InputDataConfig: {}
+                      OutputDataConfig: {}
+                      RedactionConfig: {}
+                      LanguageCode: {}
+                      DataAccessRoleArn: {}
+                      Mode: {}
+        '480':
+          description: InvalidRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidRequestException'
+              examples:
+                DescribePiiEntitiesDetectionJob480Example:
+                  summary: Default DescribePiiEntitiesDetectionJob 480
+                  x-microcks-default: true
+                  value: example
+        '481':
+          description: JobNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobNotFoundException'
+              examples:
+                DescribePiiEntitiesDetectionJob481Example:
+                  summary: Default DescribePiiEntitiesDetectionJob 481
+                  x-microcks-default: true
+                  value: example
+        '482':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DescribePiiEntitiesDetectionJob482Example:
+                  summary: Default DescribePiiEntitiesDetectionJob 482
+                  x-microcks-default: true
+                  value: example
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+              examples:
+                DescribePiiEntitiesDetectionJob483Example:
+                  summary: Default DescribePiiEntitiesDetectionJob 483
+                  x-microcks-default: true
+                  value: example
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribePiiEntitiesDetectionJobRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - Comprehend_20171127.DescribePiiEntitiesDetectionJob
+      summary: Amazon Comprehend Describe Pii Entities Detection Job
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=Comprehend 20171127.DescribePiiEntitiesDetectionJob'
+components:
+  schemas:
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    DocumentReadMode:
+      type: string
+      enum:
+      - SERVICE_DEFAULT
+      - FORCE_DOCUMENT_READ_ACTION
+    PiiEntityType:
+      type: string
+      enum:
+      - BANK_ACCOUNT_NUMBER
+      - BANK_ROUTING
+      - CREDIT_DEBIT_NUMBER
+      - CREDIT_DEBIT_CVV
+      - CREDIT_DEBIT_EXPIRY
+      - PIN
+      - EMAIL
+      - ADDRESS
+      - NAME
+      - PHONE
+      - SSN
+      - DATE_TIME
+      - PASSPORT_NUMBER
+      - DRIVER_ID
+      - URL
+      - AGE
+      - USERNAME
+      - PASSWORD
+      - AWS_ACCESS_KEY
+      - AWS_SECRET_KEY
+      - IP_ADDRESS
+      - MAC_ADDRESS
+      - ALL
+      - LICENSE_PLATE
+      - VEHICLE_IDENTIFICATION_NUMBER
+      - UK_NATIONAL_INSURANCE_NUMBER
+      - CA_SOCIAL_INSURANCE_NUMBER
+      - US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER
+      - UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER
+      - IN_PERMANENT_ACCOUNT_NUMBER
+      - IN_NREGA
+      - INTERNATIONAL_BANK_ACCOUNT_NUMBER
+      - SWIFT_CODE
+      - UK_NATIONAL_HEALTH_SERVICE_NUMBER
+      - CA_HEALTH_NUMBER
+      - IN_AADHAAR
+      - IN_VOTER_NUMBER
+    JobStatus:
+      type: string
+      enum:
+      - SUBMITTED
+      - IN_PROGRESS
+      - COMPLETED
+      - FAILED
+      - STOP_REQUESTED
+      - STOPPED
+    PiiOutputDataConfig:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: <p>When you use the <code>PiiOutputDataConfig</code> object with asynchronous operations, you specify the Amazon S3 location where you want to write the output data. </p> <p> For a PII entity detection job, the output file is plain text, not a compressed archive. The output file name is the same as the input file, with <code>.out</code> appended at the end. </p>
+        KmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job.
+      description: Provides configuration parameters for the output of PII entity detection jobs.
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    DescribePiiEntitiesDetectionJobResponse:
+      type: object
+      properties:
+        PiiEntitiesDetectionJobProperties:
+          $ref: '#/components/schemas/PiiEntitiesDetectionJobProperties'
+    AnyLengthString:
+      type: string
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
+    DocumentReaderConfig:
+      type: object
+      required:
+      - DocumentReadAction
+      properties:
+        DocumentReadAction:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadAction'
+          - description: <p>This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract text from PDF files and image files. Enter one of the following values:</p> <ul> <li> <p> <code>TEXTRACT_DETECT_DOCUMENT_TEXT</code> - The Amazon Comprehend service uses the <code>DetectDocumentText</code> API operation. </p> </li> <li> <p> <code>TEXTRACT_ANALYZE_DOCUMENT</code> - The Amazon Comprehend service uses the <code>AnalyzeDocument</code> API operation. </p> </li> </ul>
+        DocumentReadMode:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadMode'
+          - description: <p>Determines the text extraction actions for PDF files. Enter one of the following values:</p> <ul> <li> <p> <code>SERVICE_DEFAULT</code> - use the Amazon Comprehend service defaults for PDF files.</p> </li> <li> <p> <code>FORCE_DOCUMENT_READ_ACTION</code> - Amazon Comprehend uses the Textract API specified by DocumentReadAction for all PDF files, including digital PDF files. </p> </li> </ul>
+        FeatureTypes:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDocumentReadFeatureTypes'
+          - description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document. </p> </li> </ul>
+      description: '<p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>'
+    JobId:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
+      minLength: 1
+      maxLength: 32
+    InputFormat:
+      type: string
+      enum:
+      - ONE_DOC_PER_FILE
+      - ONE_DOC_PER_LINE
+    ListOfPiiEntityTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/PiiEntityType'
+    JobName:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
+      minLength: 1
+      maxLength: 256
+    InvalidRequestException: {}
+    DocumentReadFeatureTypes:
+      type: string
+      enum:
+      - TABLES
+      - FORMS
+      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
+    JobNotFoundException: {}
+    PiiEntitiesDetectionMode:
+      type: string
+      enum:
+      - ONLY_REDACTION
+      - ONLY_OFFSETS
+    Timestamp:
+      type: string
+      format: date-time
+    MaskCharacter:
+      type: string
+      pattern: '[!@#$%&*]'
+      minLength: 1
+      maxLength: 1
+    DescribePiiEntitiesDetectionJobRequest:
+      type: object
+      required:
+      - JobId
+      title: DescribePiiEntitiesDetectionJobRequest
+      properties:
+        JobId:
+          allOf:
+          - $ref: '#/components/schemas/JobId'
+          - description: The identifier that Amazon Comprehend generated for the job. The operation returns this identifier in its response.
+    InputDataConfig:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: <p>The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are calling. The URI can point to a single input file or it can provide the prefix for a collection of data files. </p> <p>For example, if you use the URI <code>S3://bucketName/prefix</code>, if the prefix is a single file, Amazon Comprehend uses that file as input. If more than one file begins with the prefix, Amazon Comprehend uses all of them as input.</p>
+        InputFormat:
+          allOf:
+          - $ref: '#/components/schemas/InputFormat'
+          - description: <p>Specifies how the text in an input file should be processed:</p> <ul> <li> <p> <code>ONE_DOC_PER_FILE</code> - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers.</p> </li> <li> <p> <code>ONE_DOC_PER_LINE</code> - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.</p> </li> </ul>
+        DocumentReaderConfig:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReaderConfig'
+          - description: Provides configuration parameters to override the default actions for extracting text from PDF documents and image files.
+      description: The input properties for an inference job. The document reader config field applies only to non-text inputs for custom analysis.
+    ListOfDocumentReadFeatureTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentReadFeatureTypes'
+      minItems: 1
+      maxItems: 2
+    TooManyRequestsException: {}
+    PiiEntitiesDetectionJobProperties:
+      type: object
+      properties:
+        JobId:
+          allOf:
+          - $ref: '#/components/schemas/JobId'
+          - description: The identifier assigned to the PII entities detection job.
+        JobArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendArn'
+          - description: <p>The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the ARN is as follows:</p> <p> <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code> </p> <p>The following is an example job ARN:</p> <p> <code>arn:aws:comprehend:us-west-2:111122223333:pii-entities-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+        JobName:
+          allOf:
+          - $ref: '#/components/schemas/JobName'
+          - description: The name that you assigned the PII entities detection job.
+        JobStatus:
+          allOf:
+          - $ref: '#/components/schemas/JobStatus'
+          - description: The current status of the PII entities detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.
+        Message:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: A description of the status of a job.
+        SubmitTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that the PII entities detection job was submitted for processing.
+        EndTime:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The time that the PII entities detection job completed.
+        InputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/InputDataConfig'
+          - description: The input properties for a PII entities detection job.
+        OutputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/PiiOutputDataConfig'
+          - description: The output data configuration that you supplied when you created the PII entities detection job.
+        RedactionConfig:
+          allOf:
+          - $ref: '#/components/schemas/RedactionConfig'
+          - description: <p>Provides configuration parameters for PII entity redaction.</p> <p>This parameter is required if you set the <code>Mode</code> parameter to <code>ONLY_REDACTION</code>. In that case, you must provide a <code>RedactionConfig</code> definition that includes the <code>PiiEntityTypes</code> parameter.</p>
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language code of the input documents
+        DataAccessRoleArn:
+          allOf:
+          - $ref: '#/components/schemas/IamRoleArn'
+          - description: The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
+        Mode:
+          allOf:
+          - $ref: '#/components/schemas/PiiEntitiesDetectionMode'
+          - description: Specifies whether the output provides the locations (offsets) of PII entities or a file in which PII entities are redacted.
+      description: Provides information about a PII entities detection job.
+    RedactionConfig:
+      type: object
+      properties:
+        PiiEntityTypes:
+          allOf:
+          - $ref: '#/components/schemas/ListOfPiiEntityTypes'
+          - description: An array of the types of PII entities that Amazon Comprehend detects in the input text for your request.
+        MaskMode:
+          allOf:
+          - $ref: '#/components/schemas/PiiEntitiesDetectionMaskMode'
+          - description: Specifies whether the PII entity is redacted with the mask character or the entity type.
+        MaskCharacter:
+          allOf:
+          - $ref: '#/components/schemas/MaskCharacter'
+          - description: A character that replaces each character in the redacted PII entity.
+      description: Provides configuration parameters for PII entity redaction.
+    InternalServerException: {}
+    DocumentReadAction:
+      type: string
+      enum:
+      - TEXTRACT_DETECT_DOCUMENT_TEXT
+      - TEXTRACT_ANALYZE_DOCUMENT
+    ComprehendArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:[a-zA-Z0-9-]{1,64}/[a-zA-Z0-9](-*[a-zA-Z0-9])*((/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*)|(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*))?
+      maxLength: 256
+    PiiEntitiesDetectionMaskMode:
+      type: string
+      enum:
+      - MASK
+      - REPLACE_WITH_PII_ENTITY_TYPE
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/comprehend/
+x-hasEquivalentPaths: true
