@@ -3,7 +3,19 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/apis.yml
 name: Amazon Comprehend
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-comprehend.png
 specificationVersion: '0.19'
 description: >-
   Amazon Comprehend is a natural language processing (NLP) service that uses
@@ -21,52 +33,3013 @@ tags:
   - NLP
   - Text Analysis
 apis:
-  - name: Amazon Comprehend API
-    description: >-
-      The Amazon Comprehend API provides programmatic access to natural language
-      processing capabilities including sentiment analysis, entity recognition,
-      key phrase extraction, language detection, topic modeling, PII detection,
-      and syntax analysis for text documents. The API supports real-time and
-      batch processing with 84 operations covering detection, async jobs, custom
-      model training, and flywheel management for continuous learning.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/comprehend/
-    baseURL: https://comprehend.amazonaws.com
-    tags:
-      - AWS
-      - Machine Learning
-      - Natural Language Processing
-      - NLP
-      - Text Analysis
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/comprehend/latest/dg/
-      - type: OpenAPI
-        url: openapi/amazon-comprehend-openapi.yml
-      - type: APIReference
-        url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
-      - type: Pricing
-        url: https://aws.amazon.com/comprehend/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/comprehend/getting-started/
-      - type: FAQ
-        url: https://aws.amazon.com/comprehend/faqs/
-      - type: JSONSchema
-        url: json-schema/comprehend-entity-schema.json
-      - type: JSONStructure
-        url: json-structure/comprehend-entity-structure.json
-      - type: JSON-LD
-        url: json-ld/amazon-comprehend-context.jsonld
-      - type: Overlay
-        url: overlays/amazon-comprehend-openapi-overlay.yaml
-      - type: MCPServer
-        url: mcp/amazon-comprehend-mcp.yml
-      - type: ErrorCatalog
-        url: errors/amazon-comprehend-problem-types.yml
-      - type: Conformance
-        url: conformance/amazon-comprehend-conformance.yml
-      - type: Lifecycle
-        url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.batchdetectdominantlanguage.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectEntities API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.BatchDetectEntities API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.batchdetectentities.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.BatchDetectEntities'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.batchdetectkeyphrases.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectSentiment API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.BatchDetectSentiment API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.batchdetectsentiment.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.BatchDetectSentiment'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectSyntax API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.BatchDetectSyntax API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.batchdetectsyntax.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.BatchDetectSyntax'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.batchdetecttargetedsentiment.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ClassifyDocument API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ClassifyDocument API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.classifydocument.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ClassifyDocument'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ContainsPiiEntities API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ContainsPiiEntities API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.containspiientities.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ContainsPiiEntities'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.CreateDataset API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.CreateDataset API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.createdataset.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.CreateDataset'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.CreateDocumentClassifier API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.CreateDocumentClassifier API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.createdocumentclassifier.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.CreateDocumentClassifier'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.CreateEndpoint API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.CreateEndpoint API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.createendpoint.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.CreateEndpoint'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.CreateEntityRecognizer API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.CreateEntityRecognizer API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.createentityrecognizer.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.CreateEntityRecognizer'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.CreateFlywheel API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.CreateFlywheel API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.createflywheel.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.CreateFlywheel'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DeleteDocumentClassifier API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DeleteDocumentClassifier API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.deletedocumentclassifier.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DeleteDocumentClassifier'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DeleteEndpoint API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DeleteEndpoint API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.deleteendpoint.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DeleteEndpoint'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DeleteEntityRecognizer API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DeleteEntityRecognizer API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.deleteentityrecognizer.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DeleteEntityRecognizer'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DeleteFlywheel API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DeleteFlywheel API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.deleteflywheel.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DeleteFlywheel'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DeleteResourcePolicy API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DeleteResourcePolicy API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.deleteresourcepolicy.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DeleteResourcePolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeDataset API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeDataset API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describedataset.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeDataset'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeDocumentClassificationJob API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeDocumentClassificationJob API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.describedocumentclassificationjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeDocumentClassificationJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeDocumentClassifier API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeDocumentClassifier API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describedocumentclassifier.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeDocumentClassifier'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.describedominantlanguagedetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeEndpoint API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeEndpoint API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describeendpoint.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeEndpoint'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeEntitiesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeEntitiesDetectionJob API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.describeentitiesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeEntitiesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describeentityrecognizer.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeEntityRecognizer'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeEventsDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeEventsDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describeeventsdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeEventsDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeFlywheel API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeFlywheel API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describeflywheel.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeFlywheel'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeFlywheelIteration API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeFlywheelIteration API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describeflywheeliteration.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeFlywheelIteration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describekeyphrasesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeKeyPhrasesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeKeyPhrasesDetectionJob API from Amazon Comprehend —
+    1 operation(s) for #x amz target=comprehend 20171127.describekeyphrasesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeKeyPhrasesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describekeyphrasesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describepiientitiesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribePiiEntitiesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribePiiEntitiesDetectionJob API from Amazon Comprehend —
+    1 operation(s) for #x amz target=comprehend 20171127.describepiientitiesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribePiiEntitiesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describepiientitiesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describeresourcepolicy-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeResourcePolicy API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeResourcePolicy API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describeresourcepolicy.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeResourcePolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeresourcepolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describesentimentdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeSentimentDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeSentimentDetectionJob API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.describesentimentdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeSentimentDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describesentimentdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describetargetedsentimentdetectionjob-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.describetargetedsentimentdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetargetedsentimentdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-describetopicsdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DescribeTopicsDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DescribeTopicsDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.describetopicsdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DescribeTopicsDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetopicsdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DetectDominantLanguage API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DetectDominantLanguage API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.detectdominantlanguage.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DetectDominantLanguage'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DetectEntities API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DetectEntities API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.detectentities.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DetectEntities'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DetectKeyPhrases API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DetectKeyPhrases API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.detectkeyphrases.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DetectKeyPhrases'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-detectpiientities-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DetectPiiEntities API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DetectPiiEntities API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.detectpiientities.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DetectPiiEntities'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectpiientities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-detectsentiment-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DetectSentiment API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DetectSentiment API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.detectsentiment.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DetectSentiment'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsentiment-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DetectSyntax API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DetectSyntax API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.detectsyntax.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DetectSyntax'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.DetectTargetedSentiment API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.DetectTargetedSentiment API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.detecttargetedsentiment.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.DetectTargetedSentiment'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ImportModel API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ImportModel API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.importmodel.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ImportModel'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listdatasets-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListDatasets API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListDatasets API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.listdatasets.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListDatasets'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdatasets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListDocumentClassificationJobs API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListDocumentClassificationJobs API from Amazon Comprehend —
+    1 operation(s) for #x amz target=comprehend 20171127.listdocumentclassificationjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListDocumentClassificationJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListDocumentClassifiers API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListDocumentClassifiers API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listdocumentclassifiers.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListDocumentClassifiers'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListDocumentClassifierSummaries API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListDocumentClassifierSummaries API from Amazon Comprehend —
+    1 operation(s) for #x amz target=comprehend 20171127.listdocumentclassifiersummaries.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListDocumentClassifierSummaries'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.ListDominantLanguageDetectionJobs API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListDominantLanguageDetectionJobs API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.listdominantlanguagedetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListDominantLanguageDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listendpoints-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListEndpoints API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListEndpoints API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.listendpoints.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListEndpoints'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listendpoints-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListEntitiesDetectionJobs API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListEntitiesDetectionJobs API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listentitiesdetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListEntitiesDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListEntityRecognizers API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListEntityRecognizers API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listentityrecognizers.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListEntityRecognizers'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.listentityrecognizersummaries.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListEventsDetectionJobs API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListEventsDetectionJobs API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listeventsdetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListEventsDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.listflywheeliterationhistory.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListFlywheels API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListFlywheels API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.listflywheels.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListFlywheels'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListKeyPhrasesDetectionJobs API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListKeyPhrasesDetectionJobs API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listkeyphrasesdetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListKeyPhrasesDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListPiiEntitiesDetectionJobs API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListPiiEntitiesDetectionJobs API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.listpiientitiesdetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListPiiEntitiesDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListSentimentDetectionJobs API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListSentimentDetectionJobs API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listsentimentdetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListSentimentDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listtagsforresource-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListTagsForResource API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListTagsForResource API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listtagsforresource.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListTagsForResource'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtagsforresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.ListTargetedSentimentDetectionJobs API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListTargetedSentimentDetectionJobs API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.listtargetedsentimentdetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListTargetedSentimentDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.ListTopicsDetectionJobs API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.ListTopicsDetectionJobs API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.listtopicsdetectionjobs.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.ListTopicsDetectionJobs'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-putresourcepolicy-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.PutResourcePolicy API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.PutResourcePolicy API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.putresourcepolicy.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.PutResourcePolicy'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-putresourcepolicy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartDocumentClassificationJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartDocumentClassificationJob API from Amazon Comprehend —
+    1 operation(s) for #x amz target=comprehend 20171127.startdocumentclassificationjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartDocumentClassificationJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.StartDominantLanguageDetectionJob API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartDominantLanguageDetectionJob API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.startdominantlanguagedetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartDominantLanguageDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartEntitiesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartEntitiesDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.startentitiesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartEntitiesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartEventsDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartEventsDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.starteventsdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartEventsDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartFlywheelIteration API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartFlywheelIteration API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.startflywheeliteration.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartFlywheelIteration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartKeyPhrasesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartKeyPhrasesDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.startkeyphrasesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartKeyPhrasesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-startpiientitiesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartPiiEntitiesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartPiiEntitiesDetectionJob API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.startpiientitiesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartPiiEntitiesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startpiientitiesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartSentimentDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartSentimentDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.startsentimentdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartSentimentDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.StartTargetedSentimentDetectionJob API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartTargetedSentimentDetectionJob API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.starttargetedsentimentdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartTargetedSentimentDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StartTopicsDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StartTopicsDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.starttopicsdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StartTopicsDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stopdominantlanguagedetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.stopdominantlanguagedetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopdominantlanguagedetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stopentitiesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopEntitiesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopEntitiesDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.stopentitiesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopEntitiesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopentitiesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stopeventsdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopEventsDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopEventsDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.stopeventsdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopEventsDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopeventsdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stopkeyphrasesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopKeyPhrasesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopKeyPhrasesDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.stopkeyphrasesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopKeyPhrasesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopkeyphrasesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stoppiientitiesdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopPiiEntitiesDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopPiiEntitiesDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.stoppiientitiesdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopPiiEntitiesDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoppiientitiesdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopSentimentDetectionJob API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopSentimentDetectionJob API from Amazon Comprehend — 1 operation(s)
+    for #x amz target=comprehend 20171127.stopsentimentdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopSentimentDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api
+  name: >-
+    Amazon Comprehend #X Amz Target=Comprehend 20171127.StopTargetedSentimentDetectionJob API
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopTargetedSentimentDetectionJob API from Amazon Comprehend
+    — 1 operation(s) for #x amz target=comprehend 20171127.stoptargetedsentimentdetectionjob.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopTargetedSentimentDetectionJob'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopTrainingDocumentClassifier API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopTrainingDocumentClassifier API from Amazon Comprehend —
+    1 operation(s) for #x amz target=comprehend 20171127.stoptrainingdocumentclassifier.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopTrainingDocumentClassifier'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: >-
+    amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.StopTrainingEntityRecognizer API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.StopTrainingEntityRecognizer API from Amazon Comprehend — 1
+    operation(s) for #x amz target=comprehend 20171127.stoptrainingentityrecognizer.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.StopTrainingEntityRecognizer'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-tagresource-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.TagResource API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.TagResource API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.tagresource.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.TagResource'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-tagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-untagresource-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.UntagResource API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.UntagResource API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.untagresource.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.UntagResource'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-untagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-updateendpoint-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.UpdateEndpoint API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.UpdateEndpoint API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.updateendpoint.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.UpdateEndpoint'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateendpoint-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
+- aid: amazon-comprehend:amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api
+  name: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.UpdateFlywheel API'
+  description: >-
+    The #X Amz Target=Comprehend 20171127.UpdateFlywheel API from Amazon Comprehend — 1 operation(s) for
+    #x amz target=comprehend 20171127.updateflywheel.
+  humanURL: https://aws.amazon.com/comprehend/
+  baseURL: https://comprehend.amazonaws.com
+  tags:
+  - '#X Amz Target=Comprehend 20171127.UpdateFlywheel'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/comprehend/latest/dg/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/comprehend/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/comprehend/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/comprehend/faqs/
+  - type: JSONSchema
+    url: json-schema/comprehend-entity-schema.json
+  - type: JSONStructure
+    url: json-structure/comprehend-entity-structure.json
+  - type: JSON-LD
+    url: json-ld/amazon-comprehend-context.jsonld
+  - type: ErrorCatalog
+    url: errors/amazon-comprehend-problem-types.yml
+  - type: Conformance
+    url: conformance/amazon-comprehend-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-comprehend-lifecycle.yml
 common:
   - type: AgenticAccess
     url: agentic-access/amazon-comprehend-agentic-access.yml
