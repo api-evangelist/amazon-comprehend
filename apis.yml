@@ -57,10 +57,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -93,10 +89,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -129,10 +121,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -165,10 +153,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -201,10 +185,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -237,10 +217,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -273,10 +249,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -309,10 +281,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -343,10 +311,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -379,10 +343,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -414,10 +374,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -450,10 +406,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -485,10 +437,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -521,10 +469,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -556,10 +500,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -592,10 +532,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -627,10 +563,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -663,10 +595,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -698,10 +626,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -735,10 +659,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -771,10 +691,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -808,10 +724,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -844,10 +756,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -880,10 +788,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -916,10 +820,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -952,10 +852,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -988,10 +884,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1024,10 +916,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1060,10 +948,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1096,10 +980,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1132,10 +1012,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1168,10 +1044,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1205,10 +1077,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1241,10 +1109,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1277,10 +1141,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1312,10 +1172,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1348,10 +1204,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1384,10 +1236,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1419,10 +1267,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1453,10 +1297,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1489,10 +1329,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1523,10 +1359,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1557,10 +1389,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1593,10 +1421,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1629,10 +1453,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1665,10 +1485,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1702,10 +1518,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1736,10 +1548,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1772,10 +1580,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1808,10 +1612,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1844,10 +1644,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1880,10 +1676,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1916,10 +1708,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1950,10 +1738,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -1986,10 +1770,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2022,10 +1802,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2058,10 +1834,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2094,10 +1866,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2131,10 +1899,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2167,10 +1931,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2203,10 +1963,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2239,10 +1995,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2276,10 +2028,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2312,10 +2060,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2348,10 +2092,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2384,10 +2124,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2420,10 +2156,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2456,10 +2188,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2492,10 +2220,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2529,10 +2253,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2565,10 +2285,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2601,10 +2317,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2637,10 +2349,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2673,10 +2381,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2709,10 +2413,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2745,10 +2445,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2781,10 +2477,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2818,10 +2510,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2854,10 +2542,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2890,10 +2574,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2924,10 +2604,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2958,10 +2634,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -2993,10 +2665,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -3028,10 +2696,6 @@ apis:
     url: https://aws.amazon.com/comprehend/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/comprehend/faqs/
-  - type: JSONSchema
-    url: json-schema/comprehend-entity-schema.json
-  - type: JSONStructure
-    url: json-structure/comprehend-entity-structure.json
   - type: JSON-LD
     url: json-ld/amazon-comprehend-context.jsonld
   - type: ErrorCatalog
@@ -3041,6 +2705,10 @@ apis:
   - type: Lifecycle
     url: lifecycle/amazon-comprehend-lifecycle.yml
 common:
+  - type: MCPServer
+    url: mcp/amazon-comprehend-mcp.yml
+  - type: Overlay
+    url: overlays/amazon-comprehend-openapi-overlay.yaml
   - type: AgenticAccess
     url: agentic-access/amazon-comprehend-agentic-access.yml
   - type: TrustCenter
