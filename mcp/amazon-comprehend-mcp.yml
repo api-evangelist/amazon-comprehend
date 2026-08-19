@@ -320,3 +320,9 @@ tools:
 - name: update_flywheel
   description: Update the configuration information for an existing flywheel.
   source_operation: openapi/amazon-comprehend-openapi.yml#UpdateFlywheel
+deployment:
+  mode: none
+  verified: derived
+  tools: 84
+  checked: '2026-08-12'
+  source: catalog MCP census
