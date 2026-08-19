@@ -15,7 +15,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-comprehend.png
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to uncover information in
   unstructured data. The service can identify critical elements in data, including references to language, people, and
