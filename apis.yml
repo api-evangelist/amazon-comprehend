@@ -25,6 +25,12 @@ created: '2024-01-15'
 modified: '2026-06-20'
 tags:
   - AWS
+  - Machine-Learning
+  - Natural Language Processing
+  - NLP
+  - Text Analysis
+tags_raw:
+  - AWS
   - Machine Learning
   - Natural Language Processing
   - NLP
@@ -37,7 +43,8 @@ apis:
       #x amz target=comprehend 20171127.batchdetectdominantlanguage.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage'
     properties:
       - type: OpenAPI
@@ -187,7 +194,8 @@ apis:
       #x amz target=comprehend 20171127.batchdetecttargetedsentiment.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment'
     properties:
       - type: OpenAPI
@@ -607,7 +615,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.describedocumentclassificationjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.DescribeDocumentClassificationJob'
     properties:
       - type: OpenAPI
@@ -667,7 +676,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.describedominantlanguagedetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob'
     properties:
       - type: OpenAPI
@@ -728,7 +738,8 @@ apis:
       #x amz target=comprehend 20171127.describeentitiesdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.DescribeEntitiesDetectionJob'
     properties:
       - type: OpenAPI
@@ -878,7 +889,8 @@ apis:
       for #x amz target=comprehend 20171127.describekeyphrasesdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.DescribeKeyPhrasesDetectionJob'
     properties:
       - type: OpenAPI
@@ -908,7 +920,8 @@ apis:
       for #x amz target=comprehend 20171127.describepiientitiesdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.DescribePiiEntitiesDetectionJob'
     properties:
       - type: OpenAPI
@@ -968,7 +981,8 @@ apis:
       for #x amz target=comprehend 20171127.describesentimentdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.DescribeSentimentDetectionJob'
     properties:
       - type: OpenAPI
@@ -998,7 +1012,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.describetargetedsentimentdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob'
     properties:
       - type: OpenAPI
@@ -1329,7 +1344,8 @@ apis:
       for #x amz target=comprehend 20171127.listdocumentclassificationjobs.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListDocumentClassificationJobs'
     properties:
       - type: OpenAPI
@@ -1389,7 +1405,8 @@ apis:
       for #x amz target=comprehend 20171127.listdocumentclassifiersummaries.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListDocumentClassifierSummaries'
     properties:
       - type: OpenAPI
@@ -1419,7 +1436,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.listdominantlanguagedetectionjobs.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListDominantLanguageDetectionJobs'
     properties:
       - type: OpenAPI
@@ -1539,7 +1557,8 @@ apis:
       for #x amz target=comprehend 20171127.listentityrecognizersummaries.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries'
     properties:
       - type: OpenAPI
@@ -1599,7 +1618,8 @@ apis:
       #x amz target=comprehend 20171127.listflywheeliterationhistory.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory'
     properties:
       - type: OpenAPI
@@ -1659,7 +1679,8 @@ apis:
       #x amz target=comprehend 20171127.listkeyphrasesdetectionjobs.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListKeyPhrasesDetectionJobs'
     properties:
       - type: OpenAPI
@@ -1689,7 +1710,8 @@ apis:
       #x amz target=comprehend 20171127.listpiientitiesdetectionjobs.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListPiiEntitiesDetectionJobs'
     properties:
       - type: OpenAPI
@@ -1779,7 +1801,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.listtargetedsentimentdetectionjobs.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.ListTargetedSentimentDetectionJobs'
     properties:
       - type: OpenAPI
@@ -1869,7 +1892,8 @@ apis:
       for #x amz target=comprehend 20171127.startdocumentclassificationjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StartDocumentClassificationJob'
     properties:
       - type: OpenAPI
@@ -1899,7 +1923,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.startdominantlanguagedetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StartDominantLanguageDetectionJob'
     properties:
       - type: OpenAPI
@@ -2019,7 +2044,8 @@ apis:
       #x amz target=comprehend 20171127.startkeyphrasesdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StartKeyPhrasesDetectionJob'
     properties:
       - type: OpenAPI
@@ -2049,7 +2075,8 @@ apis:
       #x amz target=comprehend 20171127.startpiientitiesdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StartPiiEntitiesDetectionJob'
     properties:
       - type: OpenAPI
@@ -2109,7 +2136,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.starttargetedsentimentdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StartTargetedSentimentDetectionJob'
     properties:
       - type: OpenAPI
@@ -2169,7 +2197,8 @@ apis:
       for #x amz target=comprehend 20171127.stopdominantlanguagedetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob'
     properties:
       - type: OpenAPI
@@ -2289,7 +2318,8 @@ apis:
       #x amz target=comprehend 20171127.stoppiientitiesdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StopPiiEntitiesDetectionJob'
     properties:
       - type: OpenAPI
@@ -2349,7 +2379,8 @@ apis:
       operation(s) for #x amz target=comprehend 20171127.stoptargetedsentimentdetectionjob.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StopTargetedSentimentDetectionJob'
     properties:
       - type: OpenAPI
@@ -2379,7 +2410,8 @@ apis:
       for #x amz target=comprehend 20171127.stoptrainingdocumentclassifier.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StopTrainingDocumentClassifier'
     properties:
       - type: OpenAPI
@@ -2409,7 +2441,8 @@ apis:
       #x amz target=comprehend 20171127.stoptrainingentityrecognizer.
     humanURL: https://aws.amazon.com/comprehend/
     baseURL: https://comprehend.amazonaws.com
-    tags:
+    tags: []
+    tags_raw:
       - '#X Amz Target=Comprehend 20171127.StopTrainingEntityRecognizer'
     properties:
       - type: OpenAPI
