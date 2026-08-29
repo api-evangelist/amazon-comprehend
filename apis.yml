@@ -2598,6 +2598,9 @@ apis:
       - type: Lifecycle
         url: lifecycle/amazon-comprehend-lifecycle.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-comprehend-capability-edges.yml
+    name: Amazon Comprehend Business Capability Map
   - type: MCPServer
     url: mcp/amazon-comprehend-mcp.yml
   - type: Overlay

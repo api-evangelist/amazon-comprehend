@@ -1,0 +1,521 @@
+slug: amazon-comprehend
+provider: Amazon Comprehend
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 56
+edges:
+- tag: '#X Amz Target=Comprehend 20171127.CreateDocumentClassifier'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: CreateDocumentClassifier  Amazon Comprehend Create Document Classifier; schemas DocumentClassifierArn,
+    AugmentedManifestsListItem
+  reason: Trains a custom ML model; explicit AI/ML model lifecycle management.
+- tag: '#X Amz Target=Comprehend 20171127.CreateEntityRecognizer'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: CreateEntityRecognizer  Amazon Comprehend Create Entity Recognizer; schemas EntityRecognizerInputDataConfig,
+    EntityRecognizerAnnotations
+  reason: Trains a custom entity recognition model — AI/ML model lifecycle.
+- tag: '#X Amz Target=Comprehend 20171127.DeleteFlywheel'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DeleteFlywheel  Amazon Comprehend Delete Flywheel; schemas ComprehendFlywheelArn
+  reason: A Comprehend flywheel is the ML model training/retraining lifecycle construct; deleting it is
+    AI/ML model lifecycle (MLOps) management, mapping to Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeDocumentClassificationJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeDocumentClassificationJob ... schemas DocumentClassificationJobProperties, DocumentClassifierArn
+  reason: Inspects an ML inference job run with a custom document classifier — ML model operations, mapping
+    to Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeDocumentClassifier'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeDocumentClassifier ... schemas DocumentClassifierProperties, ModelStatus
+  reason: Describes a trained custom classification model including ModelStatus — ML model lifecycle management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeDominantLanguageDetectionJob ... schemas DominantLanguageDetectionJobProperties
+  reason: Describes an NLP/ML batch inference job for language detection — AI/ML service operation under
+    Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeEndpoint'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeEndpoint ... schemas EndpointProperties, InferenceUnitsInteger, ComprehendModelArn
+  reason: Describes a real-time model inference endpoint with inference units — model serving/MLOps, i.e.
+    Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeEntitiesDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeEntitiesDetectionJob ... schemas EntitiesDetectionJobProperties, EntityRecognizerArn
+  reason: Describes an ML entity-recognition inference job — NLP model operations, mapping to Artificial
+    Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeEntityRecognizer'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeEntityRecognizer ... schemas EntityRecognizerProperties, EntityTypesEvaluationMetrics,
+    ModelStatus
+  reason: Describes a custom trained entity-recognition model with evaluation metrics and status — ML
+    model lifecycle management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeEventsDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeEventsDetectionJob ... schemas EventsDetectionJobProperties, TargetEventTypes
+  reason: Describes an NLP events-detection inference job over documents — AI/ML service operation, not
+    business event management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeFlywheel'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeFlywheel ... schemas FlywheelProperties, FlywheelStatus, ModelType, DocumentClassificationConfig
+  reason: Flywheel describes the continuous model training/retraining configuration for custom NLP models
+    — MLOps under Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeFlywheelIteration'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.85
+  evidence: DescribeFlywheelIteration ... schemas FlywheelModelEvaluationMetrics, FlywheelIterationStatus
+  reason: Describes a model retraining iteration with model evaluation metrics — ML model lifecycle/MLOps
+    management.
+- tag: '#X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.82
+  evidence: 'ListFlywheelIterationHistory ... schemas: FlywheelIterationStatus, FlywheelModelEvaluationMetrics,
+    ComprehendModelArn'
+  reason: Flywheel iterations track retraining runs and model evaluation metrics for Comprehend custom
+    models — an ML model lifecycle / MLOps surface, mapping to Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.ListFlywheels'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.82
+  evidence: 'ListFlywheels ... schemas: FlywheelStatus, ModelType, ComprehendModelArn, FlywheelSummary'
+  reason: Lists flywheels that orchestrate dataset accumulation and custom model retraining — ML model
+    lifecycle management (MLOps).
+- tag: '#X Amz Target=Comprehend 20171127.CreateFlywheel'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: CreateFlywheel  Amazon Comprehend Create Flywheel; schemas DocumentClassificationConfig, TaskConfig,
+    DataSecurityConfig
+  reason: Flywheel orchestrates iterative model training/retraining datasets — MLOps within Artificial
+    Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DeleteDocumentClassifier'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: DeleteDocumentClassifier  Amazon Comprehend Delete Document Classifier; DocumentClassifierArn
+  reason: Retirement of a trained ML model — model lifecycle management.
+- tag: '#X Amz Target=Comprehend 20171127.DeleteEntityRecognizer'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: DeleteEntityRecognizer  Amazon Comprehend Delete Entity Recognizer; EntityRecognizerArn
+  reason: Deletes a custom trained NLP model — AI/ML model lifecycle management.
+- tag: '#X Amz Target=Comprehend 20171127.DescribeDataset'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: DescribeDataset  Amazon Comprehend Describe Dataset; schemas DatasetProperties, DatasetType,
+    ComprehendDatasetArn
+  reason: Describes a training dataset used to build custom NLP models — part of the ML model lifecycle,
+    hence Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.ImportModel'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: ImportModel  Amazon Comprehend Import Model ... ImportModelRequest, ComprehendModelArn
+  reason: Importing a trained NLP model is squarely AI/ML model lifecycle (MLOps) management.
+- tag: '#X Amz Target=Comprehend 20171127.StartDocumentClassificationJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: StartDocumentClassificationJob ... DocumentClassifierArn, InputDataConfig, OutputDataConfig
+  reason: Starts an ML classification inference job against a trained document classifier — AI/ML model
+    operation.
+- tag: '#X Amz Target=Comprehend 20171127.StartEntitiesDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: StartEntitiesDetectionJob ... EntityRecognizerArn, StartEntitiesDetectionJobRequest
+  reason: Starts an ML entity-recognition inference job using a trained recognizer — AI/ML model operation,
+    not master data or customer identification.
+- tag: '#X Amz Target=Comprehend 20171127.StopTrainingDocumentClassifier'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: StopTrainingDocumentClassifier  Amazon Comprehend Stop Training Document Classifier
+  reason: Explicitly stops model training for a custom classifier — model lifecycle / MLOps operation.
+- tag: '#X Amz Target=Comprehend 20171127.StopTrainingEntityRecognizer'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: StopTrainingEntityRecognizer  Amazon Comprehend Stop Training Entity Recognizer
+  reason: Stops training of a custom entity recognition model — clearly AI/ML model lifecycle (MLOps)
+    management.
+- tag: '#X Amz Target=Comprehend 20171127.ListKeyPhrasesDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.78
+  evidence: ListKeyPhrasesDetectionJobs  Amazon Comprehend List Key Phrases Detection Jobs; KeyPhrasesDetectionJobProperties
+  reason: Managing NLP inference jobs (key phrase extraction) on a managed ML service — AI/ML capability,
+    not a domain business process.
+- tag: '#X Amz Target=Comprehend 20171127.ListSentimentDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.78
+  evidence: ListSentimentDetectionJobs ... SentimentDetectionJobProperties, SentimentDetectionJobFilter
+  reason: Lists ML sentiment-analysis inference jobs on arbitrary documents; generic NLP/AI capability
+    rather than customer feedback management.
+- tag: '#X Amz Target=Comprehend 20171127.ListTargetedSentimentDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.78
+  evidence: ListTargetedSentimentDetectionJobs ... TargetedSentimentDetectionJobFilter
+  reason: Management of ML targeted-sentiment inference jobs — AI/ML model operation.
+- tag: '#X Amz Target=Comprehend 20171127.ListTopicsDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.78
+  evidence: ListTopicsDetectionJobs ... TopicsDetectionJobProperties
+  reason: Topic modeling inference jobs on document sets — machine learning capability.
+- tag: '#X Amz Target=Comprehend 20171127.StartDominantLanguageDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.78
+  evidence: StartDominantLanguageDetectionJob  Amazon Comprehend Start Dominant Language Detection Job
+  reason: Launches an NLP language-detection inference job on a managed ML service — AI/ML capability.
+- tag: '#X Amz Target=Comprehend 20171127.StartFlywheelIteration'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.78
+  evidence: StartFlywheelIteration  Amazon Comprehend Start Flywheel Iteration; schemas ComprehendFlywheelArn,
+    FlywheelIterationId
+  reason: Comprehend flywheels orchestrate iterative custom-model training/evaluation — squarely AI/ML
+    model lifecycle (MLOps).
+- tag: '#X Amz Target=Comprehend 20171127.CreateDataset'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: CreateDataset  Amazon Comprehend Create Dataset; schemas DatasetDocumentClassifierInputDataConfig,
+    DatasetEntityRecognizerAnnotations
+  reason: Creates training datasets for custom NLP models — squarely ML model lifecycle / MLOps.
+- tag: '#X Amz Target=Comprehend 20171127.CreateEndpoint'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: CreateEndpoint  Amazon Comprehend Create Endpoint; schemas ComprehendModelArn, InferenceUnitsInteger
+  reason: Provisions a real-time inference endpoint for a Comprehend model — model deployment/MLOps within
+    AI management.
+- tag: '#X Amz Target=Comprehend 20171127.DetectTargetedSentiment'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: 'POST /#X-Amz-Target=Comprehend_20171127.DetectTargetedSentiment  DetectTargetedSentiment
+    ... schemas: SentimentScore, TargetedSentimentEntity'
+  reason: An ML inference operation of an NLP service ('uses machine learning to uncover information in
+    unstructured data'). This realises AI/ML capability delivery rather than any business-domain function;
+    the sentiment output is generic text analysis, not a customer-feedback programme.
+- tag: '#X Amz Target=Comprehend 20171127.ListDocumentClassifierSummaries'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: ListDocumentClassifierSummaries ... DocumentClassifierSummary, ModelStatus, VersionName
+  reason: Enumerates trained classifier models with status and version — AI/ML model lifecycle management.
+- tag: '#X Amz Target=Comprehend 20171127.ListDocumentClassifiers'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: ListDocumentClassifiers ... DocumentClassifierProperties, ModelStatus
+  reason: Model registry style listing of custom classification models, i.e. MLOps/model lifecycle.
+- tag: '#X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: ListEntityRecognizerSummaries ... EntityRecognizerSummary, ModelStatus, VersionName
+  reason: Summarises trained entity-recognition models with status/version — AI/ML model lifecycle management.
+- tag: '#X Amz Target=Comprehend 20171127.ListEntityRecognizers'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: ListEntityRecognizers ... EntityRecognizerProperties, EntityTypesEvaluationMetrics, EntityRecognizerInputDataConfig
+  reason: Custom model listing including training data config and evaluation metrics — clearly ML model
+    lifecycle/MLOps.
+- tag: '#X Amz Target=Comprehend 20171127.ListPiiEntitiesDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: ListPiiEntitiesDetectionJobs ... PiiEntitiesDetectionMode, RedactionConfig, MaskCharacter
+  reason: ML-based PII detection/redaction jobs. Primarily an AI/ML inference job surface; privacy is
+    the downstream use case, not what the API manages.
+- tag: '#X Amz Target=Comprehend 20171127.UpdateFlywheel'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: UpdateFlywheel ... FlywheelProperties, FlywheelIterationId, DocumentClassificationConfig,
+    TaskConfig
+  reason: Flywheel is Comprehend's construct for continuous model retraining/iteration — ML model lifecycle
+    management.
+- tag: '#X Amz Target=Comprehend 20171127.BatchDetectSyntax'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: POST /#X-Amz-Target=Comprehend_20171127.BatchDetectSyntax  BatchDetectSyntax; schemas PartOfSpeechTag,
+    SyntaxToken
+  reason: NLP inference operation of a managed ML service; closest honest mapping is Artificial Intelligence
+    Management (AI/ML model lifecycle and inference). Confidence moderate since this is a runtime inference
+    call rather than model lifecycle governance.
+- tag: '#X Amz Target=Comprehend 20171127.ClassifyDocument'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: ClassifyDocument  Amazon Comprehend Classify Document; schemas DocumentClass, DocumentClassifierEndpointArn
+  reason: Runs a custom ML classifier over documents — AI/ML model usage, part of Artificial Intelligence
+    Management.
+- tag: '#X Amz Target=Comprehend 20171127.DeleteEndpoint'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: DeleteEndpoint  Amazon Comprehend Delete Endpoint; ComprehendEndpointArn
+  reason: Decommissions an ML inference endpoint; AI/ML deployment lifecycle. Somewhat plumbing-like,
+    hence moderate confidence.
+- tag: '#X Amz Target=Comprehend 20171127.DetectDominantLanguage'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: '"DetectDominantLanguage  Amazon Comprehend Detect Dominant Language"; schemas ListOfDominantLanguages,
+    DominantLanguage'
+  reason: Synchronous ML inference call for language identification — an AI/NLP service capability; nothing
+    business-domain specific.
+- tag: '#X Amz Target=Comprehend 20171127.DetectEntities'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: '"DetectEntities"; schemas ListOfEntities, Entity, EntityType, DocumentMetadata'
+  reason: Named-entity recognition inference over documents. AI/ML inference capability; 'Entities' here
+    are NLP text entities, not customer or master-data records.
+- tag: '#X Amz Target=Comprehend 20171127.DetectKeyPhrases'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: '"DetectKeyPhrases"; schemas ListOfKeyPhrases, KeyPhrase, LanguageCode'
+  reason: Real-time NLP model inference extracting key phrases from text — Artificial Intelligence Management.
+- tag: '#X Amz Target=Comprehend 20171127.DetectSyntax'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: '"DetectSyntax"; schemas SyntaxToken, PartOfSpeechTag, ListOfSyntaxTokens'
+  reason: Part-of-speech / syntax parsing inference — pure NLP model capability under Artificial Intelligence
+    Management.
+- tag: '#X Amz Target=Comprehend 20171127.ListDocumentClassificationJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: ListDocumentClassificationJobs ... DocumentClassificationJobProperties, DocumentClassifierArn
+  reason: Lists ML batch inference jobs run against a document classifier — operational ML pipeline management
+    within AI/ML lifecycle.
+- tag: '#X Amz Target=Comprehend 20171127.ListDominantLanguageDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: ListDominantLanguageDetectionJobs ... DominantLanguageDetectionJobProperties, InputDataConfig
+  reason: Lists asynchronous ML language-detection jobs over document inputs — AI/ML inference pipeline
+    operation.
+- tag: '#X Amz Target=Comprehend 20171127.ListEntitiesDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: ListEntitiesDetectionJobs ... EntitiesDetectionJobProperties, EntityRecognizerArn
+  reason: Lists ML entity-recognition inference jobs; realises AI/ML lifecycle operations, not a domain
+    business capability.
+- tag: '#X Amz Target=Comprehend 20171127.ListEventsDetectionJobs'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: ListEventsDetectionJobs ... EventsDetectionJobFilter, TargetEventTypes, InputDataConfig
+  reason: '''Events'' here are NLP-extracted event types in documents, not system events; the operation
+    lists ML detection jobs, so AI/ML management applies.'
+- tag: '#X Amz Target=Comprehend 20171127.StartEventsDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: POST ... StartEventsDetectionJob  Amazon Comprehend Start Events Detection Job — "natural
+    language processing (NLP) service that uses machine learning to uncover information in unstructured
+    data"
+  reason: Asynchronous ML inference job over document corpora; this is operation of a machine-learning/NLP
+    service, best placed under AI/ML lifecycle within Information & Data Management. Not an events/business-event
+    capability despite the tag word 'Events'.
+- tag: '#X Amz Target=Comprehend 20171127.StartKeyPhrasesDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: StartKeyPhrasesDetectionJob  Amazon Comprehend Start Key Phrases Detection Job
+  reason: Batch NLP inference job (key phrase extraction) on stored documents; an AI/ML service operation,
+    no business-domain capability implied.
+- tag: '#X Amz Target=Comprehend 20171127.StartSentimentDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: StartSentimentDetectionJob  Amazon Comprehend Start Sentiment Detection Job
+  reason: Batch ML sentiment inference job; AI/ML service operation rather than, e.g., customer feedback
+    management (no survey/VoC constructs in the schemas).
+- tag: '#X Amz Target=Comprehend 20171127.StartTargetedSentimentDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: StartTargetedSentimentDetectionJob  Amazon Comprehend Start Targeted Sentiment Detection Job
+  reason: Same as sentiment job — asynchronous ML inference over documents, mapped to AI/ML lifecycle
+    management.
+- tag: '#X Amz Target=Comprehend 20171127.StartTopicsDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: StartTopicsDetectionJob  Amazon Comprehend Start Topics Detection Job
+  reason: Topic-modelling ML job over an input data config in S3; AI/ML service operation.
+- tag: '#X Amz Target=Comprehend 20171127.StopSentimentDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: StopSentimentDetectionJob  Amazon Comprehend Stop Sentiment Detection Job
+  reason: Managing an ML/NLP inference job lifecycle in a machine-learning service; closest honest fit
+    is AI/ML model lifecycle management under Information & Data Management. Confidence moderate as this
+    is job control plumbing on an ML platform.
+- tag: '#X Amz Target=Comprehend 20171127.StopTargetedSentimentDetectionJob'
+  spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: StopTargetedSentimentDetectionJob  Amazon Comprehend Stop Targeted Sentiment Detection Job
+  reason: Control of an NLP/ML analysis job on a machine-learning service; maps to AI/ML lifecycle operations
+    rather than any industry business capability.
