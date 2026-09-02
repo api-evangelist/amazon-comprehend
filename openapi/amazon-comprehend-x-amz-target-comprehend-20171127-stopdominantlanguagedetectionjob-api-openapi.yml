@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob #X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob #X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -194,37 +194,46 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.StopDominantLanguageDetectionJob'
 components:
+  schemas:
+    StopDominantLanguageDetectionJobRequest:
+      type: object
+      required:
+      - JobId
+      title: StopDominantLanguageDetectionJobRequest
+      properties:
+        JobId:
+          allOf:
+          - $ref: '#/components/schemas/JobId'
+          - description: The identifier of the dominant language detection job to stop.
+    InvalidRequestException: {}
+    InternalServerException: {}
+    JobNotFoundException: {}
+    StopDominantLanguageDetectionJobResponse:
+      type: object
+      properties:
+        JobId:
+          allOf:
+          - $ref: '#/components/schemas/JobId'
+          - description: The identifier of the dominant language detection job to stop.
+        JobStatus:
+          allOf:
+          - $ref: '#/components/schemas/JobStatus'
+          - description: Either <code>STOP_REQUESTED</code> if the job is currently running, or <code>STOPPED</code> if the job was previously stopped with the <code>StopDominantLanguageDetectionJob</code> operation.
+    JobId:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
+      minLength: 1
+      maxLength: 32
+    JobStatus:
+      type: string
+      enum:
+      - SUBMITTED
+      - IN_PROGRESS
+      - COMPLETED
+      - FAILED
+      - STOP_REQUESTED
+      - STOPPED
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
       in: header
@@ -237,45 +246,36 @@ components:
       schema:
         type: string
       required: false
-  schemas:
-    InvalidRequestException: {}
-    JobId:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
-      minLength: 1
-      maxLength: 32
-    JobNotFoundException: {}
-    InternalServerException: {}
-    JobStatus:
-      type: string
-      enum:
-      - SUBMITTED
-      - IN_PROGRESS
-      - COMPLETED
-      - FAILED
-      - STOP_REQUESTED
-      - STOPPED
-    StopDominantLanguageDetectionJobRequest:
-      type: object
-      required:
-      - JobId
-      title: StopDominantLanguageDetectionJobRequest
-      properties:
-        JobId:
-          allOf:
-          - $ref: '#/components/schemas/JobId'
-          - description: The identifier of the dominant language detection job to stop.
-    StopDominantLanguageDetectionJobResponse:
-      type: object
-      properties:
-        JobId:
-          allOf:
-          - $ref: '#/components/schemas/JobId'
-          - description: The identifier of the dominant language detection job to stop.
-        JobStatus:
-          allOf:
-          - $ref: '#/components/schemas/JobStatus'
-          - description: Either <code>STOP_REQUESTED</code> if the job is currently running, or <code>STOPPED</code> if the job was previously stopped with the <code>StopDominantLanguageDetectionJob</code> operation.
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

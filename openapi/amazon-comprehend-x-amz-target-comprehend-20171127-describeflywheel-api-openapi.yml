@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeFlywheel API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeFlywheel #X Amz Target=Comprehend 20171127.DescribeFlywheel #X Amz Target=Comprehend 20171127.DescribeFlywheel API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -204,55 +204,59 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.DescribeFlywheel'
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    IamRoleArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
-      minLength: 20
-      maxLength: 2048
-    LanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
     SecurityGroupId:
       type: string
       pattern: '[-0-9a-zA-Z]+'
       minLength: 1
       maxLength: 32
-    EntityTypesListItem:
-      type: object
-      required:
-      - Type
-      properties:
-        Type:
-          allOf:
-          - $ref: '#/components/schemas/EntityTypeName'
-          - description: '<p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p> <p>Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break, \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma).</p>'
-      description: An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.
-    ComprehendModelArn:
+    FlywheelIterationId:
       type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
-      maxLength: 256
-    EntityTypeName:
-      type: string
-      pattern: ^(?![^\n\r\t,]*\\n|\\r|\\t)[^\n\r\t,]+$
-      maxLength: 64
-    SubnetId:
-      type: string
-      pattern: '[-0-9a-zA-Z]+'
-      minLength: 1
-      maxLength: 32
+      pattern: '[0-9]{8}T[0-9]{6}Z'
+      maxLength: 63
     DocumentClassificationConfig:
       type: object
       required:
@@ -267,103 +271,28 @@ components:
           - $ref: '#/components/schemas/LabelsList'
           - description: One or more labels to associate with the custom classifier.
       description: Configuration required for a custom classification model.
-    ResourceNotFoundException: {}
-    EntityTypesList:
-      type: array
-      items:
-        $ref: '#/components/schemas/EntityTypesListItem'
-    KmsKeyId:
-      type: string
-      pattern: ^\p{ASCII}+$
-      maxLength: 2048
-    AnyLengthString:
-      type: string
-    S3Uri:
-      type: string
-      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
-      maxLength: 1024
-    Subnets:
-      type: array
-      items:
-        $ref: '#/components/schemas/SubnetId'
-      minItems: 1
-      maxItems: 16
-    DescribeFlywheelResponse:
-      type: object
-      properties:
-        FlywheelProperties:
-          allOf:
-          - $ref: '#/components/schemas/FlywheelProperties'
-          - description: The flywheel properties.
-    TaskConfig:
-      type: object
-      required:
-      - LanguageCode
-      properties:
-        LanguageCode:
-          allOf:
-          - $ref: '#/components/schemas/LanguageCode'
-          - description: Language code for the language that the model supports.
-        DocumentClassificationConfig:
-          allOf:
-          - $ref: '#/components/schemas/DocumentClassificationConfig'
-          - description: Configuration required for a classification model.
-        EntityRecognitionConfig:
-          allOf:
-          - $ref: '#/components/schemas/EntityRecognitionConfig'
-          - description: Configuration required for an entity recognition model.
-      description: Configuration about the custom classifier associated with the flywheel.
-    FlywheelStatus:
-      type: string
-      enum:
-      - CREATING
-      - ACTIVE
-      - UPDATING
-      - DELETING
-      - FAILED
-    DocumentClassifierMode:
-      type: string
-      enum:
-      - MULTI_CLASS
-      - MULTI_LABEL
-    InvalidRequestException: {}
-    DescribeFlywheelRequest:
-      type: object
-      required:
-      - FlywheelArn
-      title: DescribeFlywheelRequest
-      properties:
-        FlywheelArn:
-          allOf:
-          - $ref: '#/components/schemas/ComprehendFlywheelArn'
-          - description: The Amazon Resource Number (ARN) of the flywheel.
     LabelListItem:
       type: string
       pattern: ^\P{C}*$
       maxLength: 5000
-    SecurityGroupIds:
-      type: array
-      items:
-        $ref: '#/components/schemas/SecurityGroupId'
-      minItems: 1
-      maxItems: 5
-    ComprehendFlywheelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
     Timestamp:
       type: string
       format: date-time
-    LabelsList:
-      type: array
-      items:
-        $ref: '#/components/schemas/LabelListItem'
-      maxItems: 1000
-    ModelType:
+    IamRoleArn:
       type: string
-      enum:
-      - DOCUMENT_CLASSIFIER
-      - ENTITY_RECOGNIZER
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    EntityTypesListItem:
+      type: object
+      required:
+      - Type
+      properties:
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypeName'
+          - description: '<p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p> <p>Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break, \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma).</p>'
+      description: An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.
     FlywheelProperties:
       type: object
       properties:
@@ -416,37 +345,30 @@ components:
           - $ref: '#/components/schemas/FlywheelIterationId'
           - description: The most recent flywheel iteration.
       description: The flywheel properties.
-    TooManyRequestsException: {}
-    VpcConfig:
+    TaskConfig:
       type: object
       required:
-      - SecurityGroupIds
-      - Subnets
+      - LanguageCode
       properties:
-        SecurityGroupIds:
+        LanguageCode:
           allOf:
-          - $ref: '#/components/schemas/SecurityGroupIds'
-          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
-        Subnets:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: Language code for the language that the model supports.
+        DocumentClassificationConfig:
           allOf:
-          - $ref: '#/components/schemas/Subnets'
-          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
-      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
-    FlywheelIterationId:
-      type: string
-      pattern: '[0-9]{8}T[0-9]{6}Z'
-      maxLength: 63
-    EntityRecognitionConfig:
-      type: object
-      required:
-      - EntityTypes
-      properties:
-        EntityTypes:
+          - $ref: '#/components/schemas/DocumentClassificationConfig'
+          - description: Configuration required for a classification model.
+        EntityRecognitionConfig:
           allOf:
-          - $ref: '#/components/schemas/EntityTypesList'
-          - description: Up to 25 entity types that the model is trained to recognize.
-      description: Configuration required for an entity recognition model.
-    InternalServerException: {}
+          - $ref: '#/components/schemas/EntityRecognitionConfig'
+          - description: Configuration required for an entity recognition model.
+      description: Configuration about the custom classifier associated with the flywheel.
+    Subnets:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 1
+      maxItems: 16
     DataSecurityConfig:
       type: object
       properties:
@@ -465,49 +387,127 @@ components:
         VpcConfig:
           $ref: '#/components/schemas/VpcConfig'
       description: Data security configuration.
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
+    InvalidRequestException: {}
+    FlywheelStatus:
+      type: string
+      enum:
+      - CREATING
+      - ACTIVE
+      - UPDATING
+      - DELETING
+      - FAILED
+    AnyLengthString:
+      type: string
+    EntityTypeName:
+      type: string
+      pattern: ^(?![^\n\r\t,]*\\n|\\r|\\t)[^\n\r\t,]+$
+      maxLength: 64
+    DescribeFlywheelResponse:
+      type: object
+      properties:
+        FlywheelProperties:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelProperties'
+          - description: The flywheel properties.
+    VpcConfig:
+      type: object
+      required:
+      - SecurityGroupIds
+      - Subnets
+      properties:
+        SecurityGroupIds:
+          allOf:
+          - $ref: '#/components/schemas/SecurityGroupIds'
+          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
+        Subnets:
+          allOf:
+          - $ref: '#/components/schemas/Subnets'
+          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
+      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+    EntityTypesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/EntityTypesListItem'
+    SecurityGroupIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
+    ModelType:
+      type: string
+      enum:
+      - DOCUMENT_CLASSIFIER
+      - ENTITY_RECOGNIZER
+    DocumentClassifierMode:
+      type: string
+      enum:
+      - MULTI_CLASS
+      - MULTI_LABEL
+    InternalServerException: {}
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    SubnetId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    ResourceNotFoundException: {}
+    EntityRecognitionConfig:
+      type: object
+      required:
+      - EntityTypes
+      properties:
+        EntityTypes:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypesList'
+          - description: Up to 25 entity types that the model is trained to recognize.
+      description: Configuration required for an entity recognition model.
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    LabelsList:
+      type: array
+      items:
+        $ref: '#/components/schemas/LabelListItem'
+      maxItems: 1000
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    TooManyRequestsException: {}
+    DescribeFlywheelRequest:
+      type: object
+      required:
+      - FlywheelArn
+      title: DescribeFlywheelRequest
+      properties:
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: The Amazon Resource Number (ARN) of the flywheel.
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
   securitySchemes:
     hmac:
       type: apiKey

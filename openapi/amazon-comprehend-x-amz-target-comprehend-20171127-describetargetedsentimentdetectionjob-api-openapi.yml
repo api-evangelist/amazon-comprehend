@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob #X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob #X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -205,83 +205,44 @@ paths:
       - '#X Amz Target=Comprehend 20171127.DescribeTargetedSentimentDetectionJob'
 components:
   schemas:
-    IamRoleArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
-      minLength: 20
-      maxLength: 2048
-    LanguageCode:
+    DocumentReadFeatureTypes:
       type: string
       enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    DescribeTargetedSentimentDetectionJobResponse:
-      type: object
-      properties:
-        TargetedSentimentDetectionJobProperties:
-          allOf:
-          - $ref: '#/components/schemas/TargetedSentimentDetectionJobProperties'
-          - description: An object that contains the properties associated with a targeted sentiment detection job.
+      - TABLES
+      - FORMS
+      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
     SecurityGroupId:
       type: string
       pattern: '[-0-9a-zA-Z]+'
       minLength: 1
       maxLength: 32
-    SubnetId:
+    JobNotFoundException: {}
+    Timestamp:
       type: string
-      pattern: '[-0-9a-zA-Z]+'
-      minLength: 1
-      maxLength: 32
-    DocumentReadMode:
+      format: date-time
+    IamRoleArn:
       type: string
-      enum:
-      - SERVICE_DEFAULT
-      - FORCE_DOCUMENT_READ_ACTION
-    JobStatus:
-      type: string
-      enum:
-      - SUBMITTED
-      - IN_PROGRESS
-      - COMPLETED
-      - FAILED
-      - STOP_REQUESTED
-      - STOPPED
-    KmsKeyId:
-      type: string
-      pattern: ^\p{ASCII}+$
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
       maxLength: 2048
-    AnyLengthString:
+    ComprehendArn:
       type: string
-    S3Uri:
-      type: string
-      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
-      maxLength: 1024
-    Subnets:
-      type: array
-      items:
-        $ref: '#/components/schemas/SubnetId'
-      minItems: 1
-      maxItems: 16
-    JobId:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
-      minLength: 1
-      maxLength: 32
-    InputFormat:
-      type: string
-      enum:
-      - ONE_DOC_PER_FILE
-      - ONE_DOC_PER_LINE
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:[a-zA-Z0-9-]{1,64}/[a-zA-Z0-9](-*[a-zA-Z0-9])*((/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*)|(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*))?
+      maxLength: 256
+    OutputDataConfig:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: <p>When you use the <code>OutputDataConfig</code> object with asynchronous operations, you specify the Amazon S3 location where you want to write the output data. The URI must be in the same Region as the API endpoint that you are calling. The location is used as the prefix for the actual location of the output file.</p> <p>When the topic detection job is finished, the service creates an output file in a directory specific to the job. The <code>S3Uri</code> field contains the location of the output file, called <code>output.tar.gz</code>. It is a compressed archive that contains the ouput of the operation.</p> <p> For a PII entity detection job, the output file is plain text, not a compressed archive. The output file name is the same as the input file, with <code>.out</code> appended at the end. </p>
+        KmsKeyId:
+          allOf:
+          - $ref: '#/components/schemas/KmsKeyId'
+          - description: '<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job. The KmsKeyId can be one of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>KMS Key Alias: <code>"alias/ExampleAlias"</code> </p> </li> <li> <p>ARN of a KMS Key Alias: <code>"arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias"</code> </p> </li> </ul>'
+      description: <p>Provides configuration parameters for the output of inference jobs.</p> <p/>
     DocumentReaderConfig:
       type: object
       required:
@@ -300,42 +261,12 @@ components:
           - $ref: '#/components/schemas/ListOfDocumentReadFeatureTypes'
           - description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document. </p> </li> </ul>
       description: '<p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>'
-    OutputDataConfig:
-      type: object
-      required:
-      - S3Uri
-      properties:
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: <p>When you use the <code>OutputDataConfig</code> object with asynchronous operations, you specify the Amazon S3 location where you want to write the output data. The URI must be in the same Region as the API endpoint that you are calling. The location is used as the prefix for the actual location of the output file.</p> <p>When the topic detection job is finished, the service creates an output file in a directory specific to the job. The <code>S3Uri</code> field contains the location of the output file, called <code>output.tar.gz</code>. It is a compressed archive that contains the ouput of the operation.</p> <p> For a PII entity detection job, the output file is plain text, not a compressed archive. The output file name is the same as the input file, with <code>.out</code> appended at the end. </p>
-        KmsKeyId:
-          allOf:
-          - $ref: '#/components/schemas/KmsKeyId'
-          - description: '<p>ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job. The KmsKeyId can be one of the following formats:</p> <ul> <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li> <li> <p>KMS Key Alias: <code>"alias/ExampleAlias"</code> </p> </li> <li> <p>ARN of a KMS Key Alias: <code>"arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias"</code> </p> </li> </ul>'
-      description: <p>Provides configuration parameters for the output of inference jobs.</p> <p/>
-    JobName:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
-      minLength: 1
-      maxLength: 256
-    InvalidRequestException: {}
-    DocumentReadFeatureTypes:
-      type: string
-      enum:
-      - TABLES
-      - FORMS
-      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
-    JobNotFoundException: {}
-    SecurityGroupIds:
+    Subnets:
       type: array
       items:
-        $ref: '#/components/schemas/SecurityGroupId'
+        $ref: '#/components/schemas/SubnetId'
       minItems: 1
-      maxItems: 5
-    Timestamp:
-      type: string
-      format: date-time
+      maxItems: 16
     InputDataConfig:
       type: object
       required:
@@ -354,13 +285,14 @@ components:
           - $ref: '#/components/schemas/DocumentReaderConfig'
           - description: Provides configuration parameters to override the default actions for extracting text from PDF documents and image files.
       description: The input properties for an inference job. The document reader config field applies only to non-text inputs for custom analysis.
-    ListOfDocumentReadFeatureTypes:
-      type: array
-      items:
-        $ref: '#/components/schemas/DocumentReadFeatureTypes'
-      minItems: 1
-      maxItems: 2
-    TooManyRequestsException: {}
+    InvalidRequestException: {}
+    JobName:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
+      minLength: 1
+      maxLength: 256
+    AnyLengthString:
+      type: string
     VpcConfig:
       type: object
       required:
@@ -376,6 +308,60 @@ components:
           - $ref: '#/components/schemas/Subnets'
           - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
       description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+    SecurityGroupIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
+    DocumentReadAction:
+      type: string
+      enum:
+      - TEXTRACT_DETECT_DOCUMENT_TEXT
+      - TEXTRACT_ANALYZE_DOCUMENT
+    InternalServerException: {}
+    SubnetId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    DescribeTargetedSentimentDetectionJobResponse:
+      type: object
+      properties:
+        TargetedSentimentDetectionJobProperties:
+          allOf:
+          - $ref: '#/components/schemas/TargetedSentimentDetectionJobProperties'
+          - description: An object that contains the properties associated with a targeted sentiment detection job.
+    DocumentReadMode:
+      type: string
+      enum:
+      - SERVICE_DEFAULT
+      - FORCE_DOCUMENT_READ_ACTION
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    InputFormat:
+      type: string
+      enum:
+      - ONE_DOC_PER_FILE
+      - ONE_DOC_PER_LINE
+    TooManyRequestsException: {}
     DescribeTargetedSentimentDetectionJobRequest:
       type: object
       required:
@@ -386,12 +372,30 @@ components:
           allOf:
           - $ref: '#/components/schemas/JobId'
           - description: The identifier that Amazon Comprehend generated for the job. The <code>StartTargetedSentimentDetectionJob</code> operation returns this identifier in its response.
-    InternalServerException: {}
-    DocumentReadAction:
+    JobId:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-%@]*)$
+      minLength: 1
+      maxLength: 32
+    ListOfDocumentReadFeatureTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/DocumentReadFeatureTypes'
+      minItems: 1
+      maxItems: 2
+    JobStatus:
       type: string
       enum:
-      - TEXTRACT_DETECT_DOCUMENT_TEXT
-      - TEXTRACT_ANALYZE_DOCUMENT
+      - SUBMITTED
+      - IN_PROGRESS
+      - COMPLETED
+      - FAILED
+      - STOP_REQUESTED
+      - STOPPED
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
     TargetedSentimentDetectionJobProperties:
       type: object
       properties:
@@ -442,13 +446,9 @@ components:
         VpcConfig:
           $ref: '#/components/schemas/VpcConfig'
       description: Provides information about a targeted sentiment detection job.
-    ComprehendArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:[a-zA-Z0-9-]{1,64}/[a-zA-Z0-9](-*[a-zA-Z0-9])*((/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*)|(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*))?
-      maxLength: 256
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -465,14 +465,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -483,8 +477,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDataset API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDataset #X Amz Target=Comprehend 20171127.DescribeDataset #X Amz Target=Comprehend 20171127.DescribeDataset API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -204,9 +204,81 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.DescribeDataset'
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
     NumberOfDocuments:
       type: integer
+    Timestamp:
+      type: string
+      format: date-time
+    InvalidRequestException: {}
+    Description:
+      type: string
+      pattern: ^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$
+      maxLength: 2048
+    DescribeDatasetResponse:
+      type: object
+      properties:
+        DatasetProperties:
+          allOf:
+          - $ref: '#/components/schemas/DatasetProperties'
+          - description: The dataset properties.
+    AnyLengthString:
+      type: string
+    DatasetStatus:
+      type: string
+      enum:
+      - CREATING
+      - COMPLETED
+      - FAILED
+    DatasetType:
+      type: string
+      enum:
+      - TRAIN
+      - TEST
+    InternalServerException: {}
     DatasetProperties:
       type: object
       properties:
@@ -251,36 +323,6 @@ components:
           - $ref: '#/components/schemas/Timestamp'
           - description: Time when the data from the dataset becomes available in the data lake.
       description: Properties associated with the dataset.
-    DescribeDatasetResponse:
-      type: object
-      properties:
-        DatasetProperties:
-          allOf:
-          - $ref: '#/components/schemas/DatasetProperties'
-          - description: The dataset properties.
-    ResourceNotFoundException: {}
-    AnyLengthString:
-      type: string
-    S3Uri:
-      type: string
-      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
-      maxLength: 1024
-    DatasetType:
-      type: string
-      enum:
-      - TRAIN
-      - TEST
-    InvalidRequestException: {}
-    DatasetStatus:
-      type: string
-      enum:
-      - CREATING
-      - COMPLETED
-      - FAILED
-    Timestamp:
-      type: string
-      format: date-time
-    TooManyRequestsException: {}
     DescribeDatasetRequest:
       type: object
       required:
@@ -291,62 +333,20 @@ components:
           allOf:
           - $ref: '#/components/schemas/ComprehendDatasetArn'
           - description: The ARN of the dataset.
-    InternalServerException: {}
     ComprehendDatasetArn:
       type: string
       pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*
       maxLength: 256
+    ResourceNotFoundException: {}
+    TooManyRequestsException: {}
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
     ComprehendArnName:
       type: string
       pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
       maxLength: 63
-    Description:
-      type: string
-      pattern: ^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$
-      maxLength: 2048
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

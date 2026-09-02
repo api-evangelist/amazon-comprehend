@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.StartFlywheelIteration API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.StartFlywheelIteration #X Amz Target=Comprehend 20171127.StartFlywheelIteration #X Amz Target=Comprehend 20171127.StartFlywheelIteration API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -216,51 +216,36 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.StartFlywheelIteration'
 components:
-  parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
     InvalidRequestException: {}
+    ResourceInUseException: {}
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    FlywheelIterationId:
+      type: string
+      pattern: '[0-9]{8}T[0-9]{6}Z'
+      maxLength: 63
+    InternalServerException: {}
+    TooManyRequestsException: {}
+    ResourceNotFoundException: {}
+    StartFlywheelIterationResponse:
+      type: object
+      properties:
+        FlywheelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendFlywheelArn'
+          - description: <p/>
+        FlywheelIterationId:
+          allOf:
+          - $ref: '#/components/schemas/FlywheelIterationId'
+          - description: <p/>
+    ClientRequestTokenString:
+      type: string
+      pattern: ^[a-zA-Z0-9-]+$
+      minLength: 1
+      maxLength: 64
     StartFlywheelIterationRequest:
       type: object
       required:
@@ -275,34 +260,49 @@ components:
           allOf:
           - $ref: '#/components/schemas/ClientRequestTokenString'
           - description: A unique identifier for the request. If you don't set the client request token, Amazon Comprehend generates one.
-    ClientRequestTokenString:
-      type: string
-      pattern: ^[a-zA-Z0-9-]+$
-      minLength: 1
-      maxLength: 64
-    StartFlywheelIterationResponse:
-      type: object
-      properties:
-        FlywheelArn:
-          allOf:
-          - $ref: '#/components/schemas/ComprehendFlywheelArn'
-          - description: <p/>
-        FlywheelIterationId:
-          allOf:
-          - $ref: '#/components/schemas/FlywheelIterationId'
-          - description: <p/>
-    TooManyRequestsException: {}
-    FlywheelIterationId:
-      type: string
-      pattern: '[0-9]{8}T[0-9]{6}Z'
-      maxLength: 63
-    ResourceNotFoundException: {}
-    InternalServerException: {}
-    ComprehendFlywheelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    ResourceInUseException: {}
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

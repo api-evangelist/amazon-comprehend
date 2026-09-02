@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectPiiEntities API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectPiiEntities #X Amz Target=Comprehend 20171127.DetectPiiEntities #X Amz Target=Comprehend 20171127.DetectPiiEntities API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -225,22 +225,40 @@ components:
           - $ref: '#/components/schemas/Integer'
           - description: The zero-based offset from the beginning of the source text to the last character in the entity.
       description: Provides information about a PII entity.
-    LanguageCode:
+    DetectPiiEntitiesResponse:
+      type: object
+      properties:
+        Entities:
+          allOf:
+          - $ref: '#/components/schemas/ListOfPiiEntities'
+          - description: A collection of PII entities identified in the input text. For each entity, the response provides the entity type, where the entity text begins and ends, and the level of confidence that Amazon Comprehend has in the detection.
+    InvalidRequestException: {}
+    Integer:
+      type: integer
+    DetectPiiEntitiesRequest:
+      type: object
+      required:
+      - Text
+      - LanguageCode
+      title: DetectPiiEntitiesRequest
+      properties:
+        Text:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A UTF-8 text string. The maximum string size is 100 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language of the input documents. Currently, English is the only valid language.
+    TextSizeLimitExceededException: {}
+    ListOfPiiEntities:
+      type: array
+      items:
+        $ref: '#/components/schemas/PiiEntity'
+    InternalServerException: {}
+    String:
       type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    UnsupportedLanguageException: {}
+      minLength: 1
     PiiEntityType:
       type: string
       enum:
@@ -281,46 +299,28 @@ components:
       - CA_HEALTH_NUMBER
       - IN_AADHAAR
       - IN_VOTER_NUMBER
-    DetectPiiEntitiesResponse:
-      type: object
-      properties:
-        Entities:
-          allOf:
-          - $ref: '#/components/schemas/ListOfPiiEntities'
-          - description: A collection of PII entities identified in the input text. For each entity, the response provides the entity type, where the entity text begins and ends, and the level of confidence that Amazon Comprehend has in the detection.
-    TextSizeLimitExceededException: {}
-    ListOfPiiEntities:
-      type: array
-      items:
-        $ref: '#/components/schemas/PiiEntity'
-    InvalidRequestException: {}
-    DetectPiiEntitiesRequest:
-      type: object
-      required:
-      - Text
-      - LanguageCode
-      title: DetectPiiEntitiesRequest
-      properties:
-        Text:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A UTF-8 text string. The maximum string size is 100 KB.
-        LanguageCode:
-          allOf:
-          - $ref: '#/components/schemas/LanguageCode'
-          - description: The language of the input documents. Currently, English is the only valid language.
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
     Float:
       type: number
       format: float
-    String:
-      type: string
-      minLength: 1
-    Integer:
-      type: integer
-    InternalServerException: {}
+    UnsupportedLanguageException: {}
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -337,14 +337,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -355,8 +349,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

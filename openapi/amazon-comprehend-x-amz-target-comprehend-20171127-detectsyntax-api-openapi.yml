@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectSyntax API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectSyntax #X Amz Target=Comprehend 20171127.DetectSyntax #X Amz Target=Comprehend 20171127.DetectSyntax API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -204,22 +204,73 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.DetectSyntax'
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    ListOfSyntaxTokens:
-      type: array
-      items:
-        $ref: '#/components/schemas/SyntaxToken'
-    UnsupportedLanguageException: {}
+    InvalidRequestException: {}
+    Integer:
+      type: integer
     TextSizeLimitExceededException: {}
-    SyntaxLanguageCode:
+    CustomerInputString:
       type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
+      minLength: 1
+      format: password
+    DetectSyntaxRequest:
+      type: object
+      required:
+      - Text
+      - LanguageCode
+      title: DetectSyntaxRequest
+      properties:
+        Text:
+          allOf:
+          - $ref: '#/components/schemas/CustomerInputString'
+          - description: A UTF-8 string. The maximum string size is 5 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/SyntaxLanguageCode'
+          - description: 'The language code of the input documents. You can specify any of the following languages supported by Amazon Comprehend: German ("de"), English ("en"), Spanish ("es"), French ("fr"), Italian ("it"), or Portuguese ("pt").'
     PartOfSpeechTag:
       type: object
       properties:
@@ -232,47 +283,6 @@ components:
           - $ref: '#/components/schemas/Float'
           - description: The confidence that Amazon Comprehend has that the part of speech was correctly identified.
       description: 'Identifies the part of speech represented by the token and gives the confidence that Amazon Comprehend has that the part of speech was correctly identified. For more information about the parts of speech that Amazon Comprehend can identify, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide. '
-    InvalidRequestException: {}
-    Float:
-      type: number
-      format: float
-    String:
-      type: string
-      minLength: 1
-    PartOfSpeechTagType:
-      type: string
-      enum:
-      - ADJ
-      - ADP
-      - ADV
-      - AUX
-      - CONJ
-      - CCONJ
-      - DET
-      - INTJ
-      - NOUN
-      - NUM
-      - O
-      - PART
-      - PRON
-      - PROPN
-      - PUNCT
-      - SCONJ
-      - SYM
-      - VERB
-    Integer:
-      type: integer
-    DetectSyntaxResponse:
-      type: object
-      properties:
-        SyntaxTokens:
-          allOf:
-          - $ref: '#/components/schemas/ListOfSyntaxTokens'
-          - description: 'A collection of syntax tokens describing the text. For each token, the response provides the text, the token type, where the text begins and ends, and the level of confidence that Amazon Comprehend has that the token is correct. For a list of token types, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide. '
-    CustomerInputString:
-      type: string
-      minLength: 1
-      format: password
     SyntaxToken:
       type: object
       properties:
@@ -298,64 +308,54 @@ components:
           - description: 'Provides the part of speech label and the confidence level that Amazon Comprehend has that the part of speech was correctly identified. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide. '
       description: Represents a work in the input text that was recognized and assigned a part of speech. There is one syntax token record for each word in the source text.
     InternalServerException: {}
-    DetectSyntaxRequest:
+    String:
+      type: string
+      minLength: 1
+    ListOfSyntaxTokens:
+      type: array
+      items:
+        $ref: '#/components/schemas/SyntaxToken'
+    DetectSyntaxResponse:
       type: object
-      required:
-      - Text
-      - LanguageCode
-      title: DetectSyntaxRequest
       properties:
-        Text:
+        SyntaxTokens:
           allOf:
-          - $ref: '#/components/schemas/CustomerInputString'
-          - description: A UTF-8 string. The maximum string size is 5 KB.
-        LanguageCode:
-          allOf:
-          - $ref: '#/components/schemas/SyntaxLanguageCode'
-          - description: 'The language code of the input documents. You can specify any of the following languages supported by Amazon Comprehend: German ("de"), English ("en"), Spanish ("es"), French ("fr"), Italian ("it"), or Portuguese ("pt").'
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
+          - $ref: '#/components/schemas/ListOfSyntaxTokens'
+          - description: 'A collection of syntax tokens describing the text. For each token, the response provides the text, the token type, where the text begins and ends, and the level of confidence that Amazon Comprehend has that the token is correct. For a list of token types, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide. '
+    PartOfSpeechTagType:
+      type: string
+      enum:
+      - ADJ
+      - ADP
+      - ADV
+      - AUX
+      - CONJ
+      - CCONJ
+      - DET
+      - INTJ
+      - NOUN
+      - NUM
+      - O
+      - PART
+      - PRON
+      - PROPN
+      - PUNCT
+      - SCONJ
+      - SYM
+      - VERB
+    Float:
+      type: number
+      format: float
+    SyntaxLanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+    UnsupportedLanguageException: {}
   securitySchemes:
     hmac:
       type: apiKey

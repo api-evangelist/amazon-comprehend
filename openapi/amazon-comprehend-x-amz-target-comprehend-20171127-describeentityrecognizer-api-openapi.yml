@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -205,132 +205,24 @@ paths:
       - '#X Amz Target=Comprehend 20171127.DescribeEntityRecognizer'
 components:
   schemas:
-    IamRoleArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
-      minLength: 20
-      maxLength: 2048
-    LanguageCode:
+    AttributeNamesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AttributeNamesListItem'
+    EntityRecognizerDataFormat:
       type: string
       enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
+      - COMPREHEND_CSV
+      - AUGMENTED_MANIFEST
     SecurityGroupId:
       type: string
       pattern: '[-0-9a-zA-Z]+'
       minLength: 1
       maxLength: 32
-    EntityTypesListItem:
-      type: object
-      required:
-      - Type
-      properties:
-        Type:
-          allOf:
-          - $ref: '#/components/schemas/EntityTypeName'
-          - description: '<p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p> <p>Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break, \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma).</p>'
-      description: An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.
-    EntityTypeName:
-      type: string
-      pattern: ^(?![^\n\r\t,]*\\n|\\r|\\t)[^\n\r\t,]+$
-      maxLength: 64
-    SubnetId:
-      type: string
-      pattern: '[-0-9a-zA-Z]+'
-      minLength: 1
-      maxLength: 32
-    AugmentedManifestsListItem:
-      type: object
-      required:
-      - S3Uri
-      - AttributeNames
-      properties:
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: The Amazon S3 location of the augmented manifest file.
-        Split:
-          allOf:
-          - $ref: '#/components/schemas/Split'
-          - description: <p>The purpose of the data you've provided in the augmented manifest. You can either train or test this data. If you don't specify, the default is train.</p> <p>TRAIN - all of the documents in the manifest will be used for training. If no test documents are provided, Amazon Comprehend will automatically reserve a portion of the training documents for testing.</p> <p> TEST - all of the documents in the manifest will be used for testing.</p>
-        AttributeNames:
-          allOf:
-          - $ref: '#/components/schemas/AttributeNamesList'
-          - description: <p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p> <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p> <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>
-        AnnotationDataS3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: The S3 prefix to the annotation files that are referred in the augmented manifest file.
-        SourceDocumentsS3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
-        DocumentType:
-          allOf:
-          - $ref: '#/components/schemas/AugmentedManifestsDocumentTypeFormat'
-          - description: <p>The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is PlainTextDocument. </p> <ul> <li> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p> </li> <li> <p> <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and TXT.</p> </li> </ul>
-      description: An augmented manifest file that provides training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.
-    EntityRecognizerEntityList:
-      type: object
-      required:
-      - S3Uri
-      properties:
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: Specifies the Amazon S3 location where the entity list is located. The URI must be in the same Region as the API endpoint that you are calling.
-      description: Describes the entity list submitted with an entity recognizer.
-    EntityTypesEvaluationMetrics:
-      type: object
-      properties:
-        Precision:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: 'A measure of the usefulness of the recognizer results for a specific entity type in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. '
-        Recall:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: A measure of how complete the recognizer results are for a specific entity type in the test data. High recall means that the recognizer returned most of the relevant results.
-        F1Score:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: 'A measure of how accurate the recognizer results are for a specific entity type in the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. The highest score is 1, and the worst score is 0. '
-      description: 'Detailed information about the accuracy of an entity recognizer for a specific entity type. '
-    EntityRecognizerEvaluationMetrics:
-      type: object
-      properties:
-        Precision:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: 'A measure of the usefulness of the recognizer results in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. '
-        Recall:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: A measure of how complete the recognizer results are for the test data. High recall means that the recognizer returned most of the relevant results.
-        F1Score:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: 'A measure of how accurate the recognizer results are for the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. For plain text entity recognizer models, the range is 0 to 100, where 100 is the best score. For PDF/Word entity recognizer models, the range is 0 to 1, where 1 is the best score. '
-      description: 'Detailed information about the accuracy of an entity recognizer. '
     VersionName:
       type: string
       pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
       maxLength: 63
-    ResourceNotFoundException: {}
-    EntityTypesList:
-      type: array
-      items:
-        $ref: '#/components/schemas/EntityTypesListItem'
     EntityRecognizerProperties:
       type: object
       properties:
@@ -407,116 +299,44 @@ components:
           - $ref: '#/components/schemas/EntityRecognizerOutputDataConfig'
           - description: Output data configuration.
       description: Describes information about an entity recognizer.
-    KmsKeyId:
+    Timestamp:
       type: string
-      pattern: ^\p{ASCII}+$
-      maxLength: 2048
-    ModelStatus:
-      type: string
-      enum:
-      - SUBMITTED
-      - TRAINING
-      - DELETING
-      - STOP_REQUESTED
-      - STOPPED
-      - IN_ERROR
-      - TRAINED
-      - TRAINED_WITH_WARNING
+      format: date-time
     EntityRecognizerAugmentedManifestsList:
       type: array
       items:
         $ref: '#/components/schemas/AugmentedManifestsListItem'
-    EntityRecognizerAnnotations:
+    EntityTypesListItem:
       type: object
       required:
-      - S3Uri
-      properties:
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: ' Specifies the Amazon S3 location where the annotations for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
-        TestS3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: ' Specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
-      description: Describes the annotations associated with a entity recognizer.
-    AnyLengthString:
-      type: string
-    S3Uri:
-      type: string
-      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
-      maxLength: 1024
-    EntityRecognizerMetadataEntityTypesList:
-      type: array
-      items:
-        $ref: '#/components/schemas/EntityRecognizerMetadataEntityTypesListItem'
-    Subnets:
-      type: array
-      items:
-        $ref: '#/components/schemas/SubnetId'
-      minItems: 1
-      maxItems: 16
-    Split:
-      type: string
-      enum:
-      - TRAIN
-      - TEST
-    InputFormat:
-      type: string
-      enum:
-      - ONE_DOC_PER_FILE
-      - ONE_DOC_PER_LINE
-    AttributeNamesListItem:
-      type: string
-      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      minLength: 1
-      maxLength: 63
-    AttributeNamesList:
-      type: array
-      items:
-        $ref: '#/components/schemas/AttributeNamesListItem'
-    DescribeEntityRecognizerRequest:
-      type: object
-      required:
-      - EntityRecognizerArn
-      title: DescribeEntityRecognizerRequest
-      properties:
-        EntityRecognizerArn:
-          allOf:
-          - $ref: '#/components/schemas/EntityRecognizerArn'
-          - description: The Amazon Resource Name (ARN) that identifies the entity recognizer.
-    InvalidRequestException: {}
-    DescribeEntityRecognizerResponse:
-      type: object
-      properties:
-        EntityRecognizerProperties:
-          allOf:
-          - $ref: '#/components/schemas/EntityRecognizerProperties'
-          - description: Describes information associated with an entity recognizer.
-    EntityRecognizerOutputDataConfig:
-      type: object
-      properties:
-        FlywheelStatsS3Prefix:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: The Amazon S3 prefix for the data lake location of the flywheel statistics.
-      description: Output data configuration.
-    EntityRecognizerMetadataEntityTypesListItem:
-      type: object
+      - Type
       properties:
         Type:
           allOf:
-          - $ref: '#/components/schemas/AnyLengthString'
-          - description: 'Type of entity from the list of entity types in the metadata of an entity recognizer. '
-        EvaluationMetrics:
+          - $ref: '#/components/schemas/EntityTypeName'
+          - description: '<p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p> <p>Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break, \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma).</p>'
+      description: An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    EntityTypesEvaluationMetrics:
+      type: object
+      properties:
+        Precision:
           allOf:
-          - $ref: '#/components/schemas/EntityTypesEvaluationMetrics'
-          - description: 'Detailed information about the accuracy of the entity recognizer for a specific item on the list of entity types. '
-        NumberOfTrainMentions:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of the usefulness of the recognizer results for a specific entity type in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. '
+        Recall:
           allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: 'Indicates the number of times the given entity type was seen in the training data. '
-      description: Individual item from the list of entity types in the metadata of an entity recognizer.
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of how complete the recognizer results are for a specific entity type in the test data. High recall means that the recognizer returned most of the relevant results.
+        F1Score:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of how accurate the recognizer results are for a specific entity type in the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. The highest score is 1, and the worst score is 0. '
+      description: 'Detailed information about the accuracy of an entity recognizer for a specific entity type. '
     EntityRecognizerInputDataConfig:
       type: object
       required:
@@ -547,21 +367,9 @@ components:
           - $ref: '#/components/schemas/EntityRecognizerAugmentedManifestsList'
           - description: <p>A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.</p> <p>This parameter is required if you set <code>DataFormat</code> to <code>AUGMENTED_MANIFEST</code>.</p>
       description: Specifies the format and location of the input data.
-    SecurityGroupIds:
-      type: array
-      items:
-        $ref: '#/components/schemas/SecurityGroupId'
-      minItems: 1
-      maxItems: 5
-    ComprehendFlywheelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    Integer:
-      type: integer
-    Timestamp:
-      type: string
-      format: date-time
+    Double:
+      type: number
+      format: double
     EntityRecognizerMetadata:
       type: object
       properties:
@@ -582,9 +390,206 @@ components:
           - $ref: '#/components/schemas/EntityRecognizerMetadataEntityTypesList'
           - description: Entity types from the metadata of an entity recognizer.
       description: Detailed information about an entity recognizer.
-    Double:
-      type: number
-      format: double
+    Subnets:
+      type: array
+      items:
+        $ref: '#/components/schemas/SubnetId'
+      minItems: 1
+      maxItems: 16
+    EntityRecognizerAnnotations:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the annotations for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
+        TestS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
+      description: Describes the annotations associated with a entity recognizer.
+    ModelStatus:
+      type: string
+      enum:
+      - SUBMITTED
+      - TRAINING
+      - DELETING
+      - STOP_REQUESTED
+      - STOPPED
+      - IN_ERROR
+      - TRAINED
+      - TRAINED_WITH_WARNING
+    InvalidRequestException: {}
+    DescribeEntityRecognizerRequest:
+      type: object
+      required:
+      - EntityRecognizerArn
+      title: DescribeEntityRecognizerRequest
+      properties:
+        EntityRecognizerArn:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerArn'
+          - description: The Amazon Resource Name (ARN) that identifies the entity recognizer.
+    Integer:
+      type: integer
+    EntityRecognizerEntityList:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: Specifies the Amazon S3 location where the entity list is located. The URI must be in the same Region as the API endpoint that you are calling.
+      description: Describes the entity list submitted with an entity recognizer.
+    EntityRecognizerMetadataEntityTypesListItem:
+      type: object
+      properties:
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/AnyLengthString'
+          - description: 'Type of entity from the list of entity types in the metadata of an entity recognizer. '
+        EvaluationMetrics:
+          allOf:
+          - $ref: '#/components/schemas/EntityTypesEvaluationMetrics'
+          - description: 'Detailed information about the accuracy of the entity recognizer for a specific item on the list of entity types. '
+        NumberOfTrainMentions:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: 'Indicates the number of times the given entity type was seen in the training data. '
+      description: Individual item from the list of entity types in the metadata of an entity recognizer.
+    EntityRecognizerEvaluationMetrics:
+      type: object
+      properties:
+        Precision:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of the usefulness of the recognizer results in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. '
+        Recall:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: A measure of how complete the recognizer results are for the test data. High recall means that the recognizer returned most of the relevant results.
+        F1Score:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: 'A measure of how accurate the recognizer results are for the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. For plain text entity recognizer models, the range is 0 to 100, where 100 is the best score. For PDF/Word entity recognizer models, the range is 0 to 1, where 1 is the best score. '
+      description: 'Detailed information about the accuracy of an entity recognizer. '
+    AttributeNamesListItem:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      minLength: 1
+      maxLength: 63
+    AugmentedManifestsListItem:
+      type: object
+      required:
+      - S3Uri
+      - AttributeNames
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The Amazon S3 location of the augmented manifest file.
+        Split:
+          allOf:
+          - $ref: '#/components/schemas/Split'
+          - description: <p>The purpose of the data you've provided in the augmented manifest. You can either train or test this data. If you don't specify, the default is train.</p> <p>TRAIN - all of the documents in the manifest will be used for training. If no test documents are provided, Amazon Comprehend will automatically reserve a portion of the training documents for testing.</p> <p> TEST - all of the documents in the manifest will be used for testing.</p>
+        AttributeNames:
+          allOf:
+          - $ref: '#/components/schemas/AttributeNamesList'
+          - description: <p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p> <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p> <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>
+        AnnotationDataS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the annotation files that are referred in the augmented manifest file.
+        SourceDocumentsS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+        DocumentType:
+          allOf:
+          - $ref: '#/components/schemas/AugmentedManifestsDocumentTypeFormat'
+          - description: <p>The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is PlainTextDocument. </p> <ul> <li> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p> </li> <li> <p> <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and TXT.</p> </li> </ul>
+      description: An augmented manifest file that provides training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.
+    DescribeEntityRecognizerResponse:
+      type: object
+      properties:
+        EntityRecognizerProperties:
+          allOf:
+          - $ref: '#/components/schemas/EntityRecognizerProperties'
+          - description: Describes information associated with an entity recognizer.
+    AnyLengthString:
+      type: string
+    EntityTypeName:
+      type: string
+      pattern: ^(?![^\n\r\t,]*\\n|\\r|\\t)[^\n\r\t,]+$
+      maxLength: 64
+    EntityRecognizerArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:entity-recognizer/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    Split:
+      type: string
+      enum:
+      - TRAIN
+      - TEST
+    VpcConfig:
+      type: object
+      required:
+      - SecurityGroupIds
+      - Subnets
+      properties:
+        SecurityGroupIds:
+          allOf:
+          - $ref: '#/components/schemas/SecurityGroupIds'
+          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
+        Subnets:
+          allOf:
+          - $ref: '#/components/schemas/Subnets'
+          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
+      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
+    EntityTypesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/EntityTypesListItem'
+    SecurityGroupIds:
+      type: array
+      items:
+        $ref: '#/components/schemas/SecurityGroupId'
+      minItems: 1
+      maxItems: 5
+    InternalServerException: {}
+    EntityRecognizerMetadataEntityTypesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/EntityRecognizerMetadataEntityTypesListItem'
+    SubnetId:
+      type: string
+      pattern: '[-0-9a-zA-Z]+'
+      minLength: 1
+      maxLength: 32
+    ResourceNotFoundException: {}
+    AugmentedManifestsDocumentTypeFormat:
+      type: string
+      enum:
+      - PLAIN_TEXT_DOCUMENT
+      - SEMI_STRUCTURED_DOCUMENT
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
     EntityRecognizerDocuments:
       type: object
       required:
@@ -603,40 +608,35 @@ components:
           - $ref: '#/components/schemas/InputFormat'
           - description: ' Specifies how the text in an input file should be processed. This is optional, and the default is ONE_DOC_PER_LINE. ONE_DOC_PER_FILE - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers. ONE_DOC_PER_LINE - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.'
       description: Describes the training documents submitted with an entity recognizer.
-    EntityRecognizerArn:
+    ComprehendFlywheelArn:
       type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:entity-recognizer/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
       maxLength: 256
-    TooManyRequestsException: {}
-    VpcConfig:
+    EntityRecognizerOutputDataConfig:
       type: object
-      required:
-      - SecurityGroupIds
-      - Subnets
       properties:
-        SecurityGroupIds:
+        FlywheelStatsS3Prefix:
           allOf:
-          - $ref: '#/components/schemas/SecurityGroupIds'
-          - description: 'The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. '
-        Subnets:
-          allOf:
-          - $ref: '#/components/schemas/Subnets'
-          - description: 'The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. '
-      description: ' Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. '
-    InternalServerException: {}
-    EntityRecognizerDataFormat:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The Amazon S3 prefix for the data lake location of the flywheel statistics.
+      description: Output data configuration.
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    InputFormat:
       type: string
       enum:
-      - COMPREHEND_CSV
-      - AUGMENTED_MANIFEST
-    AugmentedManifestsDocumentTypeFormat:
+      - ONE_DOC_PER_FILE
+      - ONE_DOC_PER_LINE
+    TooManyRequestsException: {}
+    S3Uri:
       type: string
-      enum:
-      - PLAIN_TEXT_DOCUMENT
-      - SEMI_STRUCTURED_DOCUMENT
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -653,14 +653,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -671,8 +665,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

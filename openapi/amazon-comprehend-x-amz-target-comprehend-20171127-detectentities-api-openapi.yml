@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectEntities API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectEntities #X Amz Target=Comprehend 20171127.DetectEntities #X Amz Target=Comprehend 20171127.DetectEntities API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -220,139 +220,40 @@ paths:
       - '#X Amz Target=Comprehend 20171127.DetectEntities'
 components:
   schemas:
-    ListOfChildBlocks:
+    ListOfExtractedCharacters:
       type: array
       items:
-        $ref: '#/components/schemas/ChildBlock'
-    LanguageCode:
+        $ref: '#/components/schemas/ExtractedCharactersListItem'
+    DocumentReadFeatureTypes:
       type: string
       enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    BlockType:
+      - TABLES
+      - FORMS
+      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
+    ResourceUnavailableException: {}
+    SemiStructuredDocumentBlob:
       type: string
-      enum:
-      - LINE
-      - WORD
-    UnsupportedLanguageException: {}
-    DocumentReadMode:
-      type: string
-      enum:
-      - SERVICE_DEFAULT
-      - FORCE_DOCUMENT_READ_ACTION
-    Point:
+      minLength: 1
+    RelationshipsListItem:
       type: object
       properties:
-        X:
+        Ids:
           allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The value of the X coordinate for a point on a polygon
-        Y:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The value of the Y coordinate for a point on a polygon
-      description: <p>The X and Y coordinates of a point on a document page.</p> <p>For additional information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/API_Point.html">Point</a> in the Amazon Textract API reference.</p>
-    DocumentTypeListItem:
-      type: object
-      properties:
-        Page:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: Page number.
+          - $ref: '#/components/schemas/StringList'
+          - description: Identifers of the child blocks.
         Type:
           allOf:
-          - $ref: '#/components/schemas/DocumentType'
-          - description: Document type.
-      description: Document type for each page in the document.
-    StringList:
+          - $ref: '#/components/schemas/RelationshipType'
+          - description: Only supported relationship is a child relationship.
+      description: List of child blocks for the current block.
+    ListOfDocumentType:
       type: array
       items:
-        $ref: '#/components/schemas/String'
-    BoundingBox:
-      type: object
-      properties:
-        Height:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The height of the bounding box as a ratio of the overall document page height.
-        Left:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The left coordinate of the bounding box as a ratio of overall document page width.
-        Top:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The top coordinate of the bounding box as a ratio of overall document page height.
-        Width:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The width of the bounding box as a ratio of the overall document page width.
-      description: <p>The bounding box around the detected page or around an element on a document page. The left (x-coordinate) and top (y-coordinate) are coordinates that represent the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). </p> <p>For additional information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/API_BoundingBox.html">BoundingBox</a> in the Amazon Textract API reference.</p>
-    TextSizeLimitExceededException: {}
-    Entity:
-      type: object
-      properties:
-        Score:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of the detection.
-        Type:
-          allOf:
-          - $ref: '#/components/schemas/EntityType'
-          - description: <p>The entity type. For entity detection using the built-in model, this field contains one of the standard entity types listed below.</p> <p>For custom entity detection, this field contains one of the entity types that you specified when you trained your custom model.</p>
-        Text:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The text of the entity.
-        BeginOffset:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: <p>The zero-based offset from the beginning of the source text to the first character in the entity.</p> <p>This field is empty for non-text input.</p>
-        EndOffset:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: <p>The zero-based offset from the beginning of the source text to the last character in the entity.</p> <p>This field is empty for non-text input.</p>
-        BlockReferences:
-          allOf:
-          - $ref: '#/components/schemas/ListOfBlockReferences'
-          - description: A reference to each block for this entity. This field is empty for plain-text input.
-      description: <p>Provides information about an entity. </p> <p> </p>
-    RelationshipType:
-      type: string
-      enum:
-      - CHILD
+        $ref: '#/components/schemas/DocumentTypeListItem'
     ListOfEntities:
       type: array
       items:
         $ref: '#/components/schemas/Entity'
-    DocumentReaderConfig:
-      type: object
-      required:
-      - DocumentReadAction
-      properties:
-        DocumentReadAction:
-          allOf:
-          - $ref: '#/components/schemas/DocumentReadAction'
-          - description: <p>This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract text from PDF files and image files. Enter one of the following values:</p> <ul> <li> <p> <code>TEXTRACT_DETECT_DOCUMENT_TEXT</code> - The Amazon Comprehend service uses the <code>DetectDocumentText</code> API operation. </p> </li> <li> <p> <code>TEXTRACT_ANALYZE_DOCUMENT</code> - The Amazon Comprehend service uses the <code>AnalyzeDocument</code> API operation. </p> </li> </ul>
-        DocumentReadMode:
-          allOf:
-          - $ref: '#/components/schemas/DocumentReadMode'
-          - description: <p>Determines the text extraction actions for PDF files. Enter one of the following values:</p> <ul> <li> <p> <code>SERVICE_DEFAULT</code> - use the Amazon Comprehend service defaults for PDF files.</p> </li> <li> <p> <code>FORCE_DOCUMENT_READ_ACTION</code> - Amazon Comprehend uses the Textract API specified by DocumentReadAction for all PDF files, including digital PDF files. </p> </li> </ul>
-        FeatureTypes:
-          allOf:
-          - $ref: '#/components/schemas/ListOfDocumentReadFeatureTypes'
-          - description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document. </p> </li> </ul>
-      description: '<p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>'
     Block:
       type: object
       properties:
@@ -381,57 +282,116 @@ components:
           - $ref: '#/components/schemas/ListOfRelationships'
           - description: 'A list of child blocks of the current block. For example, a LINE object has child blocks for each WORD block that''s part of the line of text. '
       description: <p>Information about each word or line of text in the input document.</p> <p>For additional information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/API_Block.html">Block</a> in the Amazon Textract API reference.</p>
-    BlockReference:
+    DocumentMetadata:
       type: object
       properties:
-        BlockId:
+        Pages:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Number of pages in the document.
+        ExtractedCharacters:
+          allOf:
+          - $ref: '#/components/schemas/ListOfExtractedCharacters'
+          - description: List of pages in the document, with the number of characters extracted from each page.
+      description: Information about the document, discovered during text extraction.
+    DocumentReaderConfig:
+      type: object
+      required:
+      - DocumentReadAction
+      properties:
+        DocumentReadAction:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadAction'
+          - description: <p>This field defines the Amazon Textract API operation that Amazon Comprehend uses to extract text from PDF files and image files. Enter one of the following values:</p> <ul> <li> <p> <code>TEXTRACT_DETECT_DOCUMENT_TEXT</code> - The Amazon Comprehend service uses the <code>DetectDocumentText</code> API operation. </p> </li> <li> <p> <code>TEXTRACT_ANALYZE_DOCUMENT</code> - The Amazon Comprehend service uses the <code>AnalyzeDocument</code> API operation. </p> </li> </ul>
+        DocumentReadMode:
+          allOf:
+          - $ref: '#/components/schemas/DocumentReadMode'
+          - description: <p>Determines the text extraction actions for PDF files. Enter one of the following values:</p> <ul> <li> <p> <code>SERVICE_DEFAULT</code> - use the Amazon Comprehend service defaults for PDF files.</p> </li> <li> <p> <code>FORCE_DOCUMENT_READ_ACTION</code> - Amazon Comprehend uses the Textract API specified by DocumentReadAction for all PDF files, including digital PDF files. </p> </li> </ul>
+        FeatureTypes:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDocumentReadFeatureTypes'
+          - description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns information and the data from any forms that are detected in the input document. </p> </li> </ul>
+      description: '<p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>'
+    Point:
+      type: object
+      properties:
+        X:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The value of the X coordinate for a point on a polygon
+        Y:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The value of the Y coordinate for a point on a polygon
+      description: <p>The X and Y coordinates of a point on a document page.</p> <p>For additional information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/API_Point.html">Point</a> in the Amazon Textract API reference.</p>
+    BoundingBox:
+      type: object
+      properties:
+        Height:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The height of the bounding box as a ratio of the overall document page height.
+        Left:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The left coordinate of the bounding box as a ratio of overall document page width.
+        Top:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The top coordinate of the bounding box as a ratio of overall document page height.
+        Width:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The width of the bounding box as a ratio of the overall document page width.
+      description: <p>The bounding box around the detected page or around an element on a document page. The left (x-coordinate) and top (y-coordinate) are coordinates that represent the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). </p> <p>For additional information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/API_BoundingBox.html">BoundingBox</a> in the Amazon Textract API reference.</p>
+    InvalidRequestException: {}
+    Integer:
+      type: integer
+    ChildBlock:
+      type: object
+      properties:
+        ChildBlockId:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: Unique identifier for the block.
+          - description: Unique identifier for the child block.
         BeginOffset:
           allOf:
           - $ref: '#/components/schemas/Integer'
-          - description: Offset of the start of the block within its parent block.
+          - description: Offset of the start of the child block within its parent block.
         EndOffset:
           allOf:
           - $ref: '#/components/schemas/Integer'
-          - description: Offset of the end of the block within its parent block.
-        ChildBlocks:
-          allOf:
-          - $ref: '#/components/schemas/ListOfChildBlocks'
-          - description: List of child blocks within this block.
-      description: 'A reference to a block. '
-    ListOfBlocks:
-      type: array
-      items:
-        $ref: '#/components/schemas/Block'
-    ListOfBlockReferences:
-      type: array
-      items:
-        $ref: '#/components/schemas/BlockReference'
-    RelationshipsListItem:
+          - description: Offset of the end of the child block within its parent block.
+      description: Nested block contained within a block.
+    Entity:
       type: object
       properties:
-        Ids:
+        Score:
           allOf:
-          - $ref: '#/components/schemas/StringList'
-          - description: Identifers of the child blocks.
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of the detection.
         Type:
           allOf:
-          - $ref: '#/components/schemas/RelationshipType'
-          - description: Only supported relationship is a child relationship.
-      description: List of child blocks for the current block.
-    ResourceUnavailableException: {}
-    DocumentType:
-      type: string
-      enum:
-      - NATIVE_PDF
-      - SCANNED_PDF
-      - MS_WORD
-      - IMAGE
-      - PLAIN_TEXT
-      - TEXTRACT_DETECT_DOCUMENT_TEXT_JSON
-      - TEXTRACT_ANALYZE_DOCUMENT_JSON
+          - $ref: '#/components/schemas/EntityType'
+          - description: <p>The entity type. For entity detection using the built-in model, this field contains one of the standard entity types listed below.</p> <p>For custom entity detection, this field contains one of the entity types that you specified when you trained your custom model.</p>
+        Text:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The text of the entity.
+        BeginOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: <p>The zero-based offset from the beginning of the source text to the first character in the entity.</p> <p>This field is empty for non-text input.</p>
+        EndOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: <p>The zero-based offset from the beginning of the source text to the last character in the entity.</p> <p>This field is empty for non-text input.</p>
+        BlockReferences:
+          allOf:
+          - $ref: '#/components/schemas/ListOfBlockReferences'
+          - description: A reference to each block for this entity. This field is empty for plain-text input.
+      description: <p>Provides information about an entity. </p> <p> </p>
+    TextSizeLimitExceededException: {}
     DetectEntitiesRequest:
       type: object
       title: DetectEntitiesRequest
@@ -456,16 +416,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/DocumentReaderConfig'
           - description: Provides configuration parameters to override the default actions for extracting text from PDF documents and image files.
-    SemiStructuredDocumentBlob:
-      type: string
-      minLength: 1
-    InvalidRequestException: {}
-    DocumentReadFeatureTypes:
-      type: string
-      enum:
-      - TABLES
-      - FORMS
-      description: <p>Specifies the type of Amazon Textract features to apply. If you chose <code>TEXTRACT_ANALYZE_DOCUMENT</code> as the read action, you must specify one or both of the following values:</p> <ul> <li> <p> <code>TABLES</code> - Returns additional information about any tables that are detected in the input document. </p> </li> <li> <p> <code>FORMS</code> - Returns additional information about any forms that are detected in the input document. </p> </li> </ul>
     EntityType:
       type: string
       enum:
@@ -478,70 +428,6 @@ components:
       - QUANTITY
       - TITLE
       - OTHER
-    Float:
-      type: number
-      format: float
-    String:
-      type: string
-      minLength: 1
-    ListOfRelationships:
-      type: array
-      items:
-        $ref: '#/components/schemas/RelationshipsListItem'
-    DocumentMetadata:
-      type: object
-      properties:
-        Pages:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: Number of pages in the document.
-        ExtractedCharacters:
-          allOf:
-          - $ref: '#/components/schemas/ListOfExtractedCharacters'
-          - description: List of pages in the document, with the number of characters extracted from each page.
-      description: Information about the document, discovered during text extraction.
-    ChildBlock:
-      type: object
-      properties:
-        ChildBlockId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: Unique identifier for the child block.
-        BeginOffset:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: Offset of the start of the child block within its parent block.
-        EndOffset:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: Offset of the end of the child block within its parent block.
-      description: Nested block contained within a block.
-    Polygon:
-      type: array
-      items:
-        $ref: '#/components/schemas/Point'
-    ListOfErrors:
-      type: array
-      items:
-        $ref: '#/components/schemas/ErrorsListItem'
-    Integer:
-      type: integer
-    ErrorsListItem:
-      type: object
-      properties:
-        Page:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: Page number where the error occurred.
-        ErrorCode:
-          allOf:
-          - $ref: '#/components/schemas/PageBasedErrorCode'
-          - description: Error code for the cause of the error.
-        ErrorMessage:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: Text message explaining the reason for the error.
-      description: <p>Text extraction encountered one or more page-level errors in the input document.</p> <p>The <code>ErrorCode</code> contains one of the following values:</p> <ul> <li> <p>TEXTRACT_BAD_PAGE - Amazon Textract cannot read the page. For more information about page limits in Amazon Textract, see <a href="https://docs.aws.amazon.com/textract/latest/dg/limits-document.html"> Page Quotas in Amazon Textract</a>.</p> </li> <li> <p>TEXTRACT_PROVISIONED_THROUGHPUT_EXCEEDED - The number of requests exceeded your throughput limit. For more information about throughput quotas in Amazon Textract, see <a href="https://docs.aws.amazon.com/textract/latest/dg/limits-quotas-explained.html"> Default quotas in Amazon Textract</a>.</p> </li> <li> <p>PAGE_CHARACTERS_EXCEEDED - Too many text characters on the page (10,000 characters maximum).</p> </li> <li> <p>PAGE_SIZE_EXCEEDED - The maximum page size is 10 MB.</p> </li> <li> <p>INTERNAL_SERVER_ERROR - The request encountered a service issue. Try the API request again.</p> </li> </ul>
     DetectEntitiesResponse:
       type: object
       properties:
@@ -565,6 +451,27 @@ components:
           allOf:
           - $ref: '#/components/schemas/ListOfErrors'
           - description: Page-level errors that the system detected while processing the input document. The field is empty if the system encountered no errors.
+    ListOfRelationships:
+      type: array
+      items:
+        $ref: '#/components/schemas/RelationshipsListItem'
+    RelationshipType:
+      type: string
+      enum:
+      - CHILD
+    BlockType:
+      type: string
+      enum:
+      - LINE
+      - WORD
+    ListOfBlockReferences:
+      type: array
+      items:
+        $ref: '#/components/schemas/BlockReference'
+    CustomerInputString:
+      type: string
+      minLength: 1
+      format: password
     PageBasedErrorCode:
       type: string
       enum:
@@ -573,6 +480,109 @@ components:
       - PAGE_CHARACTERS_EXCEEDED
       - PAGE_SIZE_EXCEEDED
       - INTERNAL_SERVER_ERROR
+    ListOfErrors:
+      type: array
+      items:
+        $ref: '#/components/schemas/ErrorsListItem'
+    BlockReference:
+      type: object
+      properties:
+        BlockId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Unique identifier for the block.
+        BeginOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Offset of the start of the block within its parent block.
+        EndOffset:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Offset of the end of the block within its parent block.
+        ChildBlocks:
+          allOf:
+          - $ref: '#/components/schemas/ListOfChildBlocks'
+          - description: List of child blocks within this block.
+      description: 'A reference to a block. '
+    Geometry:
+      type: object
+      properties:
+        BoundingBox:
+          allOf:
+          - $ref: '#/components/schemas/BoundingBox'
+          - description: An axis-aligned coarse representation of the location of the recognized item on the document page.
+        Polygon:
+          allOf:
+          - $ref: '#/components/schemas/Polygon'
+          - description: Within the bounding box, a fine-grained polygon around the recognized item.
+      description: <p>Information about the location of items on a document page.</p> <p>For additional information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/API_Geometry.html">Geometry</a> in the Amazon Textract API reference.</p>
+    Polygon:
+      type: array
+      items:
+        $ref: '#/components/schemas/Point'
+    ListOfChildBlocks:
+      type: array
+      items:
+        $ref: '#/components/schemas/ChildBlock'
+    DocumentReadAction:
+      type: string
+      enum:
+      - TEXTRACT_DETECT_DOCUMENT_TEXT
+      - TEXTRACT_ANALYZE_DOCUMENT
+    InternalServerException: {}
+    String:
+      type: string
+      minLength: 1
+    DocumentType:
+      type: string
+      enum:
+      - NATIVE_PDF
+      - SCANNED_PDF
+      - MS_WORD
+      - IMAGE
+      - PLAIN_TEXT
+      - TEXTRACT_DETECT_DOCUMENT_TEXT_JSON
+      - TEXTRACT_ANALYZE_DOCUMENT_JSON
+    DocumentReadMode:
+      type: string
+      enum:
+      - SERVICE_DEFAULT
+      - FORCE_DOCUMENT_READ_ACTION
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    Float:
+      type: number
+      format: float
+    ListOfBlocks:
+      type: array
+      items:
+        $ref: '#/components/schemas/Block'
+    UnsupportedLanguageException: {}
+    DocumentTypeListItem:
+      type: object
+      properties:
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Page number.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/DocumentType'
+          - description: Document type.
+      description: Document type for each page in the document.
     ListOfDocumentReadFeatureTypes:
       type: array
       items:
@@ -591,43 +601,33 @@ components:
           - $ref: '#/components/schemas/Integer'
           - description: Number of characters extracted from each page.
       description: Array of the number of characters extracted from each page.
-    CustomerInputString:
-      type: string
-      minLength: 1
-      format: password
-    DocumentReadAction:
-      type: string
-      enum:
-      - TEXTRACT_DETECT_DOCUMENT_TEXT
-      - TEXTRACT_ANALYZE_DOCUMENT
-    ListOfDocumentType:
-      type: array
-      items:
-        $ref: '#/components/schemas/DocumentTypeListItem'
-    InternalServerException: {}
-    Geometry:
-      type: object
-      properties:
-        BoundingBox:
-          allOf:
-          - $ref: '#/components/schemas/BoundingBox'
-          - description: An axis-aligned coarse representation of the location of the recognized item on the document page.
-        Polygon:
-          allOf:
-          - $ref: '#/components/schemas/Polygon'
-          - description: Within the bounding box, a fine-grained polygon around the recognized item.
-      description: <p>Information about the location of items on a document page.</p> <p>For additional information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/API_Geometry.html">Geometry</a> in the Amazon Textract API reference.</p>
-    ListOfExtractedCharacters:
-      type: array
-      items:
-        $ref: '#/components/schemas/ExtractedCharactersListItem'
     EntityRecognizerEndpointArn:
       type: string
       pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:entity-recognizer-endpoint/[a-zA-Z0-9](-*[a-zA-Z0-9])*
       maxLength: 256
+    ErrorsListItem:
+      type: object
+      properties:
+        Page:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: Page number where the error occurred.
+        ErrorCode:
+          allOf:
+          - $ref: '#/components/schemas/PageBasedErrorCode'
+          - description: Error code for the cause of the error.
+        ErrorMessage:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Text message explaining the reason for the error.
+      description: <p>Text extraction encountered one or more page-level errors in the input document.</p> <p>The <code>ErrorCode</code> contains one of the following values:</p> <ul> <li> <p>TEXTRACT_BAD_PAGE - Amazon Textract cannot read the page. For more information about page limits in Amazon Textract, see <a href="https://docs.aws.amazon.com/textract/latest/dg/limits-document.html"> Page Quotas in Amazon Textract</a>.</p> </li> <li> <p>TEXTRACT_PROVISIONED_THROUGHPUT_EXCEEDED - The number of requests exceeded your throughput limit. For more information about throughput quotas in Amazon Textract, see <a href="https://docs.aws.amazon.com/textract/latest/dg/limits-quotas-explained.html"> Default quotas in Amazon Textract</a>.</p> </li> <li> <p>PAGE_CHARACTERS_EXCEEDED - Too many text characters on the page (10,000 characters maximum).</p> </li> <li> <p>PAGE_SIZE_EXCEEDED - The maximum page size is 10 MB.</p> </li> <li> <p>INTERNAL_SERVER_ERROR - The request encountered a service issue. Try the API request again.</p> </li> </ul>
+    StringList:
+      type: array
+      items:
+        $ref: '#/components/schemas/String'
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -644,14 +644,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -662,8 +656,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

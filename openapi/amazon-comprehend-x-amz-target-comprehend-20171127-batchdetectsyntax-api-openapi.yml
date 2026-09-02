@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectSyntax API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectSyntax #X Amz Target=Comprehend 20171127.BatchDetectSyntax #X Amz Target=Comprehend 20171127.BatchDetectSyntax API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -216,66 +216,51 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.BatchDetectSyntax'
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    ListOfSyntaxTokens:
-      type: array
-      items:
-        $ref: '#/components/schemas/SyntaxToken'
-    BatchSizeLimitExceededException: {}
-    UnsupportedLanguageException: {}
-    TextSizeLimitExceededException: {}
-    BatchDetectSyntaxRequest:
-      type: object
-      required:
-      - TextList
-      - LanguageCode
-      title: BatchDetectSyntaxRequest
-      properties:
-        TextList:
-          allOf:
-          - $ref: '#/components/schemas/CustomerInputStringList'
-          - description: A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. The maximum size for each document is 5 KB.
-        LanguageCode:
-          allOf:
-          - $ref: '#/components/schemas/SyntaxLanguageCode'
-          - description: 'The language of the input documents. You can specify any of the following languages supported by Amazon Comprehend: German ("de"), English ("en"), Spanish ("es"), French ("fr"), Italian ("it"), or Portuguese ("pt"). All documents must be in the same language.'
-    SyntaxLanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-    PartOfSpeechTag:
-      type: object
-      properties:
-        Tag:
-          allOf:
-          - $ref: '#/components/schemas/PartOfSpeechTagType'
-          - description: Identifies the part of speech that the token represents.
-        Score:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The confidence that Amazon Comprehend has that the part of speech was correctly identified.
-      description: 'Identifies the part of speech represented by the token and gives the confidence that Amazon Comprehend has that the part of speech was correctly identified. For more information about the parts of speech that Amazon Comprehend can identify, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide. '
     InvalidRequestException: {}
-    Float:
-      type: number
-      format: float
-    String:
-      type: string
-      minLength: 1
-    ListOfDetectSyntaxResult:
-      type: array
-      items:
-        $ref: '#/components/schemas/BatchDetectSyntaxItemResult'
-    CustomerInputStringList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CustomerInputString'
-      minItems: 1
     BatchDetectSyntaxItemResult:
       type: object
       properties:
@@ -288,67 +273,31 @@ components:
           - $ref: '#/components/schemas/ListOfSyntaxTokens'
           - description: The syntax tokens for the words in the document, one token for each word.
       description: The result of calling the operation. The operation returns one object that is successfully processed by the operation.
-    PartOfSpeechTagType:
-      type: string
-      enum:
-      - ADJ
-      - ADP
-      - ADV
-      - AUX
-      - CONJ
-      - CCONJ
-      - DET
-      - INTJ
-      - NOUN
-      - NUM
-      - O
-      - PART
-      - PRON
-      - PROPN
-      - PUNCT
-      - SCONJ
-      - SYM
-      - VERB
-    BatchItemErrorList:
-      type: array
-      items:
-        $ref: '#/components/schemas/BatchItemError'
     Integer:
       type: integer
-    BatchDetectSyntaxResponse:
-      type: object
-      required:
-      - ResultList
-      - ErrorList
-      properties:
-        ResultList:
-          allOf:
-          - $ref: '#/components/schemas/ListOfDetectSyntaxResult'
-          - description: A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty.
-        ErrorList:
-          allOf:
-          - $ref: '#/components/schemas/BatchItemErrorList'
-          - description: A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty.
+    TextSizeLimitExceededException: {}
+    CustomerInputStringList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomerInputString'
+      minItems: 1
     CustomerInputString:
       type: string
       minLength: 1
       format: password
-    BatchItemError:
+    PartOfSpeechTag:
       type: object
       properties:
-        Index:
+        Tag:
           allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: The zero-based index of the document in the input list.
-        ErrorCode:
+          - $ref: '#/components/schemas/PartOfSpeechTagType'
+          - description: Identifies the part of speech that the token represents.
+        Score:
           allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The numeric error code of the error.
-        ErrorMessage:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A text description of the error.
-      description: Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.
+          - $ref: '#/components/schemas/Float'
+          - description: The confidence that Amazon Comprehend has that the part of speech was correctly identified.
+      description: 'Identifies the part of speech represented by the token and gives the confidence that Amazon Comprehend has that the part of speech was correctly identified. For more information about the parts of speech that Amazon Comprehend can identify, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide. '
+    BatchSizeLimitExceededException: {}
     SyntaxToken:
       type: object
       properties:
@@ -374,49 +323,100 @@ components:
           - description: 'Provides the part of speech label and the confidence level that Amazon Comprehend has that the part of speech was correctly identified. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide. '
       description: Represents a work in the input text that was recognized and assigned a part of speech. There is one syntax token record for each word in the source text.
     InternalServerException: {}
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
+    String:
+      type: string
+      minLength: 1
+    BatchItemErrorList:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchItemError'
+    BatchDetectSyntaxResponse:
+      type: object
+      required:
+      - ResultList
+      - ErrorList
+      properties:
+        ResultList:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDetectSyntaxResult'
+          - description: A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty.
+        ErrorList:
+          allOf:
+          - $ref: '#/components/schemas/BatchItemErrorList'
+          - description: A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty.
+    ListOfSyntaxTokens:
+      type: array
+      items:
+        $ref: '#/components/schemas/SyntaxToken'
+    BatchItemError:
+      type: object
+      properties:
+        Index:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based index of the document in the input list.
+        ErrorCode:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The numeric error code of the error.
+        ErrorMessage:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A text description of the error.
+      description: Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.
+    PartOfSpeechTagType:
+      type: string
+      enum:
+      - ADJ
+      - ADP
+      - ADV
+      - AUX
+      - CONJ
+      - CCONJ
+      - DET
+      - INTJ
+      - NOUN
+      - NUM
+      - O
+      - PART
+      - PRON
+      - PROPN
+      - PUNCT
+      - SCONJ
+      - SYM
+      - VERB
+    Float:
+      type: number
+      format: float
+    SyntaxLanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+    UnsupportedLanguageException: {}
+    BatchDetectSyntaxRequest:
+      type: object
+      required:
+      - TextList
+      - LanguageCode
+      title: BatchDetectSyntaxRequest
+      properties:
+        TextList:
+          allOf:
+          - $ref: '#/components/schemas/CustomerInputStringList'
+          - description: A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. The maximum size for each document is 5 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/SyntaxLanguageCode'
+          - description: 'The language of the input documents. You can specify any of the following languages supported by Amazon Comprehend: German ("de"), English ("en"), Spanish ("es"), French ("fr"), Italian ("it"), or Portuguese ("pt"). All documents must be in the same language.'
+    ListOfDetectSyntaxResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchDetectSyntaxItemResult'
   securitySchemes:
     hmac:
       type: apiKey

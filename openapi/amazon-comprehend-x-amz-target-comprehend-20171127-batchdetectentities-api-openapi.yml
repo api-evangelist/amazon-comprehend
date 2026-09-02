@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectEntities API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectEntities #X Amz Target=Comprehend 20171127.BatchDetectEntities #X Amz Target=Comprehend 20171127.BatchDetectEntities API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -216,41 +216,93 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.BatchDetectEntities'
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    ListOfChildBlocks:
+    BatchDetectEntitiesResponse:
+      type: object
+      required:
+      - ResultList
+      - ErrorList
+      properties:
+        ResultList:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDetectEntitiesResult'
+          - description: A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty.
+        ErrorList:
+          allOf:
+          - $ref: '#/components/schemas/BatchItemErrorList'
+          - description: A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty.
+    ListOfEntities:
       type: array
       items:
-        $ref: '#/components/schemas/ChildBlock'
-    LanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    BatchSizeLimitExceededException: {}
-    UnsupportedLanguageException: {}
-    BatchDetectEntitiesItemResult:
+        $ref: '#/components/schemas/Entity'
+    InvalidRequestException: {}
+    Integer:
+      type: integer
+    ChildBlock:
       type: object
       properties:
-        Index:
+        ChildBlockId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Unique identifier for the child block.
+        BeginOffset:
           allOf:
           - $ref: '#/components/schemas/Integer'
-          - description: The zero-based index of the document in the input list.
-        Entities:
+          - description: Offset of the start of the child block within its parent block.
+        EndOffset:
           allOf:
-          - $ref: '#/components/schemas/ListOfEntities'
-          - description: One or more <a>Entity</a> objects, one for each entity detected in the document.
-      description: The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.
+          - $ref: '#/components/schemas/Integer'
+          - description: Offset of the end of the child block within its parent block.
+      description: Nested block contained within a block.
     TextSizeLimitExceededException: {}
+    CustomerInputStringList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomerInputString'
+      minItems: 1
     Entity:
       type: object
       properties:
@@ -279,10 +331,54 @@ components:
           - $ref: '#/components/schemas/ListOfBlockReferences'
           - description: A reference to each block for this entity. This field is empty for plain-text input.
       description: <p>Provides information about an entity. </p> <p> </p>
-    ListOfEntities:
+    EntityType:
+      type: string
+      enum:
+      - PERSON
+      - LOCATION
+      - ORGANIZATION
+      - COMMERCIAL_ITEM
+      - EVENT
+      - DATE
+      - QUANTITY
+      - TITLE
+      - OTHER
+    ListOfBlockReferences:
       type: array
       items:
-        $ref: '#/components/schemas/Entity'
+        $ref: '#/components/schemas/BlockReference'
+    CustomerInputString:
+      type: string
+      minLength: 1
+      format: password
+    BatchSizeLimitExceededException: {}
+    BatchDetectEntitiesItemResult:
+      type: object
+      properties:
+        Index:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based index of the document in the input list.
+        Entities:
+          allOf:
+          - $ref: '#/components/schemas/ListOfEntities'
+          - description: One or more <a>Entity</a> objects, one for each entity detected in the document.
+      description: The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.
+    BatchDetectEntitiesRequest:
+      type: object
+      required:
+      - TextList
+      - LanguageCode
+      title: BatchDetectEntitiesRequest
+      properties:
+        TextList:
+          allOf:
+          - $ref: '#/components/schemas/CustomerInputStringList'
+          - description: A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. The maximum size of each document is 5 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language of the input documents. You can specify any of the primary languages supported by Amazon Comprehend. All documents must be in the same language.
     BlockReference:
       type: object
       properties:
@@ -303,93 +399,18 @@ components:
           - $ref: '#/components/schemas/ListOfChildBlocks'
           - description: List of child blocks within this block.
       description: 'A reference to a block. '
-    BatchDetectEntitiesRequest:
-      type: object
-      required:
-      - TextList
-      - LanguageCode
-      title: BatchDetectEntitiesRequest
-      properties:
-        TextList:
-          allOf:
-          - $ref: '#/components/schemas/CustomerInputStringList'
-          - description: A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. The maximum size of each document is 5 KB.
-        LanguageCode:
-          allOf:
-          - $ref: '#/components/schemas/LanguageCode'
-          - description: The language of the input documents. You can specify any of the primary languages supported by Amazon Comprehend. All documents must be in the same language.
-    BatchDetectEntitiesResponse:
-      type: object
-      required:
-      - ResultList
-      - ErrorList
-      properties:
-        ResultList:
-          allOf:
-          - $ref: '#/components/schemas/ListOfDetectEntitiesResult'
-          - description: A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty.
-        ErrorList:
-          allOf:
-          - $ref: '#/components/schemas/BatchItemErrorList'
-          - description: A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty.
-    ListOfBlockReferences:
+    InternalServerException: {}
+    ListOfChildBlocks:
       type: array
       items:
-        $ref: '#/components/schemas/BlockReference'
-    InvalidRequestException: {}
-    EntityType:
-      type: string
-      enum:
-      - PERSON
-      - LOCATION
-      - ORGANIZATION
-      - COMMERCIAL_ITEM
-      - EVENT
-      - DATE
-      - QUANTITY
-      - TITLE
-      - OTHER
-    Float:
-      type: number
-      format: float
+        $ref: '#/components/schemas/ChildBlock'
     String:
       type: string
       minLength: 1
-    CustomerInputStringList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CustomerInputString'
-      minItems: 1
-    ChildBlock:
-      type: object
-      properties:
-        ChildBlockId:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: Unique identifier for the child block.
-        BeginOffset:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: Offset of the start of the child block within its parent block.
-        EndOffset:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: Offset of the end of the child block within its parent block.
-      description: Nested block contained within a block.
     BatchItemErrorList:
       type: array
       items:
         $ref: '#/components/schemas/BatchItemError'
-    Integer:
-      type: integer
-    ListOfDetectEntitiesResult:
-      type: array
-      items:
-        $ref: '#/components/schemas/BatchDetectEntitiesItemResult'
-    CustomerInputString:
-      type: string
-      minLength: 1
-      format: password
     BatchItemError:
       type: object
       properties:
@@ -406,50 +427,29 @@ components:
           - $ref: '#/components/schemas/String'
           - description: A text description of the error.
       description: Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.
-    InternalServerException: {}
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    Float:
+      type: number
+      format: float
+    UnsupportedLanguageException: {}
+    ListOfDetectEntitiesResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchDetectEntitiesItemResult'
   securitySchemes:
     hmac:
       type: apiKey

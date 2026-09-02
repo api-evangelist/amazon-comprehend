@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases API'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -216,24 +216,59 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases'
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    LanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    BatchSizeLimitExceededException: {}
-    UnsupportedLanguageException: {}
+    InvalidRequestException: {}
+    Integer:
+      type: integer
+    CustomerInputStringList:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomerInputString'
+      minItems: 1
+    TextSizeLimitExceededException: {}
     BatchDetectKeyPhrasesRequest:
       type: object
       required:
@@ -249,51 +284,31 @@ components:
           allOf:
           - $ref: '#/components/schemas/LanguageCode'
           - description: The language of the input documents. You can specify any of the primary languages supported by Amazon Comprehend. All documents must be in the same language.
-    BatchDetectKeyPhrasesResponse:
+    BatchDetectKeyPhrasesItemResult:
       type: object
-      required:
-      - ResultList
-      - ErrorList
       properties:
-        ResultList:
+        Index:
           allOf:
-          - $ref: '#/components/schemas/ListOfDetectKeyPhrasesResult'
-          - description: A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty.
-        ErrorList:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based index of the document in the input list.
+        KeyPhrases:
           allOf:
-          - $ref: '#/components/schemas/BatchItemErrorList'
-          - description: A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty.
-    ListOfDetectKeyPhrasesResult:
-      type: array
-      items:
-        $ref: '#/components/schemas/BatchDetectKeyPhrasesItemResult'
-    TextSizeLimitExceededException: {}
-    ListOfKeyPhrases:
-      type: array
-      items:
-        $ref: '#/components/schemas/KeyPhrase'
-    InvalidRequestException: {}
-    Float:
-      type: number
-      format: float
-    String:
-      type: string
-      minLength: 1
-    CustomerInputStringList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CustomerInputString'
-      minItems: 1
-    BatchItemErrorList:
-      type: array
-      items:
-        $ref: '#/components/schemas/BatchItemError'
-    Integer:
-      type: integer
+          - $ref: '#/components/schemas/ListOfKeyPhrases'
+          - description: One or more <a>KeyPhrase</a> objects, one for each key phrase detected in the document.
+      description: The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.
     CustomerInputString:
       type: string
       minLength: 1
       format: password
+    BatchSizeLimitExceededException: {}
+    InternalServerException: {}
+    String:
+      type: string
+      minLength: 1
+    BatchItemErrorList:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchItemError'
     BatchItemError:
       type: object
       properties:
@@ -310,7 +325,47 @@ components:
           - $ref: '#/components/schemas/String'
           - description: A text description of the error.
       description: Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.
-    InternalServerException: {}
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    Float:
+      type: number
+      format: float
+    ListOfDetectKeyPhrasesResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchDetectKeyPhrasesItemResult'
+    UnsupportedLanguageException: {}
+    ListOfKeyPhrases:
+      type: array
+      items:
+        $ref: '#/components/schemas/KeyPhrase'
+    BatchDetectKeyPhrasesResponse:
+      type: object
+      required:
+      - ResultList
+      - ErrorList
+      properties:
+        ResultList:
+          allOf:
+          - $ref: '#/components/schemas/ListOfDetectKeyPhrasesResult'
+          - description: A list of objects containing the results of the operation. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If all of the documents contain an error, the <code>ResultList</code> is empty.
+        ErrorList:
+          allOf:
+          - $ref: '#/components/schemas/BatchItemErrorList'
+          - description: A list containing one object for each document that contained an error. The results are sorted in ascending order by the <code>Index</code> field and match the order of the documents in the input list. If there are no errors in the batch, the <code>ErrorList</code> is empty.
     KeyPhrase:
       type: object
       properties:
@@ -331,61 +386,6 @@ components:
           - $ref: '#/components/schemas/Integer'
           - description: The zero-based offset from the beginning of the source text to the last character in the key phrase.
       description: Describes a key noun phrase.
-    BatchDetectKeyPhrasesItemResult:
-      type: object
-      properties:
-        Index:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: The zero-based index of the document in the input list.
-        KeyPhrases:
-          allOf:
-          - $ref: '#/components/schemas/ListOfKeyPhrases'
-          - description: One or more <a>KeyPhrase</a> objects, one for each key phrase detected in the document.
-      description: The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey
