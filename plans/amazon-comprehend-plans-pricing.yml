@@ -10,6 +10,10 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: developer-api
 pricing_basis: per-call
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
 published: true
 note: Most per-unit price values on the page are unrendered template tokens ({priceOf!...}), so the tiered
   NLP/PII/toxicity table prices are not visible. Only endpoint, training, model management prices and
