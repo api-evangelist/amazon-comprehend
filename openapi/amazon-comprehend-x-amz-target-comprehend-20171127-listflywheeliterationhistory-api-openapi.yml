@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory #X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory #X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ListFlywheelIterationHistory
-      description: Information about the history of a flywheel iteration. For more information about flywheels, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/flywheels-about.html"> Flywheel overview</a> in the <i>Amazon Comprehend Developer Guide</i>.
+      description: Information about the history of a flywheel iteration. For more information about flywheels, see Flywheel overview in the Amazon Comprehend Developer Guide.
       responses:
         '200':
           description: Success
@@ -228,81 +229,10 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.ListFlywheelIterationHistory'
 components:
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    FlywheelIterationId:
+    String:
       type: string
-      pattern: '[0-9]{8}T[0-9]{6}Z'
-      maxLength: 63
-    Timestamp:
-      type: string
-      format: date-time
-    FlywheelModelEvaluationMetrics:
-      type: object
-      properties:
-        AverageF1Score:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: The average F1 score from the evaluation metrics.
-        AveragePrecision:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: Average precision metric for the model.
-        AverageRecall:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: Average recall metric for the model.
-        AverageAccuracy:
-          allOf:
-          - $ref: '#/components/schemas/Double'
-          - description: Average accuracy metric for the model.
-      description: The evaluation metrics associated with the evaluated model.
-    InvalidFilterException: {}
-    Double:
-      type: number
-      format: double
+      minLength: 1
     FlywheelIterationStatus:
       type: string
       enum:
@@ -312,17 +242,35 @@ components:
       - FAILED
       - STOP_REQUESTED
       - STOPPED
-    FlywheelIterationPropertiesList:
-      type: array
-      items:
-        $ref: '#/components/schemas/FlywheelIterationProperties'
-    InvalidRequestException: {}
+    ResourceNotFoundException: {}
+    AnyLengthString:
+      type: string
+    FlywheelIterationFilter:
+      type: object
+      properties:
+        CreationTimeAfter:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filter the flywheel iterations to include iterations created after the specified time.
+        CreationTimeBefore:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filter the flywheel iterations to include iterations created before the specified time.
+      description: Filter the flywheel iterations based on creation time.
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
     MaxResultsInteger:
       type: integer
       minimum: 1
       maximum: 500
-    AnyLengthString:
-      type: string
+    InvalidFilterException: {}
+    TooManyRequestsException: {}
     FlywheelIterationProperties:
       type: object
       properties:
@@ -369,27 +317,31 @@ components:
           - $ref: '#/components/schemas/S3Uri'
           - description: <p/>
       description: The configuration properties of a flywheel iteration.
-    FlywheelIterationFilter:
+    FlywheelModelEvaluationMetrics:
       type: object
       properties:
-        CreationTimeAfter:
+        AverageF1Score:
           allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: Filter the flywheel iterations to include iterations created after the specified time.
-        CreationTimeBefore:
+          - $ref: '#/components/schemas/Double'
+          - description: The average F1 score from the evaluation metrics.
+        AveragePrecision:
           allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: Filter the flywheel iterations to include iterations created before the specified time.
-      description: Filter the flywheel iterations based on creation time.
+          - $ref: '#/components/schemas/Double'
+          - description: Average precision metric for the model.
+        AverageRecall:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: Average recall metric for the model.
+        AverageAccuracy:
+          allOf:
+          - $ref: '#/components/schemas/Double'
+          - description: Average accuracy metric for the model.
+      description: The evaluation metrics associated with the evaluated model.
     InternalServerException: {}
-    String:
+    S3Uri:
       type: string
-      minLength: 1
-    ComprehendModelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
-      maxLength: 256
-    ResourceNotFoundException: {}
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
     ListFlywheelIterationHistoryRequest:
       type: object
       required:
@@ -412,10 +364,11 @@ components:
           allOf:
           - $ref: '#/components/schemas/MaxResultsInteger'
           - description: Maximum number of iteration history results to return
-    ComprehendFlywheelArn:
+    FlywheelIterationId:
       type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
+      pattern: '[0-9]{8}T[0-9]{6}Z'
+      maxLength: 63
+    InvalidRequestException: {}
     ListFlywheelIterationHistoryResponse:
       type: object
       properties:
@@ -427,11 +380,59 @@ components:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: Next token
-    TooManyRequestsException: {}
-    S3Uri:
+    FlywheelIterationPropertiesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/FlywheelIterationProperties'
+    Double:
+      type: number
+      format: double
+    Timestamp:
       type: string
-      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
-      maxLength: 1024
+      format: date-time
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

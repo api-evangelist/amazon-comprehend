@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ListEndpoints #X Amz Target=Comprehend 20171127.ListEndpoints #X Amz Target=Comprehend 20171127.ListEndpoints API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ListEndpoints
-      description: Gets a list of all existing endpoints that you've created. For information about endpoints, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing endpoints</a>.
+      description: Gets a list of all existing endpoints that you've created. For information about endpoints, see Managing endpoints.
       responses:
         '200':
           description: Success
@@ -207,18 +208,20 @@ paths:
       - '#X Amz Target=Comprehend 20171127.ListEndpoints'
 components:
   schemas:
-    ComprehendEndpointArn:
+    InferenceUnitsInteger:
+      type: integer
+      minimum: 1
+    String:
       type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier-endpoint|entity-recognizer-endpoint)/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    Timestamp:
+      minLength: 1
+    EndpointStatus:
       type: string
-      format: date-time
-    IamRoleArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
-      minLength: 20
-      maxLength: 2048
+      enum:
+      - CREATING
+      - DELETING
+      - FAILED
+      - IN_SERVICE
+      - UPDATING
     EndpointFilter:
       type: object
       properties:
@@ -239,47 +242,12 @@ components:
           - $ref: '#/components/schemas/Timestamp'
           - description: Specifies a date after which the returned endpoint or endpoints were created.
       description: 'The filter used to determine which endpoints are returned. You can filter jobs on their name, model, status, or the date and time that they were created. You can only set one filter at a time. '
-    InvalidRequestException: {}
+    AnyLengthString:
+      type: string
     EndpointPropertiesList:
       type: array
       items:
         $ref: '#/components/schemas/EndpointProperties'
-    MaxResultsInteger:
-      type: integer
-      minimum: 1
-      maximum: 500
-    EndpointStatus:
-      type: string
-      enum:
-      - CREATING
-      - DELETING
-      - FAILED
-      - IN_SERVICE
-      - UPDATING
-    AnyLengthString:
-      type: string
-    InferenceUnitsInteger:
-      type: integer
-      minimum: 1
-    ListEndpointsResponse:
-      type: object
-      properties:
-        EndpointPropertiesList:
-          allOf:
-          - $ref: '#/components/schemas/EndpointPropertiesList'
-          - description: Displays a list of endpoint properties being retrieved by the service in response to the request.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: Identifies the next page of results to return.
-    InternalServerException: {}
-    String:
-      type: string
-      minLength: 1
-    ComprehendModelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
-      maxLength: 256
     EndpointProperties:
       type: object
       properties:
@@ -332,6 +300,41 @@ components:
           - $ref: '#/components/schemas/ComprehendFlywheelArn'
           - description: The Amazon Resource Number (ARN) of the flywheel
       description: Specifies information about the specified endpoint. For information about endpoints, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing endpoints</a>.
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    MaxResultsInteger:
+      type: integer
+      minimum: 1
+      maximum: 500
+    TooManyRequestsException: {}
+    ComprehendEndpointArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier-endpoint|entity-recognizer-endpoint)/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    InternalServerException: {}
+    InvalidRequestException: {}
+    ListEndpointsResponse:
+      type: object
+      properties:
+        EndpointPropertiesList:
+          allOf:
+          - $ref: '#/components/schemas/EndpointPropertiesList'
+          - description: Displays a list of endpoint properties being retrieved by the service in response to the request.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Identifies the next page of results to return.
     ListEndpointsRequest:
       type: object
       title: ListEndpointsRequest
@@ -348,20 +351,30 @@ components:
           allOf:
           - $ref: '#/components/schemas/MaxResultsInteger'
           - description: The maximum number of results to return in each page. The default is 100.
-    ComprehendFlywheelArn:
+    Timestamp:
       type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    TooManyRequestsException: {}
+      format: date-time
   parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -378,20 +391,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

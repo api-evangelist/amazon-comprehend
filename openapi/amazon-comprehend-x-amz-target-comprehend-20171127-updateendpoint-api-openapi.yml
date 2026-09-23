@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.UpdateEndpoint #X Amz Target=Comprehend 20171127.UpdateEndpoint #X Amz Target=Comprehend 20171127.UpdateEndpoint API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: UpdateEndpoint
-      description: Updates information about the specified endpoint. For information about endpoints, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing endpoints</a>.
+      description: Updates information about the specified endpoint. For information about endpoints, see Managing endpoints.
       responses:
         '200':
           description: Success
@@ -238,7 +239,26 @@ paths:
       - '#X Amz Target=Comprehend 20171127.UpdateEndpoint'
 components:
   schemas:
-    ResourceInUseException: {}
+    InferenceUnitsInteger:
+      type: integer
+      minimum: 1
+    ResourceNotFoundException: {}
+    UpdateEndpointResponse:
+      type: object
+      properties:
+        DesiredModelArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendModelArn'
+          - description: The Amazon Resource Number (ARN) of the new model.
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    TooManyRequestsException: {}
     ComprehendEndpointArn:
       type: string
       pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier-endpoint|entity-recognizer-endpoint)/[a-zA-Z0-9](-*[a-zA-Z0-9])*
@@ -269,44 +289,37 @@ components:
           allOf:
           - $ref: '#/components/schemas/ComprehendFlywheelArn'
           - description: The Amazon Resource Number (ARN) of the flywheel
-    ResourceUnavailableException: {}
     IamRoleArn:
       type: string
       pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
       minLength: 20
       maxLength: 2048
-    InvalidRequestException: {}
     ResourceLimitExceededException: {}
-    InferenceUnitsInteger:
-      type: integer
-      minimum: 1
     InternalServerException: {}
-    ComprehendModelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
-      maxLength: 256
-    ResourceNotFoundException: {}
-    ComprehendFlywheelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    TooManyRequestsException: {}
-    UpdateEndpointResponse:
-      type: object
-      properties:
-        DesiredModelArn:
-          allOf:
-          - $ref: '#/components/schemas/ComprehendModelArn'
-          - description: The Amazon Resource Number (ARN) of the new model.
+    InvalidRequestException: {}
+    ResourceUnavailableException: {}
+    ResourceInUseException: {}
   parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -323,20 +336,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

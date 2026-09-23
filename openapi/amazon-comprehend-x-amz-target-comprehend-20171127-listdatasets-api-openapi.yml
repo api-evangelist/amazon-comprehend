@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ListDatasets #X Amz Target=Comprehend 20171127.ListDatasets #X Amz Target=Comprehend 20171127.ListDatasets API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ListDatasets
-      description: List the datasets that you have configured in this Region. For more information about datasets, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/flywheels-about.html"> Flywheel overview</a> in the <i>Amazon Comprehend Developer Guide</i>.
+      description: List the datasets that you have configured in this Region. For more information about datasets, see Flywheel overview in the Amazon Comprehend Developer Guide.
       responses:
         '200':
           description: Success
@@ -228,55 +229,44 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.ListDatasets'
 components:
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    NumberOfDocuments:
-      type: integer
-    Timestamp:
+    String:
       type: string
-      format: date-time
+      minLength: 1
+    ResourceNotFoundException: {}
+    DatasetFilter:
+      type: object
+      properties:
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/DatasetStatus'
+          - description: Filter the datasets based on the dataset status.
+        DatasetType:
+          allOf:
+          - $ref: '#/components/schemas/DatasetType'
+          - description: Filter the datasets based on the dataset type.
+        CreationTimeAfter:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filter the datasets to include datasets created after the specified time.
+        CreationTimeBefore:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: Filter the datasets to include datasets created before the specified time.
+      description: Filter the datasets based on creation time or dataset status.
+    AnyLengthString:
+      type: string
+    DatasetStatus:
+      type: string
+      enum:
+      - CREATING
+      - COMPLETED
+      - FAILED
+    DatasetType:
+      type: string
+      enum:
+      - TRAIN
+      - TEST
     ListDatasetsRequest:
       type: object
       title: ListDatasetsRequest
@@ -297,44 +287,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/MaxResultsInteger'
           - description: Maximum number of results to return in a response. The default is 100.
-    ListDatasetsResponse:
-      type: object
-      properties:
-        DatasetPropertiesList:
-          allOf:
-          - $ref: '#/components/schemas/DatasetPropertiesList'
-          - description: The dataset properties list.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: Identifies the next page of results to return.
-    InvalidFilterException: {}
-    InvalidRequestException: {}
-    MaxResultsInteger:
-      type: integer
-      minimum: 1
-      maximum: 500
-    Description:
-      type: string
-      pattern: ^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$
-      maxLength: 2048
-    AnyLengthString:
-      type: string
-    DatasetStatus:
-      type: string
-      enum:
-      - CREATING
-      - COMPLETED
-      - FAILED
-    DatasetType:
-      type: string
-      enum:
-      - TRAIN
-      - TEST
-    InternalServerException: {}
-    String:
-      type: string
-      minLength: 1
     DatasetProperties:
       type: object
       properties:
@@ -379,48 +331,97 @@ components:
           - $ref: '#/components/schemas/Timestamp'
           - description: Time when the data from the dataset becomes available in the data lake.
       description: Properties associated with the dataset.
-    ComprehendDatasetArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    ResourceNotFoundException: {}
-    DatasetPropertiesList:
-      type: array
-      items:
-        $ref: '#/components/schemas/DatasetProperties'
     ComprehendFlywheelArn:
       type: string
       pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
       maxLength: 256
+    DatasetPropertiesList:
+      type: array
+      items:
+        $ref: '#/components/schemas/DatasetProperties'
+    MaxResultsInteger:
+      type: integer
+      minimum: 1
+      maximum: 500
+    NumberOfDocuments:
+      type: integer
+    ListDatasetsResponse:
+      type: object
+      properties:
+        DatasetPropertiesList:
+          allOf:
+          - $ref: '#/components/schemas/DatasetPropertiesList'
+          - description: The dataset properties list.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: Identifies the next page of results to return.
+    InvalidFilterException: {}
     TooManyRequestsException: {}
+    ComprehendDatasetArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    InternalServerException: {}
     S3Uri:
       type: string
       pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
       maxLength: 1024
-    DatasetFilter:
-      type: object
-      properties:
-        Status:
-          allOf:
-          - $ref: '#/components/schemas/DatasetStatus'
-          - description: Filter the datasets based on the dataset status.
-        DatasetType:
-          allOf:
-          - $ref: '#/components/schemas/DatasetType'
-          - description: Filter the datasets based on the dataset type.
-        CreationTimeAfter:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: Filter the datasets to include datasets created after the specified time.
-        CreationTimeBefore:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: Filter the datasets to include datasets created before the specified time.
-      description: Filter the datasets based on creation time or dataset status.
     ComprehendArnName:
       type: string
       pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
       maxLength: 63
+    InvalidRequestException: {}
+    Description:
+      type: string
+      pattern: ^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$
+      maxLength: 2048
+    Timestamp:
+      type: string
+      format: date-time
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectSentiment #X Amz Target=Comprehend 20171127.DetectSentiment #X Amz Target=Comprehend 20171127.DetectSentiment API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: DetectSentiment
-      description: 'Inspects text and returns an inference of the prevailing sentiment (<code>POSITIVE</code>, <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>). '
+      description: Inspects text and returns an inference of the prevailing sentiment (POSITIVE, NEUTRAL, MIXED, or NEGATIVE).
       responses:
         '200':
           description: Success
@@ -206,32 +207,38 @@ paths:
       - '#X Amz Target=Comprehend 20171127.DetectSentiment'
 components:
   schemas:
+    Float:
+      type: number
+      format: float
+    TextSizeLimitExceededException: {}
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+    InvalidRequestException: {}
+    SentimentType:
+      type: string
+      enum:
+      - POSITIVE
+      - NEGATIVE
+      - NEUTRAL
+      - MIXED
+    UnsupportedLanguageException: {}
     CustomerInputString:
       type: string
       minLength: 1
       format: password
-    Float:
-      type: number
-      format: float
-    DetectSentimentRequest:
-      type: object
-      required:
-      - Text
-      - LanguageCode
-      title: DetectSentimentRequest
-      properties:
-        Text:
-          allOf:
-          - $ref: '#/components/schemas/CustomerInputString'
-          - description: A UTF-8 text string. The maximum string size is 5 KB.
-        LanguageCode:
-          allOf:
-          - $ref: '#/components/schemas/LanguageCode'
-          - description: The language of the input documents. You can specify any of the primary languages supported by Amazon Comprehend. All documents must be in the same language.
-    InvalidRequestException: {}
-    UnsupportedLanguageException: {}
-    InternalServerException: {}
-    TextSizeLimitExceededException: {}
     SentimentScore:
       type: object
       properties:
@@ -252,13 +259,7 @@ components:
           - $ref: '#/components/schemas/Float'
           - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment.
       description: Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.
-    SentimentType:
-      type: string
-      enum:
-      - POSITIVE
-      - NEGATIVE
-      - NEUTRAL
-      - MIXED
+    InternalServerException: {}
     DetectSentimentResponse:
       type: object
       properties:
@@ -270,36 +271,24 @@ components:
           allOf:
           - $ref: '#/components/schemas/SentimentScore'
           - description: An object that lists the sentiments, and their corresponding confidence levels.
-    LanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
+    DetectSentimentRequest:
+      type: object
+      required:
+      - Text
+      - LanguageCode
+      title: DetectSentimentRequest
+      properties:
+        Text:
+          allOf:
+          - $ref: '#/components/schemas/CustomerInputString'
+          - description: A UTF-8 text string. The maximum string size is 5 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language of the input documents. You can specify any of the primary languages supported by Amazon Comprehend. All documents must be in the same language.
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -316,14 +305,26 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

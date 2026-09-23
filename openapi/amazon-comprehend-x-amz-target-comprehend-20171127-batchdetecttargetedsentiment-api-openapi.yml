@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment #X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment #X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: BatchDetectTargetedSentiment
-      description: <p>Inspects a batch of documents and returns a sentiment analysis for each entity identified in the documents.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
+      description: 'Inspects a batch of documents and returns a sentiment analysis for each entity identified in the documents.
+
+
+        For more information about targeted sentiment, see Targeted sentiment.'
       responses:
         '200':
           description: Success
@@ -217,79 +221,50 @@ paths:
       - '#X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment'
 components:
   schemas:
-    BatchDetectTargetedSentimentRequest:
+    String:
+      type: string
+      minLength: 1
+    TargetedSentimentEntity:
       type: object
-      required:
-      - TextList
-      - LanguageCode
-      title: BatchDetectTargetedSentimentRequest
       properties:
-        TextList:
+        DescriptiveMentionIndex:
           allOf:
-          - $ref: '#/components/schemas/CustomerInputStringList'
-          - description: A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. The maximum size of each document is 5 KB.
-        LanguageCode:
+          - $ref: '#/components/schemas/ListOfDescriptiveMentionIndices'
+          - description: One or more index into the Mentions array that provides the best name for the entity group.
+        Mentions:
           allOf:
-          - $ref: '#/components/schemas/LanguageCode'
-          - description: The language of the input documents. Currently, English is the only supported language.
-    InvalidRequestException: {}
-    Integer:
-      type: integer
-    TextSizeLimitExceededException: {}
+          - $ref: '#/components/schemas/ListOfMentions'
+          - description: 'An array of mentions of the entity in the document. The array represents a co-reference group. See <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html#how-targeted-sentiment-values"> Co-reference group</a> for an example. '
+      description: <p>Information about one of the entities found by targeted sentiment analysis.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
+    UnsupportedLanguageException: {}
+    ListOfDetectTargetedSentimentResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchDetectTargetedSentimentItemResult'
+    SentimentType:
+      type: string
+      enum:
+      - POSITIVE
+      - NEGATIVE
+      - NEUTRAL
+      - MIXED
     CustomerInputStringList:
       type: array
       items:
         $ref: '#/components/schemas/CustomerInputString'
       minItems: 1
-    SentimentScore:
-      type: object
-      properties:
-        Positive:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>POSITIVE</code> sentiment.
-        Negative:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEGATIVE</code> sentiment.
-        Neutral:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEUTRAL</code> sentiment.
-        Mixed:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment.
-      description: Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.
-    CustomerInputString:
-      type: string
-      minLength: 1
-      format: password
+    ListOfMentions:
+      type: array
+      items:
+        $ref: '#/components/schemas/TargetedSentimentMention'
+    Float:
+      type: number
+      format: float
     BatchSizeLimitExceededException: {}
-    ListOfDetectTargetedSentimentResult:
+    ListOfTargetedSentimentEntities:
       type: array
       items:
-        $ref: '#/components/schemas/BatchDetectTargetedSentimentItemResult'
-    BatchDetectTargetedSentimentItemResult:
-      type: object
-      properties:
-        Index:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: The zero-based index of this result in the input list.
-        Entities:
-          allOf:
-          - $ref: '#/components/schemas/ListOfTargetedSentimentEntities'
-          - description: An array of targeted sentiment entities.
-      description: Analysis results for one of the documents in the batch.
-    InternalServerException: {}
-    String:
-      type: string
-      minLength: 1
-    BatchItemErrorList:
-      type: array
-      items:
-        $ref: '#/components/schemas/BatchItemError'
+        $ref: '#/components/schemas/TargetedSentimentEntity'
     BatchItemError:
       type: object
       properties:
@@ -306,24 +281,7 @@ components:
           - $ref: '#/components/schemas/String'
           - description: A text description of the error.
       description: Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.
-    LanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    Float:
-      type: number
-      format: float
+    TextSizeLimitExceededException: {}
     MentionSentiment:
       type: object
       properties:
@@ -334,23 +292,10 @@ components:
         SentimentScore:
           $ref: '#/components/schemas/SentimentScore'
       description: <p>Contains the sentiment and sentiment score for one mention of an entity.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
-    UnsupportedLanguageException: {}
-    TargetedSentimentEntity:
-      type: object
-      properties:
-        DescriptiveMentionIndex:
-          allOf:
-          - $ref: '#/components/schemas/ListOfDescriptiveMentionIndices'
-          - description: One or more index into the Mentions array that provides the best name for the entity group.
-        Mentions:
-          allOf:
-          - $ref: '#/components/schemas/ListOfMentions'
-          - description: 'An array of mentions of the entity in the document. The array represents a co-reference group. See <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html#how-targeted-sentiment-values"> Co-reference group</a> for an example. '
-      description: <p>Information about one of the entities found by targeted sentiment analysis.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
-    ListOfTargetedSentimentEntities:
+    ListOfDescriptiveMentionIndices:
       type: array
       items:
-        $ref: '#/components/schemas/TargetedSentimentEntity'
+        $ref: '#/components/schemas/Integer'
     BatchDetectTargetedSentimentResponse:
       type: object
       required:
@@ -365,37 +310,9 @@ components:
           allOf:
           - $ref: '#/components/schemas/BatchItemErrorList'
           - description: List of errors that the operation can return.
-    TargetedSentimentEntityType:
-      type: string
-      enum:
-      - PERSON
-      - LOCATION
-      - ORGANIZATION
-      - FACILITY
-      - BRAND
-      - COMMERCIAL_ITEM
-      - MOVIE
-      - MUSIC
-      - BOOK
-      - SOFTWARE
-      - GAME
-      - PERSONAL_TITLE
-      - EVENT
-      - DATE
-      - QUANTITY
-      - ATTRIBUTE
-      - OTHER
-    ListOfMentions:
-      type: array
-      items:
-        $ref: '#/components/schemas/TargetedSentimentMention'
-    SentimentType:
-      type: string
-      enum:
-      - POSITIVE
-      - NEGATIVE
-      - NEUTRAL
-      - MIXED
+    InternalServerException: {}
+    Integer:
+      type: integer
     TargetedSentimentMention:
       type: object
       properties:
@@ -428,19 +345,112 @@ components:
           - $ref: '#/components/schemas/Integer'
           - description: The offset into the document text where the mention ends.
       description: <p>Information about one mention of an entity. The mention information includes the location of the mention in the text and the sentiment of the mention.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
-    ListOfDescriptiveMentionIndices:
+    CustomerInputString:
+      type: string
+      minLength: 1
+      format: password
+    InvalidRequestException: {}
+    BatchDetectTargetedSentimentRequest:
+      type: object
+      required:
+      - TextList
+      - LanguageCode
+      title: BatchDetectTargetedSentimentRequest
+      properties:
+        TextList:
+          allOf:
+          - $ref: '#/components/schemas/CustomerInputStringList'
+          - description: A list containing the UTF-8 encoded text of the input documents. The list can contain a maximum of 25 documents. The maximum size of each document is 5 KB.
+        LanguageCode:
+          allOf:
+          - $ref: '#/components/schemas/LanguageCode'
+          - description: The language of the input documents. Currently, English is the only supported language.
+    TargetedSentimentEntityType:
+      type: string
+      enum:
+      - PERSON
+      - LOCATION
+      - ORGANIZATION
+      - FACILITY
+      - BRAND
+      - COMMERCIAL_ITEM
+      - MOVIE
+      - MUSIC
+      - BOOK
+      - SOFTWARE
+      - GAME
+      - PERSONAL_TITLE
+      - EVENT
+      - DATE
+      - QUANTITY
+      - ATTRIBUTE
+      - OTHER
+    SentimentScore:
+      type: object
+      properties:
+        Positive:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>POSITIVE</code> sentiment.
+        Negative:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEGATIVE</code> sentiment.
+        Neutral:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEUTRAL</code> sentiment.
+        Mixed:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment.
+      description: Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.
+    BatchItemErrorList:
       type: array
       items:
-        $ref: '#/components/schemas/Integer'
+        $ref: '#/components/schemas/BatchItemError'
+    BatchDetectTargetedSentimentItemResult:
+      type: object
+      properties:
+        Index:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The zero-based index of this result in the input list.
+        Entities:
+          allOf:
+          - $ref: '#/components/schemas/ListOfTargetedSentimentEntities'
+          - description: An array of targeted sentiment entities.
+      description: Analysis results for one of the documents in the batch.
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -459,12 +469,6 @@ components:
       required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
       in: header
       schema:
         type: string

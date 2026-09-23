@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries #X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries #X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -206,57 +207,10 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.ListEntityRecognizerSummaries'
 components:
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    VersionName:
+    String:
       type: string
-      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-      maxLength: 63
-    Timestamp:
-      type: string
-      format: date-time
+      minLength: 1
     ModelStatus:
       type: string
       enum:
@@ -268,13 +222,6 @@ components:
       - IN_ERROR
       - TRAINED
       - TRAINED_WITH_WARNING
-    InvalidRequestException: {}
-    Integer:
-      type: integer
-    MaxResultsInteger:
-      type: integer
-      minimum: 1
-      maximum: 500
     ListEntityRecognizerSummariesResponse:
       type: object
       properties:
@@ -310,15 +257,23 @@ components:
           - $ref: '#/components/schemas/ModelStatus'
           - description: ' Provides the status of the latest entity recognizer version.'
       description: ' Describes the information about an entity recognizer and its versions.'
+    MaxResultsInteger:
+      type: integer
+      minimum: 1
+      maximum: 500
+    TooManyRequestsException: {}
     InternalServerException: {}
-    String:
+    Integer:
+      type: integer
+    ComprehendArnName:
       type: string
-      minLength: 1
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+      maxLength: 63
     EntityRecognizerSummariesList:
       type: array
       items:
         $ref: '#/components/schemas/EntityRecognizerSummary'
-    TooManyRequestsException: {}
+    InvalidRequestException: {}
     ListEntityRecognizerSummariesRequest:
       type: object
       title: ListEntityRecognizerSummariesRequest
@@ -331,10 +286,56 @@ components:
           allOf:
           - $ref: '#/components/schemas/MaxResultsInteger'
           - description: The maximum number of results to return on each page. The default is 100.
-    ComprehendArnName:
+    VersionName:
       type: string
       pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
       maxLength: 63
+    Timestamp:
+      type: string
+      format: date-time
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

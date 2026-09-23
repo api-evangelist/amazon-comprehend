@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -216,59 +217,11 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases'
 components:
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    InvalidRequestException: {}
-    Integer:
-      type: integer
-    CustomerInputStringList:
-      type: array
-      items:
-        $ref: '#/components/schemas/CustomerInputString'
-      minItems: 1
-    TextSizeLimitExceededException: {}
+    String:
+      type: string
+      minLength: 1
+    UnsupportedLanguageException: {}
     BatchDetectKeyPhrasesRequest:
       type: object
       required:
@@ -296,19 +249,15 @@ components:
           - $ref: '#/components/schemas/ListOfKeyPhrases'
           - description: One or more <a>KeyPhrase</a> objects, one for each key phrase detected in the document.
       description: The result of calling the operation. The operation returns one object for each document that is successfully processed by the operation.
-    CustomerInputString:
-      type: string
-      minLength: 1
-      format: password
-    BatchSizeLimitExceededException: {}
-    InternalServerException: {}
-    String:
-      type: string
-      minLength: 1
-    BatchItemErrorList:
+    CustomerInputStringList:
       type: array
       items:
-        $ref: '#/components/schemas/BatchItemError'
+        $ref: '#/components/schemas/CustomerInputString'
+      minItems: 1
+    Float:
+      type: number
+      format: float
+    BatchSizeLimitExceededException: {}
     BatchItemError:
       type: object
       properties:
@@ -325,33 +274,22 @@ components:
           - $ref: '#/components/schemas/String'
           - description: A text description of the error.
       description: Describes an error that occurred while processing a document in a batch. The operation returns on <code>BatchItemError</code> object for each document that contained an error.
-    LanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    Float:
-      type: number
-      format: float
-    ListOfDetectKeyPhrasesResult:
-      type: array
-      items:
-        $ref: '#/components/schemas/BatchDetectKeyPhrasesItemResult'
-    UnsupportedLanguageException: {}
+    TextSizeLimitExceededException: {}
     ListOfKeyPhrases:
       type: array
       items:
         $ref: '#/components/schemas/KeyPhrase'
+    ListOfDetectKeyPhrasesResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchDetectKeyPhrasesItemResult'
+    InternalServerException: {}
+    Integer:
+      type: integer
+    CustomerInputString:
+      type: string
+      minLength: 1
+      format: password
     BatchDetectKeyPhrasesResponse:
       type: object
       required:
@@ -386,6 +324,69 @@ components:
           - $ref: '#/components/schemas/Integer'
           - description: The zero-based offset from the beginning of the source text to the last character in the key phrase.
       description: Describes a key noun phrase.
+    InvalidRequestException: {}
+    BatchItemErrorList:
+      type: array
+      items:
+        $ref: '#/components/schemas/BatchItemError'
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ImportModel #X Amz Target=Comprehend 20171127.ImportModel #X Amz Target=Comprehend 20171127.ImportModel API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,13 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ImportModel
-      description: <p>Creates a new custom model that replicates a source custom model that you import. The source model can be in your Amazon Web Services account or another one.</p> <p>If the source model is in another Amazon Web Services account, then it must have a resource-based policy that authorizes you to import it.</p> <p>The source model must be in the same Amazon Web Services Region that you're using when you import. You can't import a model that's in a different Region.</p>
+      description: 'Creates a new custom model that replicates a source custom model that you import. The source model can be in your Amazon Web Services account or another one.
+
+
+        If the source model is in another Amazon Web Services account, then it must have a resource-based policy that authorizes you to import it.
+
+
+        The source model must be in the same Amazon Web Services Region that you''re using when you import. You can''t import a model that''s in a different Region.'
       responses:
         '200':
           description: Success
@@ -260,21 +267,10 @@ paths:
       - '#X Amz Target=Comprehend 20171127.ImportModel'
 components:
   schemas:
-    ResourceInUseException: {}
-    ResourceUnavailableException: {}
-    VersionName:
+    TagKey:
       type: string
-      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-      maxLength: 63
-    IamRoleArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
-      minLength: 20
-      maxLength: 2048
-    TagValue:
-      type: string
-      minLength: 0
-      maxLength: 256
+      minLength: 1
+      maxLength: 128
     ImportModelResponse:
       type: object
       properties:
@@ -282,17 +278,12 @@ components:
           allOf:
           - $ref: '#/components/schemas/ComprehendModelArn'
           - description: The Amazon Resource Name (ARN) of the custom model being imported.
-    InvalidRequestException: {}
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-    ResourceLimitExceededException: {}
+    ResourceNotFoundException: {}
     KmsKeyValidationException: {}
-    TagKey:
+    TagValue:
       type: string
-      minLength: 1
-      maxLength: 128
+      minLength: 0
+      maxLength: 256
     Tag:
       type: object
       required:
@@ -307,6 +298,22 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: ' The second part of a key-value pair that forms a tag associated with a given resource. For instance, if you want to show which resources are used by which departments, you might use “Department” as the initial (key) portion of the pair, with a value of “sales” to indicate the sales department. '
       description: 'A key-value pair that adds as a metadata to a resource used by Amazon Comprehend. For example, a tag with the key-value pair ‘Department’:’Sales’ might be added to a resource to indicate its use by a particular department. '
+    KmsKeyId:
+      type: string
+      pattern: ^\p{ASCII}+$
+      maxLength: 2048
+    ComprehendModelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
+      maxLength: 256
+    TooManyRequestsException: {}
+    IamRoleArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:iam::[0-9]{12}:role/.+
+      minLength: 20
+      maxLength: 2048
+    ResourceLimitExceededException: {}
+    TooManyTagsException: {}
     InternalServerException: {}
     ImportModelRequest:
       type: object
@@ -338,30 +345,42 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagList'
           - description: Tags to associate with the custom model that is created by this import. A tag is a key-value pair that adds as a metadata to a resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a resource to indicate its use by the sales department.
-    TooManyTagsException: {}
-    ComprehendModelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:(document-classifier|entity-recognizer)/[a-zA-Z0-9](-*[a-zA-Z0-9])*(/version/[a-zA-Z0-9](-*[a-zA-Z0-9])*)?
-      maxLength: 256
-    ResourceNotFoundException: {}
-    KmsKeyId:
-      type: string
-      pattern: ^\p{ASCII}+$
-      maxLength: 2048
-    TooManyRequestsException: {}
     ComprehendArnName:
       type: string
       pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
       maxLength: 63
+    InvalidRequestException: {}
+    ResourceUnavailableException: {}
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+    ResourceInUseException: {}
+    VersionName:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+      maxLength: 63
   parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -378,20 +397,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

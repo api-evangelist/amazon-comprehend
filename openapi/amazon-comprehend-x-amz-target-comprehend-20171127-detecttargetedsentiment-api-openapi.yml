@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DetectTargetedSentiment #X Amz Target=Comprehend 20171127.DetectTargetedSentiment #X Amz Target=Comprehend 20171127.DetectTargetedSentiment API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: DetectTargetedSentiment
-      description: <p>Inspects the input text and returns a sentiment analysis for each entity identified in the text.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
+      description: 'Inspects the input text and returns a sentiment analysis for each entity identified in the text.
+
+
+        For more information about targeted sentiment, see Targeted sentiment.'
       responses:
         '200':
           description: Success
@@ -204,61 +208,11 @@ paths:
       tags:
       - '#X Amz Target=Comprehend 20171127.DetectTargetedSentiment'
 components:
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    DetectTargetedSentimentResponse:
-      type: object
-      properties:
-        Entities:
-          allOf:
-          - $ref: '#/components/schemas/ListOfTargetedSentimentEntities'
-          - description: Targeted sentiment analysis for each of the entities identified in the input text.
-    InvalidRequestException: {}
-    Integer:
-      type: integer
-    TextSizeLimitExceededException: {}
+    String:
+      type: string
+      minLength: 1
+    UnsupportedLanguageException: {}
     DetectTargetedSentimentRequest:
       type: object
       required:
@@ -274,70 +228,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/LanguageCode'
           - description: The language of the input documents. Currently, English is the only supported language.
-    SentimentScore:
-      type: object
-      properties:
-        Positive:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>POSITIVE</code> sentiment.
-        Negative:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEGATIVE</code> sentiment.
-        Neutral:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEUTRAL</code> sentiment.
-        Mixed:
-          allOf:
-          - $ref: '#/components/schemas/Float'
-          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment.
-      description: Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.
-    SentimentType:
-      type: string
-      enum:
-      - POSITIVE
-      - NEGATIVE
-      - NEUTRAL
-      - MIXED
-    CustomerInputString:
-      type: string
-      minLength: 1
-      format: password
-    InternalServerException: {}
-    String:
-      type: string
-      minLength: 1
-    LanguageCode:
-      type: string
-      enum:
-      - en
-      - es
-      - fr
-      - de
-      - it
-      - pt
-      - ar
-      - hi
-      - ja
-      - ko
-      - zh
-      - zh-TW
-    Float:
-      type: number
-      format: float
-    MentionSentiment:
-      type: object
-      properties:
-        Sentiment:
-          allOf:
-          - $ref: '#/components/schemas/SentimentType'
-          - description: 'The sentiment of the mention. '
-        SentimentScore:
-          $ref: '#/components/schemas/SentimentScore'
-      description: <p>Contains the sentiment and sentiment score for one mention of an entity.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
-    UnsupportedLanguageException: {}
     TargetedSentimentEntity:
       type: object
       properties:
@@ -350,34 +240,42 @@ components:
           - $ref: '#/components/schemas/ListOfMentions'
           - description: 'An array of mentions of the entity in the document. The array represents a co-reference group. See <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html#how-targeted-sentiment-values"> Co-reference group</a> for an example. '
       description: <p>Information about one of the entities found by targeted sentiment analysis.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
-    ListOfTargetedSentimentEntities:
-      type: array
-      items:
-        $ref: '#/components/schemas/TargetedSentimentEntity'
-    TargetedSentimentEntityType:
+    SentimentType:
       type: string
       enum:
-      - PERSON
-      - LOCATION
-      - ORGANIZATION
-      - FACILITY
-      - BRAND
-      - COMMERCIAL_ITEM
-      - MOVIE
-      - MUSIC
-      - BOOK
-      - SOFTWARE
-      - GAME
-      - PERSONAL_TITLE
-      - EVENT
-      - DATE
-      - QUANTITY
-      - ATTRIBUTE
-      - OTHER
+      - POSITIVE
+      - NEGATIVE
+      - NEUTRAL
+      - MIXED
     ListOfMentions:
       type: array
       items:
         $ref: '#/components/schemas/TargetedSentimentMention'
+    Float:
+      type: number
+      format: float
+    ListOfTargetedSentimentEntities:
+      type: array
+      items:
+        $ref: '#/components/schemas/TargetedSentimentEntity'
+    TextSizeLimitExceededException: {}
+    MentionSentiment:
+      type: object
+      properties:
+        Sentiment:
+          allOf:
+          - $ref: '#/components/schemas/SentimentType'
+          - description: 'The sentiment of the mention. '
+        SentimentScore:
+          $ref: '#/components/schemas/SentimentScore'
+      description: <p>Contains the sentiment and sentiment score for one mention of an entity.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
+    ListOfDescriptiveMentionIndices:
+      type: array
+      items:
+        $ref: '#/components/schemas/Integer'
+    InternalServerException: {}
+    Integer:
+      type: integer
     TargetedSentimentMention:
       type: object
       properties:
@@ -410,10 +308,116 @@ components:
           - $ref: '#/components/schemas/Integer'
           - description: The offset into the document text where the mention ends.
       description: <p>Information about one mention of an entity. The mention information includes the location of the mention in the text and the sentiment of the mention.</p> <p>For more information about targeted sentiment, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.</p>
-    ListOfDescriptiveMentionIndices:
-      type: array
-      items:
-        $ref: '#/components/schemas/Integer'
+    CustomerInputString:
+      type: string
+      minLength: 1
+      format: password
+    DetectTargetedSentimentResponse:
+      type: object
+      properties:
+        Entities:
+          allOf:
+          - $ref: '#/components/schemas/ListOfTargetedSentimentEntities'
+          - description: Targeted sentiment analysis for each of the entities identified in the input text.
+    InvalidRequestException: {}
+    TargetedSentimentEntityType:
+      type: string
+      enum:
+      - PERSON
+      - LOCATION
+      - ORGANIZATION
+      - FACILITY
+      - BRAND
+      - COMMERCIAL_ITEM
+      - MOVIE
+      - MUSIC
+      - BOOK
+      - SOFTWARE
+      - GAME
+      - PERSONAL_TITLE
+      - EVENT
+      - DATE
+      - QUANTITY
+      - ATTRIBUTE
+      - OTHER
+    SentimentScore:
+      type: object
+      properties:
+        Positive:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>POSITIVE</code> sentiment.
+        Negative:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEGATIVE</code> sentiment.
+        Neutral:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEUTRAL</code> sentiment.
+        Mixed:
+          allOf:
+          - $ref: '#/components/schemas/Float'
+          - description: The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment.
+      description: Describes the level of confidence that Amazon Comprehend has in the accuracy of its detection of sentiments.
+    LanguageCode:
+      type: string
+      enum:
+      - en
+      - es
+      - fr
+      - de
+      - it
+      - pt
+      - ar
+      - hi
+      - ja
+      - ko
+      - zh
+      - zh-TW
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

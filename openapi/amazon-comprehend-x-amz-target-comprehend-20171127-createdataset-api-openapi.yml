@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2017-11-27'
   x-release: v4
-  title: 'Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.CreateDataset #X Amz Target=Comprehend 20171127.CreateDataset #X Amz Target=Comprehend 20171127.CreateDataset API'
+  title: 'Amazon Comprehend #X Amz Target=Comprehend…'
   description: Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/comprehend-2017-11-27.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -125,7 +126,7 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: CreateDataset
-      description: Creates a dataset to upload training or test data for a model associated with a flywheel. For more information about datasets, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/flywheels-about.html"> Flywheel overview</a> in the <i>Amazon Comprehend Developer Guide</i>.
+      description: Creates a dataset to upload training or test data for a model associated with a flywheel. For more information about datasets, see Flywheel overview in the Amazon Comprehend Developer Guide.
       responses:
         '200':
           description: Success
@@ -238,11 +239,196 @@ paths:
       - '#X Amz Target=Comprehend 20171127.CreateDataset'
 components:
   schemas:
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    DatasetEntityRecognizerDocuments:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the documents for the dataset are located. '
+        InputFormat:
+          allOf:
+          - $ref: '#/components/schemas/InputFormat'
+          - description: ' Specifies how the text in an input file should be processed. This is optional, and the default is ONE_DOC_PER_LINE. ONE_DOC_PER_FILE - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers. ONE_DOC_PER_LINE - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.'
+      description: Describes the documents submitted with a dataset for an entity recognizer model.
+    DatasetAugmentedManifestsListItem:
+      type: object
+      required:
+      - AttributeNames
+      - S3Uri
+      properties:
+        AttributeNames:
+          allOf:
+          - $ref: '#/components/schemas/AttributeNamesList'
+          - description: <p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p> <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p> <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The Amazon S3 location of the augmented manifest file.
+        AnnotationDataS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the annotation files that are referred in the augmented manifest file.
+        SourceDocumentsS3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+        DocumentType:
+          allOf:
+          - $ref: '#/components/schemas/AugmentedManifestsDocumentTypeFormat'
+          - description: <p>The type of augmented manifest. If you don't specify, the default is PlainTextDocument. </p> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p>
+      description: An augmented manifest file that provides training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.
+    ResourceNotFoundException: {}
+    TagValue:
+      type: string
+      minLength: 0
+      maxLength: 256
+    AugmentedManifestsDocumentTypeFormat:
+      type: string
+      enum:
+      - PLAIN_TEXT_DOCUMENT
+      - SEMI_STRUCTURED_DOCUMENT
+    Tag:
+      type: object
+      required:
+      - Key
+      properties:
+        Key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: 'The initial part of a key-value pair that forms a tag associated with a given resource. For instance, if you want to show which resources are used by which departments, you might use “Department” as the key portion of the pair, with multiple possible values such as “sales,” “legal,” and “administration.” '
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: ' The second part of a key-value pair that forms a tag associated with a given resource. For instance, if you want to show which resources are used by which departments, you might use “Department” as the initial (key) portion of the pair, with a value of “sales” to indicate the sales department. '
+      description: 'A key-value pair that adds as a metadata to a resource used by Amazon Comprehend. For example, a tag with the key-value pair ‘Department’:’Sales’ might be added to a resource to indicate its use by a particular department. '
+    DatasetInputDataConfig:
+      type: object
+      properties:
+        AugmentedManifests:
+          allOf:
+          - $ref: '#/components/schemas/DatasetAugmentedManifestsList'
+          - description: 'A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth. '
+        DataFormat:
+          allOf:
+          - $ref: '#/components/schemas/DatasetDataFormat'
+          - description: '<p> <code>COMPREHEND_CSV</code>: The data format is a two-column CSV file, where the first column contains labels and the second column contains documents.</p> <p> <code>AUGMENTED_MANIFEST</code>: The data format </p>'
+        DocumentClassifierInputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/DatasetDocumentClassifierInputDataConfig'
+          - description: <p>The input properties for training a document classifier model. </p> <p>For more information on how the input file is formatted, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/prep-classifier-data.html">Preparing training data</a> in the Comprehend Developer Guide. </p>
+        EntityRecognizerInputDataConfig:
+          allOf:
+          - $ref: '#/components/schemas/DatasetEntityRecognizerInputDataConfig'
+          - description: The input properties for training an entity recognizer model.
+      description: Specifies the format and location of the input data for the dataset.
+    DatasetType:
+      type: string
+      enum:
+      - TRAIN
+      - TEST
+    DatasetEntityRecognizerEntityList:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: Specifies the Amazon S3 location where the entity list is located.
+      description: <p>Describes the dataset entity list for an entity recognizer model.</p> <p>For more information on how the input file is formatted, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/prep-training-data-cer.html">Preparing training data</a> in the Comprehend Developer Guide. </p>
+    ComprehendFlywheelArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    AttributeNamesListItem:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      minLength: 1
+      maxLength: 63
+    LabelDelimiter:
+      type: string
+      pattern: ^[ ~!@#$%^*\-_+=|\\:;\t>?/]$
+      minLength: 1
+      maxLength: 1
+    DatasetEntityRecognizerAnnotations:
+      type: object
+      required:
+      - S3Uri
+      properties:
+        S3Uri:
+          allOf:
+          - $ref: '#/components/schemas/S3Uri'
+          - description: ' Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
+      description: Describes the annotations associated with a entity recognizer.
+    DatasetEntityRecognizerInputDataConfig:
+      type: object
+      required:
+      - Documents
+      properties:
+        Annotations:
+          allOf:
+          - $ref: '#/components/schemas/DatasetEntityRecognizerAnnotations'
+          - description: The S3 location of the annotation documents for your custom entity recognizer.
+        Documents:
+          allOf:
+          - $ref: '#/components/schemas/DatasetEntityRecognizerDocuments'
+          - description: The format and location of the training documents for your custom entity recognizer.
+        EntityList:
+          allOf:
+          - $ref: '#/components/schemas/DatasetEntityRecognizerEntityList'
+          - description: The S3 location of the entity list for your custom entity recognizer.
+      description: Specifies the format and location of the input data. You must provide either the <code>Annotations</code> parameter or the <code>EntityList</code> parameter.
+    TooManyRequestsException: {}
+    DatasetDataFormat:
+      type: string
+      enum:
+      - COMPREHEND_CSV
+      - AUGMENTED_MANIFEST
+    CreateDatasetResponse:
+      type: object
+      properties:
+        DatasetArn:
+          allOf:
+          - $ref: '#/components/schemas/ComprehendDatasetArn'
+          - description: The ARN of the dataset.
+    ComprehendDatasetArn:
+      type: string
+      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*
+      maxLength: 256
+    ResourceLimitExceededException: {}
+    TooManyTagsException: {}
+    InternalServerException: {}
+    S3Uri:
+      type: string
+      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
+      maxLength: 1024
     AttributeNamesList:
       type: array
       items:
         $ref: '#/components/schemas/AttributeNamesListItem'
+    InputFormat:
+      type: string
+      enum:
+      - ONE_DOC_PER_FILE
+      - ONE_DOC_PER_LINE
+    ClientRequestTokenString:
+      type: string
+      pattern: ^[a-zA-Z0-9-]+$
+      minLength: 1
+      maxLength: 64
+    ComprehendArnName:
+      type: string
+      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+      maxLength: 63
     ResourceInUseException: {}
+    InvalidRequestException: {}
     DatasetDocumentClassifierInputDataConfig:
       type: object
       required:
@@ -257,10 +443,6 @@ components:
           - $ref: '#/components/schemas/LabelDelimiter'
           - description: Indicates the delimiter used to separate each label for training a multi-label classifier. The default delimiter between labels is a pipe (|). You can use a different character as a delimiter (if it's an allowed character) by specifying it under Delimiter for labels. If the training documents use a delimiter other than the default or the delimiter you specify, the labels on that line will be combined to make a single unique label, such as LABELLABELLABEL.
       description: <p>Describes the dataset input data configuration for a document classifier model.</p> <p>For more information on how the input file is formatted, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/prep-classifier-data.html">Preparing training data</a> in the Comprehend Developer Guide. </p>
-    TagValue:
-      type: string
-      minLength: 0
-      maxLength: 256
     CreateDatasetRequest:
       type: object
       required:
@@ -297,208 +479,39 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagList'
           - description: Tags for the dataset.
-    DatasetDataFormat:
-      type: string
-      enum:
-      - COMPREHEND_CSV
-      - AUGMENTED_MANIFEST
-    InvalidRequestException: {}
     TagList:
       type: array
       items:
         $ref: '#/components/schemas/Tag'
-    DatasetEntityRecognizerAnnotations:
-      type: object
-      required:
-      - S3Uri
-      properties:
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: ' Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must be in the same Region as the API endpoint that you are calling.'
-      description: Describes the annotations associated with a entity recognizer.
-    ResourceLimitExceededException: {}
     Description:
       type: string
       pattern: ^([a-zA-Z0-9_])[\\a-zA-Z0-9_@#%*+=:?./!\s-]*$
       maxLength: 2048
-    AttributeNamesListItem:
-      type: string
-      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      minLength: 1
-      maxLength: 63
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
-    ClientRequestTokenString:
-      type: string
-      pattern: ^[a-zA-Z0-9-]+$
-      minLength: 1
-      maxLength: 64
-    Tag:
-      type: object
-      required:
-      - Key
-      properties:
-        Key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: 'The initial part of a key-value pair that forms a tag associated with a given resource. For instance, if you want to show which resources are used by which departments, you might use “Department” as the key portion of the pair, with multiple possible values such as “sales,” “legal,” and “administration.” '
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: ' The second part of a key-value pair that forms a tag associated with a given resource. For instance, if you want to show which resources are used by which departments, you might use “Department” as the initial (key) portion of the pair, with a value of “sales” to indicate the sales department. '
-      description: 'A key-value pair that adds as a metadata to a resource used by Amazon Comprehend. For example, a tag with the key-value pair ‘Department’:’Sales’ might be added to a resource to indicate its use by a particular department. '
-    DatasetAugmentedManifestsListItem:
-      type: object
-      required:
-      - AttributeNames
-      - S3Uri
-      properties:
-        AttributeNames:
-          allOf:
-          - $ref: '#/components/schemas/AttributeNamesList'
-          - description: <p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p> <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p> <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: The Amazon S3 location of the augmented manifest file.
-        AnnotationDataS3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: The S3 prefix to the annotation files that are referred in the augmented manifest file.
-        SourceDocumentsS3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
-        DocumentType:
-          allOf:
-          - $ref: '#/components/schemas/AugmentedManifestsDocumentTypeFormat'
-          - description: <p>The type of augmented manifest. If you don't specify, the default is PlainTextDocument. </p> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p>
-      description: An augmented manifest file that provides training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.
-    DatasetType:
-      type: string
-      enum:
-      - TRAIN
-      - TEST
-    CreateDatasetResponse:
-      type: object
-      properties:
-        DatasetArn:
-          allOf:
-          - $ref: '#/components/schemas/ComprehendDatasetArn'
-          - description: The ARN of the dataset.
-    DatasetInputDataConfig:
-      type: object
-      properties:
-        AugmentedManifests:
-          allOf:
-          - $ref: '#/components/schemas/DatasetAugmentedManifestsList'
-          - description: 'A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth. '
-        DataFormat:
-          allOf:
-          - $ref: '#/components/schemas/DatasetDataFormat'
-          - description: '<p> <code>COMPREHEND_CSV</code>: The data format is a two-column CSV file, where the first column contains labels and the second column contains documents.</p> <p> <code>AUGMENTED_MANIFEST</code>: The data format </p>'
-        DocumentClassifierInputDataConfig:
-          allOf:
-          - $ref: '#/components/schemas/DatasetDocumentClassifierInputDataConfig'
-          - description: <p>The input properties for training a document classifier model. </p> <p>For more information on how the input file is formatted, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/prep-classifier-data.html">Preparing training data</a> in the Comprehend Developer Guide. </p>
-        EntityRecognizerInputDataConfig:
-          allOf:
-          - $ref: '#/components/schemas/DatasetEntityRecognizerInputDataConfig'
-          - description: The input properties for training an entity recognizer model.
-      description: Specifies the format and location of the input data for the dataset.
-    InternalServerException: {}
-    TooManyTagsException: {}
     DatasetAugmentedManifestsList:
       type: array
       items:
         $ref: '#/components/schemas/DatasetAugmentedManifestsListItem'
-    AugmentedManifestsDocumentTypeFormat:
-      type: string
-      enum:
-      - PLAIN_TEXT_DOCUMENT
-      - SEMI_STRUCTURED_DOCUMENT
-    DatasetEntityRecognizerEntityList:
-      type: object
-      required:
-      - S3Uri
-      properties:
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: Specifies the Amazon S3 location where the entity list is located.
-      description: <p>Describes the dataset entity list for an entity recognizer model.</p> <p>For more information on how the input file is formatted, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/prep-training-data-cer.html">Preparing training data</a> in the Comprehend Developer Guide. </p>
-    ResourceNotFoundException: {}
-    DatasetEntityRecognizerInputDataConfig:
-      type: object
-      required:
-      - Documents
-      properties:
-        Annotations:
-          allOf:
-          - $ref: '#/components/schemas/DatasetEntityRecognizerAnnotations'
-          - description: The S3 location of the annotation documents for your custom entity recognizer.
-        Documents:
-          allOf:
-          - $ref: '#/components/schemas/DatasetEntityRecognizerDocuments'
-          - description: The format and location of the training documents for your custom entity recognizer.
-        EntityList:
-          allOf:
-          - $ref: '#/components/schemas/DatasetEntityRecognizerEntityList'
-          - description: The S3 location of the entity list for your custom entity recognizer.
-      description: Specifies the format and location of the input data. You must provide either the <code>Annotations</code> parameter or the <code>EntityList</code> parameter.
-    LabelDelimiter:
-      type: string
-      pattern: ^[ ~!@#$%^*\-_+=|\\:;\t>?/]$
-      minLength: 1
-      maxLength: 1
-    ComprehendDatasetArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*/dataset/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    ComprehendFlywheelArn:
-      type: string
-      pattern: arn:aws(-[^:]+)?:comprehend:[a-zA-Z0-9-]*:[0-9]{12}:flywheel/[a-zA-Z0-9](-*[a-zA-Z0-9])*
-      maxLength: 256
-    InputFormat:
-      type: string
-      enum:
-      - ONE_DOC_PER_FILE
-      - ONE_DOC_PER_LINE
-    TooManyRequestsException: {}
-    S3Uri:
-      type: string
-      pattern: s3://[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9](/.*)?
-      maxLength: 1024
-    DatasetEntityRecognizerDocuments:
-      type: object
-      required:
-      - S3Uri
-      properties:
-        S3Uri:
-          allOf:
-          - $ref: '#/components/schemas/S3Uri'
-          - description: ' Specifies the Amazon S3 location where the documents for the dataset are located. '
-        InputFormat:
-          allOf:
-          - $ref: '#/components/schemas/InputFormat'
-          - description: ' Specifies how the text in an input file should be processed. This is optional, and the default is ONE_DOC_PER_LINE. ONE_DOC_PER_FILE - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers. ONE_DOC_PER_LINE - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.'
-      description: Describes the documents submitted with a dataset for an entity recognizer model.
-    ComprehendArnName:
-      type: string
-      pattern: ^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-      maxLength: 63
   parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -517,18 +530,6 @@ components:
       required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
