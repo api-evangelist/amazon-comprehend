@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 56
+edge_count: 57
 edges:
 - tag: '#X Amz Target=Comprehend 20171127.CreateDocumentClassifier'
   spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api-openapi.yml
@@ -219,6 +219,15 @@ edges:
   evidence: StopTrainingEntityRecognizer  Amazon Comprehend Stop Training Entity Recognizer
   reason: Stops training of a custom entity recognition model — clearly AI/ML model lifecycle (MLOps)
     management.
+- tag: Amazon Comprehend
+  spec_file: amazon-comprehend-amazon-comprehend-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: '"CreateDocumentClassifier", "CreateEntityRecognizer", "CreateEndpoint", "BatchDetectSentiment"
+    — "natural language processing (NLP) service that uses machine learning"'
+  reason: Training, deploying and invoking ML/NLP models is AI/ML model lifecycle management.
 - tag: '#X Amz Target=Comprehend 20171127.ListKeyPhrasesDetectionJobs'
   spec_file: amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api-openapi.yml
   capability_id: BC-610.60
