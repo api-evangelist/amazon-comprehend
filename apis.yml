@@ -80,6 +80,8 @@ apis:
   - type: Lifecycle
     url: lifecycle/amazon-comprehend-lifecycle.yml
 common:
+  - type: Pricing
+    url: https://aws.amazon.com/comprehend/pricing/
   - type: Plans
     url: plans/amazon-comprehend-plans-pricing.yml
   - type: CapabilityMap
