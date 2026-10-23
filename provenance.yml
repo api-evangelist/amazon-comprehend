@@ -12,510 +12,513 @@ artifacts:
   capabilities/amazon-comprehend-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  collections/amazon-comprehend-amazon-comprehend-api.postman_collection.json:
+    method: derived
+    evidence: openapi/amazon-comprehend-amazon-comprehend-api
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describekeyphrasesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describekeyphrasesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describekeyphrasesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describekeyphrasesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describepiientitiesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describepiientitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describepiientitiesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describepiientitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeresourcepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describeresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describesentimentdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describesentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describesentimentdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describesentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-describetargetedsentimentdetectionjob-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetargetedsentimentdetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-describetargetedsentimentdetectionjob-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetargetedsentimentdetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describetopicsdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetopicsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-describetopicsdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetopicsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectpiientities-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectpiientities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectpiientities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectpiientities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectsentiment-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectsentiment-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdatasets-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdatasets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdatasets-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdatasets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listendpoints-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listendpoints-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listendpoints-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listendpoints-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listtagsforresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listtagsforresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-putresourcepolicy-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-putresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-putresourcepolicy-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-putresourcepolicy-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startpiientitiesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startpiientitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startpiientitiesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startpiientitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopdominantlanguagedetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopdominantlanguagedetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopdominantlanguagedetectionjob-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopdominantlanguagedetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopentitiesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopentitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopentitiesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopentitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopeventsdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopeventsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopeventsdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopeventsdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopkeyphrasesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopkeyphrasesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopkeyphrasesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopkeyphrasesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoppiientitiesdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoppiientitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoppiientitiesdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoppiientitiesdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-tagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-untagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-updateendpoint-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-updateendpoint-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateendpoint-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api
+    method: unknown
+    evidence: no authorship recorded
   conformance/amazon-comprehend-conformance.yml:
     method: derived
     evidence: declared in the artifact
@@ -4155,127 +4158,7 @@ artifacts:
   json-structure/openapi.yml-warnings-list-item-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -4359,6 +4242,21 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   lifecycle/amazon-comprehend-lifecycle.yml:
     method: searched
     evidence: declared in the artifact
@@ -4375,261 +4273,12 @@ artifacts:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeeventsdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheel-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeflywheeliteration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describekeyphrasesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describepiientitiesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describeresourcepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describesentimentdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetargetedsentimentdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-describetopicsdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectdominantlanguage-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectentities-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectkeyphrases-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectpiientities-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsentiment-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detectsyntax-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-detecttargetedsentiment-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-importmodel-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdatasets-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassificationjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiers-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdocumentclassifiersummaries-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listdominantlanguagedetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listendpoints-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentitiesdetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizers-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listentityrecognizersummaries-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listeventsdetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheeliterationhistory-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listflywheels-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listkeyphrasesdetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listpiientitiesdetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listsentimentdetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtagsforresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtargetedsentimentdetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-listtopicsdetectionjobs-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-putresourcepolicy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdocumentclassificationjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startdominantlanguagedetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startentitiesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starteventsdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startflywheeliteration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startkeyphrasesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startpiientitiesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-startsentimentdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttargetedsentimentdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-starttopicsdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopdominantlanguagedetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopentitiesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopeventsdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopkeyphrasesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoppiientitiesdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stopsentimentdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptargetedsentimentdetectionjob-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingdocumentclassifier-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-stoptrainingentityrecognizer-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-tagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-untagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateendpoint-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-comprehend-x-amz-target-comprehend-20171127-updateflywheel-api-openapi.yml:
+  openapi/amazon-comprehend-amazon-comprehend-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   overlays/amazon-comprehend-openapi-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
+    method: derived
+    evidence: an API Evangelist overlay (title) over the provider's contract
   packages/amazon-comprehend-packages.yml:
     method: searched
     evidence: declared in the artifact
