@@ -79,6 +79,8 @@ apis:
   - type: Lifecycle
     url: lifecycle/amazon-comprehend-lifecycle.yml
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-comprehend/overview
   - type: Pricing
     url: https://aws.amazon.com/comprehend/pricing/
   - type: Plans
