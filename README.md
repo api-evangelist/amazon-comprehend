@@ -1,4 +1,4 @@
-# Amazon Comprehend (amazon-comprehend)
+# Amazon Comprehend
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,147 +64,266 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to uncover information in unstructured data. It provides entity recognition, sentiment analysis, key phrase extraction, language detection, topic modeling, PII detection, and custom classification capabilities for text documents at scale.
+Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to uncover information in unstructured data. The service can identify critical elements in data, including references to language, people, and places. It provides entity recognition, sentiment analysis, key phrase extraction, language detection, topic modeling, PII detection, and custom classification capabilities for text documents at scale.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-comprehend/refs/heads/main/apis.yml)
+**Areas:** AWS · Machine Learning · Natural Language Processing · Text Analysis
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon Comprehend on APIs.io
 
-## Tags:
+Everything profiled for Amazon Comprehend is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-comprehend/](https://apis.io/providers/amazon-comprehend/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Machine Learning, Natural Language Processing, NLP, Text Analysis
+### APIs (2)
 
-## Timestamps
+- [Amazon Comprehend Amazon Comprehend API](https://apis.io/apis/amazon-comprehend/amazon-comprehend-amazon-comprehend-api/) — The Amazon Comprehend API from Amazon Comprehend — 84 operation(s) for amazon comprehend.
+- [Amazon Comprehend Comprehend Operations API](https://apis.io/apis/amazon-comprehend/amazon-comprehend-operations-api/) — The Comprehend Operations API from Amazon Comprehend — 1 operation(s) for comprehend operations.
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon Comprehend API
-The Amazon Comprehend API provides programmatic access to natural language processing capabilities including sentiment analysis, entity recognition, key phrase extraction, language detection, topic modeling, PII detection, and syntax analysis. Supports real-time and batch processing with 84 operations.
+#### MCP servers (1)
 
-**Human URL:** [https://aws.amazon.com/comprehend/](https://aws.amazon.com/comprehend/)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags:
+- [amazon-comprehend](https://apis.io/servers/amazon-comprehend/amazon-comprehend/)
 
- - AWS, Machine Learning, Natural Language Processing, NLP, Text Analysis
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.aws.amazon.com/comprehend/latest/dg/)
-- [OpenAPI](openapi/amazon-comprehend-openapi.yml)
-- [APIReference](https://docs.aws.amazon.com/comprehend/latest/APIReference/)
-- [Pricing](https://aws.amazon.com/comprehend/pricing/)
-- [GettingStarted](https://aws.amazon.com/comprehend/getting-started/)
-- [FAQ](https://aws.amazon.com/comprehend/faqs/)
-- [JSONSchema](json-schema/comprehend-entity-schema.json)
-- [JSONStructure](json-structure/comprehend-entity-structure.json)
-- [JSON-LD](json-ld/amazon-comprehend-context.jsonld)
+- [Amazon Comprehend Agentic Access](https://apis.io/agentic-access/amazon-comprehend/amazon-comprehend-agentic-access/)
 
-## Common Properties
+#### JSON Schema (403)
 
-- [Portal](https://aws.amazon.com/)
+The data models the API reads and writes.
+
+- [Amazon Comprehend Entity](https://apis.io/schemas/amazon-comprehend/amazon-comprehend-entity/)
+- [AnyLengthString](https://apis.io/schemas/amazon-comprehend/openapi.yml-any-length-string/)
+- [AttributeNamesList](https://apis.io/schemas/amazon-comprehend/openapi.yml-attribute-names-list/)
+- [AttributeNamesListItem](https://apis.io/schemas/amazon-comprehend/openapi.yml-attribute-names-list-item/)
+- [AugmentedManifestsDocumentTypeFormat](https://apis.io/schemas/amazon-comprehend/openapi.yml-augmented-manifests-document-type-format/)
+- [AugmentedManifestsListItem](https://apis.io/schemas/amazon-comprehend/openapi.yml-augmented-manifests-list-item/)
+- [BatchDetectDominantLanguageItemResult](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-dominant-language-item-result/)
+- [BatchDetectDominantLanguageRequest](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-dominant-language-request/)
+- [BatchDetectDominantLanguageResponse](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-dominant-language-response/)
+- [BatchDetectEntitiesItemResult](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-entities-item-result/)
+- [BatchDetectEntitiesRequest](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-entities-request/)
+- [BatchDetectEntitiesResponse](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-entities-response/)
+- [BatchDetectKeyPhrasesItemResult](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-key-phrases-item-result/)
+- [BatchDetectKeyPhrasesRequest](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-key-phrases-request/)
+- [BatchDetectKeyPhrasesResponse](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-key-phrases-response/)
+- [BatchDetectSentimentItemResult](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-sentiment-item-result/)
+- [BatchDetectSentimentRequest](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-sentiment-request/)
+- [BatchDetectSentimentResponse](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-sentiment-response/)
+- [BatchDetectSyntaxItemResult](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-syntax-item-result/)
+- [BatchDetectSyntaxRequest](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-syntax-request/)
+- [BatchDetectSyntaxResponse](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-syntax-response/)
+- [BatchDetectTargetedSentimentItemResult](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-item-result/)
+- [BatchDetectTargetedSentimentRequest](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-request/)
+- [BatchDetectTargetedSentimentResponse](https://apis.io/schemas/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-response/)
+- [Block](https://apis.io/schemas/amazon-comprehend/openapi.yml-block/)
+- …and 378 more published on APIs.io
+
+#### JSON Structure (403)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Comprehend Entity Structure](https://apis.io/json-structure/amazon-comprehend/amazon-comprehend-entity-structure/)
+- [Openapi.Yml Any Length String Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-any-length-string-structure/)
+- [Openapi.Yml Attribute Names List Item Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-attribute-names-list-item-structure/)
+- [Openapi.Yml Attribute Names List Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-attribute-names-list-structure/)
+- [Openapi.Yml Augmented Manifests Document Type Format Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-augmented-manifests-document-type-format-structure/)
+- [Openapi.Yml Augmented Manifests List Item Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-augmented-manifests-list-item-structure/)
+- [Openapi.Yml Batch Detect Dominant Language Item Result Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-dominant-language-item-result-structure/)
+- [Openapi.Yml Batch Detect Dominant Language Request Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-dominant-language-request-structure/)
+- [Openapi.Yml Batch Detect Dominant Language Response Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-dominant-language-response-structure/)
+- [Openapi.Yml Batch Detect Entities Item Result Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-entities-item-result-structure/)
+- [Openapi.Yml Batch Detect Entities Request Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-entities-request-structure/)
+- [Openapi.Yml Batch Detect Entities Response Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-entities-response-structure/)
+- [Openapi.Yml Batch Detect Key Phrases Item Result Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-key-phrases-item-result-structure/)
+- [Openapi.Yml Batch Detect Key Phrases Request Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-key-phrases-request-structure/)
+- [Openapi.Yml Batch Detect Key Phrases Response Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-key-phrases-response-structure/)
+- [Openapi.Yml Batch Detect Sentiment Item Result Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-sentiment-item-result-structure/)
+- [Openapi.Yml Batch Detect Sentiment Request Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-sentiment-request-structure/)
+- [Openapi.Yml Batch Detect Sentiment Response Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-sentiment-response-structure/)
+- [Openapi.Yml Batch Detect Syntax Item Result Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-syntax-item-result-structure/)
+- [Openapi.Yml Batch Detect Syntax Request Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-syntax-request-structure/)
+- [Openapi.Yml Batch Detect Syntax Response Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-syntax-response-structure/)
+- [Openapi.Yml Batch Detect Targeted Sentiment Item Result Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-item-result-structure/)
+- [Openapi.Yml Batch Detect Targeted Sentiment Request Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-request-structure/)
+- [Openapi.Yml Batch Detect Targeted Sentiment Response Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-response-structure/)
+- [Openapi.Yml Block Reference Structure](https://apis.io/json-structure/amazon-comprehend/openapi.yml-block-reference-structure/)
+- …and 378 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Comprehend Context](https://apis.io/jsonld/amazon-comprehend/amazon-comprehend-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Comprehend Vocabulary](https://apis.io/vocabularies/amazon-comprehend/amazon-comprehend-vocabulary/)
+
+#### Examples (268)
+
+Example requests and responses.
+
+- [Amazon Comprehend Entity Example](https://apis.io/examples/amazon-comprehend/amazon-comprehend-entity-example/)
+- [Openapi.Yml Augmented Manifests List Item Example](https://apis.io/examples/amazon-comprehend/openapi.yml-augmented-manifests-list-item-example/)
+- [Openapi.Yml Batch Detect Dominant Language Item Result Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-dominant-language-item-result-example/)
+- [Openapi.Yml Batch Detect Dominant Language Request Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-dominant-language-request-example/)
+- [Openapi.Yml Batch Detect Dominant Language Response Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-dominant-language-response-example/)
+- [Openapi.Yml Batch Detect Entities Item Result Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-entities-item-result-example/)
+- [Openapi.Yml Batch Detect Entities Request Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-entities-request-example/)
+- [Openapi.Yml Batch Detect Entities Response Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-entities-response-example/)
+- [Openapi.Yml Batch Detect Key Phrases Item Result Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-key-phrases-item-result-example/)
+- [Openapi.Yml Batch Detect Key Phrases Request Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-key-phrases-request-example/)
+- [Openapi.Yml Batch Detect Key Phrases Response Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-key-phrases-response-example/)
+- [Openapi.Yml Batch Detect Sentiment Item Result Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-sentiment-item-result-example/)
+- [Openapi.Yml Batch Detect Sentiment Request Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-sentiment-request-example/)
+- [Openapi.Yml Batch Detect Sentiment Response Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-sentiment-response-example/)
+- [Openapi.Yml Batch Detect Syntax Item Result Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-syntax-item-result-example/)
+- [Openapi.Yml Batch Detect Syntax Request Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-syntax-request-example/)
+- [Openapi.Yml Batch Detect Syntax Response Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-syntax-response-example/)
+- [Openapi.Yml Batch Detect Targeted Sentiment Item Result Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-item-result-example/)
+- [Openapi.Yml Batch Detect Targeted Sentiment Request Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-request-example/)
+- [Openapi.Yml Batch Detect Targeted Sentiment Response Example](https://apis.io/examples/amazon-comprehend/openapi.yml-batch-detect-targeted-sentiment-response-example/)
+- [Openapi.Yml Block Example](https://apis.io/examples/amazon-comprehend/openapi.yml-block-example/)
+- [Openapi.Yml Block Reference Example](https://apis.io/examples/amazon-comprehend/openapi.yml-block-reference-example/)
+- [Openapi.Yml Bounding Box Example](https://apis.io/examples/amazon-comprehend/openapi.yml-bounding-box-example/)
+- [Openapi.Yml Child Block Example](https://apis.io/examples/amazon-comprehend/openapi.yml-child-block-example/)
+- [Openapi.Yml Classifier Evaluation Metrics Example](https://apis.io/examples/amazon-comprehend/openapi.yml-classifier-evaluation-metrics-example/)
+- …and 243 more published on APIs.io
+
+#### Collections (84)
+
+Postman and Open Collection request collections.
+
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectdominantlanguage-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectEntities API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectentities-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectKeyPhrases API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectkeyphrases-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectSentiment API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsentiment-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectSyntax API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-batchdetectsyntax-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectTargetedSentiment API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-batchdetecttargetedsentiment-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ClassifyDocument API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-classifydocument-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.ContainsPiiEntities API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-containspiientities-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.CreateDataset API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-createdataset-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.CreateDocumentClassifier API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-createdocumentclassifier-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.CreateEndpoint API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-createendpoint-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.CreateEntityRecognizer API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-createentityrecognizer-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.CreateFlywheel API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-createflywheel-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DeleteDocumentClassifier API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-deletedocumentclassifier-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DeleteEndpoint API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-deleteendpoint-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DeleteEntityRecognizer API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-deleteentityrecognizer-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DeleteFlywheel API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-deleteflywheel-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DeleteResourcePolicy API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-deleteresourcepolicy-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDataset API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-describedataset-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDocumentClassificationJob API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassificationjob-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDocumentClassifier API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-describedocumentclassifier-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeDominantLanguageDetectionJob API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-describedominantlanguagedetectionjob-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeEndpoint API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-describeendpoint-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeEntitiesDetectionJob API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-describeentitiesdetectionjob-api/)
+- [Amazon Comprehend #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.BatchDetectDominantLanguage #X Amz Target=Comprehend 20171127.DescribeEntityRecognizer API](https://apis.io/collections/amazon-comprehend/open-amazon-comprehend-x-amz-target-comprehend-20171127-describeentityrecognizer-api/)
+- …and 59 more published on APIs.io
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon Comprehend Openapi Overlay](https://apis.io/overlays/amazon-comprehend/amazon-comprehend-openapi-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Comprehend — jsonschema rules](https://apis.io/rules/amazon-comprehend/amazon-comprehend-jsonschema-spectral-rules/)
+- [Amazon Comprehend API Rules](https://apis.io/rules/amazon-comprehend/amazon-comprehend-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Comprehend Authentication](https://apis.io/security/amazon-comprehend/amazon-comprehend-authentication/)
+- [Amazon Comprehend Domain Security](https://apis.io/security/amazon-comprehend/amazon-comprehend-domain-security/)
+- [Amazon Comprehend Trust Center](https://apis.io/security/amazon-comprehend/amazon-comprehend-trust-center/)
+- [Amazon Comprehend Vulnerability Disclosure](https://apis.io/security/amazon-comprehend/amazon-comprehend-vulnerability-disclosure/)
+
+#### Plans and pricing (2)
+
+Published plans, tiers and prices.
+
+- [Amazon Comprehend Plans Pricing](https://apis.io/plans/amazon-comprehend/amazon-comprehend-plans-pricing/)
+- [Amazon Comprehend Price Estimates](https://apis.io/plans/amazon-comprehend/amazon-comprehend-price-estimates/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/comprehend/)
 - [Documentation](https://docs.aws.amazon.com/comprehend/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
+- [Pricing](https://aws.amazon.com/comprehend/pricing/)
+- [Sign up](https://portal.aws.amazon.com/billing/signup)
 - [Support](https://aws.amazon.com/support/)
 - [Blog](https://aws.amazon.com/blogs/machine-learning/)
-- [GitHubOrganization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/comprehend/)
-- [SignUp](https://portal.aws.amazon.com/billing/signup)
-- [Login](https://signin.aws.amazon.com/)
-- [StatusPage](https://health.aws.amazon.com/health/status)
-- [YouTube](https://www.youtube.com/user/AmazonWebServices)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/amazon-comprehend)
-- [Contact](https://aws.amazon.com/contact-us/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Entity Recognition | Identify named entities such as people, places, organizations, dates, and quantities in text. |
-| Sentiment Analysis | Detect positive, negative, neutral, or mixed sentiment in text documents. |
-| Key Phrase Extraction | Extract key noun phrases and concepts from unstructured text. |
-| Language Detection | Automatically detect the dominant language of input text from 100+ supported languages. |
-| PII Detection and Redaction | Identify and optionally redact personally identifiable information from documents. |
-| Topic Modeling | Discover latent topics in large collections of documents using unsupervised learning. |
-| Custom Classification | Train custom document classifiers using your own labeled training data. |
-| Custom Entity Recognition | Train custom entity recognizers to identify domain-specific entities in text. |
-| Syntax Analysis | Analyze the syntax of text including parts of speech tagging and tokenization. |
-| Flywheel | Continuously improve custom models with new training data using the Flywheel feature. |
+**Kin Score 58.8** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 62.0 |
+| Contract governance | 31.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 84.2 |
 
-| Name | Description |
-|------|-------------|
-| Customer Feedback Analysis | Analyze customer reviews, support tickets, and survey responses to understand sentiment and extract actionable insights. |
-| Content Moderation | Detect and filter inappropriate content, hate speech, or PII from user-generated content. |
-| Document Processing | Extract entities, key information, and classifications from contracts, reports, and medical records. |
-| Voice of Customer Analytics | Mine customer interactions for trends, topics, and sentiment to improve products and services. |
-| Compliance and PII Redaction | Automatically detect and redact PII from documents to meet GDPR, HIPAA, and other compliance requirements. |
-| Search Enhancement | Enrich search indexes with entities, key phrases, and topics to improve search relevance. |
+**Agent readiness 29.6** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| Amazon S3 | Process documents stored in S3 buckets using async batch analysis jobs. |
-| Amazon SageMaker | Integrate custom Comprehend models with SageMaker for advanced ML workflows. |
-| AWS Lambda | Trigger real-time Comprehend analysis from Lambda functions in event-driven architectures. |
-| Amazon Kinesis | Analyze streaming text data from Kinesis Data Streams and Firehose. |
-| Amazon OpenSearch | Enrich OpenSearch indexes with Comprehend-detected entities and topics for better search. |
-| AWS Glue | Use Comprehend in AWS Glue ETL jobs for large-scale document processing pipelines. |
+**Regulatory alignment 32.7** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-comprehend/](https://apis.io/providers/amazon-comprehend/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Amazon Comprehend OpenAPI](openapi/amazon-comprehend-openapi.yml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Comprehend: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-403 schema files extracted from the OpenAPI specification covering all request/response models.
-
-### JSON Structure
-
-403 JSON Structure files converted from JSON Schema using the json-structure.org specification.
-
-### JSON-LD
-
-- [Amazon Comprehend Context](json-ld/amazon-comprehend-context.jsonld) — 268 types, 216 properties
-
-### Examples
-
-403 example JSON files generated from JSON Schema definitions.
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [Amazon Comprehend API](capabilities/shared/comprehend.yaml) — 11 operations for NLP analysis and custom model management
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amazon Comprehend NLP Analysis](capabilities/nlp-analysis.yaml) | Amazon Comprehend API | 10 | Data Scientist, Application Developer |
-
-## Vocabulary
-
-- [Amazon Comprehend Vocabulary](vocabulary/amazon-comprehend-vocabulary.yaml) — Unified taxonomy mapping 10 resources, 8 actions, 1 workflow, and 2 personas across operational (OpenAPI) and capability (Naftiko) dimensions
-
-## Rules
-
-- [Amazon Comprehend Spectral Rules](rules/amazon-comprehend-spectral-rules.yml) — 26 rules across 13 categories enforcing Amazon Comprehend API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-comprehend/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
